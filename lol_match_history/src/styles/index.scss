@@ -1,5 +1,5 @@
 @import "./reset.scss";
-@import "./mixins.scss";
+@import "./mixins/_mixins.scss";
 @import "./fonts.scss";
 
 @import "./input.scss";
@@ -23,8 +23,9 @@
 }
 
 .container {
-    background-color : #7FBCE4;
+    background-color : $blue;
     min-width : 100vw;
     min-height : 100vh;
     padding : 20px;
+    position : relative;
 }

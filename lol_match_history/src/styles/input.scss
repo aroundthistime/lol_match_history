@@ -1,6 +1,9 @@
 input {
-    border-radius: 3px;
-    border : 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius;
+    border : $gray-border;
     padding : 0 10px;
-    font-size : 14px;
+    font-size : 12px;
+    @include laptop {
+        font-size : 14px;
+    }
 }

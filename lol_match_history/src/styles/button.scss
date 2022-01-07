@@ -1,3 +1,7 @@
 button.button {
     color : white;
+    border : $gray-border;
+    border-radius : $border-radius;
+    background-color : $dark-blue;
+    cursor: pointer;
 }

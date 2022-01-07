@@ -3,7 +3,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position : relative;
+    position : absolute;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
 
     .home__header {
         color : white;
@@ -11,30 +15,77 @@
         justify-content: center;
         align-items: center;
         flex-direction : column;
-        margin-bottom : 80px;
+        margin-bottom : 50px;
+        z-index : 1;
+        @include laptop {
+            margin-bottom : 80px;
+        }
 
         .header__title {
-            font-size : 100px;
             font-family: 'Concert One', cursive;
+            font-size : 65px;
             margin-bottom : 20px;
+            @include laptop {
+                font-size : 100px;
+            }
+            @include mobile {
+                font-size : 65px;
+            }
         }
     
         .header__subtitle {
-            font-size : 20px;
             font-family: 'Jua', sans-serif;
+            font-size : 14px;
+            @include laptop {
+                font-size : 20px;
+            }
+            @include mobile {
+                font-size : 14px;
+            }
         }
     }
 
     form.home__form{
+        z-index : 1;
+        @include laptop {
+            display : flex;
+            flex-direction : row;
+        }
+
+        @include mobile {
+            display : flex;
+            flex-direction : column;
+        }
+
         input.home__input {
-            width : 350px;
             height : 40px;
+            @include laptop {
+                width : 350px;
+            }
+            @include mobile {
+                width : 250px;
+            }
         }
         button.home__submit{
-            width : 20px;
-            height : 20px;
+            height : 30px;
+            @include laptop {
+                width : 60px;
+                height : 40px;
+                margin-left : 20px;
+            }
+            @include mobile {
+                height : 30px;
+                margin-top : 20px;
+            }
         }
     }
 
+    .home__bg-image{
+        width : 50vw;
+        position : absolute;
+        opacity : 0.7;
+        @include laptop {
+            width : 40vw;
+        }
+    }
 }
-
