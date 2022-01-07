@@ -1,0 +1,40 @@
+.home {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position : relative;
+
+    .home__header {
+        color : white;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction : column;
+        margin-bottom : 80px;
+
+        .header__title {
+            font-size : 100px;
+            font-family: 'Concert One', cursive;
+            margin-bottom : 20px;
+        }
+    
+        .header__subtitle {
+            font-size : 20px;
+            font-family: 'Jua', sans-serif;
+        }
+    }
+
+    form.home__form{
+        input.home__input {
+            width : 350px;
+            height : 40px;
+        }
+        button.home__submit{
+            width : 20px;
+            height : 20px;
+        }
+    }
+
+}
+

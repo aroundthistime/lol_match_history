@@ -1,0 +1,30 @@
+@import "./reset.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+@import "./input.scss";
+@import "./button.scss";
+
+//pages
+@import "../pages/Home/home.scss";
+
+
+* {
+    box-sizing : border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.no-drag{
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.container {
+    background-color : #7FBCE4;
+    min-width : 100vw;
+    min-height : 100vh;
+    padding : 20px;
+}
