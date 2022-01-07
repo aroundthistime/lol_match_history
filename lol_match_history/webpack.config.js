@@ -1,14 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+const config = {
     entry: './src/index.tsx',
     output: {
-        path: path.join(__dirname, '../dist'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
@@ -53,8 +53,10 @@ module.exports = {
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: false,
         }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-        }),
     ],
 };
+
+const configWithTimeMeasures = new SpeedMeasurePlugin().wrap(config);
+configWithTimeMeasures.plugins.push(new MiniCssExtractPlugin({}));
+
+module.exports = configWithTimeMeasures;
