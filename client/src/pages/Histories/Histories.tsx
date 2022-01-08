@@ -3,10 +3,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from '../../components/Loader/Loader';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
+import UserProfile from '../../components/UserProfile/UserProfile';
+
+interface User {
+    id: string;
+    accountId: string;
+    puuid: string;
+    name: string;
+    profileIconId: number;
+    revisionDate: number;
+    summonerLevel: number;
+}
 
 const Histories = (): JSX.Element => {
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState<User | undefined | false>();
     const params = useParams();
     const { username } = params;
 
@@ -49,7 +60,11 @@ const Histories = (): JSX.Element => {
     ) : (
         <>
             {user && (
-                <StatusMessage text="소환사 정보를 찾을 수 없습니다." />
+                <UserProfile
+                    name={user.name}
+                    profileIconId={user.profileIconId}
+                    summonerLevel={user.summonerLevel}
+                />
             )}
             {user === false && (
                 <StatusMessage text="오류가 발생했습니다." />
