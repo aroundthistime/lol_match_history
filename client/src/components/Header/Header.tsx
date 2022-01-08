@@ -1,9 +1,11 @@
-import React, { ChangeEvent, useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Header = (): JSX.Element => {
     const [username, setUsername] = useState("");
     const navigate = useNavigate();
+    const params = useParams();
+    const { username: usernameParams } = params;
 
     const onInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
         setUsername(event.target.value);
@@ -14,17 +16,24 @@ const Header = (): JSX.Element => {
             navigate(`/histories/${username}`);
         }
     }
+
+    useEffect(() => {
+        if (usernameParams) {
+            setUsername(usernameParams);
+        }
+    }, [usernameParams])
+
     return (
         <div className="header">
             <Link to="/">
                 <h4 className="header__logo logo">LOLLY</h4>
             </Link>
-            <form className="header__form">
+            <form className="header__form" onSubmit={onSubmit}>
                 <input
                     className='header__input'
                     placeholder='검색하고자 하는 소환사명을 입력하세요.'
-                // value={username}
-                // onChange={onInputChange}
+                    value={username}
+                    onChange={onInputChange}
                 />
                 <button
                     type="submit"

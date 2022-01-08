@@ -4,7 +4,4 @@ input {
     padding : 0 10px;
     font-size : 14px;
     height : 40px;
-    @include mobile {
-        font-size :12px;
-    }
 }

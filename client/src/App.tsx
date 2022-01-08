@@ -6,6 +6,7 @@ import Histories from './pages/Histories/Histories';
 import History from './pages/History';
 import Header from './components/Header/Header';
 import Layout from './components/Layout/Layout';
+import StatusMessage from './components/StatusMessage/StatusMessage';
 
 function App() {
   return (
@@ -13,14 +14,21 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/histories/:username'
-            element={
-              <Layout>
-                <Histories />
-              </Layout>
-            }
-          />
-          <Route path='/history/:id' element={<History />} />
+          <Route path='/histories/:username' element={
+            <Layout>
+              <Histories />
+            </Layout>
+          } />
+          <Route path='/history/:id' element={
+            <Layout>
+              <History />
+            </Layout>
+          } />
+          <Route path='*' element={
+            <Layout>
+              <StatusMessage text="잘못된 접근입니다." />
+            </Layout>
+          } />
         </Routes>
       </BrowserRouter>
     </div>

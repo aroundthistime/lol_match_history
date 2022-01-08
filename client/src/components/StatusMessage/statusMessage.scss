@@ -1,0 +1,26 @@
+.status-message{
+    display : flex;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    .status-message__image{
+        width : 150px;
+        margin-bottom : 10px;
+    }
+    .status-message__text{
+        font-family: 'Jua', sans-serif;
+        color : white;
+        font-size : 20px;
+    }
+    @include mobile {
+        .status-message__text{
+            font-size : 18px;
+        }
+    }
+    
+}
