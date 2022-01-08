@@ -4,18 +4,25 @@
 
 @import "./input.scss";
 @import "./button.scss";
+@import "./logo.scss";
 
 //pages
 @import "../pages/Home/home.scss";
 @import "../pages/Histories/histories.scss";
 
 //components
+@import "../components/Layout/layout.scss";
 @import "../components/Loader/loader.scss";
+@import "../components/Header/header.scss";
 
 
 * {
     box-sizing : border-box;
     font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+    background-color : $blue;
 }
 
 .no-drag{
@@ -27,7 +34,6 @@
 }
 
 .container {
-    background-color : $blue;
     min-width : 100vw;
     min-height : 100vh;
     padding : 20px;

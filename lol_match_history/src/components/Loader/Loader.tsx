@@ -17,13 +17,13 @@ const Loader = (): JSX.Element => {
     });
 
     return (
-        <div className="loader no-drag">
+        <div className="status-message loader no-drag">
             <img
                 src={loadingImage}
                 alt="로딩중"
                 className="loader__loading-image"
             />
-            <h4 className="loader__text">{loadingText}</h4>
+            <h4 className="status-message__text loader__text">{loadingText}</h4>
         </div>
     )
 }

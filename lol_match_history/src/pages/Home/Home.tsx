@@ -18,9 +18,9 @@ const Home = (): JSX.Element => {
 
     return (
         <div className='home'>
-            <img src={bgImage} alt="포로" className="home__bg-image" />
-            <div className="home__header">
-                <h1 className='header__title'>LOLLY</h1>
+            <img src={bgImage} alt="포로" className="home__bg-image no-drag" />
+            <div className="home__header no-drag">
+                <h1 className='header__title logo'>LOLLY</h1>
                 <h4 className='header__subtitle'>국내 no.1과는 거리가 먼 롤 전적 검색 사이트</h4>
             </div>
             <form className='home__form' onSubmit={onSubmit}>
