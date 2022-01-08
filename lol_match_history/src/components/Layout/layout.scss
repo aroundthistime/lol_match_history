@@ -1,3 +1,7 @@
 .layout {
-    background-color : orange;
+    .main-container{
+        background-color : rgba(255, 255, 255, 0.4);
+        border-radius : 10px;
+        min-height : 350px;
+    }
 }

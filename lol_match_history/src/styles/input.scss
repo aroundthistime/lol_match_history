@@ -2,8 +2,9 @@ input {
     border-radius: $border-radius;
     border : $gray-border;
     padding : 0 10px;
-    font-size : 12px;
-    @include laptop {
-        font-size : 14px;
+    font-size : 14px;
+    height : 40px;
+    @include mobile {
+        font-size :12px;
     }
 }

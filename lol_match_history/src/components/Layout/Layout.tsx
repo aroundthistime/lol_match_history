@@ -1,11 +1,12 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 
-const Layout = (): JSX.Element => (
+const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => (
     <div className="layout">
         <Header />
-        <Outlet />
+        <div className="main-container">
+            {children}
+        </div>
     </div>
 );
 

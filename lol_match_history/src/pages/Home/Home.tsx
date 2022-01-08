@@ -32,8 +32,11 @@ const Home = (): JSX.Element => {
                 />
                 <button
                     type="submit"
-                    className='home__submit button'
-                >검색</button>
+                    className='home__submit button submit-button'
+                >
+                    <span className="button__text button__text--default">검색</span>
+                    <i className="fas fa-search mobile 'button__text button__text--mobile" />
+                </button>
             </form>
         </div>
     )

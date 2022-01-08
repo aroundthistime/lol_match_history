@@ -5,3 +5,24 @@ button.button {
     background-color : $dark-blue;
     cursor: pointer;
 }
+
+button.submit-button{
+    width : 60px;
+    height : 40px;
+    margin-left : 20px;
+    .button__text--default {
+        display : inline-block;
+    }
+    .button__text--mobile {
+        display : none;
+    }
+    @include mobile {
+        margin-left : 0px;
+        .button__text--default {
+            display : none;
+        }
+        .button__text--mobile {
+            display : block;
+        }
+    }
+}

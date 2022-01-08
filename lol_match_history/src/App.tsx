@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, RouteProps, Routes } from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, RouteProps, Routes } from 'react-router-dom';
 import './styles/index.scss';
 import Home from './pages/Home/Home';
 import Histories from './pages/Histories/Histories';
@@ -10,11 +10,16 @@ import Layout from './components/Layout/Layout';
 function App() {
   return (
     <div className='container'>
-      {/* <Header /> */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/histories/:username' element={<Histories />} />
+          <Route path='/histories/:username'
+            element={
+              <Layout>
+                <Histories />
+              </Layout>
+            }
+          />
           <Route path='/history/:id' element={<History />} />
         </Routes>
       </BrowserRouter>

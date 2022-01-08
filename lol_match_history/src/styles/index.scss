@@ -25,6 +25,10 @@ body {
     background-color : $blue;
 }
 
+a {
+    text-decoration: none;
+}
+
 .no-drag{
     -ms-user-select: none;
     -moz-user-select: -moz-none;
@@ -34,7 +38,7 @@ body {
 }
 
 .container {
-    min-width : 100vw;
+    min-width : 410px;
     min-height : 100vh;
     padding : 20px;
     position : relative;
