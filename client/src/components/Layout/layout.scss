@@ -2,7 +2,7 @@
     .main-container{
         position: relative;
         background-color : rgba(255, 255, 255, 0.4);
-        border-radius : 10px;
+        border-radius : $border-radius;
         min-height : 350px;
     }
 }

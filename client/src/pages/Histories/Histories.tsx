@@ -11,6 +11,7 @@ interface User {
     puuid: string;
     name: string;
     profileIconId: number;
+    profileIconUri: string;
     revisionDate: number;
     summonerLevel: number;
 }
@@ -31,13 +32,14 @@ const Histories = (): JSX.Element => {
                         puuid: 'b0XjOSpDlTzSkw9O_LJ5u2iiHc1y8RLked9YoGsxJc743YVXXTSeHshMZNYpQvvSRQn73O4ZwYSkog',
                         name: '콘요맘떼',
                         profileIconId: 3622,
+                        profileIconUri: "http://127.0.0.1:4000/static/img/profileicon/3622.png",
                         revisionDate: 1639978640000,
                         summonerLevel: 160
                     }
                 };
                 setUser(response.data);
                 // const response = await axios.get(`/summoner/${username}`);
-                // if (response.data.result){
+                // if (response.data.result) {
                 //     setUser(response.data);
                 //     //have to fetch user matches
                 // } else {
@@ -62,6 +64,7 @@ const Histories = (): JSX.Element => {
             {user && (
                 <UserProfile
                     name={user.name}
+                    profileIconUri={user.profileIconUri}
                     profileIconId={user.profileIconId}
                     summonerLevel={user.summonerLevel}
                 />
