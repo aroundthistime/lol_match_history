@@ -18,6 +18,11 @@ button.submit-button{
     }
     @include mobile {
         margin-left : 0px;
+    }
+}
+
+@include mobile {
+    button {
         .button__text--default {
             display : none;
         }

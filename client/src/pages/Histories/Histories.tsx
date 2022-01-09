@@ -23,6 +23,7 @@ const Histories = (): JSX.Element => {
     const { username } = params;
 
     const fetchUser = async () => {
+        setLoading(true);
         if (username) {
             try {
                 const response = {
@@ -30,7 +31,7 @@ const Histories = (): JSX.Element => {
                         id: 'F_snKLhC_Kck921IU30DtHJStIGoV4lJcr4X4J5kvW2LZw',
                         accountId: 'PLaHM7vT7Pfs-QiK9n-OjB5uHfL1Nn7CIgroAG6q5bOJ',
                         puuid: 'b0XjOSpDlTzSkw9O_LJ5u2iiHc1y8RLked9YoGsxJc743YVXXTSeHshMZNYpQvvSRQn73O4ZwYSkog',
-                        name: '콘요맘떼',
+                        name: '콘요맘떼ㅣㅇ라고도',
                         profileIconId: 3622,
                         profileIconUri: "http://127.0.0.1:4000/static/img/profileicon/3622.png",
                         revisionDate: 1639978640000,
@@ -67,6 +68,7 @@ const Histories = (): JSX.Element => {
                     profileIconUri={user.profileIconUri}
                     profileIconId={user.profileIconId}
                     summonerLevel={user.summonerLevel}
+                    refresh={fetchUser}
                 />
             )}
             {user === false && (
