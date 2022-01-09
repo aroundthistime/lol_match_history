@@ -2,6 +2,7 @@ const { default: axios } = require('axios');
 const path = require("path");
 require('dotenv').config()
 var express = require('express');
+const { fetchByUsername } = require('./controllers');
 
 const app = express();
 
@@ -34,37 +35,4 @@ app.listen(process.env.PORT, () => console.log("Server running"));
 //     next();
 // });
 
-app.get('/summoner/:username', async (req, res) => {
-    const {
-        params: { username }
-    } = req;
-    try {
-        const url = encodeURI(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${process.env.API_KEY}`)
-        const response = await axios.get(url);
-        console.log(response.data);
-        let result; //fetch 결과
-        if (response.status === 200) {
-            result = true; //성공
-            const profileIconUri = `http://127.0.0.1:${process.env.PORT}/static/img/profileicon/${response.data.profileIconId}.png`
-            res.json({
-                result,
-                profileIconUri,
-                ...response.data,
-            })
-        } else {
-            if (response.status === 404) {
-                result = null; //해당 소환사 없음
-            } else {
-                result = false; //그 외의 이유로 fetch 실패
-            }
-            res.json({
-                result
-            })
-        }
-    } catch (error) {
-        console.log(error);
-        res.json({
-            result: false,
-        })
-    }
-})
+app.get('/summoner/:username', fetchByUsername)
