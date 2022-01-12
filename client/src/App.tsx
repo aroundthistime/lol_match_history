@@ -4,7 +4,6 @@ import './styles/index.scss';
 import Home from './pages/Home/Home';
 import Histories from './pages/Histories/Histories';
 import History from './pages/History';
-import Header from './components/Header/Header';
 import Layout from './components/Layout/Layout';
 import StatusMessage from './components/StatusMessage/StatusMessage';
 
