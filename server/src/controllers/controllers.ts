@@ -1,6 +1,7 @@
-import { getChampionImageUrl, getSummonerSpellImageUrl, getTierImageUrl } from "./imageExtractors";
+import { getChampionImageUrl, getProfileIconUri, getSummonerSpellImageUrl, getTierImageUrl } from "../utils/imageExtractors";
 
-const { default: axios } = require("axios");
+import axios from "axios";
+import { Request, Response, NextFunction } from 'express';
 
 const RANKED_SOLO = 'RANKED_SOLO_5x5';
 const RANKED_TEAM = 'RANKED_TEAM_5x5';
@@ -47,14 +48,16 @@ const QUEUE_TYPES_KOREAN = {
     "clash": "격전"
 }
 
-const fetchUser = async (username) => {
+
+
+const fetchUser = async (username: string) => {
     try {
-        const url = encodeURI(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${process.env.API_KEY}`)
+        const url: string = encodeURI(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${process.env.API_KEY}`)
         const response = await axios.get(url);
-        let result; //fetch 결과
+        let result: boolean; //fetch 결과
         if (response.status === 200) {
             result = true; //성공
-            const profileIconUri = `http://127.0.0.1:${process.env.PORT}/static/img/profileicon/${response.data.profileIconId}.png`
+            const profileIconUri = getProfileIconUri(response.data.profileIconId);
             return ({
                 result,
                 profileIconUri,
@@ -207,7 +210,7 @@ const fetchCurrentMatch = async (summonerId) => {
     }
 }
 
-export const fetchByUsername = async (req, res) => {
+export const fetchByUsername = async (req: Request, res: Response) => {
     const {
         params: { username }
     } = req;

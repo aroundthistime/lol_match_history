@@ -1,5 +1,7 @@
 import axios from "axios";
 
+export const getProfileIconUri = (profileIconId: string): string => `http://127.0.0.1:${process.env.PORT}/static/img/profileicon/${profileIconId}.png`
+
 export const getTierImageUrl = (tier) => {
     return `http://127.0.0.1:${process.env.PORT}/static/img/tiers/${tier}.png`
 }
