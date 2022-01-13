@@ -1,7 +1,7 @@
 import { Champion } from "./Champion";
 import { Item } from "./Item";
 import { Perks } from "./Perks";
-import { Spell } from "./Spell";
+import { SummonerSpell } from "./Spell";
 import { Stat } from "./Stat";
 import { User } from "./User";
 
@@ -13,7 +13,7 @@ export interface Player extends User {
     champion: Champion;
     mainPerks: Perks;
     subPerks: Perks;
-    spells: Spell[];
+    summonerSpells: SummonerSpell[];
     stats?: Stat[];
     championLevel?: number;
     items?: [Item | undefined];

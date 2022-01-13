@@ -8,7 +8,7 @@ import { Tier } from "../types/Tier";
 import { Tiers } from "../types/Tiers";
 import { CurrentMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
 import { ErrorCode } from "../types/errorCode";
-import { ChampionDto, ParticipantDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
+import { ChampionDto, ParticipantDto, ParticipantDtoCurrentGame, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
 import { TargetQueueType } from "../types/TargetQueueType";
 import { TeamId } from "../types/TeamId";
 import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
@@ -174,9 +174,10 @@ const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Prom
 
 }
 
-const extractGamePlayerInfos = async (participants: ParticipantDto[], targetSummonerId: string | undefined) => {
+const extractCurrentGamePlayerInfos = async (participants: ParticipantDtoCurrentGame[], targetSummonerId: string | undefined) => {
     return Promise.all(participants.map(async (participant) => {
         const champion = await getChampionInfos(participant.championId);
+        const summonerSpells = await getPlayerSummonerSpells(participant.spell1Id, participant.spell2Id);
         // const mainPerks = await get
         return ({
             champion
@@ -192,7 +193,7 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
             const queueTypeId: QueueTypeId = response.data.gameQueueConfigId;
             const gameModeEng: QueueTypeEng = constants.codes.queueType[queueTypeId];
             const gameModeKor: QueueTypeKor = constants.korean.queueType[gameModeEng];
-            const gamePlayers: Player[] = await extractGamePlayerInfos(response.data.participants, summonerId);
+            const gamePlayers: Player[] = await extractCurrentGamePlayerInfos(response.data.participants, summonerId);
             return ({
                 gameLength: response.data.gameLength,
                 gameMode: gameModeKor,
