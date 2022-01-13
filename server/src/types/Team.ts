@@ -1,8 +1,8 @@
 import { Champion } from "./Champion";
 
 export interface Team {
-    isBlue: boolean;
-    bans: Champion[];
+    isBlueTeam: boolean;
+    bans?: (Champion | null)[];
     championKills?: number;
     championAssists?: number;
     dragonKills?: number;

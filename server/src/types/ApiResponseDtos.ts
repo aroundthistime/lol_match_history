@@ -29,6 +29,8 @@ export interface ParticipantDtoDefault {
     summonerName: string;
 }
 
+
+//현재 진행중인 게임 (미완료 상태)
 export interface ParticipantDtoCurrentGame extends ParticipantDtoDefault {
     perks: PerksDtoCurrentGame;
     profileIconId: number;
@@ -38,8 +40,25 @@ export interface ParticipantDtoCurrentGame extends ParticipantDtoDefault {
     gameCustomizationObjects: GameCustomizationObject[];
 }
 
+export interface PerksDtoCurrentGame {
+    perkIds: number[];
+    perkStyle: number;
+    perkSubStyle: number;
+}
+
+export interface GameCustomizationObject {
+    category: string;
+    content: string;
+}
+
+export interface BannedChampionsCurrentGame {
+    pickTurn: number;
+    championId: number;
+    teamId: number;
+}
 
 
+//종료된 게임
 export interface ParticipantDtoEndedGame extends ParticipantDtoDefault {
     perks: PerksDtoEndedGame;
     assists: number;
@@ -149,12 +168,6 @@ export interface PerksDtoEndedGame {
     styles: PerkStyleDto[];
 }
 
-export interface PerksDtoCurrentGame {
-    perkIds: number[];
-    perkStyle: number;
-    perkSubStyle: number;
-}
-
 export interface PerkStatsDto {
     defense: number;
     flex: number;
@@ -172,11 +185,6 @@ export interface PerkStyleSelectionDto {
     var1: number;
     var2: number;
     var3: number;
-}
-
-export interface GameCustomizationObject {
-    category: string;
-    content: string;
 }
 
 export interface ChampionDto {

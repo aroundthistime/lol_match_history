@@ -2,7 +2,7 @@ export default {
     "solo": "솔랭",
     "norm": "일반",
     "aram": "칼바람",
-    "flex": "자랭",
+    "flex": "자유랭크",
     "nbg": "돌넥",
     "usb": "궁주문서",
     "urf": "URF",

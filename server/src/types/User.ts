@@ -4,11 +4,11 @@ import { Tiers } from "./Tiers";
 
 export interface User {
     name: string;
-    profileIcon: string;
-    accountId: string;
     id: string;
-    puuid: string;
-    summonerLevel: number;
+    profileIcon?: string;
+    accountId?: string;
+    puuid?: string;
+    summonerLevel?: number;
     tiers?: Tiers;
     currentMatch?: Match;
     latestMatches?: Match[];

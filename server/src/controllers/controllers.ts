@@ -1,24 +1,27 @@
-import { getChampionImageUrl, getProfileIconUri, getSummonerSpellImageUrl, getTierImageUrl } from "../utils/imageExtractors";
+import { getProfileIconUri, getTierImageUrl } from "../utils/imageExtractors";
 
 import axios from "axios";
 import { Request, Response, NextFunction } from 'express';
 import { User } from "../types/User";
 import constants from "../constants/constants";
 import { Tier } from "../types/Tier";
-import { Tiers } from "../types/Tiers";
 import { CurrentMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
 import { ErrorCode } from "../types/errorCode";
-import { ChampionDto, ParticipantDtoCurrentGame, PerksDtoCurrentGame, PerkSlotDto, PerkStyleDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
+import { BannedChampionsCurrentGame, ChampionDto, ParticipantDtoCurrentGame, PerksDtoCurrentGame, PerkSlotDto, PerkStyleDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
 import { TargetQueueType } from "../types/TargetQueueType";
-import { TeamId } from "../types/TeamId";
 import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
 import { Player } from "../types/Player";
 import { Champion } from "../types/Champion";
 import { Rune } from "../types/Rune";
 import { Perks } from "../types/Perks";
+import { Match } from "../types/Match";
+import { Team } from "../types/Team";
+import { SummonerSpell } from "../types/Spell";
 
 
-const VERSION = "12.1.1"
+const VERSION = "12.1.1";
+
+const NO_CHAMPION_ID = -1;
 
 const fetchUser = async (username: string): Promise<UserFetch> => {
     try {
@@ -113,6 +116,7 @@ const fetchUserTiers = async (summonerId: string): Promise<TiersFetch> => {
             return handleFailedRequest(response.status);
         }
     } catch (error) {
+        console.log(error);
         return ({
             result: false,
             errorCode: constants.codes.error.codeError
@@ -121,29 +125,36 @@ const fetchUserTiers = async (summonerId: string): Promise<TiersFetch> => {
 }
 
 
-const findTargetChampionObj = (champions: ChampionDto[], championId: string): ChampionDto => champions.find(champion => champion.key === championId)
+const findTargetChampionObj = (champions: ChampionDto[], championId: string): ChampionDto | undefined => champions.find(champion => champion.key === championId)
 
-const getChampionInfos = async (championId: number): Promise<Champion | false> => {
+const getChampionInfos = async (championId: number): Promise<Champion | null> => {
     try {
+        if (championId === NO_CHAMPION_ID) {
+            return null;
+        }
         const { status, data: { data: championJson } } = await axios.get(`http://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/champion.json`);
         if (status !== 200) {
             throw Error;
         }
         const championObjects: ChampionDto[] = Object.values(championJson);
         const targetChampion = findTargetChampionObj(championObjects, `${championId}`);//json에는 champion ID가 string으로 저장되어있기 때문에 맞춰서 변환
+        if (!targetChampion) {
+            throw Error;
+        }
         return ({
             id: championId,
             name: targetChampion.name,
-            image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/champion/${champion.id}.png`
+            image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/champion/${championId}.png`
         })
     } catch (error) {
-        return false;
+        console.log(error);
+        return null;
     }
 }
 
 // const extractPlayerRunes = async
 
-const getPlayerSummonerSpell = async (summonerSpells: SummonerSpellDto[], spellId: number): Spell | false => {
+const getPlayerSummonerSpell = (summonerSpells: SummonerSpellDto[], spellId: number): SummonerSpell | false => {
     const summonerSpell: SummonerSpellDto | undefined = summonerSpells.find(summonerSpell => summonerSpell.key === `${spellId}`);
     if (summonerSpell === undefined) {
         return false
@@ -151,11 +162,11 @@ const getPlayerSummonerSpell = async (summonerSpells: SummonerSpellDto[], spellI
     return ({
         id: spellId,
         name: summonerSpell.name,
-        image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/spell/${summonerSpell.id}.png`;
+        image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/spell/${summonerSpell.id}.png`
     })
 }
 
-const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Promise<Spell[] | false> => {
+const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Promise<SummonerSpell[] | false> => {
     try {
         const { status, data: { data: summonerSpellsJson } } = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/summoner.json`);
         if (status !== 200) {
@@ -176,7 +187,7 @@ const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Prom
 }
 
 const getSelectedPerkStyle = async (selectedPerkStyleId: number): Promise<PerkStyleDto | undefined> => {
-    const perkStylesList: PerkStyleDto[] = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/runesReforged.json`);
+    const { data: perkStylesList }: { data: PerkStyleDto[] } = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/runesReforged.json`);
     return perkStylesList.find(perkStyle => perkStyle.id === selectedPerkStyleId);
 }
 
@@ -221,31 +232,82 @@ const getPerks = async (runeIds: number[], perkStyleId: number) => {
             slots: selectedRunes
         })
     } catch (error) {
+        console.log(error);
         return false;
     }
 }
 
-const getCurrentGamePerks = async (perks: PerksDtoCurrentGame): Promise<Perks[] | false> => {
+const getCurrentGamePerks = async (perks: PerksDtoCurrentGame): Promise<(Perks | false)[]> => {
     const mainPerkIds = perks.perkIds.slice(0, 4);
     const subPerkIds = perks.perkIds.slice(4, 6);
     const mainPerks = await getPerks(mainPerkIds, perks.perkStyle);
     const subPerks = await getPerks(subPerkIds, perks.perkSubStyle);
-    if (mainPerks && subPerks) {
-        return [mainPerks, subPerks]
-    } else {
-        return false
-    }
+    return [mainPerks, subPerks]
 }
 
 const extractCurrentGamePlayerInfos = async (participants: ParticipantDtoCurrentGame[], targetSummonerId: string | undefined) => {
-    return Promise.all(participants.map(async (participant) => {
-        const champion = await getChampionInfos(participant.championId);
-        const summonerSpells = await getPlayerSummonerSpells(participant.spell1Id, participant.spell2Id);
-        const perks = await getCurrentGamePerks(participant.perks)
-        return ({
-            champion
-        })
+    try {
+        return Promise.all(participants.map(async (participant) => {
+            const champion = await getChampionInfos(participant.championId);
+            if (champion === null) {
+                throw Error;
+            }
+            const summonerSpells = await getPlayerSummonerSpells(participant.spell1Id, participant.spell2Id);
+            if (summonerSpells === false) {
+                throw Error
+            }
+            const [mainPerks, subPerks] = await getCurrentGamePerks(participant.perks);
+            if (!mainPerks || !subPerks) {
+                throw Error
+            }
+            return ({
+                name: participant.summonerName,
+                id: participant.summonerId,
+                isSearchTarget: participant.summonerId === targetSummonerId,
+                isBlueTeam: participant.teamId === constants.codes.teamId.blue,
+                champion,
+                mainPerks,
+                subPerks,
+                summonerSpells
+            })
+        }))
+    } catch (error) {
+        console.log(error);
+        return false
+    }
+
+}
+
+const filterBansByTeamId = (bannedChampions: BannedChampionsCurrentGame[], teamId: number) =>
+    bannedChampions.filter(bannedChampion => bannedChampion.teamId === teamId);
+
+const addChampionInfosToBanList = async (bannedChampions: BannedChampionsCurrentGame[]): Promise<(Champion | null)[]> => {
+    return Promise.all(bannedChampions.map(async (bannedChampion) => {
+        return getChampionInfos(bannedChampion.championId)
     }))
+}
+
+const getCurrentGameBans = async (bannedChampions: BannedChampionsCurrentGame[]): Promise<(Champion | null)[][]> => {
+    const blueTeamId = constants.codes.teamId.blue;
+    const redTeamId = constants.codes.teamId.red;
+    const blueTeamBans = filterBansByTeamId(bannedChampions, blueTeamId);
+    const redTeamBans = filterBansByTeamId(bannedChampions, redTeamId);
+    const blueTeamBansWithChampionInfos = await addChampionInfosToBanList(blueTeamBans);
+    const redTeamBansWithChampionInfos = await addChampionInfosToBanList(redTeamBans);
+    return [blueTeamBansWithChampionInfos, redTeamBansWithChampionInfos]
+}
+
+const extractCurrentGameTeamsInfo = async (bannedChampions: BannedChampionsCurrentGame[]): Promise<Team[]> => {
+    const [blueTeamBans, redTeamBans] = await getCurrentGameBans(bannedChampions);
+    const blueTeam: Team = {
+        isBlueTeam: true,
+        bans: blueTeamBans
+    };
+    const redTeam: Team = {
+        isBlueTeam: false,
+        bans: redTeamBans
+    }
+    return [blueTeam, redTeam]
 }
 
 
@@ -253,19 +315,33 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
     try {
         const response = await axios.get(`https://kr.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/${summonerId}?api_key=${process.env.API_KEY}`);
         if (response.status === 200) {
-            const queueTypeId: QueueTypeId = response.data.gameQueueConfigId;
+            const currentMatchData = response.data;
+            const queueTypeId: QueueTypeId = currentMatchData.gameQueueConfigId;
             const gameModeEng: QueueTypeEng = constants.codes.queueType[queueTypeId];
             const gameModeKor: QueueTypeKor = constants.korean.queueType[gameModeEng];
-            const gamePlayers: Player[] = await extractCurrentGamePlayerInfos(response.data.participants, summonerId);
-            return ({
-                gameLength: response.data.gameLength,
+            const gamePlayers: Player[] | false = await extractCurrentGamePlayerInfos(currentMatchData.participants, summonerId);
+            if (!gamePlayers) {
+                throw Error
+            }
+            const [blueTeam, redTeam]: Team[] = await extractCurrentGameTeamsInfo(currentMatchData.bannedChampions)
+            const currentMatch: Match = {
+                id: currentMatchData.gameId,
                 gameMode: gameModeKor,
-                players: gamePlayers
+                gameStartTime: currentMatchData.gameStartTime,
+                gameLength: currentMatchData.gameLength,
+                participants: gamePlayers,
+                blueTeam,
+                redTeam
+            }
+            return ({
+                result: true,
+                currentMatch
             })
         } else {
             return handleFailedRequest(response.status);
         }
     } catch (error) { //no current games or API KEY expired
+        console.log(error);
         return ({
             result: false,
             errorCode: constants.codes.error.codeError
@@ -296,12 +372,19 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         return;
     }
     const currentMatchFetchResult: CurrentMatchFetch = await fetchCurrentMatch(user.id);
+    if (!currentMatchFetchResult.result) {
+        res.json({
+            result: false,
+            errorCode: currentMatchFetchResult.errorCode
+        });
+        return;
+    }
     result = {
         result: true,
         user: {
             ...user,
             tiers: tiersFetchResult.tiers,
-            currentMatch
+            currentMatch: currentMatchFetchResult.currentMatch
         }
     }
     res.json(result);
