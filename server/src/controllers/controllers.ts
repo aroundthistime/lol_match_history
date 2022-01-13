@@ -2,124 +2,117 @@ import { getChampionImageUrl, getProfileIconUri, getSummonerSpellImageUrl, getTi
 
 import axios from "axios";
 import { Request, Response, NextFunction } from 'express';
-
-const RANKED_SOLO = 'RANKED_SOLO_5x5';
-const RANKED_TEAM = 'RANKED_TEAM_5x5';
-
-const CODES = {
-    QUEUE_TYPES: {
-        400: 'norm', //Normal Draft Pick
-        420: 'solo',
-        430: 'norm',
-        440: 'flex',
-        450: 'aram',
-        700: 'clash',
-        830: 'ai',
-        840: 'ai',
-        850: 'ai',
-        900: 'urf',
-        920: 'poro',
-        1020: 'ofa',
-        1300: 'nbg',
-        1400: 'usb', // Ultimate Spellbook
-        2000: 'tut',
-        2010: 'tut',
-        2020: 'tut',
-    },
-    TEAM_ID: {
-        blue: 100,
-        red: 200
-    }
-}
-
-const QUEUE_TYPES_KOREAN = {
-    "solo": "솔랭",
-    "norm": "일반",
-    "aram": "칼바람",
-    "flex": "자랭",
-    "nbg": "돌넥",
-    "usb": "궁주문서",
-    "urf": "URF",
-    "ofa": "단일",
-    "ai": "AI대전",
-    "poro": "포로왕",
-    "tut": "튜토리얼",
-    "etc": "기타",
-    "clash": "격전"
-}
+import { User } from "../types/User";
+import constants from "../constants/constants";
+import { Tier } from "../types/Tier";
+import { Tiers } from "../types/Tiers";
+import { CurrentMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
+import { ErrorCode } from "../types/errorCode";
+import { TierDto } from "../types/ApiResponseDtos";
+import { TargetQueueType } from "../types/TargetQueueType";
+import { TeamId } from "../types/TeamId";
+import { QueueTypeId } from "../types/QueueTypeId";
 
 
 
-const fetchUser = async (username: string) => {
+
+const fetchUser = async (username: string): Promise<UserFetch> => {
     try {
         const url: string = encodeURI(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${process.env.API_KEY}`)
         const response = await axios.get(url);
-        let result: boolean; //fetch 결과
         if (response.status === 200) {
-            result = true; //성공
-            const profileIconUri = getProfileIconUri(response.data.profileIconId);
+            const {
+                name,
+                id,
+                summonerLevel,
+                accountId,
+                puuid,
+            } = response.data;
+            const profileIcon: string = getProfileIconUri(response.data.profileIconId);
+            const user: User = {
+                name,
+                profileIcon,
+                accountId,
+                id,
+                puuid,
+                summonerLevel
+            };
             return ({
-                result,
-                profileIconUri,
-                ...response.data,
+                result: true,
+                user
             })
         } else {
-            if (response.status === 404) {
-                result = null; //해당 소환사 없음
-            } else {
-                result = false; //그 외의 이유로 fetch 실패
-            }
-            return ({
-                result
-            })
+            return handleFailedRequest(response.status);
         }
     } catch (error) {
         console.log(error);
         return ({
-            result: false
+            result: false,
+            errorCode: constants.codes.error.codeError
         })
     }
 }
 
-const extractTier = async (tiers, isSolo) => {
-    const targetQueueType = isSolo ? RANKED_SOLO : RANKED_TEAM;
-    let result = await tiers.find(tierObj => tierObj.queueType === targetQueueType);
-    if (result === undefined) {
+const handleFailedRequest = (statusCode: number): FetchResult => {
+    let errorCode: ErrorCode;
+    if (statusCode === 404) {
+        errorCode = constants.codes.error.noResult; //해당 이름의 유저 없음
+    } else if (statusCode === 403) {
+        errorCode = constants.codes.error.apiExpired; //api키 만료
+    } else {
+        errorCode = constants.codes.error.unauthorized; //허가되지 않은 접근
+    }
+    return ({
+        result: false,
+        errorCode
+    })
+}
+
+const extractTier = async (tiers: TierDto[], targetQueueType: TargetQueueType): Promise<Tier> => {
+    const targetTier = tiers.find(tierObj => tierObj.queueType === targetQueueType);
+    let result: Tier;
+    if (targetTier === undefined) { //티어 정보가 없으면 언랭
         result = {
             tier: "UNRANKED",
             tierImage: getTierImageUrl('UNRANKED')
         }
     } else {
         result = {
-            tier: result.tier,
-            tierImage: getTierImageUrl(result.tier),
-            rank: result.rank,
-            leaguePoints: result.leaguePoints,
-            wins: result.wins,
-            losses: result.losses
+            tier: targetTier.tier,
+            tierImage: getTierImageUrl(targetTier.tier),
+            rank: targetTier.rank,
+            leaguePoints: targetTier.leaguePoints,
+            wins: targetTier.wins,
+            losses: targetTier.losses,
+            miniSeries: targetTier.miniSeries
         }
     }
     return result;
 }
 
-const fetchUserTiers = async (summonerId) => {
+const fetchUserTiers = async (summonerId: string): Promise<TiersFetch> => {
     try {
         const response = await axios.get(`https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${process.env.API_KEY}`);
-        let solo;
-        let team;
-        if (response && response.data) {
-            solo = await extractTier(response.data, true);
-            team = await extractTier(response.data, false);
+        let solo: Tier;
+        let team: Tier;
+        if (response && response.status === 200 && response.data) {
+            solo = await extractTier(response.data, TargetQueueType.RankedSolo);
+            team = await extractTier(response.data, TargetQueueType.RankedTeam);
+            return ({
+                result: true,
+                tiers: {
+                    solo,
+                    team
+                }
+            })
         } else {
-            solo = await extractTier([], true);
-            team = await extractTier([], false);
+            return handleFailedRequest(response.status);
         }
-        return ({
-            solo,
-            team
-        })
     } catch (error) {
-        console.log(error);
+        return ({
+            result: false,
+            errorCode: constants.codes.error.codeError
+        })
     }
 }
 
@@ -180,8 +173,10 @@ const extractGamePlayerInfos = async (playersParameter) => {
     players = await getChampionImages(players);
     players = await getChampionRunes(players);
     // console.log(players)
-    const blueTeam = await players.filter(player => player.teamId === CODES.TEAM_ID.blue);
-    const redTeam = await players.filter(player => player.teamId === CODES.TEAM_ID.red);
+    const blueTeamId: TeamId = constants.codes.teamId.blue;
+    const redTeamId: TeamId = constants.codes.teamId.red;
+    const blueTeam = await players.filter(player => player.teamId === blueTeamId);
+    const redTeam = await players.filter(player => player.teamId === redTeamId);
     console.log(blueTeam);
     return ({
         blue: blueTeam,
@@ -190,23 +185,27 @@ const extractGamePlayerInfos = async (playersParameter) => {
 }
 
 
-const fetchCurrentMatch = async (summonerId) => {
+const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch> => {
     try {
         const response = await axios.get(`https://kr.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/${summonerId}?api_key=${process.env.API_KEY}`);
-        if (response.status !== 200) {
-            throw Error;
+        if (response.status === 200) {
+            const QueueTypeId: QueueTypeId = response.data.gameQueueConfigId;
+            const gameModeEng = constants.codes.queueTypes[queueTypeId];
+            const gameModeKor = QUEUE_TYPES_KOREAN[gameModeEng];
+            const gamePlayers = await extractGamePlayerInfos(response.data.participants);
+            return ({
+                gameLength: response.data.gameLength,
+                gameMode: gameModeKor,
+                players: gamePlayers
+            })
+        } else {
+            return handleFailedRequest(response.status);
         }
-        const gameModeEng = CODES.QUEUE_TYPES[response.data.gameQueueConfigId];
-        const gameModeKor = QUEUE_TYPES_KOREAN[gameModeEng];
-        const gamePlayers = await extractGamePlayerInfos(response.data.participants);
-        return ({
-            gameLength: response.data.gameLength,
-            gameMode: gameModeKor,
-            players: gamePlayers
-        })
-
     } catch (error) { //no current games or API KEY expired
-        return undefined
+        return ({
+            result: false,
+            errorCode: constants.codes.error.codeError
+        })
     }
 }
 
@@ -214,15 +213,32 @@ export const fetchByUsername = async (req: Request, res: Response) => {
     const {
         params: { username }
     } = req;
-    let user = await fetchUser(username);
-    if (user.result) {
-        const tiers = await fetchUserTiers(user.id);
-        const currentMatch = await fetchCurrentMatch(user.id)
-        user = {
+    let result: UserFetch;
+    let userFetchResult: UserFetch = await fetchUser(username);
+    if (!userFetchResult.result || userFetchResult.user === undefined) { //해당 이름의 소환사가 있으면
+        res.json({
+            result: false,
+            errorCode: userFetchResult.errorCode
+        })
+        return;
+    }
+    const user: User = userFetchResult.user;
+    const tiersFetchResult: TiersFetch = await fetchUserTiers(user.id);
+    if (!tiersFetchResult.result || tiersFetchResult.tiers === undefined) {
+        res.json({
+            result: false,
+            errorCode: tiersFetchResult.errorCode
+        })
+        return;
+    }
+    const currentMatchFetchResult: CurrentMatchFetch = await fetchCurrentMatch(user.id);
+    result = {
+        result: true,
+        user: {
             ...user,
-            tiers,
+            tiers: tiersFetchResult.tiers,
             currentMatch
         }
     }
-    res.json(user);
+    res.json(result);
 }
