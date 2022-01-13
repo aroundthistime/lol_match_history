@@ -26,7 +26,7 @@ export const getChampionImageUrl = async (championId, championJson) => {
             return championObj.key === championId;
         })
         const championName = champion[0];
-        return `http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/${championName}.png`;
+        return
     } catch (error) {
         return false;
     }

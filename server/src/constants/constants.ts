@@ -1,9 +1,9 @@
-import codes from "./codes";
-import korean from "./korean";
+import codes from "./codes/codes";
+import korean from "./korean/korean";
 
 const Constants = {
-    codes: codes,
-    korean: korean
+    codes,
+    korean
 } as const;
 
 export default Constants;

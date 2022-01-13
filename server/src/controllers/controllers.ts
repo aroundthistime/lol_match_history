@@ -8,10 +8,13 @@ import { Tier } from "../types/Tier";
 import { Tiers } from "../types/Tiers";
 import { CurrentMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
 import { ErrorCode } from "../types/errorCode";
-import { TierDto } from "../types/ApiResponseDtos";
+import { ChampionDto, ParticipantDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
 import { TargetQueueType } from "../types/TargetQueueType";
 import { TeamId } from "../types/TeamId";
-import { QueueTypeId } from "../types/QueueTypeId";
+import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
+import { Player } from "../types/Player";
+import { Champion } from "../types/Champion";
+import { Spell } from "../types/Spell";
 
 
 
@@ -116,72 +119,69 @@ const fetchUserTiers = async (summonerId: string): Promise<TiersFetch> => {
     }
 }
 
-const getSummonerSpellImages = async (players) => {
-    const summonerSpellResponse = await axios.get("https://ddragon.leagueoflegends.com/cdn/10.6.1/data/en_US/summoner.json");
+
+const findTargetChampionObj = (champions: ChampionDto[], championId: string): ChampionDto => champions.find(champion => champion.key === championId)
+
+const getChampionInfos = async (championId: number): Promise<Champion | false> => {
     try {
-        const summonerSpellJson = summonerSpellResponse.data.data;
-        return Promise.all(players.map(async (player) => {
-            const summonerSpell1Image = await getSummonerSpellImageUrl(`${player.spell1Id}`, summonerSpellJson);//json에는 spell ID가 string으로 저장되어있기 때문에 맞춰서 변환
-            const summonerSpell2Image = await getSummonerSpellImageUrl(`${player.spell2Id}`, summonerSpellJson);
-            return ({
-                ...player,
-                spell1Image: summonerSpell1Image,
-                spell2Image: summonerSpell2Image
-            });
-        }))
+        const { status, data: { data: championJson } } = await axios.get("http://ddragon.leagueoflegends.com/cdn/12.1.1/data/ko_KR/champion.json");
+        if (status !== 200) {
+            throw Error;
+        }
+        const championObjects: ChampionDto[] = Object.values(championJson);
+        const targetChampion = findTargetChampionObj(championObjects, `${championId}`);//json에는 champion ID가 string으로 저장되어있기 때문에 맞춰서 변환
+        return ({
+            id: championId,
+            name: targetChampion.name,
+            image: `http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/${champion.id}.png`
+        })
     } catch (error) {
+        return false;
+    }
+}
+
+// const extractPlayerRunes = async
+
+const getPlayerSummonerSpell = async (summonerSpells: SummonerSpellDto[], spellId: number): Spell | false => {
+    const summonerSpell: SummonerSpellDto | undefined = summonerSpells.find(summonerSpell => summonerSpell.key === `${spellId}`);
+    if (summonerSpell === undefined) {
         return false
     }
-}
-
-const getChampionImages = async (players) => {
-    const championResponse = await axios.get("http://ddragon.leagueoflegends.com/cdn/12.1.1/data/en_US/champion.json");
-    try {
-        const championJson = championResponse.data.data;
-        return Promise.all(players.map(async (player) => {
-            const championImage = await getChampionImageUrl(`${player.championId}`, championJson); //json에는 champion ID가 string으로 저장되어있기 때문에 맞춰서 변환
-            return ({
-                ...player,
-                championImage
-            });
-        }))
-    } catch (error) {
-        console.log(error);
-        return false;
-    }
-}
-
-const getRunes = async (players) => {
-    const response = await axios.get('https://ddragon.leagueoflegends.com/cdn/10.6.1/data/en_US/runesReforged.json');
-    try {
-        const runeDatas = response.data;
-        return Promise.all(players.map(async (player) => {
-            const mainRunes = await getChampionRunes(player.perks, perkIds, player.perks.perkStyle, runeDatas);
-            const subRunes = await getChampionRunes(player.perks, perkIds, player.perks.perkSubStyle, runeDatas);
-            return ({
-                ...player,
-                championImage
-            });
-        }))
-    } catch (error) {
-        return false;
-    }
-}
-
-const extractGamePlayerInfos = async (playersParameter) => {
-    let players = await getSummonerSpellImages(playersParameter);
-    players = await getChampionImages(players);
-    players = await getChampionRunes(players);
-    // console.log(players)
-    const blueTeamId: TeamId = constants.codes.teamId.blue;
-    const redTeamId: TeamId = constants.codes.teamId.red;
-    const blueTeam = await players.filter(player => player.teamId === blueTeamId);
-    const redTeam = await players.filter(player => player.teamId === redTeamId);
-    console.log(blueTeam);
     return ({
-        blue: blueTeam,
-        red: redTeam
+        id: spellId,
+        name: summonerSpell.name,
+        image: `http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/${summonerSpell.id}.png`;
     })
+}
+
+const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Promise<Spell[] | false> => {
+    try {
+        const { status, data: { data: summonerSpellsJson } } = await axios.get("https://ddragon.leagueoflegends.com/cdn/10.6.1/data/ko_KR/summoner.json");
+        if (status !== 200) {
+            throw Error;
+        }
+        const summonerSpellObjects: SummonerSpellDto[] = Object.values(summonerSpellsJson);
+        const summonerSpell1 = getPlayerSummonerSpell(summonerSpellObjects, spell1Id);
+        const summonerSpell2 = getPlayerSummonerSpell(summonerSpellObjects, spell2Id);
+        if (summonerSpell1 && summonerSpell2) {
+            return [summonerSpell1, summonerSpell2];
+        } else {
+            return false
+        }
+    } catch {
+        return false
+    }
+
+}
+
+const extractGamePlayerInfos = async (participants: ParticipantDto[], targetSummonerId: string | undefined) => {
+    return Promise.all(participants.map(async (participant) => {
+        const champion = await getChampionInfos(participant.championId);
+        // const mainPerks = await get
+        return ({
+            champion
+        })
+    }))
 }
 
 
@@ -189,10 +189,10 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
     try {
         const response = await axios.get(`https://kr.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/${summonerId}?api_key=${process.env.API_KEY}`);
         if (response.status === 200) {
-            const QueueTypeId: QueueTypeId = response.data.gameQueueConfigId;
-            const gameModeEng = constants.codes.queueTypes[queueTypeId];
-            const gameModeKor = QUEUE_TYPES_KOREAN[gameModeEng];
-            const gamePlayers = await extractGamePlayerInfos(response.data.participants);
+            const queueTypeId: QueueTypeId = response.data.gameQueueConfigId;
+            const gameModeEng: QueueTypeEng = constants.codes.queueType[queueTypeId];
+            const gameModeKor: QueueTypeKor = constants.korean.queueType[gameModeEng];
+            const gamePlayers: Player[] = await extractGamePlayerInfos(response.data.participants, summonerId);
             return ({
                 gameLength: response.data.gameLength,
                 gameMode: gameModeKor,

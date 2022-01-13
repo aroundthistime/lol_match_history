@@ -9,6 +9,7 @@ import { User } from "./User";
 
 export interface Player extends User {
     isSearchTarget: boolean; //검색의 기준이 되는 유저인지 여부
+    isBlueTeam: boolean;
     champion: Champion;
     mainPerks: Perks;
     subPerks: Perks;

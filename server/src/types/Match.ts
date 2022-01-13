@@ -10,5 +10,6 @@ export interface Match {
     gameLength: number;
     redTeam?: Team;
     blueTeam?: Team;
+    participants: Player[];
     bannedChampions: Champion[];
 }
