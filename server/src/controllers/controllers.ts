@@ -8,16 +8,17 @@ import { Tier } from "../types/Tier";
 import { Tiers } from "../types/Tiers";
 import { CurrentMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
 import { ErrorCode } from "../types/errorCode";
-import { ChampionDto, ParticipantDto, ParticipantDtoCurrentGame, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
+import { ChampionDto, ParticipantDtoCurrentGame, PerksDtoCurrentGame, PerkSlotDto, PerkStyleDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
 import { TargetQueueType } from "../types/TargetQueueType";
 import { TeamId } from "../types/TeamId";
 import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
 import { Player } from "../types/Player";
 import { Champion } from "../types/Champion";
-import { Spell } from "../types/Spell";
+import { Rune } from "../types/Rune";
+import { Perks } from "../types/Perks";
 
 
-
+const VERSION = "12.1.1"
 
 const fetchUser = async (username: string): Promise<UserFetch> => {
     try {
@@ -124,7 +125,7 @@ const findTargetChampionObj = (champions: ChampionDto[], championId: string): Ch
 
 const getChampionInfos = async (championId: number): Promise<Champion | false> => {
     try {
-        const { status, data: { data: championJson } } = await axios.get("http://ddragon.leagueoflegends.com/cdn/12.1.1/data/ko_KR/champion.json");
+        const { status, data: { data: championJson } } = await axios.get(`http://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/champion.json`);
         if (status !== 200) {
             throw Error;
         }
@@ -133,7 +134,7 @@ const getChampionInfos = async (championId: number): Promise<Champion | false> =
         return ({
             id: championId,
             name: targetChampion.name,
-            image: `http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/${champion.id}.png`
+            image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/champion/${champion.id}.png`
         })
     } catch (error) {
         return false;
@@ -150,13 +151,13 @@ const getPlayerSummonerSpell = async (summonerSpells: SummonerSpellDto[], spellI
     return ({
         id: spellId,
         name: summonerSpell.name,
-        image: `http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/${summonerSpell.id}.png`;
+        image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/spell/${summonerSpell.id}.png`;
     })
 }
 
 const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Promise<Spell[] | false> => {
     try {
-        const { status, data: { data: summonerSpellsJson } } = await axios.get("https://ddragon.leagueoflegends.com/cdn/10.6.1/data/ko_KR/summoner.json");
+        const { status, data: { data: summonerSpellsJson } } = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/summoner.json`);
         if (status !== 200) {
             throw Error;
         }
@@ -174,11 +175,73 @@ const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Prom
 
 }
 
+const getSelectedPerkStyle = async (selectedPerkStyleId: number): Promise<PerkStyleDto | undefined> => {
+    const perkStylesList: PerkStyleDto[] = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/runesReforged.json`);
+    return perkStylesList.find(perkStyle => perkStyle.id === selectedPerkStyleId);
+}
+
+const getFullPerkImagePath = (icon: string): string =>
+    `http://127.0.0.1:${process.env.PORT}/static/img/${icon}`
+
+const extractSelectedRunes = async (runeIds: number[], selectedPerkSlots: PerkSlotDto[]): Promise<Rune[]> => {
+    let result = [];
+    let perkSlotIndex = 0;
+    let runeIdsIndex = 0;
+    while (runeIdsIndex < runeIds.length && perkSlotIndex < selectedPerkSlots.length) {
+        const runeIdToSearch = runeIds[runeIdsIndex]; //현재 찾고자 하는 룬의 id
+        const searchResult = selectedPerkSlots[perkSlotIndex].runes.find(rune => rune.id === runeIdToSearch);
+        if (searchResult) {
+            const rune: Rune = {
+                id: searchResult.id,
+                name: searchResult.name,
+                image: getFullPerkImagePath(searchResult.icon)
+            }
+            result.push(rune)
+            runeIdsIndex++;
+        }
+        perkSlotIndex++;
+    }
+    return result;
+}
+
+const getPerks = async (runeIds: number[], perkStyleId: number) => {
+    try {
+        const selectedPerkStyle = await getSelectedPerkStyle(perkStyleId);
+        if (selectedPerkStyle === undefined) {
+            throw Error;
+        }
+        const selectedRunes: Rune[] = await extractSelectedRunes(runeIds, selectedPerkStyle.slots);
+        const styleBrief = {
+            id: selectedPerkStyle.id,
+            name: selectedPerkStyle.name,
+            image: getFullPerkImagePath(selectedPerkStyle.icon)
+        }
+        return ({
+            style: styleBrief,
+            slots: selectedRunes
+        })
+    } catch (error) {
+        return false;
+    }
+}
+
+const getCurrentGamePerks = async (perks: PerksDtoCurrentGame): Promise<Perks[] | false> => {
+    const mainPerkIds = perks.perkIds.slice(0, 4);
+    const subPerkIds = perks.perkIds.slice(4, 6);
+    const mainPerks = await getPerks(mainPerkIds, perks.perkStyle);
+    const subPerks = await getPerks(subPerkIds, perks.perkSubStyle);
+    if (mainPerks && subPerks) {
+        return [mainPerks, subPerks]
+    } else {
+        return false
+    }
+}
+
 const extractCurrentGamePlayerInfos = async (participants: ParticipantDtoCurrentGame[], targetSummonerId: string | undefined) => {
     return Promise.all(participants.map(async (participant) => {
         const champion = await getChampionInfos(participant.championId);
         const summonerSpells = await getPlayerSummonerSpells(participant.spell1Id, participant.spell2Id);
-        // const mainPerks = await get
+        const perks = await getCurrentGamePerks(participant.perks)
         return ({
             champion
         })
