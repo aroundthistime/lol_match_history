@@ -5,7 +5,6 @@ import constants from "../constants/constants";
 import { Tier } from "../types/Tier";
 import { CurrentMatchFetch, EndedMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
 import { ErrorCode } from "../types/errorCode";
-import { BannedChampionsCurrentGame, ChampionDto, ParticipantDtoCurrentGame, ParticipantDtoEndedGame, PerksDtoCurrentGame, PerkSlotDto, PerkStyleDto, PerkStyleSelectionDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
 import { TargetQueueType } from "../types/TargetQueueType";
 import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
 import { Player } from "../types/Player";
@@ -18,8 +17,13 @@ import { SummonerSpell } from "../types/Spell";
 import { getChampionsJsonUrl, getPerksJsonUrl, getSummonerSpellsJsonUrl } from "../utils/getUrl/json/getJsonUrls";
 import { getCurrentMatchUrl, getEndedMatchListUrl, getEndedMatchUrl, getUserInfoUrl, getUserTierUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
 import { getChampionImageUrl, getFullPerkImageUrl, getProfileIconUrl, getSummonerSpellImageUrl, getTierImageUrl } from "../utils/getUrl/images/getImageUrls";
-import Constants from "../constants/constants";
 import { getKda, getKillParticipation } from "../utils/calculation";
+import { TierDto } from "../types/apiResponseDtos/league";
+import { ChampionDto } from "../types/apiResponseDtos/championJson";
+import { SummonerSpellDto } from "../types/apiResponseDtos/summonerSpellsJson";
+import { PerkSlotDto, PerkStyleDto } from "../types/apiResponseDtos/perksJson";
+import { BannedChampionsCurrentGame, ParticipantDtoCurrentGame, PerksDtoCurrentGame } from "../types/apiResponseDtos/spectator";
+import { MatchPerkStyleDto, ParticipantDtoEndedGame, PerkStyleSelectionDto } from "../types/apiResponseDtos/match";
 
 export const VERSION = "12.1.1";
 
@@ -288,7 +292,7 @@ const extractEndedGamePerkIds = async (selectedRuneList: PerkStyleSelectionDto[]
     return selectedRuneList.map(selection => selection.perk)
 }
 
-const getEndedGamePerks = async (perkStylesList: PerkStyleDto[]): Promise<(Perks | false)[]> => {
+const getEndedGamePerks = async (perkStylesList: MatchPerkStyleDto[]): Promise<(Perks | false)[]> => {
     const mainPerkStyle = perkStylesList[0];
     const subPerkStyle = perkStylesList[1];
     const mainPerkIds = await extractEndedGamePerkIds(mainPerkStyle.selections);
@@ -375,7 +379,7 @@ const extractCurrentGameTeamsInfo = async (bannedChampions: BannedChampionsCurre
     return [blueTeam, redTeam]
 }
 
-const extractEndedGameTeamsInfo = 
+// const extractEndedGameTeamsInfo = 
 
 const getGameModeInKorean = (queueTypeId: QueueTypeId): QueueTypeKor => {
     const gameModeEng: QueueTypeEng = constants.codes.queueType[queueTypeId];
