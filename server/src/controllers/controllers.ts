@@ -23,6 +23,8 @@ const VERSION = "12.1.1";
 
 const NO_CHAMPION_ID = -1;
 
+const MATCH_FETCH_COUNT_UNIT = 20; //전적 불러올 때 몇 경기씩 불러올지 단위
+
 const fetchUser = async (username: string): Promise<UserFetch> => {
     try {
         const url: string = encodeURI(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${process.env.API_KEY}`)
@@ -347,6 +349,11 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
             errorCode: constants.codes.error.codeError
         })
     }
+}
+
+export const fetchEndedMatches = (summonerPuuid: string, page: number) => {
+    const startIndex = (page - 1) * MATCH_FETCH_COUNT_UNIT;
+    const url = `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=${startIndex}&count=${MATCH_FETCH_COUNT_UNIT}&api_key=${process.env.API_KEY}`
 }
 
 export const fetchByUsername = async (req: Request, res: Response) => {
