@@ -17,5 +17,5 @@ export interface TiersFetch extends FetchResult {
 }
 
 export interface CurrentMatchFetch extends FetchResult {
-    currentMatch?: Match | undefined;
+    currentMatch?: Match | null;
 }

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Request, Response, NextFunction } from 'express';
+import e, { Request, Response, NextFunction } from 'express';
 import { User } from "../types/User";
 import constants from "../constants/constants";
 import { Tier } from "../types/Tier";
@@ -340,7 +340,15 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
                 currentMatch
             })
         } else {
-            return handleFailedRequest(response.status);
+            const fetchResult = handleFailedRequest(response.status);
+            if (fetchResult.errorCode === constants.codes.error.noResult) {
+                return ({
+                    result: true,
+                    currentMatch: null
+                })
+            } else {
+                return fetchResult
+            }
         }
     } catch (error) { //no current games or API KEY expired
         console.log(error);

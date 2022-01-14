@@ -10,6 +10,6 @@ export interface User {
     puuid?: string;
     summonerLevel?: number;
     tiers?: Tiers;
-    currentMatch?: Match;
+    currentMatch?: Match | null;
     latestMatches?: Match[];
 }
