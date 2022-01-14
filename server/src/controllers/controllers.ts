@@ -1,5 +1,3 @@
-import { getProfileIconUri, getTierImageUrl } from "../utils/imageExtractors";
-
 import axios from "axios";
 import { Request, Response, NextFunction } from 'express';
 import { User } from "../types/User";
@@ -17,17 +15,17 @@ import { Perks } from "../types/Perks";
 import { Match } from "../types/Match";
 import { Team } from "../types/Team";
 import { SummonerSpell } from "../types/Spell";
+import { getChampionsJsonUrl, getPerksJsonUrl, getSummonerSpellsJsonUrl } from "../utils/getUrl/json/getJsonUrls";
+import { getCurrentMatchUrl, getEndedMatchListUrl, getUserInfoUrl, getUserTierUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
+import { getChampionImageUrl, getFullPerkImageUrl, getProfileIconUrl, getSummonerSpellImageUrl, getTierImageUrl } from "../utils/getUrl/images/getImageUrls";
 
-
-const VERSION = "12.1.1";
+export const VERSION = "12.1.1";
 
 const NO_CHAMPION_ID = -1;
 
-const MATCH_FETCH_COUNT_UNIT = 20; //전적 불러올 때 몇 경기씩 불러올지 단위
-
 const fetchUser = async (username: string): Promise<UserFetch> => {
     try {
-        const url: string = encodeURI(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${process.env.API_KEY}`)
+        const url: string = getUserInfoUrl(username);
         const response = await axios.get(url);
         if (response.status === 200) {
             const {
@@ -37,7 +35,7 @@ const fetchUser = async (username: string): Promise<UserFetch> => {
                 accountId,
                 puuid,
             } = response.data;
-            const profileIcon: string = getProfileIconUri(response.data.profileIconId);
+            const profileIcon: string = getProfileIconUrl(response.data.profileIconId);
             const user: User = {
                 name,
                 profileIcon,
@@ -101,7 +99,8 @@ const extractTier = async (tiers: TierDto[], targetQueueType: TargetQueueType): 
 
 const fetchUserTiers = async (summonerId: string): Promise<TiersFetch> => {
     try {
-        const response = await axios.get(`https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${process.env.API_KEY}`);
+        const url: string = getUserTierUrl(summonerId);
+        const response = await axios.get(url);
         let solo: Tier;
         let team: Tier;
         if (response && response.status === 200 && response.data) {
@@ -134,7 +133,8 @@ const getChampionInfos = async (championId: number): Promise<Champion | null> =>
         if (championId === NO_CHAMPION_ID) {
             return null;
         }
-        const { status, data: { data: championJson } } = await axios.get(`http://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/champion.json`);
+        const url: string = getChampionsJsonUrl();
+        const { status, data: { data: championJson } } = await axios.get(url);
         if (status !== 200) {
             throw Error;
         }
@@ -146,7 +146,7 @@ const getChampionInfos = async (championId: number): Promise<Champion | null> =>
         return ({
             id: championId,
             name: targetChampion.name,
-            image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/champion/${championId}.png`
+            image: getChampionImageUrl(championId)
         })
     } catch (error) {
         console.log(error);
@@ -154,7 +154,6 @@ const getChampionInfos = async (championId: number): Promise<Champion | null> =>
     }
 }
 
-// const extractPlayerRunes = async
 
 const getPlayerSummonerSpell = (summonerSpells: SummonerSpellDto[], spellId: number): SummonerSpell | false => {
     const summonerSpell: SummonerSpellDto | undefined = summonerSpells.find(summonerSpell => summonerSpell.key === `${spellId}`);
@@ -164,13 +163,14 @@ const getPlayerSummonerSpell = (summonerSpells: SummonerSpellDto[], spellId: num
     return ({
         id: spellId,
         name: summonerSpell.name,
-        image: `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/spell/${summonerSpell.id}.png`
+        image: getSummonerSpellImageUrl(summonerSpell.id)
     })
 }
 
 const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Promise<SummonerSpell[] | false> => {
     try {
-        const { status, data: { data: summonerSpellsJson } } = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/summoner.json`);
+        const url: string = getSummonerSpellsJsonUrl()
+        const { status, data: { data: summonerSpellsJson } } = await axios.get(url);
         if (status !== 200) {
             throw Error;
         }
@@ -189,12 +189,11 @@ const getPlayerSummonerSpells = async (spell1Id: number, spell2Id: number): Prom
 }
 
 const getSelectedPerkStyle = async (selectedPerkStyleId: number): Promise<PerkStyleDto | undefined> => {
-    const { data: perkStylesList }: { data: PerkStyleDto[] } = await axios.get(`https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/runesReforged.json`);
+    const url: string = getPerksJsonUrl();
+    const { data: perkStylesList }: { data: PerkStyleDto[] } = await axios.get(url);
     return perkStylesList.find(perkStyle => perkStyle.id === selectedPerkStyleId);
 }
 
-const getFullPerkImagePath = (icon: string): string =>
-    `http://127.0.0.1:${process.env.PORT}/static/img/${icon}`
 
 const extractSelectedRunes = async (runeIds: number[], selectedPerkSlots: PerkSlotDto[]): Promise<Rune[]> => {
     let result = [];
@@ -207,7 +206,7 @@ const extractSelectedRunes = async (runeIds: number[], selectedPerkSlots: PerkSl
             const rune: Rune = {
                 id: searchResult.id,
                 name: searchResult.name,
-                image: getFullPerkImagePath(searchResult.icon)
+                image: getFullPerkImageUrl(searchResult.icon)
             }
             result.push(rune)
             runeIdsIndex++;
@@ -227,7 +226,7 @@ const getPerks = async (runeIds: number[], perkStyleId: number) => {
         const styleBrief = {
             id: selectedPerkStyle.id,
             name: selectedPerkStyle.name,
-            image: getFullPerkImagePath(selectedPerkStyle.icon)
+            image: getFullPerkImageUrl(selectedPerkStyle.icon)
         }
         return ({
             style: styleBrief,
@@ -315,7 +314,8 @@ const extractCurrentGameTeamsInfo = async (bannedChampions: BannedChampionsCurre
 
 const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch> => {
     try {
-        const response = await axios.get(`https://kr.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/${summonerId}?api_key=${process.env.API_KEY}`);
+        const url = getCurrentMatchUrl(summonerId);
+        const response = await axios.get(url);
         if (response.status === 200) {
             const currentMatchData = response.data;
             const queueTypeId: QueueTypeId = currentMatchData.gameQueueConfigId;
@@ -351,9 +351,8 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
     }
 }
 
-export const fetchEndedMatches = (summonerPuuid: string, page: number) => {
-    const startIndex = (page - 1) * MATCH_FETCH_COUNT_UNIT;
-    const url = `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=${startIndex}&count=${MATCH_FETCH_COUNT_UNIT}&api_key=${process.env.API_KEY}`
+export const fetchEndedMatches = (summonerName: string, summonerPuuid: string, page: number) => {
+    const url: string = getEndedMatchListUrl(summonerPuuid, page);
 }
 
 export const fetchByUsername = async (req: Request, res: Response) => {
