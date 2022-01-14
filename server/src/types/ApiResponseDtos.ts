@@ -286,3 +286,29 @@ interface RuneDto {
     shortDesc: string;
     longDesc: string;
 }
+
+export interface TeamDto {
+    bans: BanDto[];
+    objectives: ObjectivesDto;
+    teamId: number;
+    win: boolean;
+}
+
+export interface BanDto {
+    championId: number;
+    pickTurn: number;
+}
+
+export interface ObjectivesDto {
+    champion: ObjectiveDto;
+    baron: ObjectiveDto;
+    dragon: ObjectiveDto;
+    inhibitor: ObjectiveDto;
+    riftHerald: ObjectiveDto;
+    tower: ObjectiveDto;
+}
+
+export interface ObjectiveDto {
+    first: boolean;
+    kills: number;
+}

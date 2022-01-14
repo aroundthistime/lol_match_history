@@ -14,18 +14,20 @@ export interface Player extends User {
     mainPerks: Perks;
     subPerks: Perks;
     summonerSpells: SummonerSpell[];
-    stats?: Stat[];
+    // stats?: Stat[];
     championLevel?: number;
     items?: [Item | undefined];
     kills?: number;
     deaths?: number;
     assists?: number;
-    killParticipation?: number;
+    kda?: string;
+    killParticipation?: string;
     goldEarned?: number;
-    totalMinionsKilled?: number;
+    cs?: number;
     totalDamageDealt?: number;
     totalDamageTaken?: number;
     wardsPlaced?: number;
     wardsKilled?: number;
+    detectorWardsPlaced?: number;
     visionScore?: number;
 }
