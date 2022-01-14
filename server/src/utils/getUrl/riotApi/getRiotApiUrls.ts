@@ -14,3 +14,6 @@ export const getEndedMatchListUrl = (summonerPuuid: string, page: number): strin
     const startIndex = (page - 1) * count;
     return `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=${startIndex}&count=${count}&api_key=${process.env.API_KEY}`
 }
+
+export const getEndedMatchUrl = (matchId: string): string =>
+    `https://asia.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${process.env.API_KEY}`

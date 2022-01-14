@@ -19,3 +19,7 @@ export interface TiersFetch extends FetchResult {
 export interface CurrentMatchFetch extends FetchResult {
     currentMatch?: Match | null;
 }
+
+export interface EndedMatchFetch extends FetchResult {
+    Matches?: Match[];
+}

@@ -3,7 +3,7 @@ import e, { Request, Response, NextFunction } from 'express';
 import { User } from "../types/User";
 import constants from "../constants/constants";
 import { Tier } from "../types/Tier";
-import { CurrentMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
+import { CurrentMatchFetch, EndedMatchFetch, FetchResult, TiersFetch, UserFetch } from "../types/FetchResult";
 import { ErrorCode } from "../types/errorCode";
 import { BannedChampionsCurrentGame, ChampionDto, ParticipantDtoCurrentGame, PerksDtoCurrentGame, PerkSlotDto, PerkStyleDto, SummonerSpellDto, TierDto } from "../types/ApiResponseDtos";
 import { TargetQueueType } from "../types/TargetQueueType";
@@ -16,12 +16,20 @@ import { Match } from "../types/Match";
 import { Team } from "../types/Team";
 import { SummonerSpell } from "../types/Spell";
 import { getChampionsJsonUrl, getPerksJsonUrl, getSummonerSpellsJsonUrl } from "../utils/getUrl/json/getJsonUrls";
-import { getCurrentMatchUrl, getEndedMatchListUrl, getUserInfoUrl, getUserTierUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
+import { getCurrentMatchUrl, getEndedMatchListUrl, getEndedMatchUrl, getUserInfoUrl, getUserTierUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
 import { getChampionImageUrl, getFullPerkImageUrl, getProfileIconUrl, getSummonerSpellImageUrl, getTierImageUrl } from "../utils/getUrl/images/getImageUrls";
+import Constants from "../constants/constants";
 
 export const VERSION = "12.1.1";
 
 const NO_CHAMPION_ID = -1;
+
+const CODE_ERROR_RESULT = {
+    result: false,
+    errorCode: constants.codes.error.codeError
+}
+
+
 
 const fetchUser = async (username: string): Promise<UserFetch> => {
     try {
@@ -53,10 +61,7 @@ const fetchUser = async (username: string): Promise<UserFetch> => {
         }
     } catch (error) {
         console.log(error);
-        return ({
-            result: false,
-            errorCode: constants.codes.error.codeError
-        })
+        return CODE_ERROR_RESULT
     }
 }
 
@@ -69,10 +74,7 @@ const handleFailedRequest = (statusCode: number): FetchResult => {
     } else {
         errorCode = constants.codes.error.unauthorized; //허가되지 않은 접근
     }
-    return ({
-        result: false,
-        errorCode
-    })
+    return CODE_ERROR_RESULT;
 }
 
 const extractTier = async (tiers: TierDto[], targetQueueType: TargetQueueType): Promise<Tier> => {
@@ -118,10 +120,7 @@ const fetchUserTiers = async (summonerId: string): Promise<TiersFetch> => {
         }
     } catch (error) {
         console.log(error);
-        return ({
-            result: false,
-            errorCode: constants.codes.error.codeError
-        })
+        return CODE_ERROR_RESULT;
     }
 }
 
@@ -352,15 +351,29 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
         }
     } catch (error) { //no current games or API KEY expired
         console.log(error);
-        return ({
-            result: false,
-            errorCode: constants.codes.error.codeError
-        })
+        return CODE_ERROR_RESULT;
     }
 }
 
-export const fetchEndedMatches = (summonerName: string, summonerPuuid: string, page: number) => {
+const fetchEndedMatchById = async (matchId: string, targetSummonerPuuid: string) => {
+    const url: string = getEndedMatchUrl(matchId);
+    try {
+
+    } catch (error) {
+        return CODE_ERROR_RESULT;
+    }
+}
+
+export const fetchEndedMatches = async (summonerPuuid: string, page: number): Promise<EndedMatchFetch> => {
     const url: string = getEndedMatchListUrl(summonerPuuid, page);
+    const { status, data: matchIds } = await axios.get(url);
+    if (status === 200) {
+        const endedMatches = Promise.all(matchIds.map(async (matchId: string) => {
+            return fetchEndedMatchById(matchId, summonerPuuid)
+        }))
+    } else {
+        return handleFailedRequest(status);
+    }
 }
 
 export const fetchByUsername = async (req: Request, res: Response) => {
