@@ -1,4 +1,4 @@
-import { VERSION } from "../../../controllers/controllers"
+import { VERSION } from "../../../controllers/globalControllers"
 
 export const getProfileIconUrl = (profileIconId: string): string =>
     `http://127.0.0.1:${process.env.PORT}/static/img/profileicon/${profileIconId}.png`
@@ -15,3 +15,5 @@ export const getSummonerSpellImageUrl = (summonerSpellId: string): string =>
 export const getFullPerkImageUrl = (icon: string): string =>
     `http://127.0.0.1:${process.env.PORT}/static/img/${icon}`
 
+export const getItemImageUrl = (path: string): string =>
+    `http://ddragon.leagueoflegends.com/cdn/${VERSION}/img/item/${path}`

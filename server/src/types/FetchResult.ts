@@ -1,7 +1,7 @@
 import { ErrorCode } from "./errorCode";
 import { Match } from "./Match";
 import { Tiers } from "./Tiers";
-import { User } from "./User";
+import { SearchTargetUser, User } from "./User";
 
 export interface FetchResult {
     result: boolean;
@@ -9,16 +9,13 @@ export interface FetchResult {
 }
 
 export interface UserFetch extends FetchResult {
-    user?: User;
+    user?: SearchTargetUser;
 }
 
 export interface TiersFetch extends FetchResult {
     tiers?: Tiers;
 }
 
-export interface CurrentMatchFetch extends FetchResult {
-    currentMatch?: Match | null;
-}
 
 export interface EndedMatchFetch extends FetchResult {
     Matches?: Match[];

@@ -1,4 +1,4 @@
-import { VERSION } from "../../../controllers/controllers"
+import { VERSION } from "../../../controllers/globalControllers"
 
 export const getSummonerSpellsJsonUrl = (): string =>
     `https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/summoner.json`
@@ -8,3 +8,6 @@ export const getChampionsJsonUrl = (): string =>
 
 export const getPerksJsonUrl = (): string =>
     `https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/runesReforged.json`
+
+export const getItemsJonUrl = (): string =>
+    `https://ddragon.leagueoflegends.com/cdn/${VERSION}/data/ko_KR/item.json`

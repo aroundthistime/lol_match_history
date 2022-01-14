@@ -16,7 +16,7 @@ export interface Player extends User {
     summonerSpells: SummonerSpell[];
     // stats?: Stat[];
     championLevel?: number;
-    items?: [Item | undefined];
+    items?: (Item | null)[];
     kills?: number;
     deaths?: number;
     assists?: number;

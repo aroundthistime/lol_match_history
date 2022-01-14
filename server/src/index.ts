@@ -1,7 +1,7 @@
 import path from "path";
 require('dotenv').config()
 import express, { Request, Response, NextFunction } from 'express';
-import { fetchByUsername } from './controllers/controllers';
+import { fetchByUsername } from "./controllers/userController";
 
 const app = express();
 
