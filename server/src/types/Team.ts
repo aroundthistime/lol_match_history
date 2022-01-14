@@ -1,13 +1,17 @@
 import { Champion } from "./Champion";
 
-export interface Team {
-    isBlueTeam: boolean;
+export interface CurrentGameTeam {
     bans?: (Champion | null)[];
-    championKills?: number;
+}
+
+export interface EndedGameTeam extends CurrentGameTeam {
+    championKills: number;
     championAssists?: number;
-    dragonKills?: number;
-    baronKills?: number;
-    towerKills?: number;
+    dragonKills: number;
+    baronKills: number;
+    towerKills: number;
+    inhibitorKills: number;
+    riftHeraldKills: number;
     totalGold?: number;
-    win?: boolean;
+    win: boolean;
 }

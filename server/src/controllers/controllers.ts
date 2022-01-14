@@ -12,7 +12,7 @@ import { Champion } from "../types/Champion";
 import { Rune } from "../types/Rune";
 import { Perks } from "../types/Perks";
 import { Match } from "../types/Match";
-import { Team } from "../types/Team";
+import { CurrentGameTeam, EndedGameTeam } from "../types/Team";
 import { SummonerSpell } from "../types/Spell";
 import { getChampionsJsonUrl, getPerksJsonUrl, getSummonerSpellsJsonUrl } from "../utils/getUrl/json/getJsonUrls";
 import { getCurrentMatchUrl, getEndedMatchListUrl, getEndedMatchUrl, getUserInfoUrl, getUserTierUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
@@ -23,7 +23,9 @@ import { ChampionDto } from "../types/apiResponseDtos/championJson";
 import { SummonerSpellDto } from "../types/apiResponseDtos/summonerSpellsJson";
 import { PerkSlotDto, PerkStyleDto } from "../types/apiResponseDtos/perksJson";
 import { BannedChampionsCurrentGame, ParticipantDtoCurrentGame, PerksDtoCurrentGame } from "../types/apiResponseDtos/spectator";
-import { MatchPerkStyleDto, ParticipantDtoEndedGame, PerkStyleSelectionDto } from "../types/apiResponseDtos/match";
+import { BanDto, MatchPerkStyleDto, ObjectivesDto, ParticipantDtoEndedGame, PerkStyleSelectionDto, TeamDto } from "../types/apiResponseDtos/match";
+import { stringNumberDict } from "../types/StringNumberDict";
+import { Item } from "../types/Item";
 
 export const VERSION = "12.1.1";
 
@@ -324,7 +326,25 @@ const getEndedGamePlayerStatistics = async (participant: ParticipantDtoEndedGame
     }
 }
 
-const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame[], targetSummonerId: string, teamTotalKills: number) => {
+const getItemIdsList = (participant: ParticipantDtoEndedGame) => {
+    return [
+        participant.item0,
+        participant.item1,
+        participant.item2,
+        participant.item3,
+        participant.item4,
+        participant.item5,
+        participant.item6
+    ]
+}
+
+const getItemInfos = async (participant: ParticipantDtoEndedGame): Promise<Item[]> => {
+    const itemIdsList = getItemIdsList(participant);
+
+    // return 
+}
+
+const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame[], targetSummonerId: string, blueTeamChampionKills: number, redTeamChampionKills: number) => {
     try {
         return Promise.all(participants.map(async (participant) => {
             const champion = await getChampionInfos(participant.championId);
@@ -339,7 +359,17 @@ const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame
             if (!mainPerks || !subPerks) {
                 throw Error
             }
-            const gameResultStatistics = await getEndedGamePlayerStatistics(participant, teamTotalKills);
+            const items = await getItemInfos(participant);
+            const playerCommonPart = extractCommontPlayerParts(participant, targetSummonerId);
+            const gameResultStatistics = await getEndedGamePlayerStatistics(participant, playerCommonPart.isBlueTeam ? blueTeamChampionKills : redTeamChampionKills);
+            return ({
+                ...playerCommonPart,
+                ...gameResultStatistics,
+                champion,
+                summonerSpells,
+                mainPerks,
+                subPerks
+            })
         }))
     } catch (error) {
         console.log(error);
@@ -366,20 +396,53 @@ const getCurrentGameBans = async (bannedChampions: BannedChampionsCurrentGame[])
     return [blueTeamBansWithChampionInfos, redTeamBansWithChampionInfos]
 }
 
-const extractCurrentGameTeamsInfo = async (bannedChampions: BannedChampionsCurrentGame[]): Promise<Team[]> => {
+const extractCurrentGameTeamsInfo = async (bannedChampions: BannedChampionsCurrentGame[]): Promise<CurrentGameTeam[]> => {
     const [blueTeamBans, redTeamBans] = await getCurrentGameBans(bannedChampions);
-    const blueTeam: Team = {
-        isBlueTeam: true,
+    const blueTeam: CurrentGameTeam = {
         bans: blueTeamBans
     };
-    const redTeam: Team = {
-        isBlueTeam: false,
+    const redTeam: CurrentGameTeam = {
         bans: redTeamBans
     }
     return [blueTeam, redTeam]
 }
 
-// const extractEndedGameTeamsInfo = 
+const getEndedGameBans = async (bans: BanDto[]): Promise<(Champion | null)[]> => {
+    return Promise.all(bans.map(async (banObj) => {
+        return getChampionInfos(banObj.championId)
+    }))
+}
+
+const extractEndedGameTeamObjectKills = async (objectives: ObjectivesDto): Promise<stringNumberDict> => {
+    const objectKills: stringNumberDict = {};
+    await Promise.all(
+        Object.entries(objectives).map(([objectName, { kills }]) => {
+            objectKills[`${objectName}Kills`] = kills;
+        })
+    )
+    return objectKills
+}
+
+const extractEndedGameTeamInfo = async (teamObj: TeamDto): Promise<EndedGameTeam> => {
+    const bans = await getEndedGameBans(teamObj.bans);
+    const objectKills = await extractEndedGameTeamObjectKills(teamObj.objectives);
+    return ({
+        bans,
+        win: teamObj.win,
+        championKills: objectKills.championKills,
+        dragonKills: objectKills.dragonKills,
+        baronKills: objectKills.baronKills,
+        towerKills: objectKills.towerKills,
+        inhibitorKills: objectKills.inhibitorKills,
+        riftHeraldKills: objectKills.riftHeraldKills
+    })
+}
+
+const extractEndedGameTeamsInfo = async (teams: TeamDto[]): Promise<EndedGameTeam[]> => {
+    const blueTeam = await extractEndedGameTeamInfo(teams[0]);
+    const redTeam = await extractEndedGameTeamInfo(teams[1]);
+    return [blueTeam, redTeam];
+}
 
 const getGameModeInKorean = (queueTypeId: QueueTypeId): QueueTypeKor => {
     const gameModeEng: QueueTypeEng = constants.codes.queueType[queueTypeId];
@@ -398,7 +461,7 @@ const fetchCurrentMatch = async (summonerId: string): Promise<CurrentMatchFetch>
             if (!gamePlayers) {
                 throw Error
             }
-            const [blueTeam, redTeam]: Team[] = await extractCurrentGameTeamsInfo(currentMatchData.bannedChampions)
+            const [blueTeam, redTeam]: CurrentGameTeam[] = await extractCurrentGameTeamsInfo(currentMatchData.bannedChampions)
             const currentMatch: Match = {
                 id: currentMatchData.gameId,
                 gameMode,
@@ -435,8 +498,8 @@ const fetchEndedMatchById = async (matchId: string, targetSummonerId: string) =>
         const { status, data: { info: matchData } } = await axios.get(url);
         if (status === 200) {
             const gameMode = getGameModeInKorean(matchData.queueId);
-            const [blueTeam, redTeam]: Team[] = await extractEndedGameTeamsInfo(matchData.teams)
-            // const players = await extract
+            const [blueTeam, redTeam]: EndedGameTeam[] = await extractEndedGameTeamsInfo(matchData.teams)
+            const players = await extractEndedGamePlayerInfos(matchData.participants, targetSummonerId, blueTeam.championKills, redTeam.championKills)
             const match: Match = {
                 id: matchId,
                 gameMode,
@@ -458,9 +521,13 @@ export const fetchEndedMatches = async (summonerPuuid: string, summonerId: strin
     const url: string = getEndedMatchListUrl(summonerPuuid, page);
     const { status, data: matchIds } = await axios.get(url);
     if (status === 200) {
-        const endedMatches = Promise.all(matchIds.map(async (matchId: string) => {
+        const endedMatches = await Promise.all(matchIds.map(async (matchId: string) => {
             return fetchEndedMatchById(matchId, summonerId)
         }))
+        return {
+            result: true,
+            Matches: endedMatches
+        }
     } else {
         return handleFailedRequest(status);
     }
