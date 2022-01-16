@@ -8,15 +8,14 @@ export interface FetchResult {
     errorCode?: ErrorCode;
 }
 
-export interface UserFetch extends FetchResult {
+export interface UserFetchResult extends FetchResult {
     user?: SearchTargetUser;
 }
 
-export interface TiersFetch extends FetchResult {
+export interface TiersFetchResult extends FetchResult {
     tiers?: Tiers;
 }
 
-
-export interface EndedMatchFetch extends FetchResult {
+export interface EndedMatchFetchResult extends FetchResult {
     Matches?: Match[];
 }

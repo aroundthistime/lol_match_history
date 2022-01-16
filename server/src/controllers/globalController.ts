@@ -4,15 +4,14 @@ import { ErrorCode } from "../types/errorCode";
 import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
 
 
-export const VERSION = "12.1.1";
-
+export const GAME_VERSION = "12.1.1";
 
 export const CODE_ERROR_RESULT = {
     result: false,
     errorCode: constants.codes.error.codeError
 }
 
-export const handleFailedRequest = (statusCode: number): FetchResult => {
+export const getFailedFetchResultByStatusCode = (statusCode: number): FetchResult => {
     let errorCode: ErrorCode;
     if (statusCode === 404) {
         errorCode = constants.codes.error.noResult; //해당 이름의 유저 없음
@@ -32,8 +31,3 @@ export const getGameModeInKorean = (queueTypeId: QueueTypeId): QueueTypeKor => {
     const gameModeKor: QueueTypeKor = constants.korean.queueType[gameModeEng];
     return gameModeKor
 }
-
-
-
-
-

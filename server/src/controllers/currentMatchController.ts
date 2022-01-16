@@ -7,11 +7,11 @@ import { Perks } from "../types/Perks";
 import { Player } from "../types/Player";
 import { CurrentGameTeam } from "../types/Team";
 import { getCurrentMatchUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
-import { getChampionInfos } from "./championControllers";
-import { getGameModeInKorean } from "./globalControllers";
-import { getPerks } from "./perksControllers";
-import { extractCommontPlayerParts } from "./playerControllers";
-import { getPlayerSummonerSpells } from "./summonerSpellController";
+import { getChampionInfos } from "./championController";
+import { getGameModeInKorean } from "./globalController";
+import { getPerks } from "./perksController";
+import { extractCommonPlayerParts } from "./playerController";
+import { getPlayerSummonerSpellsByIds } from "./summonerSpellController";
 
 const getCurrentGamePerks = async (perks: PerksDtoCurrentGame): Promise<(Perks | false)[]> => {
     try {
@@ -64,7 +64,7 @@ const extractCurrentGamePlayerInfos = async (participants: ParticipantDtoCurrent
             if (champion === null) {
                 throw Error;
             }
-            const summonerSpells = await getPlayerSummonerSpells(participant.spell1Id, participant.spell2Id);
+            const summonerSpells = await getPlayerSummonerSpellsByIds(participant.spell1Id, participant.spell2Id);
             if (summonerSpells === false) {
                 throw Error
             }
@@ -73,7 +73,7 @@ const extractCurrentGamePlayerInfos = async (participants: ParticipantDtoCurrent
                 throw Error
             }
             return ({
-                ...extractCommontPlayerParts(participant, targetSummonerId),
+                ...extractCommonPlayerParts(participant, targetSummonerId),
                 champion,
                 mainPerks,
                 subPerks,

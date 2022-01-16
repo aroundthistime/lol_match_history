@@ -1,19 +1,19 @@
 import axios from "axios";
 import { BanDto, MatchPerkStyleDto, ObjectivesDto, ParticipantDtoEndedGame, PerkStyleSelectionDto, TeamDto } from "../types/apiResponseDtos/match";
 import { Champion } from "../types/Champion";
-import { EndedMatchFetch } from "../types/FetchResult";
+import { EndedMatchFetchResult } from "../types/FetchResult";
 import { Match } from "../types/Match";
 import { Perks } from "../types/Perks";
 import { stringNumberDict } from "../types/StringNumberDict";
 import { EndedGameTeam } from "../types/Team";
 import { getKda, getKillParticipation } from "../utils/calculation";
 import { getEndedMatchListUrl, getEndedMatchUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
-import { getChampionInfos } from "./championControllers";
-import { CODE_ERROR_RESULT, getGameModeInKorean, handleFailedRequest } from "./globalControllers";
-import { getPlayerItems } from "./itemControllers";
-import { getPerks } from "./perksControllers";
-import { extractCommontPlayerParts } from "./playerControllers";
-import { getPlayerSummonerSpells } from "./summonerSpellController";
+import { getChampionInfos } from "./championController";
+import { CODE_ERROR_RESULT, getGameModeInKorean, getFailedFetchResultByStatusCode } from "./globalController";
+import { getPlayerItems } from "./itemController";
+import { getPerks } from "./perksController";
+import { extractCommonPlayerParts } from "./playerController";
+import { getPlayerSummonerSpellsByIds } from "./summonerSpellController";
 
 const extractEndedGamePerkIds = async (selectedRuneList: PerkStyleSelectionDto[]): Promise<number[]> => {
     return selectedRuneList.map(selection => selection.perk)
@@ -57,7 +57,7 @@ const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame
             if (champion === null) {
                 throw Error;
             }
-            const summonerSpells = await getPlayerSummonerSpells(participant.summoner1Id, participant.summoner2Id);
+            const summonerSpells = await getPlayerSummonerSpellsByIds(participant.summoner1Id, participant.summoner2Id);
             if (summonerSpells === false) {
                 throw Error
             }
@@ -69,7 +69,7 @@ const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame
             if (items === false) {
                 throw Error
             }
-            const playerCommonPart = extractCommontPlayerParts(participant, targetSummonerId);
+            const playerCommonPart = extractCommonPlayerParts(participant, targetSummonerId);
             const gameResultStatistics = await getEndedGamePlayerStatistics(participant, playerCommonPart.isBlueTeam ? blueTeamChampionKills : redTeamChampionKills);
             return ({
                 ...playerCommonPart,
@@ -146,7 +146,7 @@ const fetchEndedMatchById = async (matchId: string, targetSummonerId: string) =>
             }
             return match
         } else {
-            return handleFailedRequest(status);
+            return getFailedFetchResultByStatusCode(status);
         }
     } catch (error) {
         console.log(error);
@@ -154,7 +154,7 @@ const fetchEndedMatchById = async (matchId: string, targetSummonerId: string) =>
     }
 }
 
-export const fetchEndedMatches = async (summonerPuuid: string, summonerId: string, page: number = 1): Promise<EndedMatchFetch> => {
+export const fetchEndedMatches = async (summonerPuuid: string, summonerId: string, page: number = 1): Promise<EndedMatchFetchResult> => {
     const url: string = getEndedMatchListUrl(summonerPuuid, page);
     const { status, data: matchIds } = await axios.get(url);
     if (status === 200) {
@@ -166,6 +166,6 @@ export const fetchEndedMatches = async (summonerPuuid: string, summonerId: strin
             Matches: endedMatches
         }
     } else {
-        return handleFailedRequest(status);
+        return getFailedFetchResultByStatusCode(status);
     }
 }
