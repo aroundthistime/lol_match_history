@@ -15,4 +15,4 @@ app.use(function (req: Request, res: Response, next: NextFunction) {
 
 app.listen(process.env.PORT, () => console.log("Server running"));
 
-app.get('/summoner/:username', fetchByUsername)
+app.get('/summoner/:username', fetchByUsername);

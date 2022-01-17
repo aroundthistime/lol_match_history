@@ -1,12 +1,12 @@
 import { Player } from "./Player";
-import { CurrentGameTeam, EndedGameTeam } from "./Team";
+import { CurrentMatchTeam, EndedMatchTeam } from "./Team";
 
 export interface Match {
     id: string;
     gameMode: string;
     gameStartTime: Date;
     gameLength: number;
-    redTeam: EndedGameTeam | CurrentGameTeam;
-    blueTeam: EndedGameTeam | CurrentGameTeam;
+    redTeam: EndedMatchTeam | CurrentMatchTeam;
+    blueTeam: EndedMatchTeam | CurrentMatchTeam;
     participants: Player[];
 }

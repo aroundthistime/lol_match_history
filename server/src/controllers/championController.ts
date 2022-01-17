@@ -19,7 +19,7 @@ export const findChampionById = (idInNumber: number, champions: ChampionDto[]): 
     return champions.find(champion => champion.key === id)
 }
 
-const getChampionsObjectsFromRiot = async (): Promise<ChampionDto[] | undefined> => {
+export const getChampionsFromRiot = async (): Promise<ChampionDto[] | undefined> => {
     try {
         const url: string = getChampionsJsonUrl();
         const { data: { data: championsJsonFromRiot } } = await axios.get(url);
@@ -29,16 +29,12 @@ const getChampionsObjectsFromRiot = async (): Promise<ChampionDto[] | undefined>
     }
 }
 
-export const getChampionInfos = async (championId: number): Promise<Champion | null> => {
+export const getChampion = async (championId: number, championsFromRiot: ChampionDto[]): Promise<Champion | null> => {
     try {
         if (championId === NO_CHAMPION_ID) {
             return null;
         }
-        const championObjectsFromRiot: ChampionDto[] | undefined = await getChampionsObjectsFromRiot();
-        if (championObjectsFromRiot === undefined) {
-            throw Error;
-        }
-        const champion = findChampionById(championId, championObjectsFromRiot);
+        const champion = findChampionById(championId, championsFromRiot);
         if (!champion) {
             throw Error;
         }

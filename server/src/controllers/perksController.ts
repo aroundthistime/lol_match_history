@@ -30,24 +30,23 @@ const getSelectedRunesByIds = async (runeIds: number[], perkSlots: PerkSlotDto[]
     return selectedRunes;
 }
 
-const getperkStylesListFromRiot = async (): Promise<PerkStyleDto[]> => {
-    const url: string = getPerksJsonUrl();
-    const { data: perkStylesList }: { data: PerkStyleDto[] } = await axios.get(url);
-    return perkStylesList;
-}
-
-const getPerkStyleById = async (id: number): Promise<PerkStyleDto | undefined> => {
+export const getPerkStylesFromRiot = async (): Promise<PerkStyleDto[] | undefined> => {
     try {
-        const perkStylesList = await getperkStylesListFromRiot();
-        return perkStylesList.find(perkStyle => perkStyle.id === id);
+        const url: string = getPerksJsonUrl();
+        const { data: perkStyles }: { data: PerkStyleDto[] } = await axios.get(url);
+        return perkStyles;
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 
-export const getPerks = async (runeIds: number[], perkStyleId: number) => {
+const getPerkStyleById = (id: number, perkStyles: PerkStyleDto[]): PerkStyleDto | undefined => {
+    return perkStyles.find(perkStyle => perkStyle.id === id);
+}
+
+export const getPerks = async (runeIds: number[], perkStyleId: number, perkStylesFromRiot: PerkStyleDto[]) => {
     try {
-        const selectedPerkStyle = await getPerkStyleById(perkStyleId);
+        const selectedPerkStyle = getPerkStyleById(perkStyleId, perkStylesFromRiot);
         if (selectedPerkStyle === undefined) {
             throw Error;
         }

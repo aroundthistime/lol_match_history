@@ -1,35 +1,39 @@
 import axios from "axios";
-import { BanDto, MatchPerkStyleDto, ObjectivesDto, ParticipantDtoEndedGame, PerkStyleSelectionDto, TeamDto } from "../types/apiResponseDtos/match";
-import { Champion } from "../types/Champion";
+import { MatchPerkStyleDto, ObjectivesDto, ParticipantDtoEndedMatch, PerkStyleSelectionDto, TeamDto } from "../types/apiResponseDtos/match";
 import { EndedMatchFetchResult } from "../types/FetchResult";
 import { Match } from "../types/Match";
 import { Perks } from "../types/Perks";
 import { stringNumberDict } from "../types/StringNumberDict";
-import { EndedGameTeam } from "../types/Team";
+import { EndedMatchTeam } from "../types/Team";
 import { getKda, getKillParticipation } from "../utils/calculation";
 import { getEndedMatchListUrl, getEndedMatchUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
-import { getChampionInfos } from "./championController";
-import { CODE_ERROR_RESULT, getGameModeInKorean, getFailedFetchResultByStatusCode } from "./globalController";
+import { getChampion } from "./championController";
+import { CODE_ERROR_RESULT, getMatchModeInKorean, getFailedFetchResultByStatusCode } from "./globalController";
 import { getPlayerItems } from "./itemController";
 import { getPerks } from "./perksController";
-import { extractCommonPlayerParts } from "./playerController";
+import { extractCommonPlayerParts, getBannedChampions } from "./commonMatchController";
 import { getPlayerSummonerSpellsByIds } from "./summonerSpellController";
+import { DetailDtos } from "../types/apiResponseDtos/common";
+import { ChampionDto } from "../types/apiResponseDtos/championJson";
+import { PerkStyleDto } from "../types/apiResponseDtos/perksJson";
 
-const extractEndedGamePerkIds = async (selectedRuneList: PerkStyleSelectionDto[]): Promise<number[]> => {
+const extractEndedMatchPerkIds = async (selectedRuneList: PerkStyleSelectionDto[]): Promise<number[]> => {
     return selectedRuneList.map(selection => selection.perk)
 }
 
-const getEndedGamePerks = async (perkStylesList: MatchPerkStyleDto[]): Promise<(Perks | false)[]> => {
-    const mainPerkStyle = perkStylesList[0];
-    const subPerkStyle = perkStylesList[1];
-    const mainPerkIds = await extractEndedGamePerkIds(mainPerkStyle.selections);
-    const subPerkIds = await extractEndedGamePerkIds(subPerkStyle.selections)
-    const mainPerks = await getPerks(mainPerkIds, mainPerkStyle.style);
-    const subPerks = await getPerks(subPerkIds, subPerkStyle.style);
+const getEndedMatchPerksFromStyle = async (perkStyle: MatchPerkStyleDto, perkStylesFromRiot: PerkStyleDto[]): Promise<Perks | false> => {
+    const perkIds = await extractEndedMatchPerkIds(perkStyle.selections);
+    return getPerks(perkIds, perkStyle.style, perkStylesFromRiot);
+}
+
+const getEndedMatchPerks = async (perkStyles: MatchPerkStyleDto[], perkStylesFromRiot: PerkStyleDto[]): Promise<(Perks | false)[]> => {
+    const [mainPerks, subPerks] = await Promise.all(perkStyles.map(async (perkStyle) => {
+        return getEndedMatchPerksFromStyle(perkStyle, perkStylesFromRiot)
+    })) //perkStyles[0]은 mainPerks, perkStyles[1]은 subPerks을 담고 있음
     return [mainPerks, subPerks]
 }
 
-const getEndedGamePlayerStatistics = async (participant: ParticipantDtoEndedGame, teamTotalKills: number) => {
+const getEndedMatchPlayerStatistics = async (participant: ParticipantDtoEndedMatch, teamTotalKills: number) => {
     return {
         championLevel: participant.champLevel,
         kills: participant.kills,
@@ -50,27 +54,38 @@ const getEndedGamePlayerStatistics = async (participant: ParticipantDtoEndedGame
 
 
 
-const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame[], targetSummonerId: string, blueTeamChampionKills: number, redTeamChampionKills: number) => {
+const getEndedMatchPlayers = async (
+    participants: ParticipantDtoEndedMatch[],
+    targetSummonerId: string,
+    blueTeamChampionKills: number,
+    redTeamChampionKills: number,
+    {
+        champions: championsFromRiot,
+        perkStyles: perkStylesFromRiot,
+        summonerSpells: summonerSpellsFromRiot,
+        items: itemsFromRiot
+    }: DetailDtos
+) => {
     try {
         return Promise.all(participants.map(async (participant) => {
-            const champion = await getChampionInfos(participant.championId);
+            const champion = await getChampion(participant.championId, championsFromRiot);
             if (champion === null) {
                 throw Error;
             }
-            const summonerSpells = await getPlayerSummonerSpellsByIds(participant.summoner1Id, participant.summoner2Id);
+            const summonerSpells = await getPlayerSummonerSpellsByIds(participant.summoner1Id, participant.summoner2Id, summonerSpellsFromRiot);
             if (summonerSpells === false) {
                 throw Error
             }
-            const [mainPerks, subPerks] = await getEndedGamePerks(participant.perks.styles);
+            const [mainPerks, subPerks] = await getEndedMatchPerks(participant.perks.styles, perkStylesFromRiot);
             if (!mainPerks || !subPerks) {
                 throw Error
             }
-            const items = await getPlayerItems(participant);
+            const items = await getPlayerItems(participant, itemsFromRiot);
             if (items === false) {
                 throw Error
             }
             const playerCommonPart = extractCommonPlayerParts(participant, targetSummonerId);
-            const gameResultStatistics = await getEndedGamePlayerStatistics(participant, playerCommonPart.isBlueTeam ? blueTeamChampionKills : redTeamChampionKills);
+            const gameResultStatistics = await getEndedMatchPlayerStatistics(participant, playerCommonPart.isBlueTeam ? blueTeamChampionKills : redTeamChampionKills);
             return ({
                 ...playerCommonPart,
                 ...gameResultStatistics,
@@ -87,13 +102,7 @@ const extractEndedGamePlayerInfos = async (participants: ParticipantDtoEndedGame
     }
 }
 
-const getEndedGameBans = async (bans: BanDto[]): Promise<(Champion | null)[]> => {
-    return Promise.all(bans.map(async (banObj) => {
-        return getChampionInfos(banObj.championId)
-    }))
-}
-
-const extractEndedGameTeamObjectKills = async (objectives: ObjectivesDto): Promise<stringNumberDict> => {
+const extractEndedMatchTeamObjectKills = async (objectives: ObjectivesDto): Promise<stringNumberDict> => {
     const objectKills: stringNumberDict = {};
     await Promise.all(
         Object.entries(objectives).map(([objectName, { kills }]) => {
@@ -103,9 +112,9 @@ const extractEndedGameTeamObjectKills = async (objectives: ObjectivesDto): Promi
     return objectKills
 }
 
-const extractEndedGameTeamInfo = async (teamObj: TeamDto): Promise<EndedGameTeam> => {
-    const bans = await getEndedGameBans(teamObj.bans);
-    const objectKills = await extractEndedGameTeamObjectKills(teamObj.objectives);
+const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDto[]): Promise<EndedMatchTeam> => {
+    const bans = await getBannedChampions(teamObj.bans, championsFromRiot);
+    const objectKills = await extractEndedMatchTeamObjectKills(teamObj.objectives);
     return ({
         bans,
         win: teamObj.win,
@@ -118,54 +127,77 @@ const extractEndedGameTeamInfo = async (teamObj: TeamDto): Promise<EndedGameTeam
     })
 }
 
-const extractEndedGameTeamsInfo = async (teams: TeamDto[]): Promise<EndedGameTeam[]> => {
-    const blueTeam = await extractEndedGameTeamInfo(teams[0]);
-    const redTeam = await extractEndedGameTeamInfo(teams[1]);
+const getEndedMatchTeams = async (teams: TeamDto[], championsFromRiot: ChampionDto[]): Promise<EndedMatchTeam[]> => {
+    const blueTeam = await getEndedMatchTeam(teams[0], championsFromRiot);
+    const redTeam = await getEndedMatchTeam(teams[1], championsFromRiot);
     return [blueTeam, redTeam];
 }
 
-const fetchEndedMatchById = async (matchId: string, targetSummonerId: string) => {
+const getEndedMatchData = async (matchId: string) => {
     const url: string = getEndedMatchUrl(matchId);
+    const { data: { info: matchData } } = await axios.get(url);
+    return matchData;
+}
+
+const getEndedMatchById = async (
+    matchId: string,
+    targetSummonerId: string,
+    detailDatasFromRiot: DetailDtos
+): Promise<Match | false> => {
     try {
-        const { status, data: { info: matchData } } = await axios.get(url);
-        if (status === 200) {
-            const gameMode = getGameModeInKorean(matchData.queueId);
-            const [blueTeam, redTeam]: EndedGameTeam[] = await extractEndedGameTeamsInfo(matchData.teams)
-            const players = await extractEndedGamePlayerInfos(matchData.participants, targetSummonerId, blueTeam.championKills, redTeam.championKills)
-            if (!players) {
-                throw Error
-            }
-            const match: Match = {
-                id: matchId,
-                gameMode,
-                gameStartTime: matchData.gameStartTimestamp,
-                gameLength: matchData.gameDuration,
-                participants: players,
-                blueTeam,
-                redTeam
-            }
-            return match
-        } else {
-            return getFailedFetchResultByStatusCode(status);
+        const matchData = await getEndedMatchData(matchId);
+        const gameMode = getMatchModeInKorean(matchData.queueId);
+        const championsFromRiot = detailDatasFromRiot.champions;
+        const [blueTeam, redTeam]: EndedMatchTeam[] = await getEndedMatchTeams(matchData.teams, championsFromRiot)
+        const players = await getEndedMatchPlayers(matchData.participants, targetSummonerId, blueTeam.championKills, redTeam.championKills, detailDatasFromRiot)
+        if (!players) {
+            throw Error
         }
+        const match: Match = {
+            id: matchId,
+            gameMode,
+            gameStartTime: matchData.gameStartTimestamp,
+            gameLength: matchData.gameDuration,
+            participants: players,
+            blueTeam,
+            redTeam
+        }
+        return match
     } catch (error) {
         console.log(error);
-        return CODE_ERROR_RESULT;
+        return false
     }
 }
 
-export const fetchEndedMatches = async (summonerPuuid: string, summonerId: string, page: number = 1): Promise<EndedMatchFetchResult> => {
-    const url: string = getEndedMatchListUrl(summonerPuuid, page);
-    const { status, data: matchIds } = await axios.get(url);
-    if (status === 200) {
+const getEndedMatchIds = async (summonerPuuid: string, page: number): Promise<string[] | undefined> => {
+    try {
+        const url: string = getEndedMatchListUrl(summonerPuuid, page);
+        const { data: matchIds } = await axios.get(url);
+        return matchIds
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getEndedMatches = async (summonerPuuid: string, summonerId: string, detailDatasFromRiot: DetailDtos, page: number = 1): Promise<EndedMatchFetchResult> => {
+    try {
+        const matchIds = await getEndedMatchIds(summonerPuuid, page);
+        if (matchIds === undefined) {
+            throw Error;
+        }
         const endedMatches = await Promise.all(matchIds.map(async (matchId: string) => {
-            return fetchEndedMatchById(matchId, summonerId)
+            const match = await getEndedMatchById(matchId, summonerId, detailDatasFromRiot)
+            if (match === false) {
+                throw Error
+            }
+            return match
         }))
         return {
             result: true,
             Matches: endedMatches
         }
-    } else {
-        return getFailedFetchResultByStatusCode(status);
+    } catch (error) {
+        console.log(error);
+        return CODE_ERROR_RESULT
     }
 }

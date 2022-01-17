@@ -1,8 +1,8 @@
 import { ParticipantDtoDefault } from "./common";
 
 //종료된 게임
-export interface ParticipantDtoEndedGame extends ParticipantDtoDefault {
-    perks: PerksDtoEndedGame;
+export interface ParticipantDtoEndedMatch extends ParticipantDtoDefault {
+    perks: PerksDtoEndedMatch;
     assists: number;
     baronKills: number;
     bountyLevel: number;
@@ -66,7 +66,7 @@ export interface ParticipantDtoEndedGame extends ParticipantDtoDefault {
     riotIdName: string;
     riotIdTagline: string;
     role: string;
-    sightWardsBoughtInGame: number;
+    sightWardsBoughtInMatch: number;
     spell1Casts: number;
     spell2Casts: number;
     spell3Casts: number;
@@ -99,13 +99,13 @@ export interface ParticipantDtoEndedGame extends ParticipantDtoDefault {
     turretsLost: number;
     unrealKills: number;
     visionScore: number;
-    visionWardsBoughtInGame: number;
+    visionWardsBoughtInMatch: number;
     wardsKilled: number;
     wardsPlaced: number;
     win: boolean;
 }
 
-export interface PerksDtoEndedGame {
+export interface PerksDtoEndedMatch {
     statPerks: PerkStatsDto;
     styles: MatchPerkStyleDto[];
 }
@@ -139,6 +139,7 @@ export interface TeamDto {
 export interface BanDto {
     championId: number;
     pickTurn: number;
+    teamId?: number;
 }
 
 export interface ObjectivesDto {

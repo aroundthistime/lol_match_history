@@ -8,9 +8,9 @@ import { Tier } from '../types/Tier';
 import { SearchTargetUser } from '../types/User';
 import { getProfileIconUrl, getTierImageUrl } from '../utils/getUrl/images/getImageUrls';
 import { getUserInfoUrl, getUserTierUrl } from '../utils/getUrl/riotApi/getRiotApiUrls';
-import { fetchCurrentMatch } from './currentMatchController';
-import { fetchEndedMatches } from './endedMatchController';
-import { CODE_ERROR_RESULT, getFailedFetchResultByStatusCode } from './globalController';
+import { getCurrentMatch } from './currentMatchController';
+import { getEndedMatches } from './endedMatchController';
+import { CODE_ERROR_RESULT, getDetailDatasFromRiot, getFailedFetchResultByStatusCode } from './globalController';
 
 
 const extractTier = async (tiers: TierDto[], targetQueueType: TargetQueueType): Promise<Tier> => {
@@ -35,7 +35,7 @@ const extractTier = async (tiers: TierDto[], targetQueueType: TargetQueueType): 
     return result;
 }
 
-const fetchUserTiers = async (summonerId: string): Promise<TiersFetchResult> => {
+const getUserTiers = async (summonerId: string): Promise<TiersFetchResult> => {
     try {
         const url: string = getUserTierUrl(summonerId);
         const response = await axios.get(url);
@@ -62,7 +62,7 @@ const fetchUserTiers = async (summonerId: string): Promise<TiersFetchResult> => 
 
 
 
-const fetchUser = async (username: string): Promise<UserFetchResult> => {
+const getUser = async (username: string): Promise<UserFetchResult> => {
     try {
         const url: string = getUserInfoUrl(username);
         const response = await axios.get(url);
@@ -101,7 +101,7 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         params: { username }
     } = req;
     let result: UserFetchResult;
-    let userFetchResult: UserFetchResult = await fetchUser(username);
+    let userFetchResult: UserFetchResult = await getUser(username);
     if (!userFetchResult.result || userFetchResult.user === undefined) { //해당 이름의 소환사가 있으면
         res.json({
             result: false,
@@ -110,7 +110,7 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         return;
     }
     const user: SearchTargetUser = userFetchResult.user;
-    const tiersFetchResult: TiersFetchResult = await fetchUserTiers(user.id);
+    const tiersFetchResult: TiersFetchResult = await getUserTiers(user.id);
     if (!tiersFetchResult.result || tiersFetchResult.tiers === undefined) {
         res.json({
             result: false,
@@ -118,12 +118,17 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         })
         return;
     }
-    const currentMatch: Match | null = await fetchCurrentMatch(user.id);
-    const endedGamesFetchResult: EndedMatchFetchResult = await fetchEndedMatches(user.puuid, user.id);
-    if (!endedGamesFetchResult.result) {
+    const detailDatasFromRiot = await getDetailDatasFromRiot();
+    if (detailDatasFromRiot === null) {
+        res.json(CODE_ERROR_RESULT);
+        return;
+    }
+    const currentMatch: Match | null = await getCurrentMatch(user.id, detailDatasFromRiot);
+    const endedMatchsFetchResult: EndedMatchFetchResult = await getEndedMatches(user.puuid, user.id, detailDatasFromRiot);
+    if (!endedMatchsFetchResult.result) {
         res.json({
             result: false,
-            errorCode: endedGamesFetchResult.errorCode
+            errorCode: endedMatchsFetchResult.errorCode
         })
         return
     }
@@ -133,7 +138,7 @@ export const fetchByUsername = async (req: Request, res: Response) => {
             ...user,
             tiers: tiersFetchResult.tiers,
             currentMatch: currentMatch,
-            latestMatches: endedGamesFetchResult.Matches
+            latestMatches: endedMatchsFetchResult.Matches
         }
     }
     res.json(result);

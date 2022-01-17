@@ -1,10 +1,10 @@
 import { Champion } from "./Champion";
 
-export interface CurrentGameTeam {
+export interface CurrentMatchTeam {
     bans?: (Champion | null)[];
 }
 
-export interface EndedGameTeam extends CurrentGameTeam {
+export interface EndedMatchTeam extends CurrentMatchTeam {
     championKills: number;
     championAssists?: number;
     dragonKills: number;

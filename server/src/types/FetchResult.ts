@@ -1,7 +1,7 @@
 import { ErrorCode } from "./errorCode";
 import { Match } from "./Match";
 import { Tiers } from "./Tiers";
-import { SearchTargetUser, User } from "./User";
+import { SearchTargetUser } from "./User";
 
 export interface FetchResult {
     result: boolean;

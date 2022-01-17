@@ -21,25 +21,17 @@ const getPlayerSummonerSpell = (spellId: number, summonerSpells: SummonerSpellDt
     }
 }
 
-const getSummonerSpellsJsonFromRiot = async () => {
-    try {
-        const url: string = getSummonerSpellsJsonUrl();
-        const { data: { data: summonerSpellsJson } } = await axios.get(url);
-        return summonerSpellsJson;
-    } catch (error) {
-        console.log(error);
-    }
+export const getSummonerSpellsFromRiot = async (): Promise<SummonerSpellDto[]> => {
+    const url: string = getSummonerSpellsJsonUrl();
+    const { data: { data: summonerSpellsJson } } = await axios.get(url);
+    const summonerSpells: SummonerSpellDto[] = Object.values(summonerSpellsJson);
+    return summonerSpells;
 }
 
-export const getPlayerSummonerSpellsByIds = async (spell1Id: number, spell2Id: number): Promise<SummonerSpell[] | false> => {
+export const getPlayerSummonerSpellsByIds = async (spell1Id: number, spell2Id: number, summonerSpellsFromRiot: SummonerSpellDto[]): Promise<SummonerSpell[] | false> => {
     try {
-        const summonerSpellsJsonFromRiot = await getSummonerSpellsJsonFromRiot();
-        if (!summonerSpellsJsonFromRiot) {
-            throw Error
-        }
-        const summonerSpellObjects: SummonerSpellDto[] = Object.values(summonerSpellsJsonFromRiot);
-        const summonerSpell1 = getPlayerSummonerSpell(spell1Id, summonerSpellObjects);
-        const summonerSpell2 = getPlayerSummonerSpell(spell2Id, summonerSpellObjects);
+        const summonerSpell1 = getPlayerSummonerSpell(spell1Id, summonerSpellsFromRiot);
+        const summonerSpell2 = getPlayerSummonerSpell(spell2Id, summonerSpellsFromRiot);
         if (summonerSpell1 && summonerSpell2) {
             return [summonerSpell1, summonerSpell2];
         } else {

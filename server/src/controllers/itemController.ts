@@ -1,10 +1,11 @@
 import axios from "axios"
-import { ParticipantDtoEndedGame } from "../types/apiResponseDtos/match"
+import { ItemsDto } from "../types/apiResponseDtos/itemJson"
+import { ParticipantDtoEndedMatch } from "../types/apiResponseDtos/match"
 import { Item } from "../types/Item"
 import { getItemImageUrl } from "../utils/getUrl/images/getImageUrls"
 import { getItemsJsonUrl } from "../utils/getUrl/json/getJsonUrls"
 
-const getItemIdsList = (participant: ParticipantDtoEndedGame) => {
+const getItemIds = (participant: ParticipantDtoEndedMatch) => {
     return [
         participant.item0,
         participant.item1,
@@ -24,19 +25,18 @@ const convertToItemType = (id: number, item: any): Item => {
     })
 }
 
-const getItemsJsonFromRiot = async () => {
-    const url = getItemsJsonUrl();
+export const getItemsFromRiot = async (): Promise<ItemsDto | undefined> => {
     try {
-        const { data } = await axios.get(url);
+        const url = getItemsJsonUrl();
+        const { data: { data } } = await axios.get(url);
         return data;
     } catch (error) {
-        console.log(error);
+        return undefined
     }
-
 }
 
-const getItemById = (id: number, itemsJsonFromRiot: any): Item | null => {
-    const itemObjectFromRiot = itemsJsonFromRiot[id];
+const getItemById = (id: number, itemsFromRiot: any): Item | null => {
+    const itemObjectFromRiot = itemsFromRiot[id]; //itemsFromRiot = Json
     if (itemObjectFromRiot === undefined) {
         return null
     } else {
@@ -44,14 +44,10 @@ const getItemById = (id: number, itemsJsonFromRiot: any): Item | null => {
     }
 }
 
-export const getPlayerItems = async (participant: ParticipantDtoEndedGame): Promise<(Item | null)[] | false> => {
+export const getPlayerItems = async (participant: ParticipantDtoEndedMatch, itemsFromRiot: ItemsDto): Promise<(Item | null)[] | false> => {
     try {
-        const itemIdsList: number[] = getItemIdsList(participant);
-        const itemsJsonFromRiot = await getItemsJsonFromRiot();
-        if (itemsJsonFromRiot == undefined) {
-            throw Error
-        }
-        return Promise.all(itemIdsList.map((itemId) => getItemById(itemId, itemsJsonFromRiot)))
+        const itemIds: number[] = getItemIds(participant);
+        return Promise.all(itemIds.map((itemId) => getItemById(itemId, itemsFromRiot)))
     } catch (error) {
         console.log(error);
         return false;
