@@ -17,6 +17,10 @@ import { DetailDtos } from "../types/apiResponseDtos/common";
 import { ChampionDto } from "../types/apiResponseDtos/championJson";
 import { PerkStyleDto } from "../types/apiResponseDtos/perksJson";
 
+
+export const ENDED_GAME_FETCH_UNIT = 5;
+
+
 const extractEndedMatchPerkIds = async (selectedRuneList: PerkStyleSelectionDto[]): Promise<number[]> => {
     return selectedRuneList.map(selection => selection.perk)
 }
