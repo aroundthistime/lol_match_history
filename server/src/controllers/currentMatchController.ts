@@ -1,10 +1,8 @@
 import axios from "axios";
 import Constants from "../constants/constants";
 import { ChampionDto } from "../types/apiResponseDtos/championJson";
-import { ItemsDto } from "../types/apiResponseDtos/itemJson";
 import { PerkStyleDto } from "../types/apiResponseDtos/perksJson";
 import { ParticipantDtoCurrentMatch, PerksDtoCurrentMatch } from "../types/apiResponseDtos/spectator";
-import { SummonerSpellDto } from "../types/apiResponseDtos/summonerSpellsJson";
 import { Champion } from "../types/Champion";
 import { Match } from "../types/Match";
 import { Perks } from "../types/Perks";
@@ -18,6 +16,7 @@ import { extractCommonPlayerParts, getBannedChampions } from "./commonMatchContr
 import { getPlayerSummonerSpellsByIds } from "./summonerSpellController";
 import { BanDto } from "../types/apiResponseDtos/match";
 import { DetailDtos } from "../types/apiResponseDtos/common";
+import { defineWhetherNoDataOrError } from "../utils/errorHandler";
 
 
 const splitCurrentMatchPerkIds = (perkIds: number[]): number[][] => {
@@ -108,17 +107,21 @@ const getCurrentMatchData = async (summonerId: string): Promise<any> => {
         const url = getCurrentMatchUrl(summonerId);
         const { data } = await axios.get(url);
         return data
-    } catch (error) {
+    } catch (error: any) {
+        return defineWhetherNoDataOrError(error);
     }
 }
 
 export const getCurrentMatch = async (
     summonerId: string,
     detailDatasFromRiot: DetailDtos
-): Promise<Match | null> => {
+): Promise<Match | null | false> => {
     try {
         const currentMatch = await getCurrentMatchData(summonerId);
-        if (currentMatch === undefined) {
+        if (currentMatch === null) {
+            return null
+        }
+        if (currentMatch === false) {
             throw Error
         }
         const gameMode = getMatchModeInKorean(currentMatch.gameQueueConfigId);
@@ -138,6 +141,6 @@ export const getCurrentMatch = async (
             redTeam
         })
     } catch (error) { //no current games or API KEY expired
-        return null;
+        return false;
     }
 }

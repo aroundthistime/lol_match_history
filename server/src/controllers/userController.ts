@@ -1,145 +1,145 @@
 import axios from 'axios';
 import { Request, Response, NextFunction } from 'express';
 import { TierDto } from '../types/apiResponseDtos/league';
-import { EndedMatchFetchResult, TiersFetchResult, UserFetchResult } from '../types/FetchResult';
+import { UserFetchResult } from '../types/FetchResult';
 import { Match } from '../types/Match';
 import { TargetQueueType } from '../types/TargetQueueType';
 import { Tier } from '../types/Tier';
+import { Tiers } from '../types/Tiers';
 import { SearchTargetUser } from '../types/User';
+import { defineWhetherNoDataOrError } from '../utils/errorHandler';
 import { getProfileIconUrl, getTierImageUrl } from '../utils/getUrl/images/getImageUrls';
 import { getUserInfoUrl, getUserTierUrl } from '../utils/getUrl/riotApi/getRiotApiUrls';
 import { getCurrentMatch } from './currentMatchController';
 import { getEndedMatches } from './endedMatchController';
-import { CODE_ERROR_RESULT, getDetailDatasFromRiot, getFailedFetchResultByStatusCode } from './globalController';
+import { FAILED_RESULT, getDetailDatasFromRiot } from './globalController';
 
 
-const extractTier = async (tiers: TierDto[], targetQueueType: TargetQueueType): Promise<Tier> => {
-    const targetTier = tiers.find(tierObj => tierObj.queueType === targetQueueType);
-    let result: Tier;
-    if (targetTier === undefined) { //티어 정보가 없으면 언랭
-        result = {
-            tier: "UNRANKED",
-            tierImage: getTierImageUrl('UNRANKED')
-        }
-    } else {
-        result = {
-            tier: targetTier.tier,
-            tierImage: getTierImageUrl(targetTier.tier),
-            rank: targetTier.rank,
-            leaguePoints: targetTier.leaguePoints,
-            wins: targetTier.wins,
-            losses: targetTier.losses,
-            miniSeries: targetTier.miniSeries
-        }
-    }
-    return result;
+const getUnrankedTier = (): Tier => {
+    return ({
+        tier: "UNRANKED",
+        tierImage: getTierImageUrl('UNRANKED')
+    })
 }
 
-const getUserTiers = async (summonerId: string): Promise<TiersFetchResult> => {
+const getRankedTier = (tier: TierDto): Tier => {
+    return ({
+        tier: tier.tier,
+        tierImage: getTierImageUrl(tier.tier),
+        rank: tier.rank,
+        leaguePoints: tier.leaguePoints,
+        wins: tier.wins,
+        losses: tier.losses,
+        miniSeries: tier.miniSeries
+    })
+}
+
+const getTier = (tiers: TierDto[], targetQueueType: TargetQueueType): Tier => {
+    const tier = tiers.find(tierObj => tierObj.queueType === targetQueueType);
+    if (tier === undefined) { //티어 정보가 없으면 언랭
+        return getUnrankedTier()
+    } else { //언랭이 아닌 티어
+        return getRankedTier(tier);
+    }
+}
+
+const getUserTierDatas = async (summonerId: string) => {
+    const url: string = getUserTierUrl(summonerId);
+    const { data } = await axios.get(url);
+    return data
+}
+
+const getUserTiers = async (summonerId: string): Promise<Tiers | false> => {
     try {
-        const url: string = getUserTierUrl(summonerId);
-        const response = await axios.get(url);
-        let solo: Tier;
-        let team: Tier;
-        if (response && response.status === 200 && response.data) {
-            solo = await extractTier(response.data, TargetQueueType.RankedSolo);
-            team = await extractTier(response.data, TargetQueueType.RankedTeam);
-            return ({
-                result: true,
-                tiers: {
-                    solo,
-                    team
-                }
-            })
-        } else {
-            return getFailedFetchResultByStatusCode(response.status);
-        }
+        const tiersData = await getUserTierDatas(summonerId);
+        const solo: Tier = getTier(tiersData, TargetQueueType.RankedSolo);
+        const team: Tier = getTier(tiersData, TargetQueueType.RankedTeam);
+        return ({
+            solo,
+            team
+        })
     } catch (error) {
         console.log(error);
-        return CODE_ERROR_RESULT;
+        return false;
     }
 }
 
-
-
-const getUser = async (username: string): Promise<UserFetchResult> => {
+const getUserData = async (username: string) => {
     try {
         const url: string = getUserInfoUrl(username);
-        const response = await axios.get(url);
-        if (response.status === 200) {
-            const {
-                name,
-                id,
-                summonerLevel,
-                accountId,
-                puuid,
-            } = response.data;
-            const profileIcon: string = getProfileIconUrl(response.data.profileIconId);
-            const user: SearchTargetUser = {
-                name,
-                profileIcon,
-                accountId,
-                id,
-                puuid,
-                summonerLevel
-            };
-            return ({
-                result: true,
-                user
-            })
-        } else {
-            return getFailedFetchResultByStatusCode(response.status);
-        }
+        const { data } = await axios.get(url);
+        return data
     } catch (error) {
-        console.log(error);
-        return CODE_ERROR_RESULT
+        return defineWhetherNoDataOrError(error);
+    }
+}
+
+
+const getUser = async (username: string): Promise<SearchTargetUser | null | false> => {
+    try {
+        const userData = await getUserData(username);
+        if (userData === null) {
+            return null
+        } else if (userData === false) {
+            throw Error
+        }
+        const profileIcon: string = getProfileIconUrl(userData.profileIconId);
+        const user: SearchTargetUser = {
+            name: userData.name,
+            profileIcon,
+            accountId: userData.accountId,
+            id: userData.id,
+            puuid: userData.puuid,
+            summonerLevel: userData.summonerLevel
+        };
+        return user;
+    } catch (error) {
+        return false
     }
 }
 
 export const fetchByUsername = async (req: Request, res: Response) => {
-    const {
-        params: { username }
-    } = req;
-    let result: UserFetchResult;
-    let userFetchResult: UserFetchResult = await getUser(username);
-    if (!userFetchResult.result || userFetchResult.user === undefined) { //해당 이름의 소환사가 있으면
-        res.json({
-            result: false,
-            errorCode: userFetchResult.errorCode
-        })
-        return;
-    }
-    const user: SearchTargetUser = userFetchResult.user;
-    const tiersFetchResult: TiersFetchResult = await getUserTiers(user.id);
-    if (!tiersFetchResult.result || tiersFetchResult.tiers === undefined) {
-        res.json({
-            result: false,
-            errorCode: tiersFetchResult.errorCode
-        })
-        return;
-    }
-    const detailDatasFromRiot = await getDetailDatasFromRiot();
-    if (detailDatasFromRiot === null) {
-        res.json(CODE_ERROR_RESULT);
-        return;
-    }
-    const currentMatch: Match | null = await getCurrentMatch(user.id, detailDatasFromRiot);
-    const endedMatchsFetchResult: EndedMatchFetchResult = await getEndedMatches(user.puuid, user.id, detailDatasFromRiot);
-    if (!endedMatchsFetchResult.result) {
-        res.json({
-            result: false,
-            errorCode: endedMatchsFetchResult.errorCode
-        })
-        return
-    }
-    result = {
-        result: true,
-        user: {
-            ...user,
-            tiers: tiersFetchResult.tiers,
-            currentMatch: currentMatch,
-            latestMatches: endedMatchsFetchResult.Matches
+    try {
+        const {
+            params: { username }
+        } = req;
+        const user: SearchTargetUser | null | false = await getUser(username);
+        if (user === null) {
+            res.json({
+                result: true,
+                user
+            })
+            return
+        } else if (user === false) {
+            throw Error
         }
+        const tiers: Tiers | false = await getUserTiers(user.id);
+        if (tiers === false) {
+            throw Error;
+        }
+        const detailDatasFromRiot = await getDetailDatasFromRiot();
+        if (detailDatasFromRiot === null) {
+            throw Error
+        }
+        const currentMatch: Match | null | false = await getCurrentMatch(user.id, detailDatasFromRiot);
+        if (currentMatch === false) {
+            throw Error
+        }
+        const endedMatchs: Match[] | false = await getEndedMatches(user.puuid, user.id, detailDatasFromRiot);
+        if (endedMatchs === false) {
+            throw Error
+        }
+        const result: UserFetchResult = {
+            result: true,
+            user: {
+                ...user,
+                tiers,
+                currentMatch: currentMatch,
+                latestMatches: endedMatchs
+            }
+        }
+        res.json(result);
+    } catch (error) {
+        res.json(FAILED_RESULT)
     }
-    res.json(result);
 }

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { MatchPerkStyleDto, ObjectivesDto, ParticipantDtoEndedMatch, PerkStyleSelectionDto, TeamDto } from "../types/apiResponseDtos/match";
-import { EndedMatchFetchResult } from "../types/FetchResult";
 import { Match } from "../types/Match";
 import { Perks } from "../types/Perks";
 import { stringNumberDict } from "../types/StringNumberDict";
@@ -8,7 +7,7 @@ import { EndedMatchTeam } from "../types/Team";
 import { getKda, getKillParticipation } from "../utils/calculation";
 import { getEndedMatchListUrl, getEndedMatchUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
 import { getChampion } from "./championController";
-import { CODE_ERROR_RESULT, getMatchModeInKorean, getFailedFetchResultByStatusCode } from "./globalController";
+import { getMatchModeInKorean } from "./globalController";
 import { getPlayerItems } from "./itemController";
 import { getPerks } from "./perksController";
 import { extractCommonPlayerParts, getBannedChampions } from "./commonMatchController";
@@ -183,25 +182,22 @@ const getEndedMatchIds = async (summonerPuuid: string, page: number): Promise<st
     }
 }
 
-export const getEndedMatches = async (summonerPuuid: string, summonerId: string, detailDatasFromRiot: DetailDtos, page: number = 1): Promise<EndedMatchFetchResult> => {
+export const getEndedMatches = async (summonerPuuid: string, summonerId: string, detailDatasFromRiot: DetailDtos, page: number = 1): Promise<Match[] | false> => {
     try {
         const matchIds = await getEndedMatchIds(summonerPuuid, page);
         if (matchIds === undefined) {
             throw Error;
         }
-        const endedMatches = await Promise.all(matchIds.map(async (matchId: string) => {
+        const matches: Match[] = await Promise.all(matchIds.map(async (matchId: string) => {
             const match = await getEndedMatchById(matchId, summonerId, detailDatasFromRiot)
             if (match === false) {
                 throw Error
             }
             return match
         }))
-        return {
-            result: true,
-            Matches: endedMatches
-        }
+        return matches
     } catch (error) {
         console.log(error);
-        return CODE_ERROR_RESULT
+        return false;
     }
 }

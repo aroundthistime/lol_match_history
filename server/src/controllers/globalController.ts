@@ -1,6 +1,4 @@
 import constants from "../constants/constants";
-import { FetchResult } from "../types/FetchResult";
-import { ErrorCode } from "../types/errorCode";
 import { QueueTypeEng, QueueTypeId, QueueTypeKor } from "../types/QueueType";
 import { getChampionsFromRiot } from "./championController";
 import { getItemsFromRiot } from "./itemController";
@@ -15,24 +13,8 @@ import { DetailDtos } from "../types/apiResponseDtos/common";
 
 export const GAME_VERSION = "12.1.1";
 
-export const CODE_ERROR_RESULT = {
+export const FAILED_RESULT = {
     result: false,
-    errorCode: constants.codes.error.codeError
-}
-
-export const getFailedFetchResultByStatusCode = (statusCode: number): FetchResult => {
-    let errorCode: ErrorCode;
-    if (statusCode === 404) {
-        errorCode = constants.codes.error.noResult; //해당 이름의 유저 없음
-    } else if (statusCode === 403) {
-        errorCode = constants.codes.error.apiExpired; //api키 만료
-    } else {
-        errorCode = constants.codes.error.unauthorized; //허가되지 않은 접근
-    }
-    return ({
-        result: false,
-        errorCode
-    })
 }
 
 export const getMatchModeInKorean = (queueTypeId: QueueTypeId): QueueTypeKor => {
