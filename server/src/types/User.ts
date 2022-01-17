@@ -1,5 +1,4 @@
 import { Match } from "./Match";
-import { Tier } from "./Tier";
 import { Tiers } from "./Tiers";
 
 interface UserDefault {

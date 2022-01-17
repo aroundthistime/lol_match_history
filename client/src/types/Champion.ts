@@ -1,4 +1,4 @@
-export interface SummonerSpell {
+export interface Champion {
     id: number;
     name: string;
     image: string;
