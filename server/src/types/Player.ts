@@ -1,7 +1,7 @@
 import { Champion } from "./Champion";
 import { Item } from "./Item";
 import { Perks } from "./Perks";
-import { SummonerSpell } from "./Spell";
+import { SummonerSpell } from "./SummonerSpell";
 import { Stat } from "./Stat";
 import { User } from "./User";
 

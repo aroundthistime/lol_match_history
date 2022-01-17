@@ -41,26 +41,29 @@ const Histories = (): JSX.Element => {
             try {
                 const response = {
                     data: {
-                        id: 'F_snKLhC_Kck921IU30DtHJStIGoV4lJcr4X4J5kvW2LZw',
-                        accountId: 'PLaHM7vT7Pfs-QiK9n-OjB5uHfL1Nn7CIgroAG6q5bOJ',
-                        puuid: 'b0XjOSpDlTzSkw9O_LJ5u2iiHc1y8RLked9YoGsxJc743YVXXTSeHshMZNYpQvvSRQn73O4ZwYSkog',
-                        name: '콘요맘떼ㅣㅇ라고도',
-                        profileIconId: 3622,
-                        profileIconUri: "http://127.0.0.1:4000/static/img/profileicon/3622.png",
-                        revisionDate: 1639978640000,
-                        summonerLevel: 160,
-                        tiers: {
-                            solo: {
-                                tier: "UNRANKED",
-                                tierImage: "http://127.0.0.1:4000/static/img/tiers/UNRANKED.png"
-                            },
-                            team: {
-                                tier: "SILVER",
-                                tierImage: "http://127.0.0.1:4000/static/img/tiers/SILVER.png",
-                                rank: "I",
-                                leaguePoints: 1,
-                                wins: 8,
-                                losses: 6,
+                        result: true,
+                        user: {
+                            id: 'F_snKLhC_Kck921IU30DtHJStIGoV4lJcr4X4J5kvW2LZw',
+                            accountId: 'PLaHM7vT7Pfs-QiK9n-OjB5uHfL1Nn7CIgroAG6q5bOJ',
+                            puuid: 'b0XjOSpDlTzSkw9O_LJ5u2iiHc1y8RLked9YoGsxJc743YVXXTSeHshMZNYpQvvSRQn73O4ZwYSkog',
+                            name: '콘요맘떼ㅣㅇ라고도',
+                            profileIconId: 3622,
+                            profileIconUri: "http://127.0.0.1:4000/static/img/profileicon/3622.png",
+                            revisionDate: 1639978640000,
+                            summonerLevel: 160,
+                            tiers: {
+                                solo: {
+                                    tier: "UNRANKED",
+                                    tierImage: "http://127.0.0.1:4000/static/img/tiers/UNRANKED.png"
+                                },
+                                team: {
+                                    tier: "SILVER",
+                                    tierImage: "http://127.0.0.1:4000/static/img/tiers/SILVER.png",
+                                    rank: "I",
+                                    leaguePoints: 1,
+                                    wins: 8,
+                                    losses: 6,
+                                }
                             }
                         }
                     }
@@ -114,7 +117,7 @@ const Histories = (): JSX.Element => {
             {user === false && (
                 <StatusMessage text="오류가 발생했습니다." />
             )}
-            {user === undefined && (
+            {user === null && (
                 <StatusMessage text="소환사 정보를 찾을 수 없습니다." />
             )}
         </>
