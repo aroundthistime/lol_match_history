@@ -15,17 +15,14 @@ const convertToRuneType = ({ id, name, icon }: { id: number, name: string, icon:
 
 const getSelectedRunesByIds = async (runeIds: number[], perkSlots: PerkSlotDto[]): Promise<Rune[]> => {
     let selectedRunes = [];
-    let perkSlotsIndex = 0;
-    let runeIdsIndex = 0;
-    while (runeIdsIndex < runeIds.length && perkSlotsIndex < perkSlots.length) {
-        const runeId = runeIds[runeIdsIndex]; //현재 찾고자 하는 룬의 id
-        const searchResult = perkSlots[perkSlotsIndex].runes.find(rune => rune.id === runeId);
-        if (searchResult) {
-            const rune: Rune = convertToRuneType(searchResult);
-            selectedRunes.push(rune)
-            runeIdsIndex++;
+    for (let perkSlot of perkSlots) {
+        for (let runeId of runeIds) {
+            const searchResult = perkSlot.runes.find(rune => rune.id === runeId)
+            if (searchResult) {
+                const rune: Rune = convertToRuneType(searchResult);
+                selectedRunes.push(rune);
+            }
         }
-        perkSlotsIndex++;
     }
     return selectedRunes;
 }
