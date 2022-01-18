@@ -3,87 +3,6 @@
     padding : 50px 100px;
     border-bottom : $gray-border;
     margin-bottom : 50px;
-    .profile__icon {
-        position : relative;
-        margin-right : 30px;
-        .icon__image {
-            width : 120px;
-            height : 120px;
-        }
-        .icon__level-container {
-            position : absolute;
-            top : -11.5px;
-            left : 50%;
-            margin-left : -26px;
-            background-color : $yellow;
-            width : 52px;
-            height : 25px;
-            display : flex;
-            justify-content : center;
-            align-items : center;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
-                0 2px 2px rgba(0,0,0,0.15), 
-                0 4px 4px rgba(0,0,0,0.15), 
-                0 8px 8px rgba(0,0,0,0.15);
-            &::after {
-                content: "";
-                position: absolute;
-                left: -11.5px;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                border-right: 11.5px solid $yellow;
-                border-top: 12.5px solid transparent;
-                border-bottom: 12.5px solid transparent;
-            }
-            &::before {
-                content: "";
-                position: absolute;
-                right: -11.5px;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                border-left: 11.5px solid $yellow;
-                border-top: 12.5px solid transparent;
-                border-bottom: 12.5px solid transparent;
-            }
-            .icon__level {
-                position : relative;
-                background-color : $navy;
-                width : 50px;
-                height : 23px;
-                display : flex;
-                justify-content : center;
-                align-items : center;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: -10px;
-                    bottom: 0;
-                    width: 0;
-                    height: 0;
-                    border-right: 10px solid $navy;
-                    border-top: 11.5px solid transparent;
-                    border-bottom: 11.5px solid transparent;
-                    z-index : 1;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    right: -10px;
-                    bottom: 0;
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid $navy;
-                    border-top: 11.5px solid transparent;
-                    border-bottom: 11.5px solid transparent;
-                }
-                .level__text{
-                    color : $yellow;
-                }
-            }
-        }
-    }
     .profile__main {
         display : flex;
         flex-direction: column;
@@ -108,10 +27,6 @@
         padding : 30px 20px;
         flex-direction: column;
         align-items: center;
-        .profile__icon {
-            margin-right : 0;
-            margin-bottom : 20px;
-        }
         .profile__main {
             align-items: center;
             .profile__summoner-name {

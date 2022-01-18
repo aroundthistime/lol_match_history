@@ -1,4 +1,4 @@
-import { Champion } from "./Champion";
+import { Champion } from "../Champion/Champion";
 
 export interface CurrentMatchTeam {
     bans?: (Champion | null)[];

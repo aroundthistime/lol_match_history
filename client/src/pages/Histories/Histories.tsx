@@ -4,34 +4,13 @@ import { useParams } from 'react-router-dom';
 import Loader from '../../components/Loader/Loader';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import UserProfile from '../../components/UserProfile/UserProfile';
-import UserTier from '../../components/UserTier/UserTier';
+import UserTiers from '../../components/UserTier/UserTiers/UserTiers';
+import { SearchTargetUser } from '../../types/User/User';
 
-interface User {
-    id: string;
-    accountId: string;
-    puuid: string;
-    name: string;
-    profileIconId: number;
-    profileIconUri: string;
-    revisionDate: number;
-    summonerLevel: number;
-    tiers: {
-        solo: Tier,
-        team: Tier
-    }
-}
-
-interface Tier {
-    tier: string;
-    tierImage: string;
-    rank?: string;
-    wins?: number;
-    losses?: number;
-}
 
 const Histories = (): JSX.Element => {
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState<User | undefined | false>();
+    const [user, setUser] = useState<SearchTargetUser | undefined | false>();
     const params = useParams();
     const { username } = params;
 
@@ -47,9 +26,7 @@ const Histories = (): JSX.Element => {
                             accountId: 'PLaHM7vT7Pfs-QiK9n-OjB5uHfL1Nn7CIgroAG6q5bOJ',
                             puuid: 'b0XjOSpDlTzSkw9O_LJ5u2iiHc1y8RLked9YoGsxJc743YVXXTSeHshMZNYpQvvSRQn73O4ZwYSkog',
                             name: '콘요맘떼ㅣㅇ라고도',
-                            profileIconId: 3622,
-                            profileIconUri: "http://127.0.0.1:4000/static/img/profileicon/3622.png",
-                            revisionDate: 1639978640000,
+                            profileIcon: "http://127.0.0.1:4000/static/img/profileicon/3622.png",
                             summonerLevel: 160,
                             tiers: {
                                 solo: {
@@ -68,7 +45,7 @@ const Histories = (): JSX.Element => {
                         }
                     }
                 };
-                setUser(response.data);
+                setUser(response.data.user);
                 // const response = await axios.get(`/summoner/${username}`);
                 // console.log(response.data);
                 // if (response.data.result) {
@@ -88,7 +65,7 @@ const Histories = (): JSX.Element => {
     useEffect(() => {
         fetchUser();
     }, [])
-
+    console.log(user);
     return loading ? (
         <Loader />
     ) : (
@@ -97,12 +74,14 @@ const Histories = (): JSX.Element => {
                 <>
                     <UserProfile
                         name={user.name}
-                        profileIconUri={user.profileIconUri}
-                        profileIconId={user.profileIconId}
+                        profileIcon={user.profileIcon}
                         summonerLevel={user.summonerLevel}
                         refresh={fetchUser}
                     />
-                    <div className='tiers-container'>
+                    <UserTiers
+                        tiers={user.tiers}
+                    />
+                    {/* <div className='tiers-container'>
                         <UserTier
                             isSolo={true}
                             {...user.tiers.solo}
@@ -111,7 +90,7 @@ const Histories = (): JSX.Element => {
                             isSolo={false}
                             {...user.tiers.team}
                         />
-                    </div>
+                    </div> */}
                 </>
             )}
             {user === false && (

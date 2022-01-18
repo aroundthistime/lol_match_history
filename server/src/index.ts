@@ -2,7 +2,6 @@ import path from "path";
 require('dotenv').config()
 import express, { Request, Response, NextFunction } from 'express';
 import { fetchByUsername } from "./controllers/userController";
-Error.stackTraceLimit = Infinity;
 
 const app = express();
 

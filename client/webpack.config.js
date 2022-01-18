@@ -24,7 +24,7 @@ const config = {
                 use: [
                     {
                         loader: "ts-loader"
-                    }
+                    },
                 ]
                 // loader: 'babel-loader',
             },

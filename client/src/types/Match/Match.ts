@@ -1,5 +1,5 @@
-import { CurrentMatchPlayer, EndedMatchPlayer } from "./Player";
-import { CurrentMatchTeam, EndedMatchTeam } from "./Team";
+import { CurrentMatchPlayer, EndedMatchPlayer } from "../Player/Player";
+import { CurrentMatchTeam, EndedMatchTeam } from "../Team/Team";
 
 export interface Match {
     id: string;

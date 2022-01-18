@@ -1,5 +1,5 @@
-import { Match } from "./Match";
-import { Tiers } from "./Tier";
+import { Match } from "../Match/Match";
+import { Tiers } from "../Tier/Tier";
 
 interface UserDefault {
     name: string;
@@ -21,7 +21,7 @@ export interface SearchTargetUser extends UserDefault {
     accountId: string;
     puuid: string;
     summonerLevel: number;
-    tiers?: Tiers;
+    tiers: Tiers;
     currentMatch?: Match | null;
     latestMatches?: Match[];
 }

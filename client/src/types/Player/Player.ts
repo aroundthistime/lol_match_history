@@ -1,8 +1,8 @@
-import { Champion } from "./Champion";
-import { Item } from "./Item";
-import { Perks } from "./Perks";
-import { SummonerSpell } from "./SummonerSpell";
-import { User } from "./User";
+import { Champion } from "../Champion/Champion";
+import { Item } from "../Item/Item";
+import { Perks } from "../Perks/Perks";
+import { SummonerSpell } from "../SummonerSpell/SummonerSpell";
+import { User } from "../User/User";
 
 
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { SummonerSpellDto } from "../types/apiResponseDtos/summonerSpellsJson";
-import { SummonerSpell } from "../types/Spell";
+import { SummonerSpell } from "../types/SummonerSpell";
 import { getSummonerSpellImageUrl } from "../utils/getUrl/images/getImageUrls";
 import { getSummonerSpellsJsonUrl } from "../utils/getUrl/json/getJsonUrls";
 

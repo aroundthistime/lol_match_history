@@ -1,51 +1,50 @@
 import React from "react";
+import { createCheckers } from "ts-interface-checker";
+import { Tier } from "../../types/Tier/Tier";
+import TierTI from "../../types/Tier/Tier-ti";
+import RankedTierInfos from "./TierInfos/RankedTierInfos";
+import UnrankedTierInfos from "./TierInfos/UnrankedTierInfos";
 
-const TIER_TRANSLATOR: { [key: string]: any } = {
-    "UNRANKED": "언랭",
-    "IRON": "아이언",
-    "BRONZE": "브론즈",
-    "SILVER": "실버",
-    "GOLD": "골드",
-    "PLATINUM": "플래티넘",
-    "DIAMOND": "다이아몬드",
-    "MASTER": "마스터",
-    "GRANDMASTER": "그랜드마스터",
-    "CHALLENGER": "챌린저"
-}
+
+const { RankedTier: RankedTierChecker } = createCheckers(TierTI);
 
 const UserTier = (
-    { isSolo, tier, tierImage, rank, leaguePoints, wins, losses }
-        : { isSolo: boolean, tier: string, tierImage: string, rank?: string, leaguePoints?: number, wins?: number, losses?: number }
+    { queueType, tier }
+        : { queueType: string, tier: Tier }
 ): JSX.Element => {
-    const roundTo2Decimal = (number: number) => {
-        let temp = number * 100;
-        temp = Math.round(temp);
-        return temp / 100;
-    }
-    const getWinRate = (wins: number, losses: number) => {
-        const winRate = wins / (wins + losses) * 100;
-        return roundTo2Decimal(winRate);
+    const isRankedTier = (tier: Tier) => {
+        return tier.tier === "UNRANKED"
+        // try {
+        //     RankedTierChecker.check(tier);
+        //     return true
+        // } catch (error) {
+        //     return false
+        // }
     }
     return (
         <div className="user-tier">
-            <img className="tier__tier-image no-drag" src={tierImage} alt={tier} />
+            <UserTier.TierImage src={tier.tierImage} alt={tier.tier} />
             <div className="tier__infos">
-                <p className="tier__info queue-type"><span>리그 : </span>{isSolo ? "솔로랭크 5x5" : "자유랭크 5x5"}</p>
-                {tier === "UNRANKED" ? (
-                    <p className="tier__info tier-rank">{TIER_TRANSLATOR[tier]}</p>
+                <UserTier.Text className="queue-type" text={queueType} />
+                {isRankedTier(tier) ? (
+                    <RankedTierInfos tier={tier} />
                 ) : (
-                    <p className="tier__info tier-rank"><span>티어 : </span>{TIER_TRANSLATOR[tier]} {rank} {leaguePoints}점</p>
-                )}
-                {(wins !== undefined && losses !== undefined) ? (
-                    <p className="tier__info">{wins + losses}전 {wins}승 {losses}패 ({getWinRate(wins, losses)}%)</p>
-                ) : (
-                    <p className="tier__info">배치고사 진행중</p>
+                    <UnrankedTierInfos tier={tier} />
                 )}
             </div>
         </div>
     )
-
 }
 
+UserTier.TierImage = ({ src, alt }: { src: string, alt: string }): JSX.Element => (
+    <img className="tier__tier-image no-drag" src={src} alt={alt} />
+)
+
+UserTier.Text = (
+    { className = "", text }
+        : { className?: string | undefined, text: string }
+): JSX.Element => (
+    <p className={"tier__info " + className}>{text}</p>
+)
 
 export default UserTier;
