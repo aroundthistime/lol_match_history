@@ -85,8 +85,41 @@
 @include mobile {
     .user-profile {
         .profile__icon {
-            margin-right : 0;
-            margin-bottom : 20px;
+            .icon__image {
+                width : 70px;
+                height : 70px;
+            }
+            .icon__level-container {
+                position : absolute;
+                margin-left : -15px;
+                width : 30px;
+                height : 20px;
+                top : -10px;
+                &::after{
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+                &::before{
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+                .icon__level {
+                    width : 27px;
+                    height : 18px;
+                    &::after{
+                        border-top: 9px solid transparent;
+                        border-bottom: 9px solid transparent;
+                    }
+                    &::before{
+                        border-top: 9px solid transparent;
+                        border-bottom: 9px solid transparent;
+                    }
+                    .level__text{
+                        font-size : 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 }
