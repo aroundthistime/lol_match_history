@@ -1,6 +1,7 @@
 import React from "react";
 import constants from "../../constants/constants";
 import KOREAN_TIERS from "../../constants/korean/korean_tiers";
+import { StyleObject } from "../../types/StyleObject";
 import { Tier } from "../../types/Tier/Tier";
 import { TierTypeEng } from "../../types/Tier/TierType";
 import { roundTo2Decimal } from "../../utils/math";
@@ -20,9 +21,9 @@ const UserTier = (
             <div className="tier__infos">
                 <UserTier.Text className="queue-type" text={queueType} />
                 {tier.tier === "UNRANKED" ? (
-                    <UserTier.Text className="tier-rank" text={constants.korean.tiers[tier.tier as TierTypeEng]} />
+                    <UserTier.Text className="tier-rank" text={constants.korean.tiers[tier.tier as TierTypeEng]} style={{ fontWeight: "bold" }} />
                 ) : (
-                    <UserTier.Text className="tier-rank" text={`${constants.korean.tiers[tier.tier as TierTypeEng]} ${tier.rank} ${tier.leaguePoints}점`} />
+                    <UserTier.Text className="tier-rank" text={`${constants.korean.tiers[tier.tier as TierTypeEng]} ${tier.rank} ${tier.leaguePoints}점`} style={{ fontWeight: "bold" }} />
 
                 )}
                 {(tier.wins === undefined || tier.losses === undefined) ? (
@@ -40,10 +41,10 @@ UserTier.TierImage = ({ src, alt }: { src: string, alt: string }): JSX.Element =
 )
 
 UserTier.Text = (
-    { className = "", text }
-        : { className?: string | undefined, text: string }
+    { className = "", text, style = {} }
+        : { className?: string | undefined, text: string, style?: StyleObject }
 ): JSX.Element => (
-    <p className={"tier__info " + className}>{text}</p>
+    <p className={"tier__info " + className} style={{ ...style }}>{text}</p>
 )
 
 export default UserTier;

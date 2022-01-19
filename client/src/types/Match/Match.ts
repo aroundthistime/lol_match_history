@@ -4,7 +4,7 @@ import { CurrentMatchTeam, EndedMatchTeam } from "../Team/Team";
 export interface Match {
     id: string;
     gameMode: string;
-    gameStartTime: Date;
+    gameStartTime: number;
     gameLength: number;
     redTeam: EndedMatchTeam | CurrentMatchTeam;
     blueTeam: EndedMatchTeam | CurrentMatchTeam;

@@ -214,6 +214,9 @@ button.submit-button .button__text--mobile {
   min-height: 350px;
   padding: 15px;
 }
+.layout .main section {
+  margin-bottom: 40px;
+}
 .layout .main section.section-container {
   background-color: #F2F2F2;
   border-radius: 3px;
@@ -228,6 +231,9 @@ button.submit-button .button__text--mobile {
 @media screen and (max-width: 767px) {
   .layout .main {
     width: 400px;
+  }
+  .layout .main section {
+    margin-bottom: 20px;
   }
 }
 .loader {
@@ -378,7 +384,6 @@ button.submit-button .button__text--mobile {
   display: flex;
   padding: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 50px;
 }
 .user-profile .profile__main {
   display: flex;
@@ -398,25 +403,21 @@ button.submit-button .button__text--mobile {
   cursor: pointer;
   background-color: #3c6ca3;
 }
+
 @media screen and (max-width: 767px) {
-  .user-profile {
-    padding: 30px 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .user-profile .profile__main {
-    align-items: center;
-  }
   .user-profile .profile__main .profile__summoner-name {
-    font-size: 20px;
+    font-size: 18px;
   }
   .user-profile .profile__main .refresh-button {
-    margin-top: 20px;
-    width: 100px;
-    height: 35px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color: #3c6ca3;
   }
 }
-
 .user-profile .profile__icon {
   position: relative;
   margin-right: 30px;
@@ -497,26 +498,53 @@ button.submit-button .button__text--mobile {
 }
 
 @media screen and (max-width: 767px) {
-  .user-profile .profile__icon {
-    margin-right: 0;
-    margin-bottom: 20px;
+  .user-profile .profile__icon .icon__image {
+    width: 70px;
+    height: 70px;
+  }
+  .user-profile .profile__icon .icon__level-container {
+    position: absolute;
+    margin-left: -15px;
+    width: 30px;
+    height: 20px;
+    top: -10px;
+  }
+  .user-profile .profile__icon .icon__level-container::after {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  .user-profile .profile__icon .icon__level-container::before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  .user-profile .profile__icon .icon__level-container .icon__level {
+    width: 27px;
+    height: 18px;
+  }
+  .user-profile .profile__icon .icon__level-container .icon__level::after {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+  .user-profile .profile__icon .icon__level-container .icon__level::before {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+  .user-profile .profile__icon .icon__level-container .icon__level .level__text {
+    font-size: 12px;
+    font-weight: bold;
   }
 }
 .tiers-container {
   display: flex;
-  justify-content: center;
-  margin: 0 20px 50px 20px;
+  justify-content: space-between;
 }
 .tiers-container .user-tier {
   display: flex;
-  width: 352px;
+  width: 381px;
   padding: 20px 30px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #F2F2F2;
   box-shadow: 0 1px #dcdfdf;
-}
-.tiers-container .user-tier:first-child {
-  margin-right: 50px;
 }
 .tiers-container .user-tier .tier__tier-image {
   width: 100px;
@@ -529,6 +557,12 @@ button.submit-button .button__text--mobile {
   justify-content: space-between;
   font-size: 14px;
   padding: 10px 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1019px) {
+  .tiers-container .user-tier {
+    width: 281px;
+  }
 }
 @media screen and (max-width: 767px) {
   .tiers-container {
@@ -544,30 +578,27 @@ button.submit-button .button__text--mobile {
     margin-right: 10px;
   }
   .tiers-container .user-tier .tier__tier-image {
+    width: 70px;
     margin-right: 0px;
   }
   .tiers-container .user-tier .tier__infos .tier__info {
     text-align: center;
-  }
-  .tiers-container .user-tier .tier__infos .tier__info:last-child {
     font-size: 12.5px;
   }
   .tiers-container .user-tier .tier__infos .tier__info.queue-type {
     font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    margin-bottom: 5px;
   }
   .tiers-container .user-tier .tier__infos .tier__info.tier-rank {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
     color: #228822;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .tiers-container .user-tier .tier__infos .tier__info span {
     display: none;
   }
 }
-
 * {
   box-sizing: border-box;
   font-family: "Nanum Gothic", sans-serif;

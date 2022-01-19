@@ -1,17 +1,13 @@
 .tiers-container {
     display : flex;
-    justify-content: center;
-    margin : 0 20px 50px 20px;
+    justify-content: space-between;
     .user-tier {
         display : flex;
-        width : 352px;
+        width : 381px;
         padding : 20px 30px;
         border : $gray-border;
         background-color: $white;
         box-shadow : 0 1px #dcdfdf;
-        &:first-child {
-            margin-right : 50px;
-        }
         .tier__tier-image {
             width : 100px;
             object-fit: contain;
@@ -25,7 +21,18 @@
             padding : 10px 0;
         }
     }
-    @include mobile {
+}
+
+@include tablet {
+    .tiers-container {
+        .user-tier {
+            width : 281px;
+        }
+    }
+}
+
+@include mobile {
+    .tiers-container {
         justify-content: space-between;
         min-width : 240px;
         .user-tier {
@@ -36,24 +43,22 @@
                 margin-right : 10px;
             }
             .tier__tier-image {
+                width : 70px;
                 margin-right : 0px;
             }
             .tier__infos {
                 .tier__info {
                     text-align: center;
-                    &:last-child {
-                        font-size : 12.5px;
-                    }
+                    font-size : 12.5px;
                     &.queue-type {
                         font-weight : bold;
-                        font-size : 17px;
-                        margin-bottom : 10px;
+                        font-size : 13px;
+                        margin-bottom : 5px;
                     }
                     &.tier-rank {
-                        font-size : 18px;
-                        font-weight : bold;
+                        font-size : 15px;
                         color : $green;
-                        margin-bottom : 15px;
+                        margin-bottom : 10px;
                     }
                     span {
                         display : none;
@@ -61,7 +66,5 @@
                 }
             }
         }
-        
-        
     }
 }

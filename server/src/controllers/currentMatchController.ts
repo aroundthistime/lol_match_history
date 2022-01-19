@@ -132,7 +132,7 @@ export const getCurrentMatch = async (
         const championsFromRiot = detailDatasFromRiot.champions;
         const [blueTeam, redTeam]: CurrentMatchTeam[] = await getCurrentMatchTeams(currentMatch.bannedChampions, championsFromRiot)
         return ({
-            id: currentMatch.gameId,
+            id: `${currentMatch.gameId}`,
             gameMode,
             gameStartTime: currentMatch.gameStartTime,
             gameLength: currentMatch.gameLength,
