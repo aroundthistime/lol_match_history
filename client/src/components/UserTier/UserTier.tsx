@@ -1,35 +1,34 @@
 import React from "react";
-import { createCheckers } from "ts-interface-checker";
+import constants from "../../constants/constants";
+import KOREAN_TIERS from "../../constants/korean/korean_tiers";
 import { Tier } from "../../types/Tier/Tier";
-import TierTI from "../../types/Tier/Tier-ti";
-import RankedTierInfos from "./TierInfos/RankedTierInfos";
-import UnrankedTierInfos from "./TierInfos/UnrankedTierInfos";
+import { TierTypeEng } from "../../types/Tier/TierType";
+import { roundTo2Decimal } from "../../utils/math";
 
-
-const { RankedTier: RankedTierChecker } = createCheckers(TierTI);
 
 const UserTier = (
     { queueType, tier }
         : { queueType: string, tier: Tier }
 ): JSX.Element => {
-    const isRankedTier = (tier: Tier) => {
-        return tier.tier === "UNRANKED"
-        // try {
-        //     RankedTierChecker.check(tier);
-        //     return true
-        // } catch (error) {
-        //     return false
-        // }
+    const getWinRate = (wins: number, losses: number): number => {
+        const winRate: number = wins / (wins + losses) * 100;
+        return roundTo2Decimal(winRate);
     }
     return (
         <div className="user-tier">
             <UserTier.TierImage src={tier.tierImage} alt={tier.tier} />
             <div className="tier__infos">
                 <UserTier.Text className="queue-type" text={queueType} />
-                {isRankedTier(tier) ? (
-                    <RankedTierInfos tier={tier} />
+                {tier.tier === "UNRANKED" ? (
+                    <UserTier.Text className="tier-rank" text={constants.korean.tiers[tier.tier as TierTypeEng]} />
                 ) : (
-                    <UnrankedTierInfos tier={tier} />
+                    <UserTier.Text className="tier-rank" text={`${constants.korean.tiers[tier.tier as TierTypeEng]} ${tier.rank} ${tier.leaguePoints}점`} />
+
+                )}
+                {(tier.wins === undefined || tier.losses === undefined) ? (
+                    <UserTier.Text text="배치고사 진행중" />
+                ) : (
+                    <UserTier.Text text={`${tier.wins + tier.losses}전 ${tier.wins}승 ${tier.losses}패 (${getWinRate(tier.wins, tier.losses)}%)`} />
                 )}
             </div>
         </div>

@@ -1,5 +1,7 @@
 import korean from "./korean/korean";
 
-export default {
+const constants = {
     korean: korean
-}
+};
+
+export default constants;

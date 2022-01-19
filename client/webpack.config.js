@@ -1,10 +1,10 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
+    mode: "development",
     entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
@@ -21,12 +21,7 @@ const config = {
             {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "ts-loader"
-                    },
-                ]
-                // loader: 'babel-loader',
+                loader: "ts-loader"
             },
             {
                 test: /[\.js]$/, // .js 에 한하여 babel-loader를 이용하여 transpiling

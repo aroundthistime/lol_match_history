@@ -1,3 +1,8 @@
+// import { TierTypeEng } from "./TierType";
+
+import KOREAN_TIERS from "../../constants/korean/korean_tiers";
+import { TierTypeEng } from "./TierType";
+
 export interface Tiers {
     solo: Tier;
     team: Tier;
@@ -13,10 +18,10 @@ export interface Tiers {
 export interface Tier {
     tier: string;
     tierImage: string;
-    rank?: string | undefined;
-    leaguePoints?: number | undefined;
-    wins?: number | undefined;
-    losses: number | undefined;
+    rank?: string;
+    leaguePoints?: number;
+    wins?: number;
+    losses?: number;
 }
 
 // export interface RankedTier extends UnrankedTier {
