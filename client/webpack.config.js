@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
     mode: "development",
@@ -48,6 +49,7 @@ const config = {
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: false,
         }),
+        new UglifyJsPlugin()
     ],
 };
 

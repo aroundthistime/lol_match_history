@@ -26,7 +26,8 @@
         }
     }
     @include mobile {
-        justify-content: space-between;            min-width : 240px;
+        justify-content: space-between;
+        min-width : 240px;
         .user-tier {
             flex-direction : column;
             align-items: center;

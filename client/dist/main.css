@@ -197,17 +197,39 @@ button.submit-button .button__text--mobile {
 }
 @media screen and (max-width: 767px) {
   .home .home__bg-image {
-    width: 200px;
+    width: 300px;
   }
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .layout .main {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.4);
+  width: 800px;
+  background-color: #EAEAEA;
   border-radius: 3px;
   min-height: 350px;
+  padding: 15px;
+}
+.layout .main section.section-container {
+  background-color: #F2F2F2;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1019px) {
+  .layout .main {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .layout .main {
+    width: 400px;
+  }
+}
 .loader {
   position: absolute;
   top: 0;
@@ -253,7 +275,9 @@ button.submit-button .button__text--mobile {
 }
 
 .header {
+  position: relative;
   display: flex;
+  width: 800px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -263,19 +287,21 @@ button.submit-button .button__text--mobile {
 }
 .header a {
   position: absolute;
-  left: 60px;
+  left: 0;
 }
 .header a .header__logo {
   font-size: 45px;
 }
 .header .header__form .header__input {
-  width: 35vw;
+  width: 400px;
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (min-width: 768px) and (max-width: 1019px) {
   .header {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    width: 600px;
   }
   .header a {
     align-self: center;
@@ -296,7 +322,32 @@ button.submit-button .button__text--mobile {
     margin-right: 20px;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 400px;
+  }
+  .header a {
+    align-self: center;
+    position: relative;
+    left: 0;
+  }
+  .header a .header__logo {
+    font-size: 55px;
+  }
+  .header .header__form {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .header .header__form .header__input {
+    flex: 1;
+    margin-right: 20px;
+  }
+}
 .status-message {
   display: flex;
   position: absolute;
@@ -325,7 +376,7 @@ button.submit-button .button__text--mobile {
 
 .user-profile {
   display: flex;
-  padding: 50px 100px;
+  padding: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 50px;
 }
@@ -335,13 +386,12 @@ button.submit-button .button__text--mobile {
   justify-content: space-between;
 }
 .user-profile .profile__main .profile__summoner-name {
-  font-size: 33px;
+  font-size: 30px;
   font-weight: bold;
 }
 .user-profile .profile__main .refresh-button {
   width: 90px;
   height: 40px;
-  color: white;
   font-size: 14px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -358,7 +408,7 @@ button.submit-button .button__text--mobile {
     align-items: center;
   }
   .user-profile .profile__main .profile__summoner-name {
-    font-size: 18px;
+    font-size: 20px;
   }
   .user-profile .profile__main .refresh-button {
     margin-top: 20px;
@@ -372,8 +422,8 @@ button.submit-button .button__text--mobile {
   margin-right: 30px;
 }
 .user-profile .profile__icon .icon__image {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 .user-profile .profile__icon .icon__level-container {
   position: absolute;
