@@ -1,6 +1,6 @@
 .user-profile {
     display : flex;
-    padding : 50px 100px;
+    padding : 20px;
     border-bottom : $gray-border;
     margin-bottom : 50px;
     .profile__main {
@@ -8,13 +8,12 @@
         flex-direction: column;
         justify-content: space-between;
         .profile__summoner-name {
-            font-size : 33px;
+            font-size : 30px;
             font-weight: bold;
         }
         .refresh-button {
             width : 90px;
             height : 40px;
-            color : white;
             font-size : 14px;
             border-radius : $border-radius;
             border : $gray-border;
@@ -30,7 +29,7 @@
         .profile__main {
             align-items: center;
             .profile__summoner-name {
-                font-size : 18px;
+                font-size : 20px;
             }
             .refresh-button {
                 margin-top : 20px;

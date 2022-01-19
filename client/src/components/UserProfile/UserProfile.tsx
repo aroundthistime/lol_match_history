@@ -1,4 +1,6 @@
 import React from "react";
+import { OnClickFunction } from "../../types/Functions/OnClickFunction";
+import { StyleObject } from "../../types/StyleObject";
 import ProfileIcon from "./ProfileIcon/ProfileIcon";
 
 const UserProfile = (
@@ -11,12 +13,31 @@ const UserProfile = (
             summonerLevel={summonerLevel}
         />
         <div className="profile__main">
-            <h4 className="profile__summoner-name">{name}</h4>
-            <button className="refresh-button no-drag" onClick={() => refresh()}>
-                <span className="refresh-button__text">전적갱신</span>
-            </button>
+            <UserProfile.Text className="profile__summoner-name" text={name} style={{ fontWeight: "bold" }} />
+            <UserProfile.Button
+                className="refresh-button no-drag"
+                text="전적갱신"
+                onClick={() => refresh()}
+                style={{ color: "white" }}
+            />
         </div>
     </section>
+)
+
+UserProfile.Text = (
+    { className = "", text, style = {} }
+        : { className?: string, text: string, style?: StyleObject }
+): JSX.Element => (
+    <p className={"profile__text " + className} style={{ ...style }}>{text}</p>
+)
+
+UserProfile.Button = (
+    { className = "", text, onClick, style = {} }
+        : { className?: string, text: string, onClick: OnClickFunction, style?: StyleObject }
+): JSX.Element => (
+    <button className={"refresh-button no-drag " + className} onClick={onClick} style={{ ...style }}>
+        {text}
+    </button>
 )
 
 export default UserProfile;
