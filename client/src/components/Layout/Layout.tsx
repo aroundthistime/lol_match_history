@@ -4,9 +4,9 @@ import Header from "../Header/Header";
 const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => (
     <div className="layout">
         <Header />
-        <div className="main-container">
+        <main className="main">
             {children}
-        </div>
+        </main>
     </div>
 );
 

@@ -24,7 +24,7 @@ const Header = (): JSX.Element => {
     }, [usernameParams])
 
     return (
-        <div className="header">
+        <header className="header">
             <Link to="/">
                 <h4 className="header__logo logo">LOLLY</h4>
             </Link>
@@ -43,7 +43,7 @@ const Header = (): JSX.Element => {
                     <i className="fas fa-search mobile 'button__text button__text--mobile" />
                 </button>
             </form>
-        </div>
+        </header>
     )
 }
 

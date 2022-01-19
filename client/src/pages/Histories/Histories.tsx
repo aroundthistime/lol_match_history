@@ -45,6 +45,7 @@ const Histories = (): JSX.Element => {
                         }
                     }
                 };
+                // setUser(false);
                 setUser(response.data.user);
                 // const response = await axios.get(`/summoner/${username}`);
                 // console.log(response.data);

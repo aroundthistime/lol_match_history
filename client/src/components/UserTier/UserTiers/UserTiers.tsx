@@ -3,7 +3,7 @@ import { Tiers } from "../../../types/Tier/Tier";
 import UserTier from "../UserTier";
 
 const UserTiers = ({ tiers, children }: { tiers: Tiers, children?: React.ReactNode }): JSX.Element => (
-    <div className="tiers-container">
+    <section className="tiers-container">
         <UserTier
             queueType={"솔로랭크 5X5"}
             tier={tiers.solo}
@@ -13,7 +13,7 @@ const UserTiers = ({ tiers, children }: { tiers: Tiers, children?: React.ReactNo
             tier={tiers.team}
         />
         {children}
-    </div>
+    </section>
 )
 
 export default UserTiers

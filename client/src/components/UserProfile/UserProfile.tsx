@@ -5,7 +5,7 @@ const UserProfile = (
     { name, profileIcon, summonerLevel, refresh }
         : { name: string, profileIcon: string, summonerLevel: number, refresh: Function }
 ): JSX.Element => (
-    <section className="user-profile">
+    <section className="user-profile section-container">
         <ProfileIcon
             profileIcon={profileIcon}
             summonerLevel={summonerLevel}
