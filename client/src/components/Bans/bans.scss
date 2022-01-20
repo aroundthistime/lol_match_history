@@ -36,6 +36,10 @@
         .bans__team {
             width : 100%;
             justify-content: center;
+            .banned-champion{
+                width : 40px;
+                height : 40px;
+            }
         }
 
         p{

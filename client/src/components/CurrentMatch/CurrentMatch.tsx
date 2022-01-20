@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Champion } from "../../types/Champion/Champion";
 import { Match } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
 import { SummonerSpell } from "../../types/SummonerSpell/SummonerSpell";
+import { getPathToHistories } from "../../utils/getPaths";
 import { getCorePerkImage, getPerkStyleImage, seperateParticipants } from "../../utils/matchHandlers";
 import { getHourMinuteSecondString } from "../../utils/stringFormatter";
 import Bans from "../Bans/Bans";
@@ -21,6 +23,24 @@ CurrentMatch.Summary = ({ texts }: { texts: string[] }) => (
         {texts.map((text: string): JSX.Element => (
             <span className="current-match__summary-text">{text}</span>
         ))}
+    </div>
+)
+
+CurrentMatch.Teams = (
+    { blueTeamPlayers, redTeamPlayers }
+        : { blueTeamPlayers: CurrentMatchPlayer[], redTeamPlayers: CurrentMatchPlayer[] }
+): JSX.Element => (
+    <div className="current-match__teams">
+        <CurrentMatch.Team
+            className="team--blue"
+            players={blueTeamPlayers}
+            teamColor="blue"
+        />
+        <CurrentMatch.Team
+            className="team--red"
+            players={redTeamPlayers}
+            teamColor="red"
+        />
     </div>
 )
 
@@ -44,7 +64,9 @@ CurrentMatch.Player = ({ player, className = "", style = {} }: { player: Current
             ))}
         </div>
         <div className="player__text-infos">
-            <p className="player__text-info player__player-name text--bold">{player.name}</p>
+            <Link to={getPathToHistories(player.name)}>
+                <p className="player__text-info player__player-name text--bold">{player.name}</p>
+            </Link>
             <p className="player__text-info player__champion-name">{player.champion.name}</p>
         </div>
         <div className="player__perks">
@@ -82,15 +104,9 @@ export default ({ match }: { match: Match }): JSX.Element => {
         <CurrentMatch>
             <CurrentMatch.Summary texts={[match.gameMode, getCurrentGameDurationStr(match.gameStartTime)]} />
             <div className="current-match__body">
-                <CurrentMatch.Team
-                    className="team--blue"
-                    players={blueTeamPlayers}
-                    teamColor="blue"
-                />
-                <CurrentMatch.Team
-                    className="team--red"
-                    players={redTeamPlayers}
-                    teamColor="red"
+                <CurrentMatch.Teams
+                    blueTeamPlayers={blueTeamPlayers}
+                    redTeamPlayers={redTeamPlayers}
                 />
             </div>
             <CurrentMatch.Footer>

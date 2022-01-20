@@ -1,3 +1,42 @@
 .current-match {
-    
+    display : flex;
+    flex-direction: column;
+    row-gap : 1px;
+    background-color: gray;
+    border : 1px solid gray;
+    .current-match__summary {
+        background-color : $white;
+        padding : 5px 10px;
+        .current-match__summary-text {
+            font-size : 14px;
+            &:not(:last-child)::after{
+                content: " | ";
+            }
+        }
+    }
+    .current-match__body{
+        .current-match__teams{
+            display : flex;
+            .current-match__team {
+                display : flex;
+                flex-direction: column;
+                width : 100%;
+                // .current-match__player 
+            }
+        }
+    }
+    .current-match__footer{
+        background-color : $white;
+
+    }
+}
+
+@include mobile {
+    .current-match{
+        .current-match__body {
+            .current-match__teams{
+                flex-direction: column;
+            }
+        } 
+    }
 }
