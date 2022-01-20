@@ -21,7 +21,7 @@ const Bans = (
 )
 
 Bans.Team = ({ bannedChampions, teamColor }: { bannedChampions: Ban[], teamColor: string }) => (
-    <div className="bans__team">
+    <div className={`bans__team bans__team--${teamColor}`}>
         {bannedChampions.map((bannedChampion: Ban) => {
             return (
                 <BannedChampion

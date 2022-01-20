@@ -6,7 +6,6 @@ import { StyleObject } from "../../types/StyleObject";
 import { SummonerSpell } from "../../types/SummonerSpell/SummonerSpell";
 import { getCorePerkImage, getPerkStyleImage, seperateParticipants } from "../../utils/matchHandlers";
 import { getHourMinuteSecondString } from "../../utils/stringFormatter";
-import BannedChampion from "../Bans/BannedChampion/BannedChampion";
 import Bans from "../Bans/Bans";
 
 const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element => {
@@ -95,10 +94,12 @@ export default ({ match }: { match: Match }): JSX.Element => {
                 />
             </div>
             <CurrentMatch.Footer>
-                <Bans
-                    blueTeamBans={match.blueTeam.bans}
-                    redTeamBans={match.redTeam.bans}
-                />
+                {match.blueTeam.bans && ( //밴이 존재하는 게임이면 밴목록 추가
+                    <Bans
+                        blueTeamBans={match.blueTeam.bans}
+                        redTeamBans={match.redTeam.bans}
+                    />
+                )}
             </CurrentMatch.Footer>
         </CurrentMatch>
     )

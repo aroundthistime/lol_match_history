@@ -16,3 +16,30 @@
         margin : 0 15px;
     }
 }
+
+@include tablet  {
+    .bans {
+        .bans__team {
+            column-gap : 5px;
+            .banned-champion {
+                width : 40px;
+                height : 40px;
+            }
+        }
+
+    }
+}
+
+@include mobile {
+    .bans {
+        flex-direction: column;
+        .bans__team {
+            width : 100%;
+            justify-content: center;
+        }
+
+        p{
+            margin : 10px 0;
+        }
+    }
+}
