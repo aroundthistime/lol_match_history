@@ -22,6 +22,8 @@
 //현재 진행중인 게임
 @import "../components/CurrentMatch/currentMatch.scss";
 @import "../components/Player/player.scss";
+@import "../components/Bans/bans.scss";
+@import "../components/EmptyBlock/emptyBlock.scss";
 
 * {
     box-sizing : border-box;

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { Champion } from "../../types/Champion/Champion";
 import { Match } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
 import { SummonerSpell } from "../../types/SummonerSpell/SummonerSpell";
 import { getCorePerkImage, getPerkStyleImage, seperateParticipants } from "../../utils/matchHandlers";
 import { getHourMinuteSecondString } from "../../utils/stringFormatter";
+import BannedChampion from "../Bans/BannedChampion/BannedChampion";
+import Bans from "../Bans/Bans";
 
 const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element => {
     return (
@@ -52,6 +55,12 @@ CurrentMatch.Player = ({ player, className = "", style = {} }: { player: Current
     </li>
 )
 
+CurrentMatch.Footer = ({ children }: { children: React.ReactElement }): JSX.Element => (
+    <div className="current-match__footer">
+        {children}
+    </div>
+)
+
 export default ({ match }: { match: Match }): JSX.Element => {
     const [blueTeamPlayers, setBlueTeamPlayers] = useState([]);
     const [redTeamPlayers, setRedTeamPlayers] = useState([]);
@@ -85,6 +94,12 @@ export default ({ match }: { match: Match }): JSX.Element => {
                     teamColor="red"
                 />
             </div>
+            <CurrentMatch.Footer>
+                <Bans
+                    blueTeamBans={match.blueTeam.bans}
+                    redTeamBans={match.redTeam.bans}
+                />
+            </CurrentMatch.Footer>
         </CurrentMatch>
     )
 }

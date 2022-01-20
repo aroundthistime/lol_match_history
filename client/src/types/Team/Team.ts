@@ -1,7 +1,7 @@
-import { Champion } from "../Champion/Champion";
+import { Ban } from "../Ban/Ban";
 
 export interface CurrentMatchTeam {
-    bans?: (Champion | null)[];
+    bans?: Ban[];
 }
 
 export interface EndedMatchTeam extends CurrentMatchTeam {
