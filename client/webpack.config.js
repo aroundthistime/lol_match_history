@@ -20,16 +20,16 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
-                exclude: /node_modules/,
-                loader: "ts-loader"
-            },
-            {
                 test: /[\.js]$/, // .js 에 한하여 babel-loader를 이용하여 transpiling
                 exclude: /node_module/,
                 use: {
                     loader: "babel-loader",
                 },
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                loader: "ts-loader",
             },
             {
                 test: /\.(png|jpe?g|gif|woff|woff2|ttf|svg|ico)$/i,

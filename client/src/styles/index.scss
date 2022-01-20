@@ -19,7 +19,9 @@
 @import "../components/UserProfile/userProfile.scss";
 @import "../components/UserProfile/ProfileIcon/ProfileIcon.scss";
 @import "../components/UserTier/UserTier.scss";
-
+//현재 진행중인 게임
+@import "../components/CurrentMatch/currentMatch.scss";
+@import "../components/Player/player.scss";
 
 * {
     box-sizing : border-box;

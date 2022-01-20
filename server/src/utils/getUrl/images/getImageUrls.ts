@@ -6,8 +6,8 @@ export const getProfileIconUrl = (profileIconId: string): string =>
 export const getTierImageUrl = (tier: string) =>
     `http://127.0.0.1:${process.env.PORT}/static/img/tiers/${tier}.png`
 
-export const getChampionImageUrl = (championId: number): string =>
-    `http://ddragon.leagueoflegends.com/cdn/${GAME_VERSION}/img/champion/${championId}.png`
+export const getChampionImageUrl = (championImagePath: string): string =>
+    `http://ddragon.leagueoflegends.com/cdn/${GAME_VERSION}/img/champion/${championImagePath}`
 
 export const getSummonerSpellImageUrl = (summonerSpellId: string): string =>
     `http://ddragon.leagueoflegends.com/cdn/${GAME_VERSION}/img/spell/${summonerSpellId}.png`

@@ -1,6 +1,5 @@
 import React from "react";
 import constants from "../../constants/constants";
-import KOREAN_TIERS from "../../constants/korean/korean_tiers";
 import { StyleObject } from "../../types/StyleObject";
 import { Tier } from "../../types/Tier/Tier";
 import { TierTypeEng } from "../../types/Tier/TierType";
