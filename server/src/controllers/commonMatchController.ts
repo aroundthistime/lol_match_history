@@ -3,6 +3,9 @@ import { ChampionDto } from "../types/apiResponseDtos/championJson"
 import { BanDto, ParticipantDtoEndedMatch } from "../types/apiResponseDtos/match"
 import { ParticipantDtoCurrentMatch } from "../types/apiResponseDtos/spectator"
 import { Champion } from "../types/Champion"
+import { Match } from "../types/Match"
+import { Player } from "../types/Player"
+import { CurrentMatchTeam, EndedMatchTeam } from "../types/Team"
 import { getChampion } from "./championController"
 
 export const extractCommonPlayerParts = (participant: ParticipantDtoCurrentMatch | ParticipantDtoEndedMatch, targetSummonerId: string | undefined) => {

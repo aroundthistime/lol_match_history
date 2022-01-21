@@ -33,6 +33,7 @@ export interface CurrentMatchPlayer extends User {
 export interface EndedMatchPlayer extends User {
     isSearchTarget: boolean; //검색의 기준이 되는 유저인지 여부
     isBlueTeam: boolean;
+    win?: boolean;
     champion: Champion;
     mainPerks: Perks;
     subPerks: Perks;

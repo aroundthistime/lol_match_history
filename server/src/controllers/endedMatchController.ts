@@ -15,6 +15,7 @@ import { getPlayerSummonerSpellsByIds } from "./summonerSpellController";
 import { DetailDtos } from "../types/apiResponseDtos/common";
 import { ChampionDto } from "../types/apiResponseDtos/championJson";
 import { PerkStyleDto } from "../types/apiResponseDtos/perksJson";
+import { Player } from "../types/Player";
 
 
 export const ENDED_GAME_FETCH_UNIT = 5;
@@ -142,6 +143,31 @@ const getEndedMatchData = async (matchId: string) => {
     return matchData;
 }
 
+
+const getPlayerTeam = (player: Player, redTeam: EndedMatchTeam, blueTeam: EndedMatchTeam): EndedMatchTeam => {
+    if (player.isBlueTeam) {
+        return blueTeam
+    } else {
+        return redTeam
+    }
+}
+
+const searchTargetPlayerHasWon = (player: Player, blueTeam: EndedMatchTeam, redTeam: EndedMatchTeam): boolean => {
+    const team = getPlayerTeam(player, blueTeam, redTeam);
+    return team.win
+}
+
+const getSearchTargetPlayer = (players: Player[], blueTeam: EndedMatchTeam, redTeam: EndedMatchTeam): Player | undefined => {
+    const searchTargetPlayer: Player | undefined = players.find(player => player.isSearchTarget);
+    if (searchTargetPlayer === undefined) {
+        return
+    }
+    return {
+        ...searchTargetPlayer,
+        win: searchTargetPlayerHasWon(searchTargetPlayer, blueTeam, redTeam)
+    }
+}
+
 const getEndedMatchById = async (
     matchId: string,
     targetSummonerId: string,
@@ -156,6 +182,10 @@ const getEndedMatchById = async (
         if (!players) {
             throw Error
         }
+        const searchTargetPlayer = getSearchTargetPlayer(players, blueTeam, redTeam);
+        if (!searchTargetPlayer) {
+            throw Error
+        }
         const match: Match = {
             id: matchId,
             gameMode,
@@ -163,7 +193,8 @@ const getEndedMatchById = async (
             gameLength: matchData.gameDuration,
             participants: players,
             blueTeam,
-            redTeam
+            redTeam,
+            searchTargetPlayer
         }
         return match
     } catch (error) {

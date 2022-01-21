@@ -599,6 +599,156 @@ button.submit-button .button__text--mobile {
     display: none;
   }
 }
+.current-match {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+  background-color: gray;
+  border: 1px solid gray;
+}
+.current-match .current-match__summary {
+  background-color: #F2F2F2;
+  padding: 5px 10px;
+}
+.current-match .current-match__summary .current-match__summary-text {
+  font-size: 14px;
+}
+.current-match .current-match__summary .current-match__summary-text:not(:last-child)::after {
+  content: " | ";
+}
+.current-match .current-match__body .current-match__teams {
+  display: flex;
+}
+.current-match .current-match__body .current-match__teams .current-match__team {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.current-match .current-match__footer {
+  background-color: #F2F2F2;
+}
+
+@media screen and (max-width: 767px) {
+  .current-match .current-match__body .current-match__teams {
+    flex-direction: column;
+  }
+}
+.bans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+.bans .bans__team {
+  display: flex;
+  column-gap: 10px;
+}
+.bans .bans__team .banned-champion {
+  width: 50px;
+  height: 50px;
+}
+.bans p {
+  font-size: 12px;
+  margin: 0 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1019px) {
+  .bans .bans__team {
+    column-gap: 5px;
+  }
+  .bans .bans__team .banned-champion {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bans {
+    flex-direction: column;
+  }
+  .bans .bans__team {
+    width: 100%;
+    justify-content: center;
+  }
+  .bans .bans__team .banned-champion {
+    width: 40px;
+    height: 40px;
+  }
+  .bans p {
+    margin: 10px 0;
+  }
+}
+.empty-block {
+  background-color: #292828;
+}
+
+.team--blue {
+  background-color: #92C5F7;
+}
+
+.team--red {
+  background-color: #CEBCF2;
+}
+
+.icon--small {
+  width: 30px;
+}
+
+:root {
+  --champion-image-size: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --champion-image-size: 45px;
+  }
+}
+.player {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+}
+.player .player__champion-image {
+  width: var(--champion-image-size);
+}
+.player .player__summonerspells {
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--champion-image-size) / 2);
+}
+.player .player__text-infos {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding-left: 5px;
+}
+.player .player__text-infos .player__text-info {
+  font-size: 13px;
+}
+.player .player__text-infos .player__text-info.player__player-name {
+  font-size: 16px;
+}
+.player .player__perks {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 10px;
+}
+.player .player__perks .player__perk--main {
+  width: calc(var(--champion-image-size) / 1.5);
+}
+.player .player__perks .player__perk--sub {
+  width: calc(var(--champion-image-size) / 3);
+  height: calc(var(--champion-image-size) / 3);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1019px) {
+  .player .player__text-infos .player__text-info {
+    font-size: 12px;
+  }
+  .player .player__text-infos .player__text-info.player__player-name {
+    font-size: 13.5px;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Nanum Gothic", sans-serif;
@@ -610,6 +760,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .no-drag {
@@ -625,4 +776,8 @@ a {
   min-height: 100vh;
   padding: 20px;
   position: relative;
+}
+
+.text--bold {
+  font-weight: bold;
 }

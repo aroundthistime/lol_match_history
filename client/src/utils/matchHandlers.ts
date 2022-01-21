@@ -1,5 +1,7 @@
+import { Match } from "../types/Match/Match";
 import { Perks } from "../types/Perks/Perks";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../types/Player/Player";
+import { EndedMatchTeam } from "../types/Team/Team";
 
 export const seperateParticipants = async (participants: CurrentMatchPlayer[] | EndedMatchPlayer[]): Promise<CurrentMatchPlayer[][] | EndedMatchPlayer[][]> => {
     const blueTeamPlayers = [];

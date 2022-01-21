@@ -12,9 +12,9 @@ import Bans from "../Bans/Bans";
 
 const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element => {
     return (
-        < div className="current-match" >
+        <section className="current-match" >
             {children}
-        </div>
+        </section>
     )
 }
 
