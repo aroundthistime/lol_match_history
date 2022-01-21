@@ -3,8 +3,13 @@ const getFloatPrecision = (number: number, point: number = 2): string => { //실
 }
 
 export const getKda = (kills: number, deaths: number, assists: number): string => {
-    const kda = ((kills + assists) / deaths);
-    return getFloatPrecision(kda);
+    if (deaths === 0) {
+        return "Perfect"
+    } else {
+        const kda = ((kills + assists) / deaths);
+        return getFloatPrecision(kda);
+    }
+
 }
 
 export const getKillParticipation = (killsParameter: number | undefined, assistsParameter: number | undefined, teamTotalKills: number): string => {
