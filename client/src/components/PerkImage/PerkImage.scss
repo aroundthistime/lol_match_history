@@ -1,7 +1,6 @@
 .player__perks{
     display : flex;
     align-items: flex-end;
-    padding-right : 10px;
     .player__perk--main{
         width : calc(var(--champion-image-size) / 1.5);
     }

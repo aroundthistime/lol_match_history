@@ -1,1 +1,21 @@
 @import "./MatchRow/MatchRow.scss";
+
+.matches-table{
+    width : 100%;
+    thead {
+        .matches-table__header {
+            background-color: $white;
+            font-weight: bold;
+        }
+    }
+    tbody {
+        .table__cell{
+            &.team--blue{
+                background-color: $team-color-blue;
+            }
+            &.team--red{
+                background-color: $team-color-red;
+            }
+        }
+    }
+}

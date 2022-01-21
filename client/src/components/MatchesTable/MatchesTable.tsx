@@ -9,13 +9,13 @@ const COLUMN_NAMES: string[] = [
     "모드",
     "KDA",
     "킬관여",
-    "소환사주문",
+    "스펠",
     "룬",
     "팀",
     "아이템",
     "LV/G/CS",
-    "플레이시간",
-    "와드",
+    "시간",
+    "시야",
     "더보기",
 ]
 
@@ -24,7 +24,9 @@ const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
         <Table className="matches-table">
             <Table.Header>
                 {COLUMN_NAMES.map((columnName: string): JSX.Element => (
-                    <td className="matches-table__header" key={columnName}>{columnName}</td>
+                    <Table.Cell className="matches-table__header" key={columnName}>
+                        {columnName}
+                    </Table.Cell>
                 ))}
             </Table.Header>
             <Table.Body>

@@ -1,3 +1,15 @@
+table {
+    background-color: gray;
+    border-collapse: separate;
+    border-spacing: 1.5px;
+}
+
 .table__cell{
     vertical-align:middle;
+    text-align: center;
+    font-size : 10px;
+    padding : 3px;
+    p {
+        margin-bottom: 3px;
+    }
 }

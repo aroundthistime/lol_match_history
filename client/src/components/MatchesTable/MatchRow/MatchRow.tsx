@@ -1,17 +1,17 @@
 import React from "react";
 import { Match } from "../../../types/Match/Match";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../../../types/Player/Player";
-import { EndedMatchTeam } from "../../../types/Team/Team";
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
 import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
+import PlayerKDA from "../../PlayerKDA/PlayerKDA";
 import PlayerSummonerSpells from "../../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
 import Table from "../../Table/Table";
 
 const MatchRow = ({ match }: { match: Match }): JSX.Element =>
 (
-    <Table.Row>
-        <MatchRow.Cell>{match.searchTargetPlayer.win ? "승" : "패"}</MatchRow.Cell>
+    <Table.Row className={match.searchTargetPlayer.isBlueTeam ? "team--blue" : "team--red"}>
+        <MatchRow.Cell className="text--bold">{match.searchTargetPlayer.win ? "승" : "패"}</MatchRow.Cell>
         <MatchRow.Cell>
             <ChampionImage
                 champion={match.searchTargetPlayer.champion}
@@ -19,7 +19,14 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
             />
         </MatchRow.Cell>
         <MatchRow.Cell>{match.gameMode}</MatchRow.Cell>
-        <MatchRow.Cell>{match.searchTargetPlayer.kda}</MatchRow.Cell>
+        <MatchRow.Cell>
+            <PlayerKDA
+                kills={match.searchTargetPlayer.kills}
+                deaths={match.searchTargetPlayer.deaths}
+                assists={match.searchTargetPlayer.assists}
+                kda={match.searchTargetPlayer.kda}
+            />
+        </MatchRow.Cell>
         <MatchRow.Cell>{match.searchTargetPlayer.killParticipation}%</MatchRow.Cell>
         <MatchRow.Cell>
             <PlayerSummonerSpells summonerSpells={match.searchTargetPlayer.summonerSpells} />
@@ -28,6 +35,7 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
             <PlayerPerks
                 mainPerks={match.searchTargetPlayer.mainPerks}
                 subPerks={match.searchTargetPlayer.subPerks}
+                style={{ "flex-direction": "column", "align-items": "center" }}
             />
         </MatchRow.Cell>
         <MatchRow.Cell>
@@ -38,6 +46,11 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
         </MatchRow.Cell>
         <MatchRow.Cell>
             <PlayerItems items={match.searchTargetPlayer.items} />
+        </MatchRow.Cell>
+        <MatchRow.Cell>
+            <p className="player-growth">레벨 {match.searchTargetPlayer.championLevel}</p>
+            <p className="player-growth">골드 {match.searchTargetPlayer.goldEarned}</p>
+            <p className="player-growth">CS {match.searchTargetPlayer.cs}</p>
         </MatchRow.Cell>
     </Table.Row>
 )

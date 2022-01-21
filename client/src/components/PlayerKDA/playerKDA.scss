@@ -1,0 +1,17 @@
+.player-kda__text{
+    &.kda--perfect, &.kda--max {
+        color : red;
+    }
+    &.kda--high {
+        color :blue;
+    }
+    &.kda--average {
+        color : green;
+    }
+    &.kda--low{
+        color : gray;
+    }
+    &:not(.kda--perfect)::before{
+        content: "평점 ";
+    }
+}
