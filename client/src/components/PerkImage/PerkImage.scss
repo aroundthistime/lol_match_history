@@ -1,0 +1,12 @@
+.player__perks{
+    display : flex;
+    align-items: flex-end;
+    padding-right : 10px;
+    .player__perk--main{
+        width : calc(var(--champion-image-size) / 1.5);
+    }
+    .player__perk--sub{
+        width : calc(var(--champion-image-size) / 3);
+        height : calc(var(--champion-image-size) / 3);
+    }
+}

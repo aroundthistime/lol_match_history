@@ -1,7 +1,6 @@
 import { Match } from "../types/Match/Match";
 import { Perks } from "../types/Perks/Perks";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../types/Player/Player";
-import { EndedMatchTeam } from "../types/Team/Team";
 
 export const seperateParticipants = async (participants: CurrentMatchPlayer[] | EndedMatchPlayer[]): Promise<CurrentMatchPlayer[][] | EndedMatchPlayer[][]> => {
     const blueTeamPlayers = [];
@@ -14,12 +13,4 @@ export const seperateParticipants = async (participants: CurrentMatchPlayer[] | 
         }
     }
     return [blueTeamPlayers, redTeamPlayers]
-}
-
-export const getCorePerkImage = (perk: Perks): string => {
-    return perk.slots[0].image
-}
-
-export const getPerkStyleImage = (perk: Perks): string => {
-    return perk.style.image
 }

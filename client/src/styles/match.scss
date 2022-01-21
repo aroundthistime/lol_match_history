@@ -7,9 +7,6 @@ $chamion-icon-size : 60px;
     background-color: $team-color-red;
 }
 
-.icon--small {
-    width : 30px;
-}
 
 :root {
     --champion-image-size : 60px;
@@ -21,8 +18,9 @@ $chamion-icon-size : 60px;
     }
 }
 
-.player__champion-image {
-    width : var(--champion-image-size);
+.icon--small {
+    width : calc(var(--champion-image-size) / 2);
+    height : calc(var(--champion-image-size) / 2);
 }
 
 .player{
@@ -43,18 +41,6 @@ $chamion-icon-size : 60px;
             &.player__player-name{
                 font-size : 16px;
             }
-        }
-    }
-    .player__perks{
-        display : flex;
-        align-items: flex-end;
-        padding-right : 10px;
-        .player__perk--main{
-            width : calc(var(--champion-image-size) / 1.5);
-        }
-        .player__perk--sub{
-            width : calc(var(--champion-image-size) / 3);
-            height : calc(var(--champion-image-size) / 3);
         }
     }
 }

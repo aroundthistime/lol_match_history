@@ -1,6 +1,8 @@
 import React from "react";
 import { Match } from "../../../types/Match/Match";
 import ChampionImage from "../../ChampionImage/ChampionImage";
+import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
+import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
 import PlayerSummonerSpells from "../../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
 import Table from "../../Table/Table";
 
@@ -20,9 +22,15 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
         <MatchRow.Cell>
             <PlayerSummonerSpells summonerSpells={match.searchTargetPlayer.summonerSpells} />
         </MatchRow.Cell>
-        {/* <MatchRow.Cell>
-            <
-        </MatchRow.Cell> */}
+        <MatchRow.Cell>
+            <PlayerPerks
+                mainPerks={match.searchTargetPlayer.mainPerks}
+                subPerks={match.searchTargetPlayer.subPerks}
+            />
+        </MatchRow.Cell>
+        <MatchRow.Cell>
+            <PlayerItems items={match.searchTargetPlayer.items} />
+        </MatchRow.Cell>
     </Table.Row>
 )
 

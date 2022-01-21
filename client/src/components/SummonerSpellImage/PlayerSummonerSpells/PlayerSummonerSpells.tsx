@@ -11,7 +11,7 @@ const PlayerSummonerSpells = (
         {summonerSpells.map((summonerSpell: SummonerSpell) => (
             <SummonerSpellImage
                 summonerSpell={summonerSpell}
-                className={"player__summonerspell " + className}
+                className={"player__summonerspell icon--small " + className}
             />
         ))}
     </div>

@@ -4,10 +4,11 @@ import { Match } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
 import { getPathToHistories } from "../../utils/getPaths";
-import { getCorePerkImage, getPerkStyleImage, seperateParticipants } from "../../utils/matchHandlers";
+import { seperateParticipants } from "../../utils/matchHandlers";
 import { getHourMinuteSecondString } from "../../utils/stringFormatter";
 import Bans from "../Bans/Bans";
 import ChampionImage from "../ChampionImage/ChampionImage";
+import PlayerPerks from "../PerkImage/PlayerPerks/PlayerPerks";
 import PlayerSummonerSpells from "../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
 
 const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element => {
@@ -67,10 +68,10 @@ CurrentMatch.Player = ({ player, className = "", style = {} }: { player: Current
             </Link>
             <p className="player__text-info player__champion-name">{player.champion.name}</p>
         </div>
-        <div className="player__perks">
-            <img className="player__perk player__perk--main" src={getCorePerkImage(player.mainPerks)} />
-            <img className="player__perk player__perk--sub" src={getPerkStyleImage(player.subPerks)} />
-        </div>
+        <PlayerPerks
+            mainPerks={player.mainPerks}
+            subPerks={player.subPerks}
+        />
     </li>
 )
 
