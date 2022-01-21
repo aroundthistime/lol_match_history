@@ -21,6 +21,9 @@ $chamion-icon-size : 60px;
     }
 }
 
+.player__champion-image {
+    width : var(--champion-image-size);
+}
 
 .player{
     display : flex;
@@ -28,11 +31,6 @@ $chamion-icon-size : 60px;
     column-gap : 3px;
     .player__champion-image {
         width : var(--champion-image-size);
-    }
-    .player__summonerspells{
-        display : flex;
-        flex-direction: column;
-        width : calc(var(--champion-image-size) / 2);
     }
     .player__text-infos {
         flex-grow: 1;

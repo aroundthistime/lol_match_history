@@ -14,7 +14,7 @@ const COLUMN_NAMES: string[] = [
     "팀",
     "아이템",
     "LV/G/CS",
-    "플레이시간(게임Duration, 게임으로부터 지금까지의 시간 격차)",
+    "플레이시간",
     "와드",
     "더보기",
 ]
@@ -24,7 +24,7 @@ const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
         <Table className="matches-table">
             <Table.Header>
                 {COLUMN_NAMES.map((columnName: string): JSX.Element => (
-                    <td className="matches-table__header">{columnName}</td>
+                    <td className="matches-table__header" key={columnName}>{columnName}</td>
                 ))}
             </Table.Header>
             <Table.Body>
@@ -35,19 +35,14 @@ const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
 }
 
 MatchesTable.Matches = ({ matches }: { matches: Match[] }): JSX.Element => {
-    // const matchesWithSearchTargetExtracted = 
     if (matches.length > 0) {
         return (
             <>
                 {matches.map((match: Match): JSX.Element => {
-                    // const searchTargetPlayer = match.participants.find(participant => participant.isSearchTarget);
-                    // const searchTargetPlayerWithGameResult = {
-                    //     ...searchTargetPlayer,
-                    //     win : playerHasWon(searchTargetPlayer, match.blueTeam, match.redTeam)
-                    // }
                     return (
                         <MatchRow
                             match={match}
+                            key={match.id}
                         />
                     )
                 })}

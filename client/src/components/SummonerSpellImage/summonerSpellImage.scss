@@ -1,0 +1,5 @@
+.player__summonerspells{
+    display : flex;
+    flex-direction: column;
+    width : calc(var(--champion-image-size) / 2);
+}

@@ -1,4 +1,4 @@
-const getFloatPrecision = (number: number, point: number = 3): string => { //실수를 소수점 n자리까지 출력
+const getFloatPrecision = (number: number, point: number = 2): string => { //실수를 소수점 n자리까지 출력
     return number.toFixed(point);
 }
 

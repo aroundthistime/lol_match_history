@@ -9,5 +9,5 @@ export interface Match {
     redTeam: EndedMatchTeam | CurrentMatchTeam;
     blueTeam: EndedMatchTeam | CurrentMatchTeam;
     participants: (EndedMatchPlayer | CurrentMatchPlayer)[];
-    searchTarget?: EndedMatchPlayer | CurrentMatchPlayer;
+    searchTargetPlayer?: EndedMatchPlayer;
 }

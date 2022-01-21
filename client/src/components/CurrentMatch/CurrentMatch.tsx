@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Champion } from "../../types/Champion/Champion";
 import { Match } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
-import { SummonerSpell } from "../../types/SummonerSpell/SummonerSpell";
 import { getPathToHistories } from "../../utils/getPaths";
 import { getCorePerkImage, getPerkStyleImage, seperateParticipants } from "../../utils/matchHandlers";
 import { getHourMinuteSecondString } from "../../utils/stringFormatter";
 import Bans from "../Bans/Bans";
+import ChampionImage from "../ChampionImage/ChampionImage";
+import PlayerSummonerSpells from "../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
 
 const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element => {
     return (
@@ -57,12 +57,10 @@ CurrentMatch.Team = ({ children, className = "", players, teamColor }: { childre
 )
 CurrentMatch.Player = ({ player, className = "", style = {} }: { player: CurrentMatchPlayer, className?: string, style?: StyleObject }): JSX.Element => (
     <li className={"current-match__player player " + className} style={{ ...style }}>
-        <img className="player__champion-image" src={player.champion.image} alt={player.champion.name} />
-        <div className="player__summonerspells">
-            {player.summonerSpells.map((summmonerSpell: SummonerSpell) => (
-                <img className="player__summonerspell" src={summmonerSpell.image} alt={summmonerSpell.name} />
-            ))}
-        </div>
+        <ChampionImage champion={player.champion} className="player__champion-image" />
+        <PlayerSummonerSpells
+            summonerSpells={player.summonerSpells}
+        />
         <div className="player__text-infos">
             <Link to={getPathToHistories(player.name)}>
                 <p className="player__text-info player__player-name text--bold">{player.name}</p>

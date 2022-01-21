@@ -21,14 +21,14 @@ Table.Body = ({ children }: { children: React.ReactElement }): JSX.Element => (
     </tbody>
 )
 
-Table.Row = ({ children, className = "" }: { children: React.ReactElement, className?: string }): JSX.Element => (
+Table.Row = ({ children, className = "" }: { children: React.ReactElement | React.ReactElement[], className?: string }): JSX.Element => (
     <tr className={className}>
         {children}
     </tr>
 )
 
-Table.Cell = ({ children, className = "" }: { children: React.ReactNode, className?: string }): JSX.Element => (
-    <td className={className}>
+Table.Cell = ({ children, className = "", style = {} }: { children: React.ReactNode, className?: string, style?: StyleObject }): JSX.Element => (
+    <td className={className} style={{ ...style }}>
         {children}
     </td>
 )
