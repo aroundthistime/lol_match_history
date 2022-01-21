@@ -11,7 +11,7 @@ const PlayerItems = (
         {items.map(item => (
             <ItemImage
                 item={item}
-                className="player__item icon--small "
+                className="player__item icon--small"
             />
         ))}
     </div>

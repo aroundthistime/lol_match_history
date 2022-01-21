@@ -19,7 +19,7 @@ const ItemImage = (
             <img
                 src={item.image}
                 alt={item.name}
-                className={"item-image " + className}
+                className={`item-image ${item.isTrinket ? "item-trinket" : ""} ` + className}
                 style={{ ...style }}
             />
         )

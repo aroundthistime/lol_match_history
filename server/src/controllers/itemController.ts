@@ -17,11 +17,16 @@ const getItemIds = (participant: ParticipantDtoEndedMatch) => {
     ]
 }
 
+const getWhetherIsTrinket = (item: any): boolean => {
+    return item.tags.some((tag: string) => tag === "Trinket")
+}
+
 const convertToItemType = (id: number, item: any): Item => {
     return ({
         id,
         name: item.name,
-        image: getItemImageUrl(item.image.full)
+        image: getItemImageUrl(item.image.full),
+        isTrinket: getWhetherIsTrinket(item)
     })
 }
 

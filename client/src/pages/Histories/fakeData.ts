@@ -2,20 +2,20 @@ const fakeData = {
     data: {
         result: true,
         user: {
-            name: "콩나물이좋아요",
-            profileIcon: "http://127.0.0.1:4000/static/img/profileicon/4906.png",
-            accountId: "ixMSSSDbl9SZKhN47fqbh4af1UFDBL6yzyieMw_E8hjibBE",
-            id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-            puuid: "_7M5xfpISLQsHh2HgDtiruI3_JPCmrbDI2yvNlZCNWVMU1Khe5XmWQ7mXmCkkTVd3M4yTduGljGadA",
-            summonerLevel: 646,
+            name: "뭐하고싶어요",
+            profileIcon: "http://127.0.0.1:4000/static/img/profileicon/3787.png",
+            accountId: "IQle2xKtbe_7lWsPbxSM0E0FRN0HdRJiBkuT5oKa8lCGIcIHN-VRIM_c",
+            id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+            puuid: "cLLp0z6Ukxb23m5xJB3ZBXFiir7o2TV-2C7G8vt-hHlpQNDccVFuSJ7nboEJzIFKeJlkK1PP3jExEA",
+            summonerLevel: 81,
             tiers: {
                 solo: {
-                    tier: "CHALLENGER",
-                    tierImage: "http://127.0.0.1:4000/static/img/tiers/CHALLENGER.png",
+                    tier: "MASTER",
+                    tierImage: "http://127.0.0.1:4000/static/img/tiers/MASTER.png",
                     rank: "I",
-                    leaguePoints: 625,
-                    wins: 56,
-                    losses: 32
+                    leaguePoints: 45,
+                    wins: 78,
+                    losses: 71
                 },
                 team: {
                     tier: "UNRANKED",
@@ -23,162 +23,20 @@ const fakeData = {
                 }
             },
             currentMatch: {
-                id: "5704974543",
+                id: "5705518820",
                 gameMode: "솔랭",
-                gameStartTime: 1642748026408,
-                gameLength: 154,
+                gameStartTime: 1642765053885,
+                gameLength: 633,
                 participants: [
                     {
-                        name: "급식 졸업 미드",
-                        id: "OTH-Hvj7Bt6gpDEDjSiJDXQN8yGIUb3SxF8m971_AuI5XKk",
+                        name: "afdasfclgxsmf",
+                        id: "bEzEN5_fN5k9FaG6HZS-uHkpT7e7KDUYz1g0gbRcrel1_Nk",
                         isSearchTarget: false,
                         isBlueTeam: true,
                         champion: {
-                            id: 7,
-                            name: "르블랑",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Leblanc.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8100,
-                                name: "지배",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8112,
-                                    name: "감전",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
-                                },
-                                {
-                                    id: 8139,
-                                    name: "피의 맛",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                },
-                                {
-                                    id: 8138,
-                                    name: "사냥의 증표",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                },
-                                {
-                                    id: 8135,
-                                    name: "굶주린 사냥꾼",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8345,
-                                    name: "비스킷 배달",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                },
-                                {
-                                    id: 8352,
-                                    name: "시간 왜곡 물약",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 14,
-                                name: "점화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                            },
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "jiaojiao3",
-                        id: "vYWTrFKh-yZOAd5A4eFsfauqpJkQeK2b8VSKWHfhUVMNTX4",
-                        isSearchTarget: false,
-                        isBlueTeam: true,
-                        champion: {
-                            id: 99,
-                            name: "럭스",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Lux.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8200,
-                                name: "마법",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8214,
-                                    name: "콩콩이 소환",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
-                                },
-                                {
-                                    id: 8226,
-                                    name: "마나순환 팔찌",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
-                                },
-                                {
-                                    id: 8233,
-                                    name: "절대 집중",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
-                                },
-                                {
-                                    id: 8237,
-                                    name: "주문 작열",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8345,
-                                    name: "비스킷 배달",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                },
-                                {
-                                    id: 8352,
-                                    name: "시간 왜곡 물약",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            },
-                            {
-                                id: 14,
-                                name: "점화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "lztxljjianiaijia",
-                        id: "h_dsrfevmCH_5QRplLe_5f4zUoZEg3w8jO5xh5pnXi3N1Fjln3bgDpnGSg",
-                        isSearchTarget: false,
-                        isBlueTeam: true,
-                        champion: {
-                            id: 523,
-                            name: "아펠리오스",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Aphelios.png"
+                            id: 202,
+                            name: "진",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jhin.png"
                         },
                         mainPerks: {
                             style: {
@@ -188,151 +46,9 @@ const fakeData = {
                             },
                             slots: [
                                 {
-                                    id: 8005,
-                                    name: "집중 공격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
-                                },
-                                {
-                                    id: 9101,
-                                    name: "과다치유",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Overheal.png"
-                                },
-                                {
-                                    id: 9103,
-                                    name: "전설: 핏빛 길",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                },
-                                {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8100,
-                                name: "지배",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8139,
-                                    name: "피의 맛",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                },
-                                {
-                                    id: 8135,
-                                    name: "굶주린 사냥꾼",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            },
-                            {
-                                id: 7,
-                                name: "회복",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "콩나물이좋아요",
-                        id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                        isSearchTarget: true,
-                        isBlueTeam: true,
-                        champion: {
-                            id: 64,
-                            name: "리 신",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/LeeSin.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                },
-                                {
-                                    id: 9111,
-                                    name: "승전보",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                },
-                                {
-                                    id: 9105,
-                                    name: "전설: 강인함",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                },
-                                {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8304,
-                                    name: "마법의 신발",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                },
-                                {
-                                    id: 8347,
-                                    name: "우주적 통찰력",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                            },
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "whtwht",
-                        id: "A4CH8CBkAE0Xg4cLWlPX4M4MyrXNpqkLu9yjgDFdd8tpv0E",
-                        isSearchTarget: false,
-                        isBlueTeam: true,
-                        champion: {
-                            id: 84,
-                            name: "아칼리",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Akali.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    id: 8021,
+                                    name: "기민한 발놀림",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
                                 },
                                 {
                                     id: 8009,
@@ -340,77 +56,6 @@ const fakeData = {
                                     image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
                                 },
                                 {
-                                    id: 9105,
-                                    name: "전설: 강인함",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                },
-                                {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8400,
-                                name: "결의",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8473,
-                                    name: "뼈 방패",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
-                                },
-                                {
-                                    id: 8242,
-                                    name: "불굴의 의지",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 12,
-                                name: "순간이동",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                            },
-                            {
-                                id: 14,
-                                name: "점화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "CscyDzhbzBZ",
-                        id: "PYSwg7ufYEGsYiiRQ8hEDGZdL43n89HX9PkGJfXDTnqct6TnAbCAVqVrCg",
-                        isSearchTarget: false,
-                        isBlueTeam: false,
-                        champion: {
-                            id: 360,
-                            name: "사미라",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Samira.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                },
-                                {
-                                    id: 9111,
-                                    name: "승전보",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                },
-                                {
                                     id: 9103,
                                     name: "전설: 핏빛 길",
                                     image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
@@ -424,5869 +69,46 @@ const fakeData = {
                         },
                         subPerks: {
                             style: {
-                                id: 8100,
-                                name: "지배",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8136,
-                                    name: "좀비 와드",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/ZombieWard/ZombieWard.png"
-                                },
-                                {
-                                    id: 8135,
-                                    name: "굶주린 사냥꾼",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            },
-                            {
-                                id: 1,
-                                name: "정화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBoost.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "문세훈팬보이",
-                        id: "1LeemnoP9qMWMoRbqFasKRc-wW1QqcU5SFSZaboVFqLXiGa-HBvgmfthtQ",
-                        isSearchTarget: false,
-                        isBlueTeam: false,
-                        champion: {
-                            id: 497,
-                            name: "라칸",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Rakan.png"
-                        },
-                        mainPerks: {
-                            style: {
                                 id: 8300,
                                 name: "영감",
                                 image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
                             },
                             slots: [
-                                {
-                                    id: 8351,
-                                    name: "빙결 강화",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
-                                },
-                                {
-                                    id: 8313,
-                                    name: "완벽한 타이밍",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png"
-                                },
                                 {
                                     id: 8345,
                                     name: "비스킷 배달",
                                     image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
                                 },
                                 {
-                                    id: 8347,
-                                    name: "우주적 통찰력",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8100,
-                                name: "지배",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8136,
-                                    name: "좀비 와드",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/ZombieWard/ZombieWard.png"
-                                },
-                                {
-                                    id: 8106,
-                                    name: "궁극의 사냥꾼",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
+                                    id: 8352,
+                                    name: "시간 왜곡 물약",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
                                 }
                             ]
                         },
                         summonerSpells: [
-                            {
-                                id: 14,
-                                name: "점화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                            },
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "wobushigegeouo",
-                        id: "opCPSJEnR-KzLV1vmL2I_eJmMRX9xcmPYXAjj1tAwQqcXCc8B0qeiyevoA",
-                        isSearchTarget: false,
-                        isBlueTeam: false,
-                        champion: {
-                            id: 24,
-                            name: "잭스",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jax.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8400,
-                                name: "결의",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8437,
-                                    name: "착취의 손아귀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
-                                },
-                                {
-                                    id: 8446,
-                                    name: "철거",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Demolish/Demolish.png"
-                                },
-                                {
-                                    id: 8473,
-                                    name: "뼈 방패",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
-                                },
-                                {
-                                    id: 8451,
-                                    name: "과잉성장",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Overgrowth/Overgrowth.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8304,
-                                    name: "마법의 신발",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                },
-                                {
-                                    id: 8345,
-                                    name: "비스킷 배달",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            },
-                            {
-                                id: 12,
-                                name: "순간이동",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "나솔직히무섭다",
-                        id: "gvIbDxDAJBkKp9diouqFw6LgdkfWz_tEGYtT-arsalswBMcyjXpKZtAmTA",
-                        isSearchTarget: false,
-                        isBlueTeam: false,
-                        champion: {
-                            id: 238,
-                            name: "제드",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Zed.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8100,
-                                name: "지배",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8112,
-                                    name: "감전",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
-                                },
-                                {
-                                    id: 8139,
-                                    name: "피의 맛",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                },
-                                {
-                                    id: 8136,
-                                    name: "좀비 와드",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/ZombieWard/ZombieWard.png"
-                                },
-                                {
-                                    id: 8106,
-                                    name: "궁극의 사냥꾼",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8200,
-                                name: "마법",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8210,
-                                    name: "깨달음",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-                                },
-                                {
-                                    id: 8237,
-                                    name: "주문 작열",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            },
-                            {
-                                id: 14,
-                                name: "점화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                            }
-                        ]
-                    },
-                    {
-                        name: "일산전영찬",
-                        id: "eadW6Pz0tus2rabjN0F19SHWtCwBTQhJWS358f9USI_APIBoRiIUBGix0g",
-                        isSearchTarget: false,
-                        isBlueTeam: false,
-                        champion: {
-                            id: 76,
-                            name: "니달리",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Nidalee.png"
-                        },
-                        mainPerks: {
-                            style: {
-                                id: 8100,
-                                name: "지배",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8128,
-                                    name: "어둠의 수확",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png"
-                                },
-                                {
-                                    id: 8143,
-                                    name: "돌발 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
-                                },
-                                {
-                                    id: 8138,
-                                    name: "사냥의 증표",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                },
-                                {
-                                    id: 8105,
-                                    name: "끈질긴 사냥꾼",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8200,
-                                name: "마법",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8210,
-                                    name: "깨달음",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-                                },
-                                {
-                                    id: 8232,
-                                    name: "물 위를 걷는 자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png"
-                                }
-                            ]
-                        },
-                        summonerSpells: [
-                            {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                            },
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            }
-                        ]
-                    }
-                ],
-                blueTeam: {
-                    bans: [
-                        {
-                            id: 126,
-                            name: "제이스",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jayce.png"
-                        },
-                        {
-                            id: 43,
-                            name: "카르마",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Karma.png"
-                        },
-                        {
-                            id: 23,
-                            name: "트린다미어",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
-                        },
-                        {
-                            id: 111,
-                            name: "노틸러스",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Nautilus.png"
-                        },
-                        null
-                    ]
-                },
-                redTeam: {
-                    bans: [
-                        {
-                            id: 39,
-                            name: "이렐리아",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Irelia.png"
-                        },
-                        {
-                            id: 67,
-                            name: "베인",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Vayne.png"
-                        },
-                        {
-                            id: 5,
-                            name: "신 짜오",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/XinZhao.png"
-                        },
-                        {
-                            id: 43,
-                            name: "카르마",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Karma.png"
-                        },
-                        {
-                            id: 117,
-                            name: "룰루",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Lulu.png"
-                        }
-                    ]
-                }
-            },
-            latestMatches: [
-                {
-                    id: "KR_5704747645",
-                    gameMode: "솔랭",
-                    gameStartTime: 1642745027662,
-                    gameLength: 1449,
-                    participants: [
-                        {
-                            name: "잘하자 이현2022",
-                            id: "hUu-8rWjy01atf4VMhktjCZhbgAvDO9kaDtGMEUqq_xjfA",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 7,
-                            deaths: 5,
-                            assists: 10,
-                            kda: "3.400",
-                            killParticipation: "47.222",
-                            goldEarned: 12302,
-                            cs: 172,
-                            totalDamageDealt: 115118,
-                            totalDamageTaken: 20505,
-                            wardsPlaced: 7,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 1,
-                            visionScore: 17,
-                            champion: {
-                                id: 24,
-                                name: "잭스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jax.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8008,
-                                        name: "치명적 속도",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 2033,
-                                    name: "부패 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2033.png"
-                                },
-                                {
-                                    id: 6632,
-                                    name: "신성한 파괴자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6632.png"
-                                },
-                                {
-                                    id: 3053,
-                                    name: "스테락의 도전",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 6333,
-                                    name: "죽음의 무도",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6333.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "콩나물이좋아요",
-                            id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                            isSearchTarget: true,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 10,
-                            deaths: 5,
-                            assists: 12,
-                            kda: "4.400",
-                            killParticipation: "61.111",
-                            goldEarned: 12623,
-                            cs: 20,
-                            totalDamageDealt: 125337,
-                            totalDamageTaken: 25478,
-                            wardsPlaced: 12,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 10,
-                            visionScore: 27,
-                            champion: {
-                                id: 59,
-                                name: "자르반 4세",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/JarvanIV.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                null,
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3026,
-                                    name: "수호 천사",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3026.png"
-                                },
-                                {
-                                    id: 3053,
-                                    name: "스테락의 도전",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "너가아는제라스",
-                            id: "QNv289X_OO9GtXTZ6_49EVUsB6fcA0OzCQUwC1NHBdK0gxwqzOBqeLV4hw",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 10,
-                            deaths: 5,
-                            assists: 11,
-                            kda: "4.200",
-                            killParticipation: "58.333",
-                            goldEarned: 11764,
-                            cs: 125,
-                            totalDamageDealt: 94493,
-                            totalDamageTaken: 9790,
-                            wardsPlaced: 12,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 5,
-                            visionScore: 29,
-                            champion: {
-                                id: 101,
-                                name: "제라스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Xerath.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 1,
-                                    name: "정화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBoost.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8369,
-                                        name: "선제공격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
-                                    },
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8316,
-                                        name: "미니언 해체분석기",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8226,
-                                        name: "마나순환 팔찌",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
-                                    },
-                                    {
-                                        id: 8237,
-                                        name: "주문 작열",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 4628,
-                                    name: "지평선의 초점",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4628.png"
-                                },
-                                {
-                                    id: 3041,
-                                    name: "메자이의 영혼약탈자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3041.png"
-                                },
-                                {
-                                    id: 6655,
-                                    name: "루덴의 폭풍",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6655.png"
-                                },
-                                null,
-                                {
-                                    id: 1056,
-                                    name: "도란의 반지",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1056.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "xiamulan",
-                            id: "5JIuwDbJiypjUya2AIrv6z_eCf-fFSsw6UOBLT1wBwdI8qc",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 7,
-                            deaths: 3,
-                            assists: 13,
-                            kda: "6.667",
-                            killParticipation: "55.556",
-                            goldEarned: 11129,
-                            cs: 170,
-                            totalDamageDealt: 113081,
-                            totalDamageTaken: 13302,
-                            wardsPlaced: 10,
-                            wardsKilled: 3,
-                            detectorWardsPlaced: 5,
-                            visionScore: 21,
-                            champion: {
-                                id: 202,
-                                name: "진",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jhin.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 7,
-                                    name: "회복",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8021,
-                                        name: "기민한 발놀림",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8017,
-                                        name: "체력차 극복",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CutDown/CutDown.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3036,
-                                    name: "도미닉 경의 인사",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3036.png"
-                                },
-                                {
-                                    id: 6671,
-                                    name: "돌풍",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6671.png"
-                                },
-                                null,
-                                {
-                                    id: 3086,
-                                    name: "열정의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3086.png"
-                                },
-                                {
-                                    id: 2015,
-                                    name: "키르히아이스의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2015.png"
-                                },
-                                {
-                                    id: 3009,
-                                    name: "신속의 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3009.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "kimchi warrior12",
-                            id: "fpFUaMfSzTuCJIu-Oo9givjdRkzjtzXF3L2xlWkfV6dw5oVwVAR9DBMGYw",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 12,
-                            kills: 2,
-                            deaths: 5,
-                            assists: 21,
-                            kda: "4.600",
-                            killParticipation: "63.889",
-                            goldEarned: 7665,
-                            cs: 13,
-                            totalDamageDealt: 20495,
-                            totalDamageTaken: 12411,
-                            wardsPlaced: 30,
-                            wardsKilled: 8,
-                            detectorWardsPlaced: 9,
-                            visionScore: 51,
-                            champion: {
-                                id: 43,
-                                name: "카르마",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Karma.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 3,
-                                    name: "탈진",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerExhaust.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8229,
-                                        name: "신비로운 유성",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
-                                    },
-                                    {
-                                        id: 8275,
-                                        name: "빛의 망토",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
-                                    },
-                                    {
-                                        id: 8233,
-                                        name: "절대 집중",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
-                                    },
-                                    {
-                                        id: 8237,
-                                        name: "주문 작열",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 2065,
-                                    name: "슈렐리아의 군가",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2065.png"
-                                },
-                                {
-                                    id: 3916,
-                                    name: "망각의 구",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3916.png"
-                                },
-                                null,
-                                {
-                                    id: 3853,
-                                    name: "얼음 정수의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3853.png"
-                                },
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 4642,
-                                    name: "밴들유리 거울",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4642.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "The B0xer J",
-                            id: "Jc2f6c94GBYyeLa6bf54JSvDGslDixj-kCteIP4qYNpwH_DJyWW2yH98HQ",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 13,
-                            kills: 5,
-                            deaths: 9,
-                            assists: 2,
-                            kda: "0.778",
-                            killParticipation: "30.435",
-                            goldEarned: 9961,
-                            cs: 148,
-                            totalDamageDealt: 125918,
-                            totalDamageTaken: 18341,
-                            wardsPlaced: 9,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 2,
-                            visionScore: 25,
-                            champion: {
-                                id: 104,
-                                name: "그레이브즈",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Graves.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8021,
-                                        name: "기민한 발놀림",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9104,
-                                        name: "전설: 민첩함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3123,
-                                    name: "처형인의 대검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3123.png"
-                                },
-                                {
-                                    id: 3142,
-                                    name: "요우무의 유령검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3142.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 1037,
-                                    name: "곡괭이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1037.png"
-                                },
-                                {
-                                    id: 6692,
-                                    name: "월식",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6692.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "NeedAspirin",
-                            id: "rOEM2KzHuoUBLdiz7ccgBUGG3EUcPT9rfcSG2hoY84VhDpe1c-7G7VAQcQ",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 12,
-                            kills: 10,
-                            deaths: 4,
-                            assists: 5,
-                            kda: "3.750",
-                            killParticipation: "65.217",
-                            goldEarned: 10125,
-                            cs: 21,
-                            totalDamageDealt: 89746,
-                            totalDamageTaken: 24480,
-                            wardsPlaced: 14,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 7,
-                            visionScore: 31,
-                            champion: {
-                                id: 64,
-                                name: "리 신",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/LeeSin.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9104,
-                                        name: "전설: 민첩함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                {
-                                    id: 6333,
-                                    name: "죽음의 무도",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6333.png"
-                                },
-                                {
-                                    id: 1037,
-                                    name: "곡괭이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1037.png"
-                                },
-                                {
-                                    id: 1028,
-                                    name: "루비 수정",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1028.png"
-                                },
-                                {
-                                    id: 1028,
-                                    name: "루비 수정",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1028.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "sanspareil2",
-                            id: "UStYLZxZxbpflUCq2IYqRfo4LnQApzbw_OzlvloUoOIdlGe8FrsdYwXvnQ",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 12,
-                            kills: 2,
-                            deaths: 9,
-                            assists: 8,
-                            kda: "1.111",
-                            killParticipation: "43.478",
-                            goldEarned: 8368,
-                            cs: 137,
-                            totalDamageDealt: 91767,
-                            totalDamageTaken: 21852,
-                            wardsPlaced: 9,
-                            wardsKilled: 6,
-                            detectorWardsPlaced: 3,
-                            visionScore: 19,
-                            champion: {
-                                id: 4,
-                                name: "트위스티드 페이트",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/TwistedFate.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8124,
-                                        name: "포식자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Predator/Predator.png"
-                                    },
-                                    {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                    },
-                                    {
-                                        id: 8138,
-                                        name: "사냥의 증표",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                    },
-                                    {
-                                        id: 8106,
-                                        name: "궁극의 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8316,
-                                        name: "미니언 해체분석기",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6656,
-                                    name: "만년서리",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6656.png"
-                                },
-                                {
-                                    id: 3157,
-                                    name: "존야의 모래시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
-                                },
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 2033,
-                                    name: "부패 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2033.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3086,
-                                    name: "열정의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3086.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "jkjkjkjkk",
-                            id: "3unfyssDTF0hqQi4_KeVa2w7z_3pHB6U3toS9Nyv09T2t4Q",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 12,
-                            kills: 5,
-                            deaths: 8,
-                            assists: 3,
-                            kda: "1.000",
-                            killParticipation: "34.783",
-                            goldEarned: 10077,
-                            cs: 168,
-                            totalDamageDealt: 81986,
-                            totalDamageTaken: 18035,
-                            wardsPlaced: 5,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 0,
-                            visionScore: 13,
-                            champion: {
-                                id: 360,
-                                name: "사미라",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Samira.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 1,
-                                    name: "정화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBoost.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                    },
-                                    {
-                                        id: 8135,
-                                        name: "굶주린 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 6673,
-                                    name: "불멸의 철갑궁",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6673.png"
-                                },
-                                {
-                                    id: 3036,
-                                    name: "도미닉 경의 인사",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3036.png"
-                                },
-                                {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 1053,
-                                    name: "흡혈의 낫",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1053.png"
-                                },
-                                {
-                                    id: 1038,
-                                    name: "B.F. 대검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1038.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "패배를까먹은사람",
-                            id: "ldl-4Lb7--e2P_CqfgpHI851lPA1XUos0-ITgdiGyeavoQs",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 10,
-                            kills: 0,
-                            deaths: 6,
-                            assists: 10,
-                            kda: "1.667",
-                            killParticipation: "43.478",
-                            goldEarned: 5897,
-                            cs: 31,
-                            totalDamageDealt: 23357,
-                            totalDamageTaken: 17058,
-                            wardsPlaced: 22,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 7,
-                            visionScore: 47,
-                            champion: {
-                                id: 111,
-                                name: "노틸러스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Nautilus.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8351,
-                                        name: "빙결 강화",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
-                                    },
-                                    {
-                                        id: 8306,
-                                        name: "마법공학 점멸기",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
-                                    },
-                                    {
-                                        id: 8316,
-                                        name: "미니언 해체분석기",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8463,
-                                        name: "생명의 샘",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
-                                    },
-                                    {
-                                        id: 8444,
-                                        name: "재생의 바람",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3860,
-                                    name: "타곤 산의 방벽",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3860.png"
-                                },
-                                {
-                                    id: 3067,
-                                    name: "점화석",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3067.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3001,
-                                    name: "저녁갑주",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3001.png"
-                                },
-                                null,
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        }
-                    ],
-                    blueTeam: {
-                        bans: [
-                            {
-                                id: 117,
-                                name: "룰루",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Lulu.png"
-                            },
-                            null,
-                            {
-                                id: 38,
-                                name: "카사딘",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Kassadin.png"
-                            },
-                            {
-                                id: 42,
-                                name: "코르키",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Corki.png"
-                            },
-                            {
-                                id: 84,
-                                name: "아칼리",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Akali.png"
-                            }
-                        ],
-                        win: true,
-                        championKills: 36,
-                        dragonKills: 2,
-                        baronKills: 1,
-                        towerKills: 9,
-                        inhibitorKills: 1,
-                        riftHeraldKills: 2
-                    },
-                    redTeam: {
-                        bans: [
                             {
                                 id: 7,
-                                name: "르블랑",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Leblanc.png"
-                            },
-                            {
-                                id: 58,
-                                name: "레넥톤",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Renekton.png"
-                            },
-                            null,
-                            {
-                                id: 91,
-                                name: "탈론",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Talon.png"
-                            },
-                            {
-                                id: 35,
-                                name: "샤코",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Shaco.png"
-                            }
-                        ],
-                        win: false,
-                        championKills: 23,
-                        dragonKills: 1,
-                        baronKills: 0,
-                        towerKills: 2,
-                        inhibitorKills: 0,
-                        riftHeraldKills: 0
-                    },
-                    searchTargetPlayer: {
-                        name: "콩나물이좋아요",
-                        id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                        isSearchTarget: true,
-                        isBlueTeam: true,
-                        championLevel: 14,
-                        kills: 10,
-                        deaths: 5,
-                        assists: 12,
-                        kda: "4.400",
-                        killParticipation: "61.111",
-                        goldEarned: 12623,
-                        cs: 20,
-                        totalDamageDealt: 125337,
-                        totalDamageTaken: 25478,
-                        wardsPlaced: 12,
-                        wardsKilled: 4,
-                        detectorWardsPlaced: 10,
-                        visionScore: 27,
-                        champion: {
-                            id: 59,
-                            name: "자르반 4세",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/JarvanIV.png"
-                        },
-                        summonerSpells: [
-                            {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
+                                name: "회복",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
                             },
                             {
                                 id: 4,
                                 name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                             }
-                        ],
-                        mainPerks: {
-                            style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                },
-                                {
-                                    id: 9111,
-                                    name: "승전보",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                },
-                                {
-                                    id: 9105,
-                                    name: "전설: 강인함",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                },
-                                {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8304,
-                                    name: "마법의 신발",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                },
-                                {
-                                    id: 8347,
-                                    name: "우주적 통찰력",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                }
-                            ]
-                        },
-                        items: [
-                            {
-                                id: 6630,
-                                name: "선혈포식자",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                            },
-                            null,
-                            {
-                                id: 2055,
-                                name: "제어 와드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                            },
-                            {
-                                id: 3026,
-                                name: "수호 천사",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3026.png"
-                            },
-                            {
-                                id: 3053,
-                                name: "스테락의 도전",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                            },
-                            {
-                                id: 3047,
-                                name: "판금 장화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                            },
-                            {
-                                id: 3364,
-                                name: "예언자의 렌즈",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                            }
-                        ],
-                        win: false
-                    }
-                },
-                {
-                    id: "KR_5704771518",
-                    gameMode: "솔랭",
-                    gameStartTime: 1642742281843,
-                    gameLength: 1491,
-                    participants: [
-                        {
-                            name: "zika1",
-                            id: "nBWePZQyn2b9dMoYQnynGmTrRzHXQund7cvw_SxG3ZzbgOe35-HHs6dL5g",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 16,
-                            kills: 6,
-                            deaths: 6,
-                            assists: 3,
-                            kda: "1.500",
-                            killParticipation: "28.125",
-                            goldEarned: 11349,
-                            cs: 199,
-                            totalDamageDealt: 152894,
-                            totalDamageTaken: 22420,
-                            wardsPlaced: 5,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 1,
-                            visionScore: 14,
-                            champion: {
-                                id: 92,
-                                name: "리븐",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Riven.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8275,
-                                        name: "빛의 망토",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
-                                    },
-                                    {
-                                        id: 8210,
-                                        name: "깨달음",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3071,
-                                    name: "칠흑의 양날 도끼",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3071.png"
-                                },
-                                {
-                                    id: 1037,
-                                    name: "곡괭이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1037.png"
-                                },
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 1031,
-                                    name: "쇠사슬 조끼",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1031.png"
-                                },
-                                {
-                                    id: 1055,
-                                    name: "도란의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1055.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "콩나물이좋아요",
-                            id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                            isSearchTarget: true,
-                            isBlueTeam: true,
-                            championLevel: 15,
-                            kills: 7,
-                            deaths: 1,
-                            assists: 15,
-                            kda: "22.000",
-                            killParticipation: "68.750",
-                            goldEarned: 12522,
-                            cs: 42,
-                            totalDamageDealt: 172955,
-                            totalDamageTaken: 24176,
-                            wardsPlaced: 13,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 6,
-                            visionScore: 27,
-                            champion: {
-                                id: 64,
-                                name: "리 신",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/LeeSin.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3053,
-                                    name: "스테락의 도전",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 6333,
-                                    name: "죽음의 무도",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6333.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: " Happiness21",
-                            id: "0Iy0sCVJpdjVcrUlhCKKsVcr4-_XeFSCcPBHXcznmBjAy5MN3m1zfFe8tQ",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 15,
-                            kills: 9,
-                            deaths: 2,
-                            assists: 6,
-                            kda: "7.500",
-                            killParticipation: "46.875",
-                            goldEarned: 12776,
-                            cs: 187,
-                            totalDamageDealt: 125416,
-                            totalDamageTaken: 11589,
-                            wardsPlaced: 7,
-                            wardsKilled: 3,
-                            detectorWardsPlaced: 3,
-                            visionScore: 19,
-                            champion: {
-                                id: 711,
-                                name: "벡스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Vex.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8112,
-                                        name: "감전",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
-                                    },
-                                    {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                    },
-                                    {
-                                        id: 8138,
-                                        name: "사냥의 증표",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                    },
-                                    {
-                                        id: 8106,
-                                        name: "궁극의 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6656,
-                                    name: "만년서리",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6656.png"
-                                },
-                                null,
-                                {
-                                    id: 3157,
-                                    name: "존야의 모래시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
-                                },
-                                {
-                                    id: 3041,
-                                    name: "메자이의 영혼약탈자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3041.png"
-                                },
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 3135,
-                                    name: "공허의 지팡이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3135.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "해강고 원딜",
-                            id: "cQM__Qi6h5wKJvi9ZrNMmVsroftpz-DFOfxe4OivNS6Le90",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 9,
-                            deaths: 6,
-                            assists: 6,
-                            kda: "2.500",
-                            killParticipation: "46.875",
-                            goldEarned: 11570,
-                            cs: 164,
-                            totalDamageDealt: 123005,
-                            totalDamageTaken: 14900,
-                            wardsPlaced: 5,
-                            wardsKilled: 3,
-                            detectorWardsPlaced: 1,
-                            visionScore: 14,
-                            champion: {
-                                id: 110,
-                                name: "바루스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Varus.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 1,
-                                    name: "정화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBoost.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8008,
-                                        name: "치명적 속도",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8226,
-                                        name: "마나순환 팔찌",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
-                                    },
-                                    {
-                                        id: 8210,
-                                        name: "깨달음",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6671,
-                                    name: "돌풍",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6671.png"
-                                },
-                                {
-                                    id: 3124,
-                                    name: "구인수의 격노검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3124.png"
-                                },
-                                {
-                                    id: 1055,
-                                    name: "도란의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1055.png"
-                                },
-                                {
-                                    id: 3006,
-                                    name: "광전사의 군화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3006.png"
-                                },
-                                {
-                                    id: 3046,
-                                    name: "유령 무희",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3046.png"
-                                },
-                                {
-                                    id: 1042,
-                                    name: "단검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1042.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Never Stop Me",
-                            id: "Akg0Qk0ace2rLqB5OAL6wLvN58yY_71oxaWZ18glBUgBLuU",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 12,
-                            kills: 1,
-                            deaths: 4,
-                            assists: 17,
-                            kda: "4.500",
-                            killParticipation: "56.250",
-                            goldEarned: 7587,
-                            cs: 34,
-                            totalDamageDealt: 24903,
-                            totalDamageTaken: 15102,
-                            wardsPlaced: 31,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 7,
-                            visionScore: 60,
-                            champion: {
-                                id: 201,
-                                name: "브라움",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Braum.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8351,
-                                        name: "빙결 강화",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
-                                    },
-                                    {
-                                        id: 8313,
-                                        name: "완벽한 타이밍",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8463,
-                                        name: "생명의 샘",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
-                                    },
-                                    {
-                                        id: 8473,
-                                        name: "뼈 방패",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3076,
-                                    name: "덤불 조끼",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3076.png"
-                                },
-                                {
-                                    id: 3860,
-                                    name: "타곤 산의 방벽",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3860.png"
-                                },
-                                {
-                                    id: 3190,
-                                    name: "강철의 솔라리 펜던트",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3190.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3067,
-                                    name: "점화석",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3067.png"
-                                },
-                                {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "잘하자 이현2022",
-                            id: "hUu-8rWjy01atf4VMhktjCZhbgAvDO9kaDtGMEUqq_xjfA",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 15,
-                            kills: 6,
-                            deaths: 5,
-                            assists: 2,
-                            kda: "1.600",
-                            killParticipation: "42.105",
-                            goldEarned: 11470,
-                            cs: 186,
-                            totalDamageDealt: 133876,
-                            totalDamageTaken: 21595,
-                            wardsPlaced: 9,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 1,
-                            visionScore: 13,
-                            champion: {
-                                id: 24,
-                                name: "잭스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jax.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 3,
-                                    name: "탈진",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerExhaust.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8008,
-                                        name: "치명적 속도",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6632,
-                                    name: "신성한 파괴자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6632.png"
-                                },
-                                {
-                                    id: 6333,
-                                    name: "죽음의 무도",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6333.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 1055,
-                                    name: "도란의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1055.png"
-                                },
-                                {
-                                    id: 3053,
-                                    name: "스테락의 도전",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                                },
-                                {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "김잡초",
-                            id: "reSJZFziw1--KE8_JIHRq7SmdENcwXSQ1mhNe2YwHZbewpDlArU3r8PcRQ",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 12,
-                            kills: 2,
-                            deaths: 8,
-                            assists: 9,
-                            kda: "1.375",
-                            killParticipation: "57.895",
-                            goldEarned: 7791,
-                            cs: 15,
-                            totalDamageDealt: 85436,
-                            totalDamageTaken: 27003,
-                            wardsPlaced: 2,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 1,
-                            visionScore: 16,
-                            champion: {
-                                id: 5,
-                                name: "신 짜오",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/XinZhao.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3123,
-                                    name: "처형인의 대검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3123.png"
-                                },
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 1031,
-                                    name: "쇠사슬 조끼",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1031.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3133,
-                                    name: "콜필드의 전투 망치",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3133.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "너가아는제라스",
-                            id: "QNv289X_OO9GtXTZ6_49EVUsB6fcA0OzCQUwC1NHBdK0gxwqzOBqeLV4hw",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 10,
-                            kills: 1,
-                            deaths: 9,
-                            assists: 9,
-                            kda: "1.111",
-                            killParticipation: "52.632",
-                            goldEarned: 6523,
-                            cs: 11,
-                            totalDamageDealt: 22974,
-                            totalDamageTaken: 14198,
-                            wardsPlaced: 22,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 6,
-                            visionScore: 45,
-                            champion: {
-                                id: 101,
-                                name: "제라스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Xerath.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 3,
-                                    name: "탈진",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerExhaust.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8369,
-                                        name: "선제공격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
-                                    },
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8226,
-                                        name: "마나순환 팔찌",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
-                                    },
-                                    {
-                                        id: 8237,
-                                        name: "주문 작열",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3853,
-                                    name: "얼음 정수의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3853.png"
-                                },
-                                {
-                                    id: 6655,
-                                    name: "루덴의 폭풍",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6655.png"
-                                },
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 1082,
-                                    name: "암흑의 인장",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1082.png"
-                                },
-                                {
-                                    id: 3145,
-                                    name: "마법공학 교류 발전기",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3145.png"
-                                },
-                                null,
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Uneasy12",
-                            id: "D-XSJH76nAeOpV4lbzDmAD_awn5K0JDOelXjfrWk0RMEgf4",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 12,
-                            kills: 3,
-                            deaths: 6,
-                            assists: 3,
-                            kda: "1.000",
-                            killParticipation: "31.579",
-                            goldEarned: 9234,
-                            cs: 190,
-                            totalDamageDealt: 109820,
-                            totalDamageTaken: 14648,
-                            wardsPlaced: 8,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 3,
-                            visionScore: 12,
-                            champion: {
-                                id: 202,
-                                name: "진",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jhin.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 7,
-                                    name: "회복",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8021,
-                                        name: "기민한 발놀림",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3036,
-                                    name: "도미닉 경의 인사",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3036.png"
-                                },
-                                {
-                                    id: 6671,
-                                    name: "돌풍",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6671.png"
-                                },
-                                {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 1018,
-                                    name: "민첩성의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1018.png"
-                                },
-                                {
-                                    id: 3009,
-                                    name: "신속의 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3009.png"
-                                },
-                                {
-                                    id: 1018,
-                                    name: "민첩성의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1018.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "GGGori",
-                            id: "QqcxIDv-GKvWbpvUrniBTvjvKuB5kkFKKLi6XRUO0mTB-us",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 14,
-                            kills: 7,
-                            deaths: 4,
-                            assists: 6,
-                            kda: "3.250",
-                            killParticipation: "68.421",
-                            goldEarned: 11228,
-                            cs: 180,
-                            totalDamageDealt: 115950,
-                            totalDamageTaken: 16359,
-                            wardsPlaced: 7,
-                            wardsKilled: 1,
-                            detectorWardsPlaced: 1,
-                            visionScore: 16,
-                            champion: {
-                                id: 3,
-                                name: "갈리오",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Galio.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8439,
-                                        name: "여진",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
-                                    },
-                                    {
-                                        id: 8401,
-                                        name: "보호막 강타",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
-                                    },
-                                    {
-                                        id: 8444,
-                                        name: "재생의 바람",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
-                                    },
-                                    {
-                                        id: 8242,
-                                        name: "불굴의 의지",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8316,
-                                        name: "미니언 해체분석기",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6656,
-                                    name: "만년서리",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6656.png"
-                                },
-                                {
-                                    id: 3157,
-                                    name: "존야의 모래시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
-                                },
-                                {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
-                                },
-                                {
-                                    id: 1058,
-                                    name: "쓸데없이 큰 지팡이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1058.png"
-                                },
-                                {
-                                    id: 1082,
-                                    name: "암흑의 인장",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1082.png"
-                                },
-                                {
-                                    id: 3916,
-                                    name: "망각의 구",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3916.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        }
-                    ],
-                    blueTeam: {
-                        bans: [
-                            {
-                                id: 23,
-                                name: "트린다미어",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
-                            },
-                            {
-                                id: 412,
-                                name: "쓰레쉬",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Thresh.png"
-                            },
-                            {
-                                id: 35,
-                                name: "샤코",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Shaco.png"
-                            },
-                            null,
-                            {
-                                id: 497,
-                                name: "라칸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Rakan.png"
-                            }
-                        ],
-                        win: true,
-                        championKills: 32,
-                        dragonKills: 3,
-                        baronKills: 1,
-                        towerKills: 6,
-                        inhibitorKills: 1,
-                        riftHeraldKills: 1
+                        ]
                     },
-                    redTeam: {
-                        bans: [
-                            {
-                                id: 222,
-                                name: "징크스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jinx.png"
-                            },
-                            {
-                                id: 53,
-                                name: "블리츠크랭크",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Blitzcrank.png"
-                            },
-                            {
-                                id: 89,
-                                name: "레오나",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Leona.png"
-                            },
-                            {
-                                id: 84,
-                                name: "아칼리",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Akali.png"
-                            },
-                            {
-                                id: 38,
-                                name: "카사딘",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Kassadin.png"
-                            }
-                        ],
-                        win: false,
-                        championKills: 19,
-                        dragonKills: 0,
-                        baronKills: 0,
-                        towerKills: 4,
-                        inhibitorKills: 0,
-                        riftHeraldKills: 1
-                    },
-                    searchTargetPlayer: {
-                        name: "콩나물이좋아요",
-                        id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                        isSearchTarget: true,
+                    {
+                        name: "dong li xiao zi",
+                        id: "9WD6Hqs9pS4kI9V8kxHyYghrSL4j0fF6Vi3m1KfOxz2usX8ZujMLeZbiGw",
+                        isSearchTarget: false,
                         isBlueTeam: true,
-                        championLevel: 15,
-                        kills: 7,
-                        deaths: 1,
-                        assists: 15,
-                        kda: "22.000",
-                        killParticipation: "68.750",
-                        goldEarned: 12522,
-                        cs: 42,
-                        totalDamageDealt: 172955,
-                        totalDamageTaken: 24176,
-                        wardsPlaced: 13,
-                        wardsKilled: 2,
-                        detectorWardsPlaced: 6,
-                        visionScore: 27,
-                        champion: {
-                            id: 64,
-                            name: "리 신",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/LeeSin.png"
-                        },
-                        summonerSpells: [
-                            {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                            },
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            }
-                        ],
-                        mainPerks: {
-                            style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                },
-                                {
-                                    id: 9111,
-                                    name: "승전보",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                },
-                                {
-                                    id: 9105,
-                                    name: "전설: 강인함",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                },
-                                {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8304,
-                                    name: "마법의 신발",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                },
-                                {
-                                    id: 8347,
-                                    name: "우주적 통찰력",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                }
-                            ]
-                        },
-                        items: [
-                            {
-                                id: 6630,
-                                name: "선혈포식자",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                            },
-                            {
-                                id: 2055,
-                                name: "제어 와드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                            },
-                            {
-                                id: 3053,
-                                name: "스테락의 도전",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                            },
-                            {
-                                id: 1036,
-                                name: "롱소드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                            },
-                            {
-                                id: 6333,
-                                name: "죽음의 무도",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6333.png"
-                            },
-                            {
-                                id: 3047,
-                                name: "판금 장화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                            },
-                            {
-                                id: 3340,
-                                name: "투명 와드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                            }
-                        ],
-                        win: false
-                    }
-                },
-                {
-                    id: "KR_5704386839",
-                    gameMode: "솔랭",
-                    gameStartTime: 1642704797456,
-                    gameLength: 1518,
-                    participants: [
-                        {
-                            name: "트위치 야무준식",
-                            id: "_hw3YyubZQ2wt9ENlljXJkdTi7pkgtffjBJ0ESQSEIW6Sw",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 13,
-                            kills: 1,
-                            deaths: 4,
-                            assists: 3,
-                            kda: "1.000",
-                            killParticipation: "36.364",
-                            goldEarned: 8294,
-                            cs: 162,
-                            totalDamageDealt: 94671,
-                            totalDamageTaken: 17606,
-                            wardsPlaced: 8,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 4,
-                            visionScore: 20,
-                            champion: {
-                                id: 78,
-                                name: "뽀삐",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Poppy.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8437,
-                                        name: "착취의 손아귀",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
-                                    },
-                                    {
-                                        id: 8401,
-                                        name: "보호막 강타",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
-                                    },
-                                    {
-                                        id: 8473,
-                                        name: "뼈 방패",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
-                                    },
-                                    {
-                                        id: 8453,
-                                        name: "소생",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 2033,
-                                    name: "부패 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2033.png"
-                                },
-                                {
-                                    id: 3143,
-                                    name: "란두인의 예언",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3143.png"
-                                },
-                                {
-                                    id: 1033,
-                                    name: "마법무효화의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1033.png"
-                                },
-                                null,
-                                {
-                                    id: 6662,
-                                    name: "서리불꽃 건틀릿",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6662.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "콩나물이좋아요",
-                            id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                            isSearchTarget: true,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 7,
-                            deaths: 7,
-                            assists: 2,
-                            kda: "1.286",
-                            killParticipation: "81.818",
-                            goldEarned: 11881,
-                            cs: 51,
-                            totalDamageDealt: 164949,
-                            totalDamageTaken: 22128,
-                            wardsPlaced: 7,
-                            wardsKilled: 6,
-                            detectorWardsPlaced: 6,
-                            visionScore: 30,
-                            champion: {
-                                id: 131,
-                                name: "다이애나",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Diana.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3152,
-                                    name: "마법공학 로켓 벨트",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3152.png"
-                                },
-                                {
-                                    id: 3157,
-                                    name: "존야의 모래시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 4645,
-                                    name: "그림자불꽃",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4645.png"
-                                },
-                                {
-                                    id: 4630,
-                                    name: "역병의 보석",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4630.png"
-                                },
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "이렐아칼리",
-                            id: "neRCK-qVjBuJYBdUrBd9GRSAElUDF1yP-NxChCqxT9R_tBM",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 2,
-                            deaths: 9,
-                            assists: 3,
-                            kda: "0.556",
-                            killParticipation: "45.455",
-                            goldEarned: 10460,
-                            cs: 210,
-                            totalDamageDealt: 130088,
-                            totalDamageTaken: 27159,
-                            wardsPlaced: 10,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 2,
-                            visionScore: 24,
-                            champion: {
-                                id: 39,
-                                name: "이렐리아",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Irelia.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6673,
-                                    name: "불멸의 철갑궁",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6673.png"
-                                },
-                                {
-                                    id: 3153,
-                                    name: "몰락한 왕의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3153.png"
-                                },
-                                null,
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 3133,
-                                    name: "콜필드의 전투 망치",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3133.png"
-                                },
-                                {
-                                    id: 1029,
-                                    name: "천 갑옷",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1029.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Virtual gamer",
-                            id: "01gRhFcHRiahMZhHmoq1-0et0nmI6Mh2nTNtFt7q01Zt3m3MZIt4XtEHGw",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 12,
-                            kills: 1,
-                            deaths: 9,
-                            assists: 1,
-                            kda: "0.222",
-                            killParticipation: "18.182",
-                            goldEarned: 9436,
-                            cs: 182,
-                            totalDamageDealt: 122704,
-                            totalDamageTaken: 17266,
-                            wardsPlaced: 7,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 1,
-                            visionScore: 16,
-                            champion: {
-                                id: 222,
-                                name: "징크스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jinx.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 7,
-                                    name: "회복",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8008,
-                                        name: "치명적 속도",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                    },
-                                    {
-                                        id: 8135,
-                                        name: "굶주린 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6672,
-                                    name: "크라켄 학살자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6672.png"
-                                },
-                                {
-                                    id: 3036,
-                                    name: "도미닉 경의 인사",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3036.png"
-                                },
-                                {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 3006,
-                                    name: "광전사의 군화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3006.png"
-                                },
-                                {
-                                    id: 2015,
-                                    name: "키르히아이스의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2015.png"
-                                },
-                                {
-                                    id: 1018,
-                                    name: "민첩성의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1018.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "밤을 달리다1",
-                            id: "XckjT0ubZF8DSQwJe0x5p6G2iMDtpSJxoZEmflOYwC4ngUSVhWvJpA_dwQ",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 9,
-                            kills: 0,
-                            deaths: 10,
-                            assists: 3,
-                            kda: "0.300",
-                            killParticipation: "27.273",
-                            goldEarned: 5865,
-                            cs: 42,
-                            totalDamageDealt: 16870,
-                            totalDamageTaken: 16997,
-                            wardsPlaced: 25,
-                            wardsKilled: 12,
-                            detectorWardsPlaced: 8,
-                            visionScore: 58,
-                            champion: {
-                                id: 412,
-                                name: "쓰레쉬",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Thresh.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8351,
-                                        name: "빙결 강화",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
-                                    },
-                                    {
-                                        id: 8306,
-                                        name: "마법공학 점멸기",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8463,
-                                        name: "생명의 샘",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
-                                    },
-                                    {
-                                        id: 8444,
-                                        name: "재생의 바람",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3857,
-                                    name: "화이트록의 갑옷",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3857.png"
-                                },
-                                {
-                                    id: 3190,
-                                    name: "강철의 솔라리 펜던트",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3190.png"
-                                },
-                                {
-                                    id: 3076,
-                                    name: "덤불 조끼",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3076.png"
-                                },
-                                null,
-                                {
-                                    id: 3117,
-                                    name: "기동력의 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3117.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "나는개선할것이다",
-                            id: "j8shiFWq3zUy4lw_ud5LGlXYQnVKnUNaME1X-tsBjF7c8RI",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 15,
-                            kills: 8,
-                            deaths: 4,
-                            assists: 5,
-                            kda: "3.250",
-                            killParticipation: "33.333",
-                            goldEarned: 10878,
-                            cs: 194,
-                            totalDamageDealt: 125468,
-                            totalDamageTaken: 13058,
-                            wardsPlaced: 12,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 4,
-                            visionScore: 24,
-                            champion: {
-                                id: 126,
-                                name: "제이스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jayce.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9104,
-                                        name: "전설: 민첩함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
-                                    },
-                                    {
-                                        id: 8017,
-                                        name: "체력차 극복",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CutDown/CutDown.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3042,
-                                    name: "무라마나",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3042.png"
-                                },
-                                {
-                                    id: 3035,
-                                    name: "최후의 속삭임",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3035.png"
-                                },
-                                {
-                                    id: 6692,
-                                    name: "월식",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6692.png"
-                                },
-                                {
-                                    id: 1055,
-                                    name: "도란의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1055.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Sound 0f Winter",
-                            id: "SzzYViVx8JQjAW_GcQjE9zozIygxBdvsWz4p5obxEqfk7Qc",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 15,
-                            kills: 8,
-                            deaths: 1,
-                            assists: 20,
-                            kda: "28.000",
-                            killParticipation: "71.795",
-                            goldEarned: 12743,
-                            cs: 40,
-                            totalDamageDealt: 154401,
-                            totalDamageTaken: 24016,
-                            wardsPlaced: 8,
-                            wardsKilled: 7,
-                            detectorWardsPlaced: 7,
-                            visionScore: 41,
-                            champion: {
-                                id: 59,
-                                name: "자르반 4세",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/JarvanIV.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6333,
-                                    name: "죽음의 무도",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6333.png"
-                                },
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                {
-                                    id: 3053,
-                                    name: "스테락의 도전",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3053.png"
-                                },
-                                {
-                                    id: 1033,
-                                    name: "마법무효화의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1033.png"
-                                },
-                                {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
-                                },
-                                null,
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Noticed",
-                            id: "ix2-NKrzSFG3XOJBmX8vxEQjqE8vWnetZ3oMkdT3_tmvmpY",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 16,
-                            kills: 10,
-                            deaths: 2,
-                            assists: 9,
-                            kda: "9.500",
-                            killParticipation: "48.718",
-                            goldEarned: 12980,
-                            cs: 208,
-                            totalDamageDealt: 161658,
-                            totalDamageTaken: 15405,
-                            wardsPlaced: 3,
-                            wardsKilled: 6,
-                            detectorWardsPlaced: 3,
-                            visionScore: 25,
-                            champion: {
-                                id: 711,
-                                name: "벡스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Vex.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8112,
-                                        name: "감전",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
-                                    },
-                                    {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                    },
-                                    {
-                                        id: 8138,
-                                        name: "사냥의 증표",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                    },
-                                    {
-                                        id: 8134,
-                                        name: "영리한 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 1082,
-                                    name: "암흑의 인장",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1082.png"
-                                },
-                                {
-                                    id: 6656,
-                                    name: "만년서리",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6656.png"
-                                },
-                                {
-                                    id: 1058,
-                                    name: "쓸데없이 큰 지팡이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1058.png"
-                                },
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 3165,
-                                    name: "모렐로노미콘",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3165.png"
-                                },
-                                {
-                                    id: 4645,
-                                    name: "그림자불꽃",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4645.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "피할 수 없는",
-                            id: "MIDgSntmlySm3HkSdExGPQEBdjfRrJ6typKKlqXCrNO34lpk",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 15,
-                            kills: 6,
-                            deaths: 2,
-                            assists: 7,
-                            kda: "6.500",
-                            killParticipation: "33.333",
-                            goldEarned: 12211,
-                            cs: 203,
-                            totalDamageDealt: 153541,
-                            totalDamageTaken: 11954,
-                            wardsPlaced: 11,
-                            wardsKilled: 3,
-                            detectorWardsPlaced: 2,
-                            visionScore: 31,
-                            champion: {
-                                id: 81,
-                                name: "이즈리얼",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Ezreal.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 3,
-                                    name: "탈진",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerExhaust.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8017,
-                                        name: "체력차 극복",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CutDown/CutDown.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 1033,
-                                    name: "마법무효화의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1033.png"
-                                },
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 3042,
-                                    name: "무라마나",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3042.png"
-                                },
-                                {
-                                    id: 6694,
-                                    name: "세릴다의 원한",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6694.png"
-                                },
-                                {
-                                    id: 3078,
-                                    name: "삼위일체",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3078.png"
-                                },
-                                null,
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Slow start 1",
-                            id: "9mRDHuWfdKef3wgR8LdNvJARv6ulKx03uqBFxlnVQEqFxjc",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 13,
-                            kills: 7,
-                            deaths: 2,
-                            assists: 19,
-                            kda: "13.000",
-                            killParticipation: "66.667",
-                            goldEarned: 9909,
-                            cs: 39,
-                            totalDamageDealt: 56525,
-                            totalDamageTaken: 6840,
-                            wardsPlaced: 34,
-                            wardsKilled: 7,
-                            detectorWardsPlaced: 9,
-                            visionScore: 59,
-                            champion: {
-                                id: 99,
-                                name: "럭스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Lux.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8229,
-                                        name: "신비로운 유성",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
-                                    },
-                                    {
-                                        id: 8226,
-                                        name: "마나순환 팔찌",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
-                                    },
-                                    {
-                                        id: 8233,
-                                        name: "절대 집중",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
-                                    },
-                                    {
-                                        id: 8237,
-                                        name: "주문 작열",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3853,
-                                    name: "얼음 정수의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3853.png"
-                                },
-                                {
-                                    id: 2420,
-                                    name: "초시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2420.png"
-                                },
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 4628,
-                                    name: "지평선의 초점",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4628.png"
-                                },
-                                {
-                                    id: 4644,
-                                    name: "부서진 여왕의 왕관",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4644.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        }
-                    ],
-                    blueTeam: {
-                        bans: [
-                            {
-                                id: 23,
-                                name: "트린다미어",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
-                            },
-                            {
-                                id: 51,
-                                name: "케이틀린",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Caitlyn.png"
-                            },
-                            {
-                                id: 41,
-                                name: "갱플랭크",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Gangplank.png"
-                            },
-                            {
-                                id: 7,
-                                name: "르블랑",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Leblanc.png"
-                            },
-                            {
-                                id: 523,
-                                name: "아펠리오스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Aphelios.png"
-                            }
-                        ],
-                        win: false,
-                        championKills: 11,
-                        dragonKills: 0,
-                        baronKills: 0,
-                        towerKills: 4,
-                        inhibitorKills: 1,
-                        riftHeraldKills: 0
-                    },
-                    redTeam: {
-                        bans: [
-                            {
-                                id: 166,
-                                name: "아크샨",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Akshan.png"
-                            },
-                            {
-                                id: 23,
-                                name: "트린다미어",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
-                            },
-                            {
-                                id: 43,
-                                name: "카르마",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Karma.png"
-                            },
-                            {
-                                id: 350,
-                                name: "유미",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Yuumi.png"
-                            },
-                            null
-                        ],
-                        win: true,
-                        championKills: 39,
-                        dragonKills: 3,
-                        baronKills: 1,
-                        towerKills: 7,
-                        inhibitorKills: 1,
-                        riftHeraldKills: 2
-                    },
-                    searchTargetPlayer: {
-                        name: "콩나물이좋아요",
-                        id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                        isSearchTarget: true,
-                        isBlueTeam: true,
-                        championLevel: 14,
-                        kills: 7,
-                        deaths: 7,
-                        assists: 2,
-                        kda: "1.286",
-                        killParticipation: "81.818",
-                        goldEarned: 11881,
-                        cs: 51,
-                        totalDamageDealt: 164949,
-                        totalDamageTaken: 22128,
-                        wardsPlaced: 7,
-                        wardsKilled: 6,
-                        detectorWardsPlaced: 6,
-                        visionScore: 30,
                         champion: {
                             id: 131,
                             name: "다이애나",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Diana.png"
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Diana.png"
                         },
-                        summonerSpells: [
-                            {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                            },
-                            {
-                                id: 4,
-                                name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                            }
-                        ],
-                        mainPerks: {
-                            style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                },
-                                {
-                                    id: 9111,
-                                    name: "승전보",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                },
-                                {
-                                    id: 9105,
-                                    name: "전설: 강인함",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                },
-                                {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                }
-                            ]
-                        },
-                        subPerks: {
-                            style: {
-                                id: 8300,
-                                name: "영감",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                            },
-                            slots: [
-                                {
-                                    id: 8304,
-                                    name: "마법의 신발",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                },
-                                {
-                                    id: 8347,
-                                    name: "우주적 통찰력",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                }
-                            ]
-                        },
-                        items: [
-                            {
-                                id: 3152,
-                                name: "마법공학 로켓 벨트",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3152.png"
-                            },
-                            {
-                                id: 3157,
-                                name: "존야의 모래시계",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
-                            },
-                            {
-                                id: 2055,
-                                name: "제어 와드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                            },
-                            {
-                                id: 4645,
-                                name: "그림자불꽃",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4645.png"
-                            },
-                            {
-                                id: 4630,
-                                name: "역병의 보석",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4630.png"
-                            },
-                            {
-                                id: 3020,
-                                name: "마법사의 신발",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                            },
-                            {
-                                id: 3364,
-                                name: "예언자의 렌즈",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                            }
-                        ],
-                        win: true
-                    }
-                },
-                {
-                    id: "KR_5704383283",
-                    gameMode: "솔랭",
-                    gameStartTime: 1642701127247,
-                    gameLength: 1119,
-                    participants: [
-                        {
-                            name: "뽀삐의 피지컬",
-                            id: "a2MY6-sIIyUIZ21vOZ4bG37rz9BnfCZJWRGKs-vcWeuuTdU",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 12,
-                            kills: 3,
-                            deaths: 1,
-                            assists: 8,
-                            kda: "11.000",
-                            killParticipation: "40.741",
-                            goldEarned: 8398,
-                            cs: 121,
-                            totalDamageDealt: 86913,
-                            totalDamageTaken: 14059,
-                            wardsPlaced: 6,
-                            wardsKilled: 0,
-                            detectorWardsPlaced: 1,
-                            visionScore: 14,
-                            champion: {
-                                id: 78,
-                                name: "뽀삐",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Poppy.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8437,
-                                        name: "착취의 손아귀",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
-                                    },
-                                    {
-                                        id: 8401,
-                                        name: "보호막 강타",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
-                                    },
-                                    {
-                                        id: 8473,
-                                        name: "뼈 방패",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
-                                    },
-                                    {
-                                        id: 8242,
-                                        name: "불굴의 의지",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3044,
-                                    name: "탐식의 망치",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3044.png"
-                                },
-                                {
-                                    id: 2033,
-                                    name: "부패 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2033.png"
-                                },
-                                {
-                                    id: 6632,
-                                    name: "신성한 파괴자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6632.png"
-                                },
-                                {
-                                    id: 1037,
-                                    name: "곡괭이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1037.png"
-                                },
-                                null,
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "JUGKlNG",
-                            id: "8W9foxFQzweXTXh8E3cDFgLPNE-XCHloHFuq5b6hTmcnWbI",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 12,
-                            kills: 7,
-                            deaths: 3,
-                            assists: 3,
-                            kda: "3.333",
-                            killParticipation: "37.037",
-                            goldEarned: 9497,
-                            cs: 18,
-                            totalDamageDealt: 118346,
-                            totalDamageTaken: 20084,
-                            wardsPlaced: 5,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 3,
-                            visionScore: 21,
-                            champion: {
-                                id: 76,
-                                name: "니달리",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Nidalee.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8112,
-                                        name: "감전",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
-                                    },
-                                    {
-                                        id: 8143,
-                                        name: "돌발 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
-                                    },
-                                    {
-                                        id: 8138,
-                                        name: "사냥의 증표",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                    },
-                                    {
-                                        id: 8105,
-                                        name: "끈질긴 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8275,
-                                        name: "빛의 망토",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
-                                    },
-                                    {
-                                        id: 8210,
-                                        name: "깨달음",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 1052,
-                                    name: "증폭의 고서",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1052.png"
-                                },
-                                {
-                                    id: 3057,
-                                    name: "광휘의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3057.png"
-                                },
-                                {
-                                    id: 3108,
-                                    name: "악마의 마법서",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3108.png"
-                                },
-                                {
-                                    id: 4636,
-                                    name: "밤의 수확자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4636.png"
-                                },
-                                {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "이렐아칼리",
-                            id: "neRCK-qVjBuJYBdUrBd9GRSAElUDF1yP-NxChCqxT9R_tBM",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 12,
-                            kills: 11,
-                            deaths: 2,
-                            assists: 3,
-                            kda: "7.000",
-                            killParticipation: "51.852",
-                            goldEarned: 10869,
-                            cs: 155,
-                            totalDamageDealt: 88932,
-                            totalDamageTaken: 12180,
-                            wardsPlaced: 5,
-                            wardsKilled: 3,
-                            detectorWardsPlaced: 2,
-                            visionScore: 13,
-                            champion: {
-                                id: 39,
-                                name: "이렐리아",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Irelia.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9105,
-                                        name: "전설: 강인함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3153,
-                                    name: "몰락한 왕의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3153.png"
-                                },
-                                {
-                                    id: 6630,
-                                    name: "선혈포식자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6630.png"
-                                },
-                                null,
-                                {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
-                                },
-                                null,
-                                null,
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Ahnananananan",
-                            id: "9A3W0jGIxVN0vbiKS4KUSbFEmnJVxKOtzs7Hyra77jGxrfwwSikjzrsKFw",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 11,
-                            kills: 5,
-                            deaths: 3,
-                            assists: 4,
-                            kda: "3.000",
-                            killParticipation: "33.333",
-                            goldEarned: 9091,
-                            cs: 149,
-                            totalDamageDealt: 86338,
-                            totalDamageTaken: 12849,
-                            wardsPlaced: 6,
-                            wardsKilled: 7,
-                            detectorWardsPlaced: 1,
-                            visionScore: 16,
-                            champion: {
-                                id: 145,
-                                name: "카이사",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Kaisa.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 7,
-                                    name: "회복",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 9923,
-                                        name: "칼날비",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
-                                    },
-                                    {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
-                                    },
-                                    {
-                                        id: 8138,
-                                        name: "사냥의 증표",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
-                                    },
-                                    {
-                                        id: 8135,
-                                        name: "굶주린 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6676,
-                                    name: "징수의 총",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6676.png"
-                                },
-                                null,
-                                null,
-                                {
-                                    id: 1055,
-                                    name: "도란의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1055.png"
-                                },
-                                {
-                                    id: 2422,
-                                    name: "약간 신비한 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2422.png"
-                                },
-                                {
-                                    id: 6672,
-                                    name: "크라켄 학살자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6672.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "구운몽임",
-                            id: "TMwzwuzJ-VZ7-WZZ-jOd4XJPpjbzVNIsjTpSRaoGPh-1odo",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 10,
-                            kills: 1,
-                            deaths: 2,
-                            assists: 10,
-                            kda: "5.500",
-                            killParticipation: "40.741",
-                            goldEarned: 5909,
-                            cs: 14,
-                            totalDamageDealt: 20250,
-                            totalDamageTaken: 9263,
-                            wardsPlaced: 16,
-                            wardsKilled: 4,
-                            detectorWardsPlaced: 2,
-                            visionScore: 37,
-                            champion: {
-                                id: 16,
-                                name: "소라카",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Soraka.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 21,
-                                    name: "방어막",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBarrier.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8214,
-                                        name: "콩콩이 소환",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
-                                    },
-                                    {
-                                        id: 8224,
-                                        name: "무효화 구체",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NullifyingOrb/Pokeshield.png"
-                                    },
-                                    {
-                                        id: 8234,
-                                        name: "기민함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png"
-                                    },
-                                    {
-                                        id: 8237,
-                                        name: "주문 작열",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8444,
-                                        name: "재생의 바람",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
-                                    },
-                                    {
-                                        id: 8453,
-                                        name: "소생",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 3853,
-                                    name: "얼음 정수의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3853.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 6617,
-                                    name: "월석 재생기",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6617.png"
-                                },
-                                {
-                                    id: 1028,
-                                    name: "루비 수정",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1028.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "버스메이커",
-                            id: "tGDSmdLDy-SXZ1jFs9nVxOUQmMvZE-lRYfFK6-YWNJb61a8",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 10,
-                            kills: 0,
-                            deaths: 5,
-                            assists: 1,
-                            kda: "0.200",
-                            killParticipation: "9.091",
-                            goldEarned: 4572,
-                            cs: 97,
-                            totalDamageDealt: 45786,
-                            totalDamageTaken: 13476,
-                            wardsPlaced: 5,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 0,
-                            visionScore: 8,
-                            champion: {
-                                id: 98,
-                                name: "쉔",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Shen.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8437,
-                                        name: "착취의 손아귀",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
-                                    },
-                                    {
-                                        id: 8401,
-                                        name: "보호막 강타",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
-                                    },
-                                    {
-                                        id: 8444,
-                                        name: "재생의 바람",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
-                                    },
-                                    {
-                                        id: 8453,
-                                        name: "소생",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 1054,
-                                    name: "도란의 방패",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1054.png"
-                                },
-                                {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 6662,
-                                    name: "서리불꽃 건틀릿",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6662.png"
-                                },
-                                {
-                                    id: 1029,
-                                    name: "천 갑옷",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1029.png"
-                                },
-                                {
-                                    id: 1001,
-                                    name: "장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1001.png"
-                                },
-                                {
-                                    id: 1028,
-                                    name: "루비 수정",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1028.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "콩나물이좋아요",
-                            id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                            isSearchTarget: true,
-                            isBlueTeam: false,
-                            championLevel: 11,
-                            kills: 1,
-                            deaths: 7,
-                            assists: 4,
-                            kda: "0.714",
-                            killParticipation: "45.455",
-                            goldEarned: 5772,
-                            cs: 33,
-                            totalDamageDealt: 87172,
-                            totalDamageTaken: 20275,
-                            wardsPlaced: 7,
-                            wardsKilled: 3,
-                            detectorWardsPlaced: 4,
-                            visionScore: 20,
-                            champion: {
-                                id: 887,
-                                name: "그웬",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Gwen.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                                },
-                                {
-                                    id: 6,
-                                    name: "유체화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHaste.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 9111,
-                                        name: "승전보",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
-                                    },
-                                    {
-                                        id: 9104,
-                                        name: "전설: 민첩함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
-                                    },
-                                    {
-                                        id: 8014,
-                                        name: "최후의 일격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 2422,
-                                    name: "약간 신비한 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2422.png"
-                                },
-                                {
-                                    id: 3115,
-                                    name: "내셔의 이빨",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3115.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 1082,
-                                    name: "암흑의 인장",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1082.png"
-                                },
-                                {
-                                    id: 4635,
-                                    name: "흡수의 시선",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4635.png"
-                                },
-                                null,
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "Gen G ian",
-                            id: "wC_0KmDBRX72TIk8Az4yEk2o67woPeZbDk7dpUATx2soRBk",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 11,
-                            kills: 4,
-                            deaths: 2,
-                            assists: 3,
-                            kda: "3.500",
-                            killParticipation: "63.636",
-                            goldEarned: 7671,
-                            cs: 142,
-                            totalDamageDealt: 88116,
-                            totalDamageTaken: 8546,
-                            wardsPlaced: 8,
-                            wardsKilled: 1,
-                            detectorWardsPlaced: 2,
-                            visionScore: 21,
-                            champion: {
-                                id: 126,
-                                name: "제이스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jayce.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8369,
-                                        name: "선제공격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
-                                    },
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8473,
-                                        name: "뼈 방패",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
-                                    },
-                                    {
-                                        id: 8451,
-                                        name: "과잉성장",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Overgrowth/Overgrowth.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6609,
-                                    name: "화공 펑크 사슬검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6609.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                null,
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 6692,
-                                    name: "월식",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6692.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "C9 Berserker",
-                            id: "S75NyHpx6tvE-ULw_rssB6kKFoJXoHPEw3eRVMrjUyfU_To",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 9,
-                            kills: 3,
-                            deaths: 5,
-                            assists: 4,
-                            kda: "1.400",
-                            killParticipation: "63.636",
-                            goldEarned: 6564,
-                            cs: 106,
-                            totalDamageDealt: 48069,
-                            totalDamageTaken: 13476,
-                            wardsPlaced: 6,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 1,
-                            visionScore: 8,
-                            champion: {
-                                id: 235,
-                                name: "세나",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Senna.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 7,
-                                    name: "회복",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8369,
-                                        name: "선제공격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
-                                    },
-                                    {
-                                        id: 8304,
-                                        name: "마법의 신발",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
-                                    },
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8410,
-                                        name: "쾌속 접근",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9104,
-                                        name: "전설: 민첩함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6672,
-                                    name: "크라켄 학살자",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6672.png"
-                                },
-                                {
-                                    id: 2422,
-                                    name: "약간 신비한 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2422.png"
-                                },
-                                {
-                                    id: 6677,
-                                    name: "분노의 칼",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6677.png"
-                                },
-                                null,
-                                {
-                                    id: 3070,
-                                    name: "여신의 눈물",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3070.png"
-                                },
-                                {
-                                    id: 1055,
-                                    name: "도란의 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1055.png"
-                                },
-                                {
-                                    id: 3340,
-                                    name: "투명 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3340.png"
-                                }
-                            ]
-                        },
-                        {
-                            name: "아임서폿",
-                            id: "AFbKSifDuGJ6gBNGGWJ54X4O1PrILAy8KunmHwKHAFZcEvOW",
-                            isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 8,
-                            kills: 3,
-                            deaths: 8,
-                            assists: 5,
-                            kda: "1.000",
-                            killParticipation: "72.727",
-                            goldEarned: 5891,
-                            cs: 8,
-                            totalDamageDealt: 13431,
-                            totalDamageTaken: 12788,
-                            wardsPlaced: 26,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 8,
-                            visionScore: 41,
-                            champion: {
-                                id: 117,
-                                name: "룰루",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Lulu.png"
-                            },
-                            summonerSpells: [
-                                {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
-                                },
-                                {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8200,
-                                    name: "마법",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8214,
-                                        name: "콩콩이 소환",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
-                                    },
-                                    {
-                                        id: 8226,
-                                        name: "마나순환 팔찌",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
-                                    },
-                                    {
-                                        id: 8234,
-                                        name: "기민함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png"
-                                    },
-                                    {
-                                        id: 8237,
-                                        name: "주문 작열",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8347,
-                                        name: "우주적 통찰력",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
-                                },
-                                {
-                                    id: 3853,
-                                    name: "얼음 정수의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3853.png"
-                                },
-                                {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 3011,
-                                    name: "화학공학 부패기",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3011.png"
-                                },
-                                {
-                                    id: 1052,
-                                    name: "증폭의 고서",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1052.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
-                                }
-                            ]
-                        }
-                    ],
-                    blueTeam: {
-                        bans: [
-                            {
-                                id: 7,
-                                name: "르블랑",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Leblanc.png"
-                            },
-                            {
-                                id: 35,
-                                name: "샤코",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Shaco.png"
-                            },
-                            {
-                                id: 41,
-                                name: "갱플랭크",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Gangplank.png"
-                            },
-                            null,
-                            {
-                                id: 58,
-                                name: "레넥톤",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Renekton.png"
-                            }
-                        ],
-                        win: true,
-                        championKills: 27,
-                        dragonKills: 0,
-                        baronKills: 0,
-                        towerKills: 8,
-                        inhibitorKills: 1,
-                        riftHeraldKills: 2
-                    },
-                    redTeam: {
-                        bans: [
-                            {
-                                id: 166,
-                                name: "아크샨",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Akshan.png"
-                            },
-                            {
-                                id: 23,
-                                name: "트린다미어",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
-                            },
-                            null,
-                            {
-                                id: 350,
-                                name: "유미",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Yuumi.png"
-                            },
-                            {
-                                id: 114,
-                                name: "피오라",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Fiora.png"
-                            }
-                        ],
-                        win: false,
-                        championKills: 11,
-                        dragonKills: 2,
-                        baronKills: 0,
-                        towerKills: 0,
-                        inhibitorKills: 0,
-                        riftHeraldKills: 0
-                    },
-                    searchTargetPlayer: {
-                        name: "콩나물이좋아요",
-                        id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                        isSearchTarget: true,
-                        isBlueTeam: false,
-                        championLevel: 11,
-                        kills: 1,
-                        deaths: 7,
-                        assists: 4,
-                        kda: "0.714",
-                        killParticipation: "45.455",
-                        goldEarned: 5772,
-                        cs: 33,
-                        totalDamageDealt: 87172,
-                        totalDamageTaken: 20275,
-                        wardsPlaced: 7,
-                        wardsKilled: 3,
-                        detectorWardsPlaced: 4,
-                        visionScore: 20,
-                        champion: {
-                            id: 887,
-                            name: "그웬",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Gwen.png"
-                        },
-                        summonerSpells: [
-                            {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
-                            },
-                            {
-                                id: 6,
-                                name: "유체화",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHaste.png"
-                            }
-                        ],
                         mainPerks: {
                             style: {
                                 id: 8000,
@@ -6335,242 +157,686 @@ const fakeData = {
                                 }
                             ]
                         },
-                        items: [
+                        summonerSpells: [
                             {
-                                id: 2422,
-                                name: "약간 신비한 신발",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2422.png"
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                             },
                             {
-                                id: 3115,
-                                name: "내셔의 이빨",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3115.png"
-                            },
-                            {
-                                id: 2055,
-                                name: "제어 와드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                            },
-                            {
-                                id: 1082,
-                                name: "암흑의 인장",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1082.png"
-                            },
-                            {
-                                id: 4635,
-                                name: "흡수의 시선",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4635.png"
-                            },
-                            null,
-                            {
-                                id: 3364,
-                                name: "예언자의 렌즈",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                id: 11,
+                                name: "강타",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
                             }
-                        ],
-                        win: true
-                    }
-                },
-                {
-                    id: "KR_5704289572",
-                    gameMode: "솔랭",
-                    gameStartTime: 1642698543121,
-                    gameLength: 1496,
-                    participants: [
-                        {
-                            name: "ren jian",
-                            id: "Hfrk6xkM4ic3QUB9FbqaapOC63k5wvmpbk8EKnx9g1IP7Fk",
-                            isSearchTarget: false,
-                            isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 3,
-                            deaths: 6,
-                            assists: 4,
-                            kda: "1.167",
-                            killParticipation: "21.212",
-                            goldEarned: 9622,
-                            cs: 174,
-                            totalDamageDealt: 143824,
-                            totalDamageTaken: 13817,
-                            wardsPlaced: 7,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 0,
-                            visionScore: 18,
-                            champion: {
-                                id: 126,
-                                name: "제이스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Jayce.png"
+                        ]
+                    },
+                    {
+                        name: "오이동생",
+                        id: "uSbL79HDepxF8RTMMOwUTXwM0PjzC7JQOpLf2_MmKtXerbQ",
+                        isSearchTarget: false,
+                        isBlueTeam: true,
+                        champion: {
+                            id: 92,
+                            name: "리븐",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Riven.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
                             },
-                            summonerSpells: [
+                            slots: [
                                 {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    id: 8010,
+                                    name: "정복자",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
                                 },
                                 {
-                                    id: 12,
-                                    name: "순간이동",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerTeleport.png"
-                                }
-                            ],
-                            mainPerks: {
-                                style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
-                                    },
-                                    {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
-                                    },
-                                    {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
-                                    },
-                                    {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
-                                style: {
-                                    id: 8300,
-                                    name: "영감",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8345,
-                                        name: "비스킷 배달",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
-                                    },
-                                    {
-                                        id: 8352,
-                                        name: "시간 왜곡 물약",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
-                                    }
-                                ]
-                            },
-                            items: [
-                                {
-                                    id: 6692,
-                                    name: "월식",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6692.png"
+                                    id: 9111,
+                                    name: "승전보",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
                                 },
                                 {
-                                    id: 3042,
-                                    name: "무라마나",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3042.png"
+                                    id: 9104,
+                                    name: "전설: 민첩함",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
                                 },
                                 {
-                                    id: 2031,
-                                    name: "충전형 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2031.png"
-                                },
-                                {
-                                    id: 3134,
-                                    name: "톱날 단검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3134.png"
-                                },
-                                {
-                                    id: 3047,
-                                    name: "판금 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3047.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
+                                    id: 8299,
+                                    name: "최후의 저항",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
                                 }
                             ]
                         },
+                        subPerks: {
+                            style: {
+                                id: 8400,
+                                name: "결의",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8444,
+                                    name: "재생의 바람",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+                                },
+                                {
+                                    id: 8242,
+                                    name: "불굴의 의지",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "iChii ni Nanachi",
+                        id: "8iuGDhDeX734EG1Bjr4yfjhGjV3fDt0CtV9YM2ywTTyPlEA",
+                        isSearchTarget: false,
+                        isBlueTeam: true,
+                        champion: {
+                            id: 40,
+                            name: "잔나",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Janna.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8351,
+                                    name: "빙결 강화",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+                                },
+                                {
+                                    id: 8313,
+                                    name: "완벽한 타이밍",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png"
+                                },
+                                {
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                },
+                                {
+                                    id: 8347,
+                                    name: "우주적 통찰력",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8100,
+                                name: "지배",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8139,
+                                    name: "피의 맛",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                },
+                                {
+                                    id: 8105,
+                                    name: "끈질긴 사냥꾼",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            },
+                            {
+                                id: 3,
+                                name: "탈진",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "뭐하고싶어요",
+                        id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                        isSearchTarget: true,
+                        isBlueTeam: true,
+                        champion: {
+                            id: 112,
+                            name: "빅토르",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viktor.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8369,
+                                    name: "선제공격",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
+                                },
+                                {
+                                    id: 8304,
+                                    name: "마법의 신발",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                },
+                                {
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                },
+                                {
+                                    id: 8347,
+                                    name: "우주적 통찰력",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8400,
+                                name: "결의",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8473,
+                                    name: "뼈 방패",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                },
+                                {
+                                    id: 8242,
+                                    name: "불굴의 의지",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "꿈에 남자",
+                        id: "icGcA_Q2LVQgkDJdcfE0r1s0f_LlhTf5e3NcLgzuutoj0io",
+                        isSearchTarget: false,
+                        isBlueTeam: false,
+                        champion: {
+                            id: 43,
+                            name: "카르마",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8200,
+                                name: "마법",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8229,
+                                    name: "신비로운 유성",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+                                },
+                                {
+                                    id: 8275,
+                                    name: "빛의 망토",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                },
+                                {
+                                    id: 8233,
+                                    name: "절대 집중",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+                                },
+                                {
+                                    id: 8237,
+                                    name: "주문 작열",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                },
+                                {
+                                    id: 8352,
+                                    name: "시간 왜곡 물약",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 3,
+                                name: "탈진",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "dangyadangyadang",
+                        id: "5j9ePoiTKEVBZI10NwuOi-DQLBURFIqQoRz33ayZBuSwulXuA-YDSIB-cg",
+                        isSearchTarget: false,
+                        isBlueTeam: false,
+                        champion: {
+                            id: 104,
+                            name: "그레이브즈",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Graves.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8010,
+                                    name: "정복자",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                },
+                                {
+                                    id: 9111,
+                                    name: "승전보",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                },
+                                {
+                                    id: 9104,
+                                    name: "전설: 민첩함",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                },
+                                {
+                                    id: 8299,
+                                    name: "최후의 저항",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8304,
+                                    name: "마법의 신발",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                },
+                                {
+                                    id: 8347,
+                                    name: "우주적 통찰력",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 11,
+                                name: "강타",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "리맴버",
+                        id: "cUCfz17gb6WGfVu92X8ieN7f8DFhA3zaR_GUL6oP9-opl_o",
+                        isSearchTarget: false,
+                        isBlueTeam: false,
+                        champion: {
+                            id: 110,
+                            name: "바루스",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Varus.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8008,
+                                    name: "치명적 속도",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+                                },
+                                {
+                                    id: 8009,
+                                    name: "침착",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                },
+                                {
+                                    id: 9103,
+                                    name: "전설: 핏빛 길",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                },
+                                {
+                                    id: 8014,
+                                    name: "최후의 일격",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8200,
+                                name: "마법",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8275,
+                                    name: "빛의 망토",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                },
+                                {
+                                    id: 8237,
+                                    name: "주문 작열",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 7,
+                                name: "회복",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "충주갱수",
+                        id: "wE6O_WJxHzTQUuQNU9LM6VNeZxEZAKBTVhCrgL9lV0LJ7Rg",
+                        isSearchTarget: false,
+                        isBlueTeam: false,
+                        champion: {
+                            id: 84,
+                            name: "아칼리",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Akali.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8010,
+                                    name: "정복자",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                },
+                                {
+                                    id: 8009,
+                                    name: "침착",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                },
+                                {
+                                    id: 9105,
+                                    name: "전설: 강인함",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                },
+                                {
+                                    id: 8299,
+                                    name: "최후의 저항",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8400,
+                                name: "결의",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8473,
+                                    name: "뼈 방패",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                },
+                                {
+                                    id: 8242,
+                                    name: "불굴의 의지",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 14,
+                                name: "점화",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                            },
+                            {
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                            }
+                        ]
+                    },
+                    {
+                        name: "zyf",
+                        id: "TYYu306AZu1U4L7S6nh5nhLifuTwyqPh8IMe_GJIKpRj1Mwb3WkwNLfIGA",
+                        isSearchTarget: false,
+                        isBlueTeam: false,
+                        champion: {
+                            id: 39,
+                            name: "이렐리아",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Irelia.png"
+                        },
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8008,
+                                    name: "치명적 속도",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+                                },
+                                {
+                                    id: 9111,
+                                    name: "승전보",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                },
+                                {
+                                    id: 9103,
+                                    name: "전설: 핏빛 길",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                },
+                                {
+                                    id: 8299,
+                                    name: "최후의 저항",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8400,
+                                name: "결의",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8444,
+                                    name: "재생의 바람",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+                                },
+                                {
+                                    id: 8242,
+                                    name: "불굴의 의지",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                }
+                            ]
+                        },
+                        summonerSpells: [
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            },
+                            {
+                                id: 14,
+                                name: "점화",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                            }
+                        ]
+                    }
+                ],
+                blueTeam: {
+                    bans: [
                         {
-                            name: "JUGKlNG",
-                            id: "8W9foxFQzweXTXh8E3cDFgLPNE-XCHloHFuq5b6hTmcnWbI",
-                            isSearchTarget: false,
+                            id: 53,
+                            name: "블리츠크랭크",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Blitzcrank.png"
+                        },
+                        {
+                            id: 64,
+                            name: "리 신",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/LeeSin.png"
+                        },
+                        {
+                            id: 91,
+                            name: "탈론",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Talon.png"
+                        },
+                        null,
+                        {
+                            id: 58,
+                            name: "레넥톤",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Renekton.png"
+                        }
+                    ]
+                },
+                redTeam: {
+                    bans: [
+                        {
+                            id: 53,
+                            name: "블리츠크랭크",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Blitzcrank.png"
+                        },
+                        null,
+                        null,
+                        {
+                            id: 23,
+                            name: "트린다미어",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Tryndamere.png"
+                        },
+                        null
+                    ]
+                }
+            },
+            latestMatches: [
+                {
+                    id: "KR_5705563398",
+                    gameMode: "솔랭",
+                    gameStartTime: 1642763575422,
+                    gameLength: 1212,
+                    participants: [
+                        {
+                            name: "뭐하고싶어요",
+                            id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                            isSearchTarget: true,
                             isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 8,
+                            championLevel: 13,
+                            kills: 4,
                             deaths: 3,
-                            assists: 18,
-                            kda: "8.667",
-                            killParticipation: "78.788",
-                            goldEarned: 11659,
-                            cs: 24,
-                            totalDamageDealt: 119229,
-                            totalDamageTaken: 35160,
-                            wardsPlaced: 10,
-                            wardsKilled: 6,
-                            detectorWardsPlaced: 7,
-                            visionScore: 24,
+                            assists: 4,
+                            kda: "2.67",
+                            killParticipation: "21.62",
+                            goldEarned: 9052,
+                            cs: 152,
+                            totalDamageDealt: 98335,
+                            totalDamageTaken: 22516,
+                            wardsPlaced: 6,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 1,
+                            visionScore: 15,
                             champion: {
-                                id: 154,
-                                name: "자크",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Zac.png"
+                                id: 58,
+                                name: "레넥톤",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Renekton.png"
                             },
                             summonerSpells: [
                                 {
-                                    id: 11,
-                                    name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
                                 },
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
-                                style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
-                                },
-                                slots: [
-                                    {
-                                        id: 8439,
-                                        name: "여진",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
-                                    },
-                                    {
-                                        id: 8463,
-                                        name: "생명의 샘",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
-                                    },
-                                    {
-                                        id: 8429,
-                                        name: "사전 준비",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Conditioning/Conditioning.png"
-                                    },
-                                    {
-                                        id: 8453,
-                                        name: "소생",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
-                                    }
-                                ]
-                            },
-                            subPerks: {
                                 style: {
                                     id: 8000,
                                     name: "정밀",
                                     image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
                                 },
                                 slots: [
+                                    {
+                                        id: 8005,
+                                        name: "집중 공격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+                                    },
                                     {
                                         id: 9111,
                                         name: "승전보",
@@ -6580,77 +846,236 @@ const fakeData = {
                                         id: 9105,
                                         name: "전설: 강인함",
                                         image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
                                     }
                                 ]
                             },
                             items: [
-                                null,
                                 {
-                                    id: 3067,
-                                    name: "점화석",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3067.png"
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 1011,
-                                    name: "거인의 허리띠",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1011.png"
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3075,
-                                    name: "가시 갑옷",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3075.png"
+                                    id: 3053,
+                                    name: "스테락의 도전",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3053.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 6662,
-                                    name: "서리불꽃 건틀릿",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6662.png"
+                                    id: 1054,
+                                    name: "도란의 방패",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1054.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
+                                    id: 1033,
+                                    name: "마법무효화의 망토",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1033.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                    id: 3111,
+                                    name: "헤르메스의 발걸음",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3111.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "DK Pullbae",
-                            id: "sa3xviJOtt_o9eNiWQmKR7bBPUr1kR5v0awU8H1dk5kCMzPV",
+                            name: "dong li xiao zi",
+                            id: "9WD6Hqs9pS4kI9V8kxHyYghrSL4j0fF6Vi3m1KfOxz2usX8ZujMLeZbiGw",
                             isSearchTarget: false,
                             isBlueTeam: true,
-                            championLevel: 14,
-                            kills: 12,
-                            deaths: 5,
-                            assists: 7,
-                            kda: "3.800",
-                            killParticipation: "57.576",
-                            goldEarned: 12212,
-                            cs: 184,
-                            totalDamageDealt: 133039,
-                            totalDamageTaken: 14735,
-                            wardsPlaced: 11,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 3,
-                            visionScore: 18,
+                            championLevel: 13,
+                            kills: 14,
+                            deaths: 2,
+                            assists: 10,
+                            kda: "12.00",
+                            killParticipation: "64.86",
+                            goldEarned: 10997,
+                            cs: 15,
+                            totalDamageDealt: 123216,
+                            totalDamageTaken: 23540,
+                            wardsPlaced: 3,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 1,
+                            visionScore: 21,
                             champion: {
-                                id: 711,
-                                name: "벡스",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Vex.png"
+                                id: 76,
+                                name: "니달리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Nidalee.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8128,
+                                        name: "어둠의 수확",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png"
+                                    },
+                                    {
+                                        id: 8143,
+                                        name: "돌발 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+                                    },
+                                    {
+                                        id: 8138,
+                                        name: "사냥의 증표",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                    },
+                                    {
+                                        id: 8105,
+                                        name: "끈질긴 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8232,
+                                        name: "물 위를 걷는 자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3152,
+                                    name: "마법공학 로켓 벨트",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3152.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3041,
+                                    name: "메자이의 영혼약탈자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3041.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1052,
+                                    name: "증폭의 고서",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1052.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3089,
+                                    name: "라바돈의 죽음모자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3089.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "김완두",
+                            id: "THwLQYgymro2THnC7_j9uUuPjaCKTa0uMsJeh7_UWqJd2T0",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 12,
+                            deaths: 3,
+                            assists: 7,
+                            kda: "6.33",
+                            killParticipation: "51.35",
+                            goldEarned: 9985,
+                            cs: 119,
+                            totalDamageDealt: 70422,
+                            totalDamageTaken: 14832,
+                            wardsPlaced: 4,
+                            wardsKilled: 6,
+                            detectorWardsPlaced: 2,
+                            visionScore: 24,
+                            champion: {
+                                id: 91,
+                                name: "탈론",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Talon.png"
                             },
                             summonerSpells: [
                                 {
                                     id: 14,
                                     name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
                                 },
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
@@ -6676,9 +1101,882 @@ const fakeData = {
                                         image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
                                     },
                                     {
-                                        id: 8106,
-                                        name: "궁극의 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
+                                        id: 8105,
+                                        name: "끈질긴 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8275,
+                                        name: "빛의 망토",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                    },
+                                    {
+                                        id: 8233,
+                                        name: "절대 집중",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6693,
+                                    name: "자객의 발톱",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6693.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3142,
+                                    name: "요우무의 유령검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3142.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3035,
+                                    name: "최후의 속삭임",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3035.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1036,
+                                    name: "롱소드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1036.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "수영장파티세이호",
+                            id: "Z-qPa2tWqD9-zWS3fLB_ZYqtG1TOvbk6fVKdnymWlrTCy2yGFs6M-T3YZw",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 7,
+                            deaths: 1,
+                            assists: 12,
+                            kda: "19.00",
+                            killParticipation: "51.35",
+                            goldEarned: 11063,
+                            cs: 172,
+                            totalDamageDealt: 116677,
+                            totalDamageTaken: 17866,
+                            wardsPlaced: 7,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 1,
+                            visionScore: 12,
+                            champion: {
+                                id: 523,
+                                name: "아펠리오스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Aphelios.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8005,
+                                        name: "집중 공격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+                                    },
+                                    {
+                                        id: 9101,
+                                        name: "과다치유",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Overheal.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8139,
+                                        name: "피의 맛",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                    },
+                                    {
+                                        id: 8134,
+                                        name: "영리한 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3072,
+                                    name: "피바라기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3072.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6671,
+                                    name: "돌풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6671.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1038,
+                                    name: "B.F. 대검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1038.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1037,
+                                    name: "곡괭이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1037.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "김도칠",
+                            id: "DgEf_-RtaNU7wq7aRZRyWfLr_cHIC_z9GLWbNBGCtHAFCA8",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 0,
+                            deaths: 0,
+                            assists: 31,
+                            kda: "Infinity",
+                            killParticipation: "83.78",
+                            goldEarned: 7635,
+                            cs: 10,
+                            totalDamageDealt: 14074,
+                            totalDamageTaken: 6141,
+                            wardsPlaced: 20,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 3,
+                            visionScore: 41,
+                            champion: {
+                                id: 16,
+                                name: "소라카",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Soraka.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 3,
+                                    name: "탈진",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8214,
+                                        name: "콩콩이 소환",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
+                                    },
+                                    {
+                                        id: 8226,
+                                        name: "마나순환 팔찌",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
+                                    },
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8453,
+                                        name: "소생",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3041,
+                                    name: "메자이의 영혼약탈자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3041.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6617,
+                                    name: "월석 재생기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6617.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3916,
+                                    name: "망각의 구",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3916.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "조관우급 늪 설치",
+                            id: "xec3oOivOF_VJNl5ijNWVHYhQGBx5K4Zu7VwLYGtC4bOJ9w",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 11,
+                            kills: 3,
+                            deaths: 8,
+                            assists: 2,
+                            kda: "0.63",
+                            killParticipation: "55.56",
+                            goldEarned: 7602,
+                            cs: 138,
+                            totalDamageDealt: 84694,
+                            totalDamageTaken: 17457,
+                            wardsPlaced: 6,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 1,
+                            visionScore: 18,
+                            champion: {
+                                id: 69,
+                                name: "카시오페아",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Cassiopeia.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6653,
+                                    name: "리안드리의 고뇌",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6653.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3040,
+                                    name: "대천사의 포옹",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3040.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                null,
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "hhhaaaapppppy",
+                            id: "4LyTryGvUdVAkivqE7iGQTuJls4WFNCYemvLtl8TSE-Dayh9C1Hlz7SQEw",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 10,
+                            kills: 2,
+                            deaths: 7,
+                            assists: 2,
+                            kda: "0.57",
+                            killParticipation: "44.44",
+                            goldEarned: 5941,
+                            cs: 16,
+                            totalDamageDealt: 90977,
+                            totalDamageTaken: 18816,
+                            wardsPlaced: 5,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 4,
+                            visionScore: 20,
+                            champion: {
+                                id: 5,
+                                name: "신 짜오",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/XinZhao.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8008,
+                                        name: "치명적 속도",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3044,
+                                    name: "탐식의 망치",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3044.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 2422,
+                                    name: "약간 신비한 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2422.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "zyf",
+                            id: "TYYu306AZu1U4L7S6nh5nhLifuTwyqPh8IMe_GJIKpRj1Mwb3WkwNLfIGA",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 2,
+                            deaths: 6,
+                            assists: 3,
+                            kda: "0.83",
+                            killParticipation: "55.56",
+                            goldEarned: 7169,
+                            cs: 143,
+                            totalDamageDealt: 80038,
+                            totalDamageTaken: 12153,
+                            wardsPlaced: 8,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 2,
+                            visionScore: 10,
+                            champion: {
+                                id: 42,
+                                name: "코르키",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Corki.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 3,
+                                    name: "탈진",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8369,
+                                        name: "선제공격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
+                                    },
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8352,
+                                        name: "시간 왜곡 물약",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3042,
+                                    name: "무라마나",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3042.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6670,
+                                    name: "절정의 화살",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6670.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1053,
+                                    name: "흡혈의 낫",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1053.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1018,
+                                    name: "민첩성의 망토",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1018.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "shenzhenshaoye",
+                            id: "0Z0DoLzB4vlAvPRk-RiqNFEYezOhNn8pZsn1d18WIR8sTG82gvqmW92pzQ",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 10,
+                            kills: 1,
+                            deaths: 10,
+                            assists: 2,
+                            kda: "0.30",
+                            killParticipation: "33.33",
+                            goldEarned: 6174,
+                            cs: 105,
+                            totalDamageDealt: 76059,
+                            totalDamageTaken: 15434,
+                            wardsPlaced: 4,
+                            wardsKilled: 2,
+                            detectorWardsPlaced: 1,
+                            visionScore: 11,
+                            champion: {
+                                id: 221,
+                                name: "제리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zeri.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8008,
+                                        name: "치명적 속도",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8139,
+                                        name: "피의 맛",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                    },
+                                    {
+                                        id: 8135,
+                                        name: "굶주린 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1053,
+                                    name: "흡혈의 낫",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1053.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3078,
+                                    name: "삼위일체",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3078.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1042,
+                                    name: "단검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1042.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "꿈에 남자",
+                            id: "icGcA_Q2LVQgkDJdcfE0r1s0f_LlhTf5e3NcLgzuutoj0io",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 8,
+                            kills: 1,
+                            deaths: 6,
+                            assists: 4,
+                            kda: "0.83",
+                            killParticipation: "55.56",
+                            goldEarned: 5307,
+                            cs: 12,
+                            totalDamageDealt: 18415,
+                            totalDamageTaken: 9679,
+                            wardsPlaced: 19,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 5,
+                            visionScore: 39,
+                            champion: {
+                                id: 43,
+                                name: "카르마",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8229,
+                                        name: "신비로운 유성",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+                                    },
+                                    {
+                                        id: 8275,
+                                        name: "빛의 망토",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                    },
+                                    {
+                                        id: 8233,
+                                        name: "절대 집중",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
                                     }
                                 ]
                             },
@@ -6703,76 +2001,647 @@ const fakeData = {
                             },
                             items: [
                                 {
-                                    id: 2033,
-                                    name: "부패 물약",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2033.png"
+                                    id: 3067,
+                                    name: "점화석",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3067.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 6656,
-                                    name: "만년서리",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6656.png"
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3157,
-                                    name: "존야의 모래시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 1082,
-                                    name: "암흑의 인장",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1082.png"
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
+                                    id: 3011,
+                                    name: "화학공학 부패기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3011.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        }
+                    ],
+                    blueTeam: {
+                        bans: [
+                            {
+                                id: 3,
+                                name: "갈리오",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Galio.png"
+                            },
+                            {
+                                id: 64,
+                                name: "리 신",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/LeeSin.png"
+                            },
+                            {
+                                id: 51,
+                                name: "케이틀린",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Caitlyn.png"
+                            },
+                            {
+                                id: 166,
+                                name: "아크샨",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Akshan.png"
+                            },
+                            null
+                        ],
+                        win: true,
+                        championKills: 37,
+                        dragonKills: 2,
+                        baronKills: 0,
+                        towerKills: 9,
+                        inhibitorKills: 1,
+                        riftHeraldKills: 2
+                    },
+                    redTeam: {
+                        bans: [
+                            {
+                                id: 131,
+                                name: "다이애나",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Diana.png"
+                            },
+                            {
+                                id: 53,
+                                name: "블리츠크랭크",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Blitzcrank.png"
+                            },
+                            null,
+                            {
+                                id: 234,
+                                name: "비에고",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viego.png"
+                            },
+                            {
+                                id: 112,
+                                name: "빅토르",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viktor.png"
+                            }
+                        ],
+                        win: false,
+                        championKills: 9,
+                        dragonKills: 0,
+                        baronKills: 0,
+                        towerKills: 0,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 0
+                    },
+                    searchTargetPlayer: {
+                        name: "뭐하고싶어요",
+                        id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                        isSearchTarget: true,
+                        isBlueTeam: true,
+                        championLevel: 13,
+                        kills: 4,
+                        deaths: 3,
+                        assists: 4,
+                        kda: "2.67",
+                        killParticipation: "21.62",
+                        goldEarned: 9052,
+                        cs: 152,
+                        totalDamageDealt: 98335,
+                        totalDamageTaken: 22516,
+                        wardsPlaced: 6,
+                        wardsKilled: 3,
+                        detectorWardsPlaced: 1,
+                        visionScore: 15,
+                        champion: {
+                            id: 58,
+                            name: "레넥톤",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Renekton.png"
+                        },
+                        summonerSpells: [
+                            {
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ],
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8005,
+                                    name: "집중 공격",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
                                 },
                                 {
-                                    id: 3135,
-                                    name: "공허의 지팡이",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3135.png"
+                                    id: 9111,
+                                    name: "승전보",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
                                 },
                                 {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
+                                    id: 9105,
+                                    name: "전설: 강인함",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                },
+                                {
+                                    id: 8014,
+                                    name: "최후의 일격",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8400,
+                                name: "결의",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8473,
+                                    name: "뼈 방패",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                },
+                                {
+                                    id: 8242,
+                                    name: "불굴의 의지",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                }
+                            ]
+                        },
+                        items: [
+                            {
+                                id: 2031,
+                                name: "충전형 물약",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 6630,
+                                name: "선혈포식자",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3053,
+                                name: "스테락의 도전",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3053.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1054,
+                                name: "도란의 방패",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1054.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1033,
+                                name: "마법무효화의 망토",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1033.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3111,
+                                name: "헤르메스의 발걸음",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3111.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3340,
+                                name: "투명 와드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                isTrinket: true
+                            }
+                        ],
+                        win: false
+                    }
+                },
+                {
+                    id: "KR_5705448283",
+                    gameMode: "솔랭",
+                    gameStartTime: 1642761637062,
+                    gameLength: 1151,
+                    participants: [
+                        {
+                            name: "LaPerm",
+                            id: "KatOogsS4SGLWe0ZAjjNg8w39bPYI6REcKmrsY-HUVsqjB4",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 4,
+                            deaths: 3,
+                            assists: 1,
+                            kda: "1.67",
+                            killParticipation: "83.33",
+                            goldEarned: 6608,
+                            cs: 122,
+                            totalDamageDealt: 61574,
+                            totalDamageTaken: 11302,
+                            wardsPlaced: 6,
+                            wardsKilled: 2,
+                            detectorWardsPlaced: 0,
+                            visionScore: 12,
+                            champion: {
+                                id: 92,
+                                name: "리븐",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Riven.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 1055,
+                                    name: "도란의 검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1055,
+                                    name: "도란의 검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3133,
+                                    name: "콜필드의 전투 망치",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3133.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "Twitch Tv 쥐린내",
-                            id: "tFGOhF5l70S-31Byn5cyTL5cr7s-vDK5iNuD3sKNSg_81v4",
+                            name: "꿀꿀꿀탱꿀탱",
+                            id: "AMQFBoIm150CEwicMHm89UUgvImAJTUggBeZ3DosaPRj7v0",
                             isSearchTarget: false,
                             isBlueTeam: true,
-                            championLevel: 13,
-                            kills: 7,
-                            deaths: 6,
-                            assists: 16,
-                            kda: "3.833",
-                            killParticipation: "69.697",
-                            goldEarned: 12031,
-                            cs: 166,
-                            totalDamageDealt: 122022,
-                            totalDamageTaken: 20088,
-                            wardsPlaced: 10,
-                            wardsKilled: 12,
-                            detectorWardsPlaced: 2,
-                            visionScore: 38,
+                            championLevel: 11,
+                            kills: 1,
+                            deaths: 5,
+                            assists: 3,
+                            kda: "0.80",
+                            killParticipation: "66.67",
+                            goldEarned: 6911,
+                            cs: 43,
+                            totalDamageDealt: 121323,
+                            totalDamageTaken: 13052,
+                            wardsPlaced: 5,
+                            wardsKilled: 2,
+                            detectorWardsPlaced: 4,
+                            visionScore: 13,
                             champion: {
-                                id: 96,
-                                name: "코그모",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/KogMaw.png"
+                                id: 131,
+                                name: "다이애나",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Diana.png"
                             },
                             summonerSpells: [
                                 {
-                                    id: 21,
-                                    name: "방어막",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBarrier.png"
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
                                 },
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3115,
+                                    name: "내셔의 이빨",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3115.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1052,
+                                    name: "증폭의 고서",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1052.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3145,
+                                    name: "마법공학 교류 발전기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3145.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "Yellow",
+                            id: "EsdwabQdRKi_PVpzIcKdkkljmDRfGkymNKavMXuqvTMAnko",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 1,
+                            deaths: 4,
+                            assists: 2,
+                            kda: "0.75",
+                            killParticipation: "50.00",
+                            goldEarned: 5856,
+                            cs: 132,
+                            totalDamageDealt: 61625,
+                            totalDamageTaken: 8423,
+                            wardsPlaced: 6,
+                            wardsKilled: 2,
+                            detectorWardsPlaced: 3,
+                            visionScore: 13,
+                            champion: {
+                                id: 246,
+                                name: "키아나",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Qiyana.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8112,
+                                        name: "감전",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
+                                    },
+                                    {
+                                        id: 8143,
+                                        name: "돌발 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+                                    },
+                                    {
+                                        id: 8138,
+                                        name: "사냥의 증표",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                    },
+                                    {
+                                        id: 8135,
+                                        name: "굶주린 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6693,
+                                    name: "자객의 발톱",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6693.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3134,
+                                    name: "톱날 단검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3134.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                null,
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "뭐하고싶어요",
+                            id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                            isSearchTarget: true,
+                            isBlueTeam: true,
+                            championLevel: 10,
+                            kills: 0,
+                            deaths: 6,
+                            assists: 0,
+                            kda: "0.00",
+                            killParticipation: "0.00",
+                            goldEarned: 5765,
+                            cs: 155,
+                            totalDamageDealt: 62557,
+                            totalDamageTaken: 9048,
+                            wardsPlaced: 5,
+                            wardsKilled: 4,
+                            detectorWardsPlaced: 0,
+                            visionScore: 12,
+                            champion: {
+                                id: 222,
+                                name: "징크스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jinx.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
@@ -6806,87 +2675,593 @@ const fakeData = {
                             },
                             subPerks: {
                                 style: {
-                                    id: 8100,
-                                    name: "지배",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
                                 },
                                 slots: [
                                     {
-                                        id: 8139,
-                                        name: "피의 맛",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
                                     },
                                     {
-                                        id: 8135,
-                                        name: "굶주린 사냥꾼",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
+                                        id: 8352,
+                                        name: "시간 왜곡 물약",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
                                     }
                                 ]
                             },
                             items: [
                                 {
-                                    id: 3075,
-                                    name: "가시 갑옷",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3075.png"
+                                    id: 6672,
+                                    name: "크라켄 학살자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6672.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1036,
+                                    name: "롱소드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1036.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2010,
+                                    name: "굳건한 의지의 완전한 비스킷",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2010.png",
+                                    isTrinket: false
                                 },
                                 {
                                     id: 3006,
                                     name: "광전사의 군화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3006.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3143,
-                                    name: "란두인의 예언",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3143.png"
-                                },
-                                {
-                                    id: 6671,
-                                    name: "돌풍",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6671.png"
+                                    id: 1018,
+                                    name: "민첩성의 망토",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1018.png",
+                                    isTrinket: false
                                 },
                                 null,
-                                null,
                                 {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "jiaojiao3",
-                            id: "vYWTrFKh-yZOAd5A4eFsfauqpJkQeK2b8VSKWHfhUVMNTX4",
+                            name: "그대가함께라면",
+                            id: "JFnWRazh48oFpmSqPYRiZEdD1QzGAtQASTMtKf7wuQ5BvWs",
                             isSearchTarget: false,
                             isBlueTeam: true,
-                            championLevel: 13,
-                            kills: 3,
-                            deaths: 3,
-                            assists: 26,
-                            kda: "9.667",
-                            killParticipation: "87.879",
-                            goldEarned: 8826,
-                            cs: 16,
-                            totalDamageDealt: 21313,
-                            totalDamageTaken: 9860,
-                            wardsPlaced: 29,
-                            wardsKilled: 13,
-                            detectorWardsPlaced: 2,
-                            visionScore: 61,
+                            championLevel: 8,
+                            kills: 0,
+                            deaths: 4,
+                            assists: 1,
+                            kda: "0.25",
+                            killParticipation: "16.67",
+                            goldEarned: 3521,
+                            cs: 24,
+                            totalDamageDealt: 10676,
+                            totalDamageTaken: 5528,
+                            wardsPlaced: 14,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 9,
+                            visionScore: 17,
                             champion: {
-                                id: 117,
-                                name: "룰루",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Lulu.png"
+                                id: 526,
+                                name: "렐",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Rell.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8351,
+                                        name: "빙결 강화",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+                                    },
+                                    {
+                                        id: 8306,
+                                        name: "마법공학 점멸기",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+                                    },
+                                    {
+                                        id: 8316,
+                                        name: "미니언 해체분석기",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8401,
+                                        name: "보호막 강타",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3859,
+                                    name: "타곤 산의 방패",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3859.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2403,
+                                    name: "미니언 해체분석기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2403.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3067,
+                                    name: "점화석",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3067.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "정흠이",
+                            id: "zY69o37InHyCx6ETiY6H8ZC9P1ZcKGmgFkkvZZl79T9Wxma-",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 5,
+                            deaths: 5,
+                            assists: 2,
+                            kda: "1.40",
+                            killParticipation: "31.82",
+                            goldEarned: 7650,
+                            cs: 134,
+                            totalDamageDealt: 61281,
+                            totalDamageTaken: 16067,
+                            wardsPlaced: 9,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 4,
+                            visionScore: 16,
+                            champion: {
+                                id: 164,
+                                name: "카밀",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Camille.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                },
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8437,
+                                        name: "착취의 손아귀",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
+                                    },
+                                    {
+                                        id: 8401,
+                                        name: "보호막 강타",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
+                                    },
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 1037,
+                                    name: "곡괭이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1037.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3133,
+                                    name: "콜필드의 전투 망치",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3133.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1054,
+                                    name: "도란의 방패",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1054.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6632,
+                                    name: "신성한 파괴자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6632.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1029,
+                                    name: "천 갑옷",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1029.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "광연4",
+                            id: "cgj_R2AKufEBCQIcI66K0zDFYvsX5b8TMxbO9bOxZ0V6Tq8",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 6,
+                            deaths: 0,
+                            assists: 7,
+                            kda: "Infinity",
+                            killParticipation: "59.09",
+                            goldEarned: 8984,
+                            cs: 30,
+                            totalDamageDealt: 122957,
+                            totalDamageTaken: 10245,
+                            wardsPlaced: 6,
+                            wardsKilled: 2,
+                            detectorWardsPlaced: 5,
+                            visionScore: 24,
+                            champion: {
+                                id: 33,
+                                name: "람머스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Rammus.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8439,
+                                        name: "여진",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
+                                    },
+                                    {
+                                        id: 8463,
+                                        name: "생명의 샘",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+                                    },
+                                    {
+                                        id: 8429,
+                                        name: "사전 준비",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Conditioning/Conditioning.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                null,
+                                {
+                                    id: 6664,
+                                    name: "터보 화공 탱크",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6664.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3111,
+                                    name: "헤르메스의 발걸음",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3111.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1028,
+                                    name: "루비 수정",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1028.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3075,
+                                    name: "가시 갑옷",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3075.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1029,
+                                    name: "천 갑옷",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1029.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "나솔직히무섭다",
+                            id: "gvIbDxDAJBkKp9diouqFw6LgdkfWz_tEGYtT-arsalswBMcyjXpKZtAmTA",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 13,
+                            kills: 6,
+                            deaths: 1,
+                            assists: 0,
+                            kda: "6.00",
+                            killParticipation: "27.27",
+                            goldEarned: 7342,
+                            cs: 125,
+                            totalDamageDealt: 61824,
+                            totalDamageTaken: 11769,
+                            wardsPlaced: 4,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 0,
+                            visionScore: 9,
+                            champion: {
+                                id: 517,
+                                name: "사일러스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Sylas.png"
                             },
                             summonerSpells: [
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 },
                                 {
-                                    id: 7,
-                                    name: "회복",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerHeal.png"
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6656,
+                                    name: "만년서리",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6656.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3157,
+                                    name: "존야의 모래시계",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3157.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "킬러톱",
+                            id: "4KX5OIhhpVgZo7z2NCimRElP3GmDNuQbTczBAEutBJTCmA",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 10,
+                            kills: 1,
+                            deaths: 0,
+                            assists: 11,
+                            kda: "Infinity",
+                            killParticipation: "54.55",
+                            goldEarned: 5445,
+                            cs: 8,
+                            totalDamageDealt: 13876,
+                            totalDamageTaken: 2611,
+                            wardsPlaced: 16,
+                            wardsKilled: 5,
+                            detectorWardsPlaced: 3,
+                            visionScore: 41,
+                            champion: {
+                                id: 16,
+                                name: "소라카",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Soraka.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 3,
+                                    name: "탈진",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
                                 }
                             ],
                             mainPerks: {
@@ -6920,6 +3295,120 @@ const fakeData = {
                             },
                             subPerks: {
                                 style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8275,
+                                        name: "빛의 망토",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                    },
+                                    {
+                                        id: 8234,
+                                        name: "기민함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 2065,
+                                    name: "슈렐리아의 군가",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2065.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3009,
+                                    name: "신속의 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3009.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "낭만원딜러06",
+                            id: "s6cqFYUYPxJ1H7LIFcs1Y_wAPGcQMAlBSLj8ZDU4qhX8AAs2QVP5Yue5Rw",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 4,
+                            deaths: 0,
+                            assists: 6,
+                            kda: "Infinity",
+                            killParticipation: "45.45",
+                            goldEarned: 9575,
+                            cs: 175,
+                            totalDamageDealt: 109002,
+                            totalDamageTaken: 4934,
+                            wardsPlaced: 10,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 4,
+                            visionScore: 22,
+                            champion: {
+                                id: 202,
+                                name: "진",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jhin.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8021,
+                                        name: "기민한 발놀림",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
                                     id: 8300,
                                     name: "영감",
                                     image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
@@ -6939,76 +3428,283 @@ const fakeData = {
                             },
                             items: [
                                 {
-                                    id: 2065,
-                                    name: "슈렐리아의 군가",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2065.png"
+                                    id: 2003,
+                                    name: "체력 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2003.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3853,
-                                    name: "얼음 정수의 파편",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3853.png"
+                                    id: 6671,
+                                    name: "돌풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6671.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 1037,
+                                    name: "곡괭이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1037.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3114,
-                                    name: "금지된 우상",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3114.png"
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3158,
-                                    name: "명석함의 아이오니아 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3158.png"
+                                    id: 3134,
+                                    name: "톱날 단검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3134.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3011,
-                                    name: "화학공학 부패기",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3011.png"
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        }
+                    ],
+                    blueTeam: {
+                        bans: [
+                            {
+                                id: 43,
+                                name: "카르마",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
+                            },
+                            {
+                                id: 58,
+                                name: "레넥톤",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Renekton.png"
+                            },
+                            {
+                                id: 112,
+                                name: "빅토르",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viktor.png"
+                            },
+                            {
+                                id: 25,
+                                name: "모르가나",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Morgana.png"
+                            },
+                            {
+                                id: 7,
+                                name: "르블랑",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Leblanc.png"
+                            }
+                        ],
+                        win: false,
+                        championKills: 6,
+                        dragonKills: 0,
+                        baronKills: 0,
+                        towerKills: 0,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 0
+                    },
+                    redTeam: {
+                        bans: [
+                            {
+                                id: 53,
+                                name: "블리츠크랭크",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Blitzcrank.png"
+                            },
+                            {
+                                id: 51,
+                                name: "케이틀린",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Caitlyn.png"
+                            },
+                            {
+                                id: 39,
+                                name: "이렐리아",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Irelia.png"
+                            },
+                            {
+                                id: 7,
+                                name: "르블랑",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Leblanc.png"
+                            },
+                            {
+                                id: 84,
+                                name: "아칼리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Akali.png"
+                            }
+                        ],
+                        win: true,
+                        championKills: 22,
+                        dragonKills: 2,
+                        baronKills: 0,
+                        towerKills: 4,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 1
+                    },
+                    searchTargetPlayer: {
+                        name: "뭐하고싶어요",
+                        id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                        isSearchTarget: true,
+                        isBlueTeam: true,
+                        championLevel: 10,
+                        kills: 0,
+                        deaths: 6,
+                        assists: 0,
+                        kda: "0.00",
+                        killParticipation: "0.00",
+                        goldEarned: 5765,
+                        cs: 155,
+                        totalDamageDealt: 62557,
+                        totalDamageTaken: 9048,
+                        wardsPlaced: 5,
+                        wardsKilled: 4,
+                        detectorWardsPlaced: 0,
+                        visionScore: 12,
+                        champion: {
+                            id: 222,
+                            name: "징크스",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jinx.png"
+                        },
+                        summonerSpells: [
+                            {
+                                id: 7,
+                                name: "회복",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ],
+                        mainPerks: {
+                            style: {
+                                id: 8000,
+                                name: "정밀",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8008,
+                                    name: "치명적 속도",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
                                 },
                                 {
-                                    id: 1052,
-                                    name: "증폭의 고서",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1052.png"
+                                    id: 8009,
+                                    name: "침착",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
                                 },
                                 {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                    id: 9104,
+                                    name: "전설: 민첩함",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                },
+                                {
+                                    id: 8014,
+                                    name: "최후의 일격",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
                                 }
                             ]
                         },
+                        subPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                },
+                                {
+                                    id: 8352,
+                                    name: "시간 왜곡 물약",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                }
+                            ]
+                        },
+                        items: [
+                            {
+                                id: 6672,
+                                name: "크라켄 학살자",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6672.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1036,
+                                name: "롱소드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1036.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 2010,
+                                name: "굳건한 의지의 완전한 비스킷",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2010.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3006,
+                                name: "광전사의 군화",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1018,
+                                name: "민첩성의 망토",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1018.png",
+                                isTrinket: false
+                            },
+                            null,
+                            {
+                                id: 3340,
+                                name: "투명 와드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                isTrinket: true
+                            }
+                        ],
+                        win: true
+                    }
+                },
+                {
+                    id: "KR_5705434266",
+                    gameMode: "솔랭",
+                    gameStartTime: 1642760262735,
+                    gameLength: 1017,
+                    participants: [
                         {
-                            name: "커피물조절장인",
-                            id: "IdjEjQ8Apzh2kHkd92Yd6PO04_zx5QOH290OVtsgnN3sQfU",
+                            name: "1vsAll",
+                            id: "IHNWJC7AtZAhG9sSkuEr5cGJq8oL2ffrfi0VE2vk5pBjvoRqL1k3UPi8ig",
                             isSearchTarget: false,
-                            isBlueTeam: false,
-                            championLevel: 15,
-                            kills: 4,
-                            deaths: 8,
-                            assists: 2,
-                            kda: "0.750",
-                            killParticipation: "26.087",
-                            goldEarned: 11322,
-                            cs: 198,
-                            totalDamageDealt: 134903,
-                            totalDamageTaken: 25123,
-                            wardsPlaced: 12,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 4,
-                            visionScore: 24,
+                            isBlueTeam: true,
+                            championLevel: 11,
+                            kills: 1,
+                            deaths: 2,
+                            assists: 1,
+                            kda: "1.00",
+                            killParticipation: "25.00",
+                            goldEarned: 5826,
+                            cs: 130,
+                            totalDamageDealt: 52558,
+                            totalDamageTaken: 7288,
+                            wardsPlaced: 2,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 0,
+                            visionScore: 3,
                             champion: {
-                                id: 58,
-                                name: "레넥톤",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Renekton.png"
+                                id: 5,
+                                name: "신 짜오",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/XinZhao.png"
                             },
                             summonerSpells: [
                                 {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
-                                },
-                                {
                                     id: 14,
                                     name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
@@ -7019,9 +3715,2026 @@ const fakeData = {
                                 },
                                 slots: [
                                     {
-                                        id: 8005,
-                                        name: "집중 공격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+                                        id: 8008,
+                                        name: "치명적 속도",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8321,
+                                        name: "외상",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FuturesMarket/FuturesMarket.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2420,
+                                    name: "초시계",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2420.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "광연4",
+                            id: "cgj_R2AKufEBCQIcI66K0zDFYvsX5b8TMxbO9bOxZ0V6Tq8",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 11,
+                            kills: 4,
+                            deaths: 3,
+                            assists: 3,
+                            kda: "2.33",
+                            killParticipation: "87.50",
+                            goldEarned: 7186,
+                            cs: 22,
+                            totalDamageDealt: 73501,
+                            totalDamageTaken: 12288,
+                            wardsPlaced: 3,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 2,
+                            visionScore: 14,
+                            champion: {
+                                id: 33,
+                                name: "람머스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Rammus.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8439,
+                                        name: "여진",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
+                                    },
+                                    {
+                                        id: 8463,
+                                        name: "생명의 샘",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+                                    },
+                                    {
+                                        id: 8429,
+                                        name: "사전 준비",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Conditioning/Conditioning.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3076,
+                                    name: "덤불 조끼",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3076.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6664,
+                                    name: "터보 화공 탱크",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6664.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1011,
+                                    name: "거인의 허리띠",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1011.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "빨간음료수",
+                            id: "Ug36Hi_Fy3AjC-OIpsTMjMwqdMV5yasN1IauENHYq5f5Og",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 10,
+                            kills: 0,
+                            deaths: 2,
+                            assists: 0,
+                            kda: "0.00",
+                            killParticipation: "0.00",
+                            goldEarned: 4851,
+                            cs: 119,
+                            totalDamageDealt: 50441,
+                            totalDamageTaken: 6015,
+                            wardsPlaced: 6,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 1,
+                            visionScore: 11,
+                            champion: {
+                                id: 112,
+                                name: "빅토르",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viktor.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8369,
+                                        name: "선제공격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
+                                    },
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 1056,
+                                    name: "도란의 반지",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1056.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6655,
+                                    name: "루덴의 폭풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6655.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 2422,
+                                    name: "약간 신비한 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2422.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "찐조1",
+                            id: "OlI-38MxmzkM5go9hLANNfGcXfxylkyjU6B8MKg7EiCwZgw",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 9,
+                            kills: 1,
+                            deaths: 5,
+                            assists: 3,
+                            kda: "0.80",
+                            killParticipation: "50.00",
+                            goldEarned: 5173,
+                            cs: 89,
+                            totalDamageDealt: 47850,
+                            totalDamageTaken: 7734,
+                            wardsPlaced: 6,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 1,
+                            visionScore: 9,
+                            champion: {
+                                id: 523,
+                                name: "아펠리오스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Aphelios.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9101,
+                                        name: "과다치유",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Overheal.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8139,
+                                        name: "피의 맛",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                    },
+                                    {
+                                        id: 8135,
+                                        name: "굶주린 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6673,
+                                    name: "불멸의 철갑궁",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6673.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                null,
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "피할 수 없는",
+                            id: "MIDgSntmlySm3HkSdExGPQEBdjfRrJ6typKKlqXCrNO34lpk",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 7,
+                            kills: 1,
+                            deaths: 6,
+                            assists: 4,
+                            kda: "0.83",
+                            killParticipation: "62.50",
+                            goldEarned: 4581,
+                            cs: 17,
+                            totalDamageDealt: 16672,
+                            totalDamageTaken: 6970,
+                            wardsPlaced: 10,
+                            wardsKilled: 5,
+                            detectorWardsPlaced: 3,
+                            visionScore: 27,
+                            champion: {
+                                id: 43,
+                                name: "카르마",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8229,
+                                        name: "신비로운 유성",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+                                    },
+                                    {
+                                        id: 8275,
+                                        name: "빛의 망토",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                    },
+                                    {
+                                        id: 8233,
+                                        name: "절대 집중",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8352,
+                                        name: "시간 왜곡 물약",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3851,
+                                    name: "얼음 송곳니",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3851.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3011,
+                                    name: "화학공학 부패기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3011.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "난폭한 양",
+                            id: "ggvree_Jv05blrY1qjyODE6Tlv9TE4IAKPBx6_Vv4c_te2E",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 2,
+                            deaths: 1,
+                            assists: 3,
+                            kda: "5.00",
+                            killParticipation: "27.78",
+                            goldEarned: 6266,
+                            cs: 115,
+                            totalDamageDealt: 51273,
+                            totalDamageTaken: 9475,
+                            wardsPlaced: 5,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 0,
+                            visionScore: 9,
+                            champion: {
+                                id: 266,
+                                name: "아트록스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Aatrox.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8444,
+                                        name: "재생의 바람",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1028,
+                                    name: "루비 수정",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1028.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1054,
+                                    name: "도란의 방패",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1054.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1036,
+                                    name: "롱소드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1036.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "Hermoso cielo",
+                            id: "ESXHBbnlj5AD7S6ajhUMcT2JCVyK8JXVsMulJ-akSOqdqAs",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 10,
+                            kills: 1,
+                            deaths: 1,
+                            assists: 10,
+                            kda: "11.00",
+                            killParticipation: "61.11",
+                            goldEarned: 6673,
+                            cs: 9,
+                            totalDamageDealt: 80562,
+                            totalDamageTaken: 12257,
+                            wardsPlaced: 5,
+                            wardsKilled: 2,
+                            detectorWardsPlaced: 3,
+                            visionScore: 15,
+                            champion: {
+                                id: 59,
+                                name: "자르반 4세",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/JarvanIV.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 1028,
+                                    name: "루비 수정",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1028.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1028,
+                                    name: "루비 수정",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1028.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "뭐하고싶어요",
+                            id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                            isSearchTarget: true,
+                            isBlueTeam: false,
+                            championLevel: 11,
+                            kills: 4,
+                            deaths: 1,
+                            assists: 1,
+                            kda: "5.00",
+                            killParticipation: "27.78",
+                            goldEarned: 7192,
+                            cs: 141,
+                            totalDamageDealt: 65846,
+                            totalDamageTaken: 6394,
+                            wardsPlaced: 5,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 0,
+                            visionScore: 9,
+                            champion: {
+                                id: 711,
+                                name: "벡스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Vex.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8112,
+                                        name: "감전",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
+                                    },
+                                    {
+                                        id: 8139,
+                                        name: "피의 맛",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                    },
+                                    {
+                                        id: 8138,
+                                        name: "사냥의 증표",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                    },
+                                    {
+                                        id: 8105,
+                                        name: "끈질긴 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8352,
+                                        name: "시간 왜곡 물약",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2033,
+                                    name: "부패 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2033.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6656,
+                                    name: "만년서리",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6656.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1058,
+                                    name: "쓸데없이 큰 지팡이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1058.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "aikubao",
+                            id: "mDkNVjnKnJP_4jdwMKROND9cuP2OxSJT1N-HVs5yADBYGfK5RUQWYNADzQ",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 11,
+                            kills: 7,
+                            deaths: 2,
+                            assists: 6,
+                            kda: "6.50",
+                            killParticipation: "72.22",
+                            goldEarned: 10442,
+                            cs: 150,
+                            totalDamageDealt: 108632,
+                            totalDamageTaken: 7545,
+                            wardsPlaced: 5,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 1,
+                            visionScore: 9,
+                            champion: {
+                                id: 222,
+                                name: "징크스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jinx.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8008,
+                                        name: "치명적 속도",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8017,
+                                        name: "체력차 극복",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CutDown/CutDown.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                null,
+                                {
+                                    id: 3035,
+                                    name: "최후의 속삭임",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3035.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 6672,
+                                    name: "크라켄 학살자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6672.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3094,
+                                    name: "고속 연사포",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3094.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "lengqingxue2",
+                            id: "YS7UdvlNQOqGoZ2Toih2CkhSFqE7pIL6LmnTtv7LxY18D6M",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 9,
+                            kills: 3,
+                            deaths: 3,
+                            assists: 13,
+                            kda: "5.33",
+                            killParticipation: "88.89",
+                            goldEarned: 6865,
+                            cs: 15,
+                            totalDamageDealt: 18127,
+                            totalDamageTaken: 8209,
+                            wardsPlaced: 22,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 1,
+                            visionScore: 47,
+                            champion: {
+                                id: 147,
+                                name: "세라핀",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Seraphine.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 3,
+                                    name: "탈진",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8214,
+                                        name: "콩콩이 소환",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
+                                    },
+                                    {
+                                        id: 8226,
+                                        name: "마나순환 팔찌",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
+                                    },
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8136,
+                                        name: "좀비 와드",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/ZombieWard/ZombieWard.png"
+                                    },
+                                    {
+                                        id: 8106,
+                                        name: "궁극의 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3116,
+                                    name: "라일라이의 수정홀",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3116.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 4642,
+                                    name: "밴들유리 거울",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/4642.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3067,
+                                    name: "점화석",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3067.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        }
+                    ],
+                    blueTeam: {
+                        bans: [
+                            null,
+                            {
+                                id: 7,
+                                name: "르블랑",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Leblanc.png"
+                            },
+                            {
+                                id: 221,
+                                name: "제리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zeri.png"
+                            },
+                            {
+                                id: 120,
+                                name: "헤카림",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Hecarim.png"
+                            },
+                            {
+                                id: 91,
+                                name: "탈론",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Talon.png"
+                            }
+                        ],
+                        win: false,
+                        championKills: 8,
+                        dragonKills: 0,
+                        baronKills: 0,
+                        towerKills: 0,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 1
+                    },
+                    redTeam: {
+                        bans: [
+                            {
+                                id: 58,
+                                name: "레넥톤",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Renekton.png"
+                            },
+                            {
+                                id: 221,
+                                name: "제리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zeri.png"
+                            },
+                            {
+                                id: 76,
+                                name: "니달리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Nidalee.png"
+                            },
+                            null,
+                            {
+                                id: 238,
+                                name: "제드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zed.png"
+                            }
+                        ],
+                        win: true,
+                        championKills: 18,
+                        dragonKills: 1,
+                        baronKills: 0,
+                        towerKills: 7,
+                        inhibitorKills: 1,
+                        riftHeraldKills: 1
+                    },
+                    searchTargetPlayer: {
+                        name: "뭐하고싶어요",
+                        id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                        isSearchTarget: true,
+                        isBlueTeam: false,
+                        championLevel: 11,
+                        kills: 4,
+                        deaths: 1,
+                        assists: 1,
+                        kda: "5.00",
+                        killParticipation: "27.78",
+                        goldEarned: 7192,
+                        cs: 141,
+                        totalDamageDealt: 65846,
+                        totalDamageTaken: 6394,
+                        wardsPlaced: 5,
+                        wardsKilled: 1,
+                        detectorWardsPlaced: 0,
+                        visionScore: 9,
+                        champion: {
+                            id: 711,
+                            name: "벡스",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Vex.png"
+                        },
+                        summonerSpells: [
+                            {
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ],
+                        mainPerks: {
+                            style: {
+                                id: 8100,
+                                name: "지배",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8112,
+                                    name: "감전",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
+                                },
+                                {
+                                    id: 8139,
+                                    name: "피의 맛",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                },
+                                {
+                                    id: 8138,
+                                    name: "사냥의 증표",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                },
+                                {
+                                    id: 8105,
+                                    name: "끈질긴 사냥꾼",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                },
+                                {
+                                    id: 8352,
+                                    name: "시간 왜곡 물약",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                }
+                            ]
+                        },
+                        items: [
+                            {
+                                id: 2033,
+                                name: "부패 물약",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2033.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 6656,
+                                name: "만년서리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6656.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1058,
+                                name: "쓸데없이 큰 지팡이",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1058.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3020,
+                                name: "마법사의 신발",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1082,
+                                name: "암흑의 인장",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                isTrinket: false
+                            },
+                            null,
+                            {
+                                id: 3340,
+                                name: "투명 와드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                isTrinket: true
+                            }
+                        ],
+                        win: false
+                    }
+                },
+                {
+                    id: "KR_5705339214",
+                    gameMode: "솔랭",
+                    gameStartTime: 1642758133070,
+                    gameLength: 1489,
+                    participants: [
+                        {
+                            name: "Crazy angle ",
+                            id: "9Z-1_t8UVslm4GawyLpnn8B9bUeqAlKbDtvEc4wc1ZEhMYtZ0l2zQXAqeA",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 13,
+                            kills: 2,
+                            deaths: 5,
+                            assists: 3,
+                            kda: "1.00",
+                            killParticipation: "33.33",
+                            goldEarned: 8433,
+                            cs: 140,
+                            totalDamageDealt: 73607,
+                            totalDamageTaken: 20560,
+                            wardsPlaced: 10,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 2,
+                            visionScore: 18,
+                            champion: {
+                                id: 266,
+                                name: "아트록스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Aatrox.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8453,
+                                        name: "소생",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3053,
+                                    name: "스테락의 도전",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3053.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "DWG BoxMaker",
+                            id: "5cql8941olY96E98Fbq3rDjC05K0RKZt8TBxmxW9_jRsoA",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 3,
+                            deaths: 3,
+                            assists: 7,
+                            kda: "3.33",
+                            killParticipation: "66.67",
+                            goldEarned: 9268,
+                            cs: 16,
+                            totalDamageDealt: 104302,
+                            totalDamageTaken: 16373,
+                            wardsPlaced: 5,
+                            wardsKilled: 6,
+                            detectorWardsPlaced: 3,
+                            visionScore: 24,
+                            champion: {
+                                id: 35,
+                                name: "샤코",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Shaco.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                },
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8369,
+                                        name: "선제공격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
+                                    },
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8321,
+                                        name: "외상",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/FuturesMarket/FuturesMarket.png"
+                                    },
+                                    {
+                                        id: 8410,
+                                        name: "쾌속 접근",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8138,
+                                        name: "사냥의 증표",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                    },
+                                    {
+                                        id: 8105,
+                                        name: "끈질긴 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 2420,
+                                    name: "초시계",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2420.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3100,
+                                    name: "리치베인",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3100.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6653,
+                                    name: "리안드리의 고뇌",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6653.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1052,
+                                    name: "증폭의 고서",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1052.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "뭐하고싶어요",
+                            id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                            isSearchTarget: true,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 1,
+                            deaths: 1,
+                            assists: 7,
+                            kda: "8.00",
+                            killParticipation: "53.33",
+                            goldEarned: 7473,
+                            cs: 147,
+                            totalDamageDealt: 83614,
+                            totalDamageTaken: 11266,
+                            wardsPlaced: 10,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 1,
+                            visionScore: 13,
+                            champion: {
+                                id: 142,
+                                name: "조이",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zoe.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8112,
+                                        name: "감전",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
+                                    },
+                                    {
+                                        id: 8139,
+                                        name: "피의 맛",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                    },
+                                    {
+                                        id: 8138,
+                                        name: "사냥의 증표",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                    },
+                                    {
+                                        id: 8105,
+                                        name: "끈질긴 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3113,
+                                    name: "에테르 환영",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3113.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6655,
+                                    name: "루덴의 폭풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6655.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3108,
+                                    name: "악마의 마법서",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3108.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1056,
+                                    name: "도란의 반지",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1056.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "자쿰의 투구a",
+                            id: "rKt8N0Cm4b_5B1_nK2NCPnwBxj76-KkwsHsNkrvT1tTqfik",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 4,
+                            deaths: 4,
+                            assists: 5,
+                            kda: "2.25",
+                            killParticipation: "60.00",
+                            goldEarned: 9897,
+                            cs: 193,
+                            totalDamageDealt: 135528,
+                            totalDamageTaken: 11758,
+                            wardsPlaced: 6,
+                            wardsKilled: 10,
+                            detectorWardsPlaced: 0,
+                            visionScore: 26,
+                            champion: {
+                                id: 51,
+                                name: "케이틀린",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Caitlyn.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8021,
+                                        name: "기민한 발놀림",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8233,
+                                        name: "절대 집중",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+                                    },
+                                    {
+                                        id: 8236,
+                                        name: "폭풍의 결집",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6671,
+                                    name: "돌풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6671.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6676,
+                                    name: "징수의 총",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6676.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3086,
+                                    name: "열정의 검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3086.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1042,
+                                    name: "단검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1042.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "제비거북이",
+                            id: "Tslf_dqb3yiBOnuEeuHavDTFUL1KnxFcs1Y2jpl5gVLTR0A",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 9,
+                            kills: 5,
+                            deaths: 8,
+                            assists: 4,
+                            kda: "1.13",
+                            killParticipation: "60.00",
+                            goldEarned: 7412,
+                            cs: 23,
+                            totalDamageDealt: 26127,
+                            totalDamageTaken: 13292,
+                            wardsPlaced: 35,
+                            wardsKilled: 8,
+                            detectorWardsPlaced: 10,
+                            visionScore: 64,
+                            champion: {
+                                id: 99,
+                                name: "럭스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Lux.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8229,
+                                        name: "신비로운 유성",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+                                    },
+                                    {
+                                        id: 8226,
+                                        name: "마나순환 팔찌",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
+                                    },
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8352,
+                                        name: "시간 왜곡 물약",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 4644,
+                                    name: "부서진 여왕의 왕관",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/4644.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2421,
+                                    name: "망가진 초시계",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2421.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3108,
+                                    name: "악마의 마법서",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3108.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "다리쓰레기챔피언",
+                            id: "5fq6rSH5CweMKQ-_CpeVoCJFZvHx7XNdpU0gaAXFsZhRauM",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 14,
+                            kills: 5,
+                            deaths: 3,
+                            assists: 1,
+                            kda: "2.00",
+                            killParticipation: "28.57",
+                            goldEarned: 10222,
+                            cs: 171,
+                            totalDamageDealt: 114203,
+                            totalDamageTaken: 13988,
+                            wardsPlaced: 9,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 2,
+                            visionScore: 19,
+                            champion: {
+                                id: 122,
+                                name: "다리우스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Darius.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 6,
+                                    name: "유체화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHaste.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
                                     },
                                     {
                                         id: 9111,
@@ -7048,9 +5761,9 @@ const fakeData = {
                                 },
                                 slots: [
                                     {
-                                        id: 8473,
-                                        name: "뼈 방패",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                        id: 8444,
+                                        name: "재생의 바람",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
                                     },
                                     {
                                         id: 8242,
@@ -7061,76 +5774,78 @@ const fakeData = {
                             },
                             items: [
                                 {
-                                    id: 3142,
-                                    name: "요우무의 유령검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3142.png"
+                                    id: 1055,
+                                    name: "도란의 검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1055.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 6693,
-                                    name: "자객의 발톱",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6693.png"
+                                    id: 3123,
+                                    name: "처형인의 대검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3123.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3044,
-                                    name: "탐식의 망치",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3044.png"
+                                    id: 3078,
+                                    name: "삼위일체",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3078.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3211,
-                                    name: "망령의 두건",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3211.png"
+                                    id: 3053,
+                                    name: "스테락의 도전",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3053.png",
+                                    isTrinket: false
                                 },
+                                null,
                                 {
-                                    id: 3067,
-                                    name: "점화석",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3067.png"
-                                },
-                                {
-                                    id: 3363,
-                                    name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "콩나물이좋아요",
-                            id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
-                            isSearchTarget: true,
+                            name: "영겁무간",
+                            id: "ARp117lFpHPfBSPbwvE2JHlMUKNmQ32Ji7_H44g1ln3e9Nw8DAP2Q6aUEg",
+                            isSearchTarget: false,
                             isBlueTeam: false,
                             championLevel: 13,
-                            kills: 3,
-                            deaths: 6,
-                            assists: 7,
-                            kda: "1.667",
-                            killParticipation: "43.478",
-                            goldEarned: 11033,
-                            cs: 40,
-                            totalDamageDealt: 161564,
-                            totalDamageTaken: 24090,
-                            wardsPlaced: 12,
-                            wardsKilled: 2,
-                            detectorWardsPlaced: 8,
-                            visionScore: 24,
+                            kills: 6,
+                            deaths: 3,
+                            assists: 5,
+                            kda: "3.67",
+                            killParticipation: "52.38",
+                            goldEarned: 10099,
+                            cs: 11,
+                            totalDamageDealt: 149372,
+                            totalDamageTaken: 30677,
+                            wardsPlaced: 8,
+                            wardsKilled: 5,
+                            detectorWardsPlaced: 7,
+                            visionScore: 27,
                             champion: {
-                                id: 131,
-                                name: "다이애나",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Diana.png"
+                                id: 5,
+                                name: "신 짜오",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/XinZhao.png"
                             },
                             summonerSpells: [
                                 {
                                     id: 11,
                                     name: "강타",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
                                 },
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
@@ -7141,9 +5856,9 @@ const fakeData = {
                                 },
                                 slots: [
                                     {
-                                        id: 8010,
-                                        name: "정복자",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                        id: 8008,
+                                        name: "치명적 속도",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
                                     },
                                     {
                                         id: 9111,
@@ -7182,195 +5897,208 @@ const fakeData = {
                                 ]
                             },
                             items: [
-                                {
-                                    id: 3152,
-                                    name: "마법공학 로켓 벨트",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3152.png"
-                                },
-                                {
-                                    id: 3157,
-                                    name: "존야의 모래시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
-                                },
-                                {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                                },
-                                {
-                                    id: 4645,
-                                    name: "그림자불꽃",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4645.png"
-                                },
                                 null,
                                 {
-                                    id: 3020,
-                                    name: "마법사의 신발",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1037,
+                                    name: "곡괭이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1037.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3091,
+                                    name: "마법사의 최후",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3091.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1029,
+                                    name: "천 갑옷",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1029.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
                                 },
                                 {
                                     id: 3364,
                                     name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "하데스 9",
-                            id: "gUlTjBSHvjEM5uHQstmsVs1UsxwXjTdvAB6XrQa3IDCv5_AzeCc8IGwv_A",
+                            name: "전설이 될 남자",
+                            id: "8P1hD3mwAlTV5dWplOXYGkxXBjfVVhAUJa0JRn1_ddg6U74",
                             isSearchTarget: false,
                             isBlueTeam: false,
-                            championLevel: 13,
-                            kills: 6,
-                            deaths: 4,
-                            assists: 7,
-                            kda: "3.250",
-                            killParticipation: "56.522",
-                            goldEarned: 10903,
-                            cs: 155,
-                            totalDamageDealt: 121014,
-                            totalDamageTaken: 13238,
-                            wardsPlaced: 5,
-                            wardsKilled: 1,
-                            detectorWardsPlaced: 1,
-                            visionScore: 11,
+                            championLevel: 14,
+                            kills: 8,
+                            deaths: 1,
+                            assists: 4,
+                            kda: "12.00",
+                            killParticipation: "57.14",
+                            goldEarned: 11424,
+                            cs: 183,
+                            totalDamageDealt: 119122,
+                            totalDamageTaken: 9609,
+                            wardsPlaced: 8,
+                            wardsKilled: 5,
+                            detectorWardsPlaced: 2,
+                            visionScore: 27,
                             champion: {
-                                id: 166,
-                                name: "아크샨",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Akshan.png"
+                                id: 112,
+                                name: "빅토르",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viktor.png"
                             },
                             summonerSpells: [
                                 {
-                                    id: 4,
-                                    name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
                                 },
                                 {
-                                    id: 14,
-                                    name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
                                 style: {
-                                    id: 8000,
-                                    name: "정밀",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
                                 },
                                 slots: [
                                     {
-                                        id: 8005,
-                                        name: "집중 공격",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+                                        id: 8214,
+                                        name: "콩콩이 소환",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
                                     },
                                     {
-                                        id: 8009,
-                                        name: "침착",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                        id: 8226,
+                                        name: "마나순환 팔찌",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
                                     },
                                     {
-                                        id: 9104,
-                                        name: "전설: 민첩함",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
                                     },
                                     {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
                                     }
                                 ]
                             },
                             subPerks: {
                                 style: {
-                                    id: 8400,
-                                    name: "결의",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
                                 },
                                 slots: [
                                     {
-                                        id: 8401,
-                                        name: "보호막 강타",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
                                     },
                                     {
-                                        id: 8473,
-                                        name: "뼈 방패",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
                                     }
                                 ]
                             },
                             items: [
                                 {
-                                    id: 6673,
-                                    name: "불멸의 철갑궁",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6673.png"
+                                    id: 3157,
+                                    name: "존야의 모래시계",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3157.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3124,
-                                    name: "구인수의 격노검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3124.png"
+                                    id: 6655,
+                                    name: "루덴의 폭풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6655.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 2055,
-                                    name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
+                                    id: 4630,
+                                    name: "역병의 보석",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/4630.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3095,
-                                    name: "폭풍갈퀴",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3095.png"
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 1018,
-                                    name: "민첩성의 망토",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1018.png"
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3111,
-                                    name: "헤르메스의 발걸음",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3111.png"
+                                    id: 3916,
+                                    name: "망각의 구",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3916.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3364,
-                                    name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "BRO Hena",
-                            id: "1vGpuEuniaZIike0NYPnyJ5ygkkn4D41_lplCY4Zbq4OXnA",
+                            name: "e fei liu sl",
+                            id: "OapNRySrOWCn7vKtUKkzHPJx6RkiZSIlD8MsYuC8vh59LcA",
                             isSearchTarget: false,
                             isBlueTeam: false,
-                            championLevel: 12,
-                            kills: 4,
-                            deaths: 6,
-                            assists: 6,
-                            kda: "1.667",
-                            killParticipation: "43.478",
-                            goldEarned: 8730,
-                            cs: 138,
-                            totalDamageDealt: 71014,
-                            totalDamageTaken: 15305,
-                            wardsPlaced: 11,
-                            wardsKilled: 5,
-                            detectorWardsPlaced: 4,
-                            visionScore: 17,
+                            championLevel: 13,
+                            kills: 0,
+                            deaths: 4,
+                            assists: 4,
+                            kda: "1.00",
+                            killParticipation: "19.05",
+                            goldEarned: 9579,
+                            cs: 190,
+                            totalDamageDealt: 126162,
+                            totalDamageTaken: 13978,
+                            wardsPlaced: 8,
+                            wardsKilled: 8,
+                            detectorWardsPlaced: 1,
+                            visionScore: 22,
                             champion: {
-                                id: 360,
-                                name: "사미라",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Samira.png"
+                                id: 523,
+                                name: "아펠리오스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Aphelios.png"
                             },
                             summonerSpells: [
                                 {
-                                    id: 1,
-                                    name: "정화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerBoost.png"
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
                                 },
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
@@ -7391,14 +6119,14 @@ const fakeData = {
                                         image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
                                     },
                                     {
-                                        id: 9103,
-                                        name: "전설: 핏빛 길",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
                                     },
                                     {
-                                        id: 8299,
-                                        name: "최후의 저항",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                        id: 8017,
+                                        name: "체력차 극복",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CutDown/CutDown.png"
                                     }
                                 ]
                             },
@@ -7425,74 +6153,535 @@ const fakeData = {
                                 {
                                     id: 6673,
                                     name: "불멸의 철갑궁",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6673.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6673.png",
+                                    isTrinket: false
                                 },
+                                null,
+                                null,
                                 {
                                     id: 6676,
                                     name: "징수의 총",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6676.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6676.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 2421,
-                                    name: "망가진 초시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2421.png"
+                                    id: 1083,
+                                    name: "수확의 낫",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1083.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 1036,
-                                    name: "롱소드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1036.png"
-                                },
-                                {
-                                    id: 1001,
-                                    name: "장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/1001.png"
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
                                 },
                                 {
                                     id: 3363,
                                     name: "망원형 개조",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3363.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
                                 }
                             ]
                         },
                         {
-                            name: "Slow start 1",
-                            id: "9mRDHuWfdKef3wgR8LdNvJARv6ulKx03uqBFxlnVQEqFxjc",
+                            name: "리그오브레전드ll",
+                            id: "_uV0Dn32oq5ra82-OsJJT0nItiSL0juMUHaA3kXKYTiVsg",
                             isSearchTarget: false,
                             isBlueTeam: false,
                             championLevel: 11,
-                            kills: 6,
-                            deaths: 9,
-                            assists: 8,
-                            kda: "1.556",
-                            killParticipation: "60.870",
-                            goldEarned: 10619,
-                            cs: 34,
-                            totalDamageDealt: 19650,
-                            totalDamageTaken: 18623,
-                            wardsPlaced: 41,
-                            wardsKilled: 11,
-                            detectorWardsPlaced: 7,
-                            visionScore: 60,
+                            kills: 2,
+                            deaths: 4,
+                            assists: 12,
+                            kda: "3.50",
+                            killParticipation: "66.67",
+                            goldEarned: 7490,
+                            cs: 10,
+                            totalDamageDealt: 11216,
+                            totalDamageTaken: 10163,
+                            wardsPlaced: 34,
+                            wardsKilled: 7,
+                            detectorWardsPlaced: 6,
+                            visionScore: 65,
                             champion: {
-                                id: 555,
-                                name: "파이크",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Pyke.png"
+                                id: 43,
+                                name: "카르마",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
                             },
                             summonerSpells: [
                                 {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
                                     id: 14,
                                     name: "점화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerDot.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8229,
+                                        name: "신비로운 유성",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+                                    },
+                                    {
+                                        id: 8275,
+                                        name: "빛의 망토",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                    },
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2065,
+                                    name: "슈렐리아의 군가",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2065.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 4642,
+                                    name: "밴들유리 거울",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/4642.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3916,
+                                    name: "망각의 구",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3916.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        }
+                    ],
+                    blueTeam: {
+                        bans: [
+                            {
+                                id: 23,
+                                name: "트린다미어",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Tryndamere.png"
+                            },
+                            {
+                                id: 202,
+                                name: "진",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jhin.png"
+                            },
+                            {
+                                id: 221,
+                                name: "제리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zeri.png"
+                            },
+                            {
+                                id: 104,
+                                name: "그레이브즈",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Graves.png"
+                            },
+                            {
+                                id: 777,
+                                name: "요네",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Yone.png"
+                            }
+                        ],
+                        win: false,
+                        championKills: 15,
+                        dragonKills: 1,
+                        baronKills: 0,
+                        towerKills: 3,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 2
+                    },
+                    redTeam: {
+                        bans: [
+                            {
+                                id: 84,
+                                name: "아칼리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Akali.png"
+                            },
+                            null,
+                            {
+                                id: 23,
+                                name: "트린다미어",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Tryndamere.png"
+                            },
+                            {
+                                id: 67,
+                                name: "베인",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Vayne.png"
+                            },
+                            {
+                                id: 7,
+                                name: "르블랑",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Leblanc.png"
+                            }
+                        ],
+                        win: true,
+                        championKills: 21,
+                        dragonKills: 2,
+                        baronKills: 1,
+                        towerKills: 3,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 0
+                    },
+                    searchTargetPlayer: {
+                        name: "뭐하고싶어요",
+                        id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                        isSearchTarget: true,
+                        isBlueTeam: true,
+                        championLevel: 12,
+                        kills: 1,
+                        deaths: 1,
+                        assists: 7,
+                        kda: "8.00",
+                        killParticipation: "53.33",
+                        goldEarned: 7473,
+                        cs: 147,
+                        totalDamageDealt: 83614,
+                        totalDamageTaken: 11266,
+                        wardsPlaced: 10,
+                        wardsKilled: 1,
+                        detectorWardsPlaced: 1,
+                        visionScore: 13,
+                        champion: {
+                            id: 142,
+                            name: "조이",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zoe.png"
+                        },
+                        summonerSpells: [
+                            {
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                            },
+                            {
+                                id: 4,
+                                name: "점멸",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                            }
+                        ],
+                        mainPerks: {
+                            style: {
+                                id: 8100,
+                                name: "지배",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8112,
+                                    name: "감전",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
+                                },
+                                {
+                                    id: 8139,
+                                    name: "피의 맛",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                },
+                                {
+                                    id: 8138,
+                                    name: "사냥의 증표",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
+                                },
+                                {
+                                    id: 8105,
+                                    name: "끈질긴 사냥꾼",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png"
+                                }
+                            ]
+                        },
+                        subPerks: {
+                            style: {
+                                id: 8300,
+                                name: "영감",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                            },
+                            slots: [
+                                {
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                },
+                                {
+                                    id: 8347,
+                                    name: "우주적 통찰력",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                }
+                            ]
+                        },
+                        items: [
+                            {
+                                id: 3020,
+                                name: "마법사의 신발",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3113,
+                                name: "에테르 환영",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3113.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 6655,
+                                name: "루덴의 폭풍",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6655.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1082,
+                                name: "암흑의 인장",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3108,
+                                name: "악마의 마법서",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3108.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 1056,
+                                name: "도란의 반지",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1056.png",
+                                isTrinket: false
+                            },
+                            {
+                                id: 3363,
+                                name: "망원형 개조",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                isTrinket: true
+                            }
+                        ],
+                        win: true
+                    }
+                },
+                {
+                    id: "KR_5705322537",
+                    gameMode: "솔랭",
+                    gameStartTime: 1642755287636,
+                    gameLength: 1308,
+                    participants: [
+                        {
+                            name: "간절해야 하는 법",
+                            id: "oYpavu_BoSVbcNR0Mo3KFgtgePkNAkUr9MK9W90ug4pzZeY",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 13,
+                            kills: 3,
+                            deaths: 5,
+                            assists: 2,
+                            kda: "1.00",
+                            killParticipation: "38.46",
+                            goldEarned: 8709,
+                            cs: 162,
+                            totalDamageDealt: 92297,
+                            totalDamageTaken: 14110,
+                            wardsPlaced: 6,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 1,
+                            visionScore: 8,
+                            champion: {
+                                id: 104,
+                                name: "그레이브즈",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Graves.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8021,
+                                        name: "기민한 발놀림",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9104,
+                                        name: "전설: 민첩함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6673,
+                                    name: "불멸의 철갑궁",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6673.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3033,
+                                    name: "필멸자의 운명",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3033.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1037,
+                                    name: "곡괭이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1037.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1018,
+                                    name: "민첩성의 망토",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1018.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "찬구형1",
+                            id: "iTKoTgLGs_sFI1lsOWEhAt5rbXzqRJUBtM663NpEJAE6i93yv_tBFJoTsg",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 4,
+                            deaths: 5,
+                            assists: 4,
+                            kda: "1.60",
+                            killParticipation: "61.54",
+                            goldEarned: 7654,
+                            cs: 13,
+                            totalDamageDealt: 92699,
+                            totalDamageTaken: 19436,
+                            wardsPlaced: 6,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 4,
+                            visionScore: 26,
+                            champion: {
+                                id: 238,
+                                name: "제드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zed.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
                                 },
                                 {
                                     id: 4,
                                     name: "점멸",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                                 }
                             ],
                             mainPerks: {
@@ -7503,24 +6692,148 @@ const fakeData = {
                                 },
                                 slots: [
                                     {
-                                        id: 9923,
-                                        name: "칼날비",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
+                                        id: 8112,
+                                        name: "감전",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/Electrocute/Electrocute.png"
                                     },
                                     {
-                                        id: 8126,
-                                        name: "비열한 한 방",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/CheapShot/CheapShot.png"
+                                        id: 8143,
+                                        name: "돌발 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
                                     },
                                     {
-                                        id: 8136,
-                                        name: "좀비 와드",
-                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/ZombieWard/ZombieWard.png"
+                                        id: 8138,
+                                        name: "사냥의 증표",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png"
                                     },
                                     {
                                         id: 8106,
                                         name: "궁극의 사냥꾼",
                                         image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3142,
+                                    name: "요우무의 유령검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3142.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3134,
+                                    name: "톱날 단검",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3134.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3133,
+                                    name: "콜필드의 전투 망치",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3133.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "뭐하고싶어요",
+                            id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
+                            isSearchTarget: true,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 3,
+                            deaths: 7,
+                            assists: 3,
+                            kda: "0.86",
+                            killParticipation: "46.15",
+                            goldEarned: 7955,
+                            cs: 149,
+                            totalDamageDealt: 94245,
+                            totalDamageTaken: 18184,
+                            wardsPlaced: 9,
+                            wardsKilled: 1,
+                            detectorWardsPlaced: 2,
+                            visionScore: 17,
+                            champion: {
+                                id: 13,
+                                name: "라이즈",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Ryze.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8230,
+                                        name: "난입",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png"
+                                    },
+                                    {
+                                        id: 8226,
+                                        name: "마나순환 팔찌",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
+                                    },
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8232,
+                                        name: "물 위를 걷는 자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png"
                                     }
                                 ]
                             },
@@ -7545,39 +6858,909 @@ const fakeData = {
                             },
                             items: [
                                 {
-                                    id: 3857,
-                                    name: "화이트록의 갑옷",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3857.png"
+                                    id: 2033,
+                                    name: "부패 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2033.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 2420,
-                                    name: "초시계",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2420.png"
+                                    id: 6656,
+                                    name: "만년서리",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6656.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3179,
-                                    name: "그림자 검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3179.png"
+                                    id: 3040,
+                                    name: "대천사의 포옹",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3040.png",
+                                    isTrinket: false
                                 },
+                                null,
+                                null,
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "FA PanG jin",
+                            id: "uPiEtTcYtBbfZMp_iaKcbK1FCc2kPI2EE4OO0KImQI-FCHU",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 12,
+                            kills: 2,
+                            deaths: 5,
+                            assists: 3,
+                            kda: "1.00",
+                            killParticipation: "38.46",
+                            goldEarned: 8461,
+                            cs: 159,
+                            totalDamageDealt: 104118,
+                            totalDamageTaken: 17597,
+                            wardsPlaced: 7,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 2,
+                            visionScore: 20,
+                            champion: {
+                                id: 81,
+                                name: "이즈리얼",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Ezreal.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3042,
+                                    name: "무라마나",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3042.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3508,
+                                    name: "정수 약탈자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3508.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3035,
+                                    name: "최후의 속삭임",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3035.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1036,
+                                    name: "롱소드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1036.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "Second The shy",
+                            id: "Em6bAD0PV0zRMTdY_kF6aeJ69kbMo6gdxdmD5GOvVu-XEdw",
+                            isSearchTarget: false,
+                            isBlueTeam: true,
+                            championLevel: 8,
+                            kills: 1,
+                            deaths: 6,
+                            assists: 5,
+                            kda: "1.00",
+                            killParticipation: "46.15",
+                            goldEarned: 5062,
+                            cs: 5,
+                            totalDamageDealt: 9544,
+                            totalDamageTaken: 12389,
+                            wardsPlaced: 11,
+                            wardsKilled: 3,
+                            detectorWardsPlaced: 3,
+                            visionScore: 26,
+                            champion: {
+                                id: 16,
+                                name: "소라카",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Soraka.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 21,
+                                    name: "방어막",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerBarrier.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8465,
+                                        name: "수호자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+                                    },
+                                    {
+                                        id: 8463,
+                                        name: "생명의 샘",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+                                    },
+                                    {
+                                        id: 8473,
+                                        name: "뼈 방패",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+                                    },
+                                    {
+                                        id: 8453,
+                                        name: "소생",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            items: [
                                 {
                                     id: 2055,
                                     name: "제어 와드",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 3117,
-                                    name: "기동력의 장화",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3117.png"
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
                                 },
                                 {
-                                    id: 6691,
-                                    name: "드락사르의 황혼검",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/6691.png"
+                                    id: 2031,
+                                    name: "충전형 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2031.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6617,
+                                    name: "월석 재생기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6617.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3158,
+                                    name: "명석함의 아이오니아 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1004,
+                                    name: "요정의 부적",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1004.png",
+                                    isTrinket: false
                                 },
                                 {
                                     id: 3364,
                                     name: "예언자의 렌즈",
-                                    image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "T1 Dal",
+                            id: "9RvrGFVVOXWW4YZOxEydwGqEsKQmg6hEmQt2Kd1pHFbgJ0U",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 14,
+                            kills: 8,
+                            deaths: 1,
+                            assists: 7,
+                            kda: "15.00",
+                            killParticipation: "53.57",
+                            goldEarned: 10830,
+                            cs: 150,
+                            totalDamageDealt: 98379,
+                            totalDamageTaken: 19238,
+                            wardsPlaced: 7,
+                            wardsKilled: 5,
+                            detectorWardsPlaced: 2,
+                            visionScore: 23,
+                            champion: {
+                                id: 164,
+                                name: "카밀",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Camille.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 12,
+                                    name: "순간이동",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8400,
+                                    name: "결의",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7204_Resolve.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8437,
+                                        name: "착취의 손아귀",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
+                                    },
+                                    {
+                                        id: 8401,
+                                        name: "보호막 강타",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
+                                    },
+                                    {
+                                        id: 8444,
+                                        name: "재생의 바람",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+                                    },
+                                    {
+                                        id: 8242,
+                                        name: "불굴의 의지",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 1054,
+                                    name: "도란의 방패",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1054.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6632,
+                                    name: "신성한 파괴자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6632.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3077,
+                                    name: "티아맷",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3077.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 6333,
+                                    name: "죽음의 무도",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6333.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "Hermoso cielo",
+                            id: "ESXHBbnlj5AD7S6ajhUMcT2JCVyK8JXVsMulJ-akSOqdqAs",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 6,
+                            deaths: 2,
+                            assists: 12,
+                            kda: "9.00",
+                            killParticipation: "64.29",
+                            goldEarned: 9158,
+                            cs: 22,
+                            totalDamageDealt: 99053,
+                            totalDamageTaken: 21025,
+                            wardsPlaced: 4,
+                            wardsKilled: 4,
+                            detectorWardsPlaced: 2,
+                            visionScore: 23,
+                            champion: {
+                                id: 59,
+                                name: "자르반 4세",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/JarvanIV.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 11,
+                                    name: "강타",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerSmite.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9111,
+                                        name: "승전보",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    },
+                                    {
+                                        id: 9105,
+                                        name: "전설: 강인함",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    },
+                                    {
+                                        id: 8299,
+                                        name: "최후의 저항",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8304,
+                                        name: "마법의 신발",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    },
+                                    {
+                                        id: 8347,
+                                        name: "우주적 통찰력",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6630,
+                                    name: "선혈포식자",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6630.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1057,
+                                    name: "음전자 망토",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1057.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3053,
+                                    name: "스테락의 도전",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3053.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3047,
+                                    name: "판금 장화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3047.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "xiaoximeng",
+                            id: "l9xasexEIcCMEc1WD1KJWHGeTOHH8nb56av_OKUWl4ntogljc51HTiiUTA",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 13,
+                            kills: 6,
+                            deaths: 5,
+                            assists: 6,
+                            kda: "2.40",
+                            killParticipation: "42.86",
+                            goldEarned: 8703,
+                            cs: 144,
+                            totalDamageDealt: 91573,
+                            totalDamageTaken: 9889,
+                            wardsPlaced: 7,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 1,
+                            visionScore: 14,
+                            champion: {
+                                id: 142,
+                                name: "조이",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zoe.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                },
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8214,
+                                        name: "콩콩이 소환",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
+                                    },
+                                    {
+                                        id: 8275,
+                                        name: "빛의 망토",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+                                    },
+                                    {
+                                        id: 8233,
+                                        name: "절대 집중",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+                                    },
+                                    {
+                                        id: 8237,
+                                        name: "주문 작열",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8300,
+                                    name: "영감",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7203_Whimsy.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8345,
+                                        name: "비스킷 배달",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+                                    },
+                                    {
+                                        id: 8352,
+                                        name: "시간 왜곡 물약",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6655,
+                                    name: "루덴의 폭풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6655.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1082,
+                                    name: "암흑의 인장",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1082.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2033,
+                                    name: "부패 물약",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2033.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3020,
+                                    name: "마법사의 신발",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3020.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 4628,
+                                    name: "지평선의 초점",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/4628.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3340,
+                                    name: "투명 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "Aspecto",
+                            id: "mGmqXvyhhy1KaNuNvTaJRjFDns8glvVX33X2hHvwb6KRyHmKJatFME-Hjw",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 12,
+                            kills: 7,
+                            deaths: 5,
+                            assists: 2,
+                            kda: "1.80",
+                            killParticipation: "32.14",
+                            goldEarned: 9674,
+                            cs: 165,
+                            totalDamageDealt: 111359,
+                            totalDamageTaken: 14875,
+                            wardsPlaced: 7,
+                            wardsKilled: 0,
+                            detectorWardsPlaced: 2,
+                            visionScore: 6,
+                            champion: {
+                                id: 221,
+                                name: "제리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Zeri.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 7,
+                                    name: "회복",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerHeal.png"
+                                },
+                                {
+                                    id: 4,
+                                    name: "점멸",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8010,
+                                        name: "정복자",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    },
+                                    {
+                                        id: 9101,
+                                        name: "과다치유",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Overheal.png"
+                                    },
+                                    {
+                                        id: 9103,
+                                        name: "전설: 핏빛 길",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+                                    },
+                                    {
+                                        id: 8014,
+                                        name: "최후의 일격",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8100,
+                                    name: "지배",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7200_Domination.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8139,
+                                        name: "피의 맛",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png"
+                                    },
+                                    {
+                                        id: 8135,
+                                        name: "굶주린 사냥꾼",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Domination/RavenousHunter/RavenousHunter.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 6671,
+                                    name: "돌풍",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6671.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                {
+                                    id: 3085,
+                                    name: "루난의 허리케인",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3085.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3006,
+                                    name: "광전사의 군화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3006.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1037,
+                                    name: "곡괭이",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1037.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 1018,
+                                    name: "민첩성의 망토",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/1018.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3363,
+                                    name: "망원형 개조",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3363.png",
+                                    isTrinket: true
+                                }
+                            ]
+                        },
+                        {
+                            name: "mqmm",
+                            id: "fV5VwcmczDEyc5qyRv34qYTf567vjPSgcZSpDb9G-5VG3ch3ScxqRFygew",
+                            isSearchTarget: false,
+                            isBlueTeam: false,
+                            championLevel: 11,
+                            kills: 1,
+                            deaths: 0,
+                            assists: 16,
+                            kda: "Infinity",
+                            killParticipation: "60.71",
+                            goldEarned: 6471,
+                            cs: 7,
+                            totalDamageDealt: 13527,
+                            totalDamageTaken: 5132,
+                            wardsPlaced: 17,
+                            wardsKilled: 4,
+                            detectorWardsPlaced: 3,
+                            visionScore: 41,
+                            champion: {
+                                id: 350,
+                                name: "유미",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Yuumi.png"
+                            },
+                            summonerSpells: [
+                                {
+                                    id: 3,
+                                    name: "탈진",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerExhaust.png"
+                                },
+                                {
+                                    id: 14,
+                                    name: "점화",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerDot.png"
+                                }
+                            ],
+                            mainPerks: {
+                                style: {
+                                    id: 8200,
+                                    name: "마법",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8214,
+                                        name: "콩콩이 소환",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
+                                    },
+                                    {
+                                        id: 8226,
+                                        name: "마나순환 팔찌",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
+                                    },
+                                    {
+                                        id: 8210,
+                                        name: "깨달음",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+                                    },
+                                    {
+                                        id: 8236,
+                                        name: "폭풍의 결집",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png"
+                                    }
+                                ]
+                            },
+                            subPerks: {
+                                style: {
+                                    id: 8000,
+                                    name: "정밀",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                },
+                                slots: [
+                                    {
+                                        id: 8009,
+                                        name: "침착",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+                                    },
+                                    {
+                                        id: 8017,
+                                        name: "체력차 극복",
+                                        image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CutDown/CutDown.png"
+                                    }
+                                ]
+                            },
+                            items: [
+                                {
+                                    id: 3853,
+                                    name: "얼음 정수의 파편",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3853.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 2055,
+                                    name: "제어 와드",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2055.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3011,
+                                    name: "화학공학 부패기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3011.png",
+                                    isTrinket: false
+                                },
+                                null,
+                                null,
+                                {
+                                    id: 6617,
+                                    name: "월석 재생기",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6617.png",
+                                    isTrinket: false
+                                },
+                                {
+                                    id: 3364,
+                                    name: "예언자의 렌즈",
+                                    image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3364.png",
+                                    isTrinket: true
                                 }
                             ]
                         }
@@ -7585,125 +7768,137 @@ const fakeData = {
                     blueTeam: {
                         bans: [
                             {
+                                id: 89,
+                                name: "레오나",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Leona.png"
+                            },
+                            {
+                                id: 76,
+                                name: "니달리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Nidalee.png"
+                            },
+                            {
+                                id: 43,
+                                name: "카르마",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
+                            },
+                            {
+                                id: 42,
+                                name: "코르키",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Corki.png"
+                            },
+                            {
                                 id: 23,
                                 name: "트린다미어",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
-                            },
-                            {
-                                id: 91,
-                                name: "탈론",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Talon.png"
-                            },
-                            {
-                                id: 51,
-                                name: "케이틀린",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Caitlyn.png"
-                            },
-                            null,
-                            null
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Tryndamere.png"
+                            }
                         ],
-                        win: true,
-                        championKills: 33,
-                        dragonKills: 2,
+                        win: false,
+                        championKills: 13,
+                        dragonKills: 1,
                         baronKills: 0,
-                        towerKills: 9,
-                        inhibitorKills: 2,
-                        riftHeraldKills: 1
+                        towerKills: 2,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 0
                     },
                     redTeam: {
                         bans: [
                             {
-                                id: 23,
-                                name: "트린다미어",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Tryndamere.png"
+                                id: 76,
+                                name: "니달리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Nidalee.png"
                             },
                             {
-                                id: 4,
-                                name: "트위스티드 페이트",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/TwistedFate.png"
-                            },
-                            null,
-                            {
-                                id: 350,
-                                name: "유미",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Yuumi.png"
+                                id: 112,
+                                name: "빅토르",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Viktor.png"
                             },
                             {
-                                id: 5,
-                                name: "신 짜오",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/XinZhao.png"
+                                id: 43,
+                                name: "카르마",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Karma.png"
+                            },
+                            {
+                                id: 51,
+                                name: "케이틀린",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Caitlyn.png"
+                            },
+                            {
+                                id: 24,
+                                name: "잭스",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Jax.png"
                             }
                         ],
-                        win: false,
-                        championKills: 23,
+                        win: true,
+                        championKills: 28,
                         dragonKills: 1,
                         baronKills: 0,
-                        towerKills: 5,
-                        inhibitorKills: 1,
-                        riftHeraldKills: 1
+                        towerKills: 4,
+                        inhibitorKills: 0,
+                        riftHeraldKills: 2
                     },
                     searchTargetPlayer: {
-                        name: "콩나물이좋아요",
-                        id: "70Yz_vBu58EDr2T0tIYSjOQrLJD5vrK5b55LsIVjNTIq5Ag",
+                        name: "뭐하고싶어요",
+                        id: "47ovKk6xSnc5OX8lFPEJreKn8Jt0xNv78M5LCoESvjPSWuoxBBcuDeH34Q",
                         isSearchTarget: true,
-                        isBlueTeam: false,
-                        championLevel: 13,
+                        isBlueTeam: true,
+                        championLevel: 12,
                         kills: 3,
-                        deaths: 6,
-                        assists: 7,
-                        kda: "1.667",
-                        killParticipation: "43.478",
-                        goldEarned: 11033,
-                        cs: 40,
-                        totalDamageDealt: 161564,
-                        totalDamageTaken: 24090,
-                        wardsPlaced: 12,
-                        wardsKilled: 2,
-                        detectorWardsPlaced: 8,
-                        visionScore: 24,
+                        deaths: 7,
+                        assists: 3,
+                        kda: "0.86",
+                        killParticipation: "46.15",
+                        goldEarned: 7955,
+                        cs: 149,
+                        totalDamageDealt: 94245,
+                        totalDamageTaken: 18184,
+                        wardsPlaced: 9,
+                        wardsKilled: 1,
+                        detectorWardsPlaced: 2,
+                        visionScore: 17,
                         champion: {
-                            id: 131,
-                            name: "다이애나",
-                            image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/champion/Diana.png"
+                            id: 13,
+                            name: "라이즈",
+                            image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/champion/Ryze.png"
                         },
                         summonerSpells: [
                             {
-                                id: 11,
-                                name: "강타",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerSmite.png"
+                                id: 12,
+                                name: "순간이동",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerTeleport.png"
                             },
                             {
                                 id: 4,
                                 name: "점멸",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/spell/SummonerFlash.png"
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/SummonerFlash.png"
                             }
                         ],
                         mainPerks: {
                             style: {
-                                id: 8000,
-                                name: "정밀",
-                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7201_Precision.png"
+                                id: 8200,
+                                name: "마법",
+                                image: "http://127.0.0.1:4000/static/img/perk-images/Styles/7202_Sorcery.png"
                             },
                             slots: [
                                 {
-                                    id: 8010,
-                                    name: "정복자",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+                                    id: 8230,
+                                    name: "난입",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png"
                                 },
                                 {
-                                    id: 9111,
-                                    name: "승전보",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/Triumph.png"
+                                    id: 8226,
+                                    name: "마나순환 팔찌",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
                                 },
                                 {
-                                    id: 9105,
-                                    name: "전설: 강인함",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png"
+                                    id: 8210,
+                                    name: "깨달음",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
                                 },
                                 {
-                                    id: 8014,
-                                    name: "최후의 일격",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+                                    id: 8232,
+                                    name: "물 위를 걷는 자",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png"
                                 }
                             ]
                         },
@@ -7715,48 +7910,49 @@ const fakeData = {
                             },
                             slots: [
                                 {
-                                    id: 8304,
-                                    name: "마법의 신발",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+                                    id: 8345,
+                                    name: "비스킷 배달",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
                                 },
                                 {
-                                    id: 8347,
-                                    name: "우주적 통찰력",
-                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+                                    id: 8352,
+                                    name: "시간 왜곡 물약",
+                                    image: "http://127.0.0.1:4000/static/img/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
                                 }
                             ]
                         },
                         items: [
                             {
-                                id: 3152,
-                                name: "마법공학 로켓 벨트",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3152.png"
+                                id: 2033,
+                                name: "부패 물약",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/2033.png",
+                                isTrinket: false
                             },
                             {
-                                id: 3157,
-                                name: "존야의 모래시계",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3157.png"
+                                id: 6656,
+                                name: "만년서리",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/6656.png",
+                                isTrinket: false
                             },
                             {
-                                id: 2055,
-                                name: "제어 와드",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/2055.png"
-                            },
-                            {
-                                id: 4645,
-                                name: "그림자불꽃",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/4645.png"
+                                id: 3040,
+                                name: "대천사의 포옹",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3040.png",
+                                isTrinket: false
                             },
                             null,
+                            null,
                             {
-                                id: 3020,
-                                name: "마법사의 신발",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3020.png"
+                                id: 3158,
+                                name: "명석함의 아이오니아 장화",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3158.png",
+                                isTrinket: false
                             },
                             {
-                                id: 3364,
-                                name: "예언자의 렌즈",
-                                image: "http://ddragon.leagueoflegends.com/cdn/12.1.1/img/item/3364.png"
+                                id: 3340,
+                                name: "투명 와드",
+                                image: "http://ddragon.leagueoflegends.com/cdn/12.2.1/img/item/3340.png",
+                                isTrinket: true
                             }
                         ],
                         win: true
