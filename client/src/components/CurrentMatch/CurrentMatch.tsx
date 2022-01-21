@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Match } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
+import { CurrentMatchTeam } from "../../types/Team/Team";
 import { getPathToHistories } from "../../utils/getPaths";
 import { seperateParticipants } from "../../utils/matchHandlers";
 import { getHourMinuteSecondString } from "../../utils/stringFormatter";
@@ -28,11 +29,11 @@ CurrentMatch.Summary = ({ texts }: { texts: string[] }) => (
 )
 
 CurrentMatch.Teams = (
-    { blueTeamPlayers, redTeamPlayers }
-        : { blueTeamPlayers: CurrentMatchPlayer[], redTeamPlayers: CurrentMatchPlayer[] }
+    { children }: { children: React.ReactNode | React.ReactNode[] }
 ): JSX.Element => (
     <div className="current-match__teams">
-        <CurrentMatch.Team
+        {children}
+        {/* <CurrentMatch.Team
             className="team--blue"
             players={blueTeamPlayers}
             teamColor="blue"
@@ -41,13 +42,13 @@ CurrentMatch.Teams = (
             className="team--red"
             players={redTeamPlayers}
             teamColor="red"
-        />
+        /> */}
     </div>
 )
 
-CurrentMatch.Team = ({ children, className = "", players, teamColor }: { children?: React.ReactNode, className?: string, players: CurrentMatchPlayer[], teamColor: string }): JSX.Element => (
+CurrentMatch.Team = ({ children, className = "", team, teamColor }: { children?: React.ReactNode, className?: string, team: CurrentMatchTeam, teamColor: string }): JSX.Element => (
     <ul className={"current-match__team " + className}>
-        {players.map((player: CurrentMatchPlayer) => (
+        {team.players.map((player: CurrentMatchPlayer) => (
             <CurrentMatch.Player
                 className={`player--${teamColor}`}
                 player={player}
@@ -82,31 +83,27 @@ CurrentMatch.Footer = ({ children }: { children: React.ReactElement }): JSX.Elem
 )
 
 export default ({ match }: { match: Match }): JSX.Element => {
-    const [blueTeamPlayers, setBlueTeamPlayers] = useState([]);
-    const [redTeamPlayers, setRedTeamPlayers] = useState([]);
-    const [loading, setLoading] = useState(true);
     const getCurrentGameDurationStr = (startTime: number): string => {
         const currentDate = new Date();
         const gameDurationInMilliseconds: number = currentDate.getTime() - startTime;
         return getHourMinuteSecondString(gameDurationInMilliseconds)
     }
-    const seperateCurrentGamePlayersByTeam = async () => {
-        const [blueTeam, redTeam] = await seperateParticipants(match.participants);
-        setBlueTeamPlayers(blueTeam);
-        setRedTeamPlayers(redTeam);
-        setLoading(false);
-    }
-    useEffect(() => {
-        seperateCurrentGamePlayersByTeam();
-    }, [])
     return (
         <CurrentMatch>
             <CurrentMatch.Summary texts={[match.gameMode, getCurrentGameDurationStr(match.gameStartTime)]} />
             <div className="current-match__body">
-                <CurrentMatch.Teams
-                    blueTeamPlayers={blueTeamPlayers}
-                    redTeamPlayers={redTeamPlayers}
-                />
+                <CurrentMatch.Teams>
+                    <CurrentMatch.Team
+                        team={match.blueTeam}
+                        className="team--blue"
+                        teamColor="blue"
+                    />
+                    <CurrentMatch.Team
+                        team={match.redTeam}
+                        className="team--red"
+                        teamColor="red"
+                    />
+                </CurrentMatch.Teams>
             </div>
             <CurrentMatch.Footer>
                 {match.blueTeam.bans && ( //밴이 존재하는 게임이면 밴목록 추가

@@ -44,7 +44,6 @@ const getEndedMatchPlayerStatistics = async (participant: ParticipantDtoEndedMat
         deaths: participant.deaths,
         assists: participant.assists,
         kda: getKda(participant.kills, participant.deaths, participant.assists),
-        // killParticipation: getKillParticipation(participant.kills, participant.assists, teamTotalKills),
         goldEarned: participant.goldEarned,
         cs: participant.totalMinionsKilled,
         totalDamageDealt: participant.totalDamageDealt,
@@ -120,11 +119,9 @@ const extractEndedMatchTeamObjectKills = async (objectives: ObjectivesDto): Prom
 
 const addKillParticipationToPlayers = async (players: Player[], teamTotalKills: number): Promise<Player[]> => {
     return players.map(player => {
-        const kills = player.kills !== undefined ? player.kills : 0;
-        const assists = player.assists !== undefined ? player.assists : 0;
         return ({
             ...player,
-            killParticipation: getKillParticipation(kills, assists, teamTotalKills),
+            killParticipation: getKillParticipation(player.kills, player.assists, teamTotalKills),
         })
     })
 }
@@ -169,19 +166,29 @@ const getPlayerTeam = (player: Player, redTeam: EndedMatchTeam, blueTeam: EndedM
     }
 }
 
-const searchTargetPlayerHasWon = (player: Player, blueTeam: EndedMatchTeam, redTeam: EndedMatchTeam): boolean => {
-    const team = getPlayerTeam(player, blueTeam, redTeam);
-    return team.win
+
+const findSearchTargetPlayerFromATeam = (teamPlayers: Player[]): Player | undefined => {
+    return teamPlayers.find(player => player.isSearchTarget)
 }
 
-const getSearchTargetPlayer = (players: Player[], blueTeam: EndedMatchTeam, redTeam: EndedMatchTeam): Player | undefined => {
-    const searchTargetPlayer: Player | undefined = players.find(player => player.isSearchTarget);
+const getSearchTargetAndTeam = (blueTeam: EndedMatchTeam, redTeam: EndedMatchTeam): [Player | undefined, EndedMatchTeam] => {
+    const searchTargetFromBlueTeam = findSearchTargetPlayerFromATeam(blueTeam.players);
+    if (searchTargetFromBlueTeam) {
+        return [searchTargetFromBlueTeam, blueTeam]
+    }
+    const searchTargetFromRedTeam = findSearchTargetPlayerFromATeam(redTeam.players);
+    return [searchTargetFromRedTeam, redTeam];
+}
+
+const getSearchTargetPlayer = (blueTeam: EndedMatchTeam, redTeam: EndedMatchTeam): Player | undefined => {
+    const [searchTargetPlayer, searchTargetTeam] = getSearchTargetAndTeam(blueTeam, redTeam);
     if (searchTargetPlayer === undefined) {
         return
     }
     return {
         ...searchTargetPlayer,
-        win: searchTargetPlayerHasWon(searchTargetPlayer, blueTeam, redTeam)
+        killParticipation: getKillParticipation(searchTargetPlayer.kills, searchTargetPlayer.assists, searchTargetTeam.championKills),
+        win: searchTargetTeam.win
     }
 }
 
@@ -204,7 +211,7 @@ const getEndedMatchById = async (
             console.log("Team Info Error")
             throw Error;
         }
-        const searchTargetPlayer = getSearchTargetPlayer(players, blueTeam, redTeam);
+        const searchTargetPlayer = getSearchTargetPlayer(blueTeam, redTeam);
         if (searchTargetPlayer === undefined) {
             console.log('search target Player Error')
             throw Error;
@@ -214,7 +221,6 @@ const getEndedMatchById = async (
             gameMode,
             gameStartTime: matchData.gameStartTimestamp,
             gameLength: matchData.gameDuration,
-            // participants: players,
             blueTeam,
             redTeam,
             searchTargetPlayer

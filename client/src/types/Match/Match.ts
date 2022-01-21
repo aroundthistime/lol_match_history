@@ -1,4 +1,4 @@
-import { CurrentMatchPlayer, EndedMatchPlayer } from "../Player/Player";
+import { EndedMatchPlayer } from "../Player/Player";
 import { CurrentMatchTeam, EndedMatchTeam } from "../Team/Team";
 
 export interface Match {
@@ -8,6 +8,5 @@ export interface Match {
     gameLength: number;
     redTeam: EndedMatchTeam | CurrentMatchTeam;
     blueTeam: EndedMatchTeam | CurrentMatchTeam;
-    participants: (EndedMatchPlayer | CurrentMatchPlayer)[];
     searchTargetPlayer?: EndedMatchPlayer;
 }

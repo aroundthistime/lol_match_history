@@ -7,7 +7,9 @@ export const getKda = (kills: number, deaths: number, assists: number): string =
     return getFloatPrecision(kda);
 }
 
-export const getKillParticipation = (kills: number, assists: number, teamTotalKills: number): string => {
+export const getKillParticipation = (killsParameter: number | undefined, assistsParameter: number | undefined, teamTotalKills: number): string => {
+    const kills = killsParameter !== undefined ? killsParameter : 0;
+    const assists = assistsParameter !== undefined ? assistsParameter : 0;
     const killParticipation = ((kills + assists) / teamTotalKills) * 100;
     return getFloatPrecision(killParticipation);
 }
