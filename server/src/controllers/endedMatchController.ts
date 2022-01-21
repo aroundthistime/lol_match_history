@@ -10,7 +10,7 @@ import { getChampion } from "./championController";
 import { getMatchModeInKorean } from "./globalController";
 import { getPlayerItems } from "./itemController";
 import { getPerks } from "./perksController";
-import { extractCommonPlayerParts, getBannedChampions } from "./commonMatchController";
+import { extractCommonPlayerParts, getBannedChampions, getBlueTeamPlayers, getRedTeamPlayers } from "./commonMatchController";
 import { getPlayerSummonerSpellsByIds } from "./summonerSpellController";
 import { DetailDtos } from "../types/apiResponseDtos/common";
 import { ChampionDto } from "../types/apiResponseDtos/championJson";
@@ -37,14 +37,14 @@ const getEndedMatchPerks = async (perkStyles: MatchPerkStyleDto[], perkStylesFro
     return [mainPerks, subPerks]
 }
 
-const getEndedMatchPlayerStatistics = async (participant: ParticipantDtoEndedMatch, teamTotalKills: number) => {
+const getEndedMatchPlayerStatistics = async (participant: ParticipantDtoEndedMatch) => {
     return {
         championLevel: participant.champLevel,
         kills: participant.kills,
         deaths: participant.deaths,
         assists: participant.assists,
         kda: getKda(participant.kills, participant.deaths, participant.assists),
-        killParticipation: getKillParticipation(participant.kills, participant.assists, teamTotalKills),
+        // killParticipation: getKillParticipation(participant.kills, participant.assists, teamTotalKills),
         goldEarned: participant.goldEarned,
         cs: participant.totalMinionsKilled,
         totalDamageDealt: participant.totalDamageDealt,
@@ -61,8 +61,6 @@ const getEndedMatchPlayerStatistics = async (participant: ParticipantDtoEndedMat
 const getEndedMatchPlayers = async (
     participants: ParticipantDtoEndedMatch[],
     targetSummonerId: string,
-    blueTeamChampionKills: number,
-    redTeamChampionKills: number,
     {
         champions: championsFromRiot,
         perkStyles: perkStylesFromRiot,
@@ -93,7 +91,7 @@ const getEndedMatchPlayers = async (
                 throw Error
             }
             const playerCommonPart = extractCommonPlayerParts(participant, targetSummonerId);
-            const gameResultStatistics = await getEndedMatchPlayerStatistics(participant, playerCommonPart.isBlueTeam ? blueTeamChampionKills : redTeamChampionKills);
+            const gameResultStatistics = await getEndedMatchPlayerStatistics(participant);
             return ({
                 ...playerCommonPart,
                 ...gameResultStatistics,
@@ -120,9 +118,21 @@ const extractEndedMatchTeamObjectKills = async (objectives: ObjectivesDto): Prom
     return objectKills
 }
 
-const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDto[]): Promise<EndedMatchTeam> => {
+const addKillParticipationToPlayers = async (players: Player[], teamTotalKills: number): Promise<Player[]> => {
+    return players.map(player => {
+        const kills = player.kills !== undefined ? player.kills : 0;
+        const assists = player.assists !== undefined ? player.assists : 0;
+        return ({
+            ...player,
+            killParticipation: getKillParticipation(kills, assists, teamTotalKills),
+        })
+    })
+}
+
+const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDto[], players: Player[]): Promise<EndedMatchTeam> => {
     const bans = await getBannedChampions(teamObj.bans, championsFromRiot);
     const objectKills = await extractEndedMatchTeamObjectKills(teamObj.objectives);
+    const playersWithKillParticipation = await addKillParticipationToPlayers(players, objectKills.championKills);
     return ({
         bans,
         win: teamObj.win,
@@ -131,13 +141,16 @@ const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDt
         baronKills: objectKills.baronKills,
         towerKills: objectKills.towerKills,
         inhibitorKills: objectKills.inhibitorKills,
-        riftHeraldKills: objectKills.riftHeraldKills
+        riftHeraldKills: objectKills.riftHeraldKills,
+        players: playersWithKillParticipation
     })
 }
 
-const getEndedMatchTeams = async (teams: TeamDto[], championsFromRiot: ChampionDto[]): Promise<EndedMatchTeam[]> => {
-    const blueTeam = await getEndedMatchTeam(teams[0], championsFromRiot);
-    const redTeam = await getEndedMatchTeam(teams[1], championsFromRiot);
+const getEndedMatchTeams = async (teams: TeamDto[], championsFromRiot: ChampionDto[], players: Player[]): Promise<EndedMatchTeam[]> => {
+    const blueTeamPlayers: Player[] = getBlueTeamPlayers(players);
+    const redTeamPlayers: Player[] = getRedTeamPlayers(players);
+    const blueTeam = await getEndedMatchTeam(teams[0], championsFromRiot, players);
+    const redTeam = await getEndedMatchTeam(teams[1], championsFromRiot, players);
     return [blueTeam, redTeam];
 }
 
@@ -181,15 +194,15 @@ const getEndedMatchById = async (
         const matchData = await getEndedMatchData(matchId);
         const gameMode = getMatchModeInKorean(matchData.queueId);
         const championsFromRiot = detailDatasFromRiot.champions;
-        const [blueTeam, redTeam]: EndedMatchTeam[] = await getEndedMatchTeams(matchData.teams, championsFromRiot)
-        if (blueTeam === undefined || redTeam === undefined) {
-            console.log("Team Info Error")
-            throw Error;
-        }
-        const players = await getEndedMatchPlayers(matchData.participants, targetSummonerId, blueTeam.championKills, redTeam.championKills, detailDatasFromRiot)
+        const players = await getEndedMatchPlayers(matchData.participants, targetSummonerId, detailDatasFromRiot)
         if (!players) {
             console.log("player Error")
             throw Error
+        }
+        const [blueTeam, redTeam]: EndedMatchTeam[] = await getEndedMatchTeams(matchData.teams, championsFromRiot, players)
+        if (blueTeam === undefined || redTeam === undefined) {
+            console.log("Team Info Error")
+            throw Error;
         }
         const searchTargetPlayer = getSearchTargetPlayer(players, blueTeam, redTeam);
         if (searchTargetPlayer === undefined) {
