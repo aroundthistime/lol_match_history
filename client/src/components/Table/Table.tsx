@@ -28,7 +28,7 @@ Table.Row = ({ children, className = "" }: { children: React.ReactElement | Reac
 )
 
 Table.Cell = ({ children, className = "", style = {} }: { children: React.ReactNode, className?: string, style?: StyleObject }): JSX.Element => (
-    <td className={className} style={{ ...style }}>
+    <td className={"table__cell " + className} style={{ ...style }}>
         {children}
     </td>
 )

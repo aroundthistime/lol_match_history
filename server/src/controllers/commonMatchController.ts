@@ -22,3 +22,14 @@ export const getBannedChampions = async (bans: BanDto[], championsFromRiot: Cham
         return getChampion(ban.championId, championsFromRiot);
     }))
 }
+
+export const getBlueTeamPlayers = (players: Player[]): Player[] => {
+    return getTeamPlayers(true, players);
+}
+
+export const getRedTeamPlayers = (players: Player[]): Player[] => {
+    return getTeamPlayers(false, players);
+}
+export const getTeamPlayers = (isBlueTeam: boolean, players: Player[]) => {
+    return players.filter(player => player.isBlueTeam === isBlueTeam)
+}

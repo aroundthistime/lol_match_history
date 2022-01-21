@@ -8,6 +8,6 @@ export interface Match {
     gameLength: number;
     redTeam: EndedMatchTeam | CurrentMatchTeam;
     blueTeam: EndedMatchTeam | CurrentMatchTeam;
-    participants: Player[];
+    // participants: Player[];
     searchTargetPlayer?: Player;
 }

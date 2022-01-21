@@ -1,5 +1,7 @@
 import React from "react";
 import { Match } from "../../../types/Match/Match";
+import { EndedMatchPlayer } from "../../../types/Player/Player";
+import { EndedMatchTeam } from "../../../types/Team/Team";
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
 import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
@@ -29,6 +31,9 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
             />
         </MatchRow.Cell>
         <MatchRow.Cell>
+
+        </MatchRow.Cell>
+        <MatchRow.Cell>
             <PlayerItems items={match.searchTargetPlayer.items} />
         </MatchRow.Cell>
     </Table.Row>
@@ -37,10 +42,23 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
 
 MatchRow.Cell = ({ children, className = "" }: { children: React.ReactNode, className?: string }): JSX.Element => (
     <Table.Cell
-        className={"match-table__cell " + className}
+        className={"matches-table__cell " + className}
     >
         {children}
     </Table.Cell>
 )
+
+MatchRow.Teams = (
+    { children, participants }
+        : { children?: React.ReactNode, participants: EndedMatchPlayer[] }
+): JSX.Element => {
+    // const blueTeamPlayers = 
+    // const redTeamPlayers = 
+    return (
+        <div className="matches-table">
+            {children}
+        </div>
+    )
+}
 
 export default MatchRow;

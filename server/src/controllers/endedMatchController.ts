@@ -201,7 +201,7 @@ const getEndedMatchById = async (
             gameMode,
             gameStartTime: matchData.gameStartTimestamp,
             gameLength: matchData.gameDuration,
-            participants: players,
+            // participants: players,
             blueTeam,
             redTeam,
             searchTargetPlayer

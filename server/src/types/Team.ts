@@ -1,6 +1,8 @@
 import { Champion } from "./Champion";
+import { Player } from "./Player";
 
 export interface CurrentMatchTeam {
+    players: Player[];
     bans?: (Champion | null)[];
 }
 
