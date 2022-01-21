@@ -681,16 +681,44 @@ button.submit-button .button__text--mobile {
   background-color: #292828;
 }
 
+.match-table__cell {
+  vertical-align: middle;
+}
+
+.player__champion-image {
+  width: var(--champion-image-size);
+}
+
+.player__summonerspells {
+  display: flex;
+  flex-direction: column;
+}
+
+.player__perks {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 10px;
+}
+.player__perks .player__perk--main {
+  width: calc(var(--champion-image-size) / 1.5);
+}
+.player__perks .player__perk--sub {
+  width: calc(var(--champion-image-size) / 3);
+  height: calc(var(--champion-image-size) / 3);
+}
+
+.player__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+}
+
 .team--blue {
   background-color: #92C5F7;
 }
 
 .team--red {
   background-color: #CEBCF2;
-}
-
-.icon--small {
-  width: 30px;
 }
 
 :root {
@@ -702,6 +730,11 @@ button.submit-button .button__text--mobile {
     --champion-image-size: 45px;
   }
 }
+.icon--small {
+  width: calc(var(--champion-image-size) / 2);
+  height: calc(var(--champion-image-size) / 2);
+}
+
 .player {
   display: flex;
   align-items: center;
@@ -709,11 +742,6 @@ button.submit-button .button__text--mobile {
 }
 .player .player__champion-image {
   width: var(--champion-image-size);
-}
-.player .player__summonerspells {
-  display: flex;
-  flex-direction: column;
-  width: calc(var(--champion-image-size) / 2);
 }
 .player .player__text-infos {
   flex-grow: 1;
@@ -727,18 +755,6 @@ button.submit-button .button__text--mobile {
 }
 .player .player__text-infos .player__text-info.player__player-name {
   font-size: 16px;
-}
-.player .player__perks {
-  display: flex;
-  align-items: flex-end;
-  padding-right: 10px;
-}
-.player .player__perks .player__perk--main {
-  width: calc(var(--champion-image-size) / 1.5);
-}
-.player .player__perks .player__perk--sub {
-  width: calc(var(--champion-image-size) / 3);
-  height: calc(var(--champion-image-size) / 3);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1019px) {

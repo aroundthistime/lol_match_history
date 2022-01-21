@@ -78,14 +78,17 @@ const getCurrentMatchPlayers = async (
         return Promise.all(participants.map(async (participant) => {
             const champion = await getChampion(participant.championId, championsFromRiot);
             if (champion === null) {
+                console.log("C");
                 throw Error;
             }
             const [mainPerks, subPerks] = await getCurrentMatchPerks(participant.perks, perkStylesFromRiot);
             if (!mainPerks || !subPerks) {
+                console.log("P");
                 throw Error
             }
             const summonerSpells = await getPlayerSummonerSpellsByIds(participant.spell1Id, participant.spell2Id, summonerSpellsFromRiot);
             if (summonerSpells === false) {
+                console.log("S");
                 throw Error
             }
             return ({
@@ -124,12 +127,17 @@ export const getCurrentMatch = async (
         if (currentMatch === false) {
             throw Error
         }
+        console.log("GAME MODE")
         const gameMode = getMatchModeInKorean(currentMatch.gameQueueConfigId);
+        console.log("BEFORE PLAYERS")
         const gamePlayers: Player[] | false = await getCurrentMatchPlayers(currentMatch.participants, summonerId, detailDatasFromRiot);
         if (!gamePlayers) {
+            console.log("PLAYER");
             throw Error
         }
+        console.log("BEFORE CVHAMIONS");
         const championsFromRiot = detailDatasFromRiot.champions;
+        console.log("EBORE TEAM");
         const [blueTeam, redTeam]: CurrentMatchTeam[] = await getCurrentMatchTeams(currentMatch.bannedChampions, championsFromRiot)
         return ({
             id: `${currentMatch.gameId}`,
@@ -141,6 +149,7 @@ export const getCurrentMatch = async (
             redTeam
         })
     } catch (error) { //no current games or API KEY expired
+        console.log(error);
         return false;
     }
 }

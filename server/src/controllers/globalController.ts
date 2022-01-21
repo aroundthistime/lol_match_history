@@ -11,7 +11,7 @@ import { ItemsDto } from "../types/apiResponseDtos/itemJson";
 import { DetailDtos } from "../types/apiResponseDtos/common";
 
 
-export const GAME_VERSION = "12.1.1";
+export const GAME_VERSION = "12.2.1";
 
 export const FAILED_RESULT = {
     result: false,

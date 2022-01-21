@@ -74,18 +74,22 @@ const getEndedMatchPlayers = async (
         return Promise.all(participants.map(async (participant) => {
             const champion = await getChampion(participant.championId, championsFromRiot);
             if (champion === null) {
+                console.log("champion error");
                 throw Error;
             }
             const summonerSpells = await getPlayerSummonerSpellsByIds(participant.summoner1Id, participant.summoner2Id, summonerSpellsFromRiot);
             if (summonerSpells === false) {
+                console.log("summoner spell error");
                 throw Error
             }
             const [mainPerks, subPerks] = await getEndedMatchPerks(participant.perks.styles, perkStylesFromRiot);
             if (!mainPerks || !subPerks) {
+                console.log("perks error");
                 throw Error
             }
             const items = await getPlayerItems(participant, itemsFromRiot);
             if (items === false) {
+                console.log("items error");
                 throw Error
             }
             const playerCommonPart = extractCommonPlayerParts(participant, targetSummonerId);
@@ -178,13 +182,19 @@ const getEndedMatchById = async (
         const gameMode = getMatchModeInKorean(matchData.queueId);
         const championsFromRiot = detailDatasFromRiot.champions;
         const [blueTeam, redTeam]: EndedMatchTeam[] = await getEndedMatchTeams(matchData.teams, championsFromRiot)
+        if (blueTeam === undefined || redTeam === undefined) {
+            console.log("Team Info Error")
+            throw Error;
+        }
         const players = await getEndedMatchPlayers(matchData.participants, targetSummonerId, blueTeam.championKills, redTeam.championKills, detailDatasFromRiot)
         if (!players) {
+            console.log("player Error")
             throw Error
         }
         const searchTargetPlayer = getSearchTargetPlayer(players, blueTeam, redTeam);
-        if (!searchTargetPlayer) {
-            throw Error
+        if (searchTargetPlayer === undefined) {
+            console.log('search target Player Error')
+            throw Error;
         }
         const match: Match = {
             id: matchId,
@@ -220,7 +230,7 @@ export const getEndedMatches = async (summonerPuuid: string, summonerId: string,
             throw Error;
         }
         const matches: Match[] = await Promise.all(matchIds.map(async (matchId: string) => {
-            const match = await getEndedMatchById(matchId, summonerId, detailDatasFromRiot)
+            const match = await getEndedMatchById(matchId, summonerId, detailDatasFromRiot);
             if (match === false) {
                 throw Error
             }
