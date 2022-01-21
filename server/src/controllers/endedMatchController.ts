@@ -16,6 +16,7 @@ import { DetailDtos } from "../types/apiResponseDtos/common";
 import { ChampionDto } from "../types/apiResponseDtos/championJson";
 import { PerkStyleDto } from "../types/apiResponseDtos/perksJson";
 import { Player } from "../types/Player";
+import Constants from "../constants/constants";
 
 
 export const ENDED_GAME_FETCH_UNIT = 5;
@@ -126,10 +127,16 @@ const addKillParticipationToPlayers = async (players: Player[], teamTotalKills: 
     })
 }
 
+const filterPlayersByTeamId = (players: Player[], teamId: number) => {
+    const isBlueTeam = teamId === Constants.codes.teamId.blue;
+    return players.filter(player => player.isBlueTeam === isBlueTeam)
+}
+
 const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDto[], players: Player[]): Promise<EndedMatchTeam> => {
     const bans = await getBannedChampions(teamObj.bans, championsFromRiot);
     const objectKills = await extractEndedMatchTeamObjectKills(teamObj.objectives);
-    const playersWithKillParticipation = await addKillParticipationToPlayers(players, objectKills.championKills);
+    const currentTeamPlayers = filterPlayersByTeamId(players, teamObj.teamId);
+    const playersWithKillParticipation = await addKillParticipationToPlayers(currentTeamPlayers, objectKills.championKills);
     return ({
         bans,
         win: teamObj.win,

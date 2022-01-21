@@ -1,6 +1,6 @@
 import React from "react";
 import { Match } from "../../../types/Match/Match";
-import { EndedMatchPlayer } from "../../../types/Player/Player";
+import { CurrentMatchPlayer, EndedMatchPlayer } from "../../../types/Player/Player";
 import { EndedMatchTeam } from "../../../types/Team/Team";
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
@@ -31,7 +31,10 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
             />
         </MatchRow.Cell>
         <MatchRow.Cell>
-
+            <MatchRow.Teams>
+                <MatchRow.Team teamPlayers={match.blueTeam.players} />
+                <MatchRow.Team teamPlayers={match.redTeam.players} />
+            </MatchRow.Teams>
         </MatchRow.Cell>
         <MatchRow.Cell>
             <PlayerItems items={match.searchTargetPlayer.items} />
@@ -49,16 +52,27 @@ MatchRow.Cell = ({ children, className = "" }: { children: React.ReactNode, clas
 )
 
 MatchRow.Teams = (
-    { children, participants }
-        : { children?: React.ReactNode, participants: EndedMatchPlayer[] }
+    { children }
+        : { children?: React.ReactNode }
 ): JSX.Element => {
-    // const blueTeamPlayers = 
-    // const redTeamPlayers = 
     return (
-        <div className="matches-table">
+        <div className="matches-table__teams">
             {children}
         </div>
     )
 }
+
+MatchRow.Team = (
+    { teamPlayers }: { teamPlayers: EndedMatchPlayer[] | CurrentMatchPlayer[] }
+): JSX.Element => (
+    <div className="matches-table__team">
+        {teamPlayers.map(teamPlayer => (
+            <ChampionImage
+                champion={teamPlayer.champion}
+                className="player__champion-image icon--small"
+            />
+        ))}
+    </div>
+)
 
 export default MatchRow;
