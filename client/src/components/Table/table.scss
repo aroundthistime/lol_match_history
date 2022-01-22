@@ -13,3 +13,15 @@ table {
         margin-bottom: 3px;
     }
 }
+
+@include tablet {
+    .table__cell.tablet-hidden {
+        display : none;
+    }
+}
+
+@include mobile {
+    .table__cell.mobile-hidden{
+        display : none;
+    }
+}

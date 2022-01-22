@@ -1,29 +1,87 @@
 import React from "react";
 import { Match } from "../../types/Match/Match";
+import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
+import { getClassNameByPlatformWhetherDisplayObject } from "../../utils/viewHandlers";
 import Table from "../Table/Table";
 import MatchRow from "./MatchRow/MatchRow";
 
-const COLUMN_NAMES: string[] = [
-    "승",
-    "챔피언",
-    "모드",
-    "KDA",
-    "킬관여",
-    "스펠",
-    "룬",
-    "팀",
-    "아이템",
-    "LV/G/CS",
-    "시간",
-    "더보기",
-]
+type ColumnNameObject = { [key: string]: PlatformWhetherDisplay }
+
+const COLUMN_NAMES: ColumnNameObject = {
+    "승": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "챔피언": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "모드": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "KDA": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "킬관여": {
+        mobile: false,
+        tablet: false,
+        desktop: true
+    },
+    "스펠": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "룬": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "팀": {
+        mobile: false,
+        tablet: true,
+        desktop: true
+    },
+    "아이템": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    "LV/G/CS": {
+        mobile: false,
+        tablet: false,
+        desktop: true
+    },
+    "시간": {
+        mobile: true,
+        tablet: true,
+        desktop: true
+    },
+    " ": { //더보기는 공간 문제로 header text 생략
+        mobile: true,
+        tablet: true,
+        desktop: true
+    }
+}
 
 const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
+    const getMatchesTableHeaderClassName = (columnName: string): string => {
+        return "matches-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])
+    }
     return (
         <Table className="matches-table">
             <Table.Header>
-                {COLUMN_NAMES.map((columnName: string): JSX.Element => (
-                    <Table.Cell className="matches-table__header" key={columnName}>
+                {Object.keys(COLUMN_NAMES).map((columnName: string): JSX.Element => (
+                    <Table.Cell
+                        className={getMatchesTableHeaderClassName(columnName)}
+                        key={columnName}
+                    >
                         {columnName}
                     </Table.Cell>
                 ))}
@@ -59,5 +117,6 @@ MatchesTable.Matches = ({ matches }: { matches: Match[] }): JSX.Element => {
 
     }
 }
+
 
 export default MatchesTable;
