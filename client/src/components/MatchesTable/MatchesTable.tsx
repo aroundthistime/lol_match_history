@@ -15,7 +15,6 @@ const COLUMN_NAMES: string[] = [
     "아이템",
     "LV/G/CS",
     "시간",
-    "시야",
     "더보기",
 ]
 
