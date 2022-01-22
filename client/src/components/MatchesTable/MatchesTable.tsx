@@ -71,19 +71,16 @@ const COLUMN_NAMES: ColumnNameObject = {
 }
 
 const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
-    const getMatchesTableHeaderClassName = (columnName: string): string => {
-        return "matches-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])
-    }
     return (
         <Table className="matches-table">
             <Table.Header>
                 {Object.keys(COLUMN_NAMES).map((columnName: string): JSX.Element => (
-                    <Table.Cell
-                        className={getMatchesTableHeaderClassName(columnName)}
+                    <td
+                        className={"matches-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
                         key={columnName}
                     >
                         {columnName}
-                    </Table.Cell>
+                    </td>
                 ))}
             </Table.Header>
             <Table.Body>

@@ -4,7 +4,7 @@ table {
     border-spacing: 1.5px;
 }
 
-.table__cell{
+td{
     vertical-align:middle;
     text-align: center;
     font-size : 10px;
@@ -15,13 +15,13 @@ table {
 }
 
 @include tablet {
-    .table__cell.tablet-hidden {
+    td.tablet-hidden {
         display : none;
     }
 }
 
 @include mobile {
-    .table__cell.mobile-hidden{
+    td.mobile-hidden{
         display : none;
     }
 }

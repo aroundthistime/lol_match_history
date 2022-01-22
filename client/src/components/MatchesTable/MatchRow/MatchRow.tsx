@@ -5,10 +5,10 @@ import { getHourMinuteSecondStringFromSeconds, getLargestUnitOfTimeDiffFromCurre
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import CaretIcon from "../../Icons/Caret/CaretIcon";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
+import MatchDetailTable from "../../MatchDetailTable/MatchDetailTable";
 import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
 import PlayerKDA from "../../PlayerKDA/PlayerKDA";
 import PlayerSummonerSpells from "../../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
-import Table from "../../Table/Table";
 
 const MatchRow = ({ match }: { match: Match }): JSX.Element => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
@@ -17,7 +17,7 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element => {
     }
     return (
         <>
-            <Table.Row className={match.searchTargetPlayer.win ? "match--win" : "match--lose"}>
+            <tr className={match.searchTargetPlayer.win ? "match--win" : "match--lose"}>
                 <MatchRow.Cell className="text--bold">{match.searchTargetPlayer.win ? "승" : "패"}</MatchRow.Cell>
                 <MatchRow.Cell>
                     <ChampionImage
@@ -71,19 +71,25 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element => {
                         onClick={toggleShowDetails}
                     />
                 </MatchRow.Cell>
-            </Table.Row>
-            {showDetails && <Table.Row><span>1</span></Table.Row>}
+            </tr>
+            {showDetails && (
+                <tr>
+                    <td colSpan={100}>
+                        <MatchDetailTable match={match} />
+                    </td>
+                </tr>
+            )}
         </>
     )
 }
 
 
 MatchRow.Cell = ({ children, className = "" }: { children: React.ReactNode, className?: string }): JSX.Element => (
-    <Table.Cell
+    <td
         className={"matches-table__cell " + className}
     >
         {children}
-    </Table.Cell>
+    </td>
 )
 
 MatchRow.Teams = (

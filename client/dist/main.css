@@ -695,10 +695,10 @@ button.submit-button .button__text--mobile {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.matches-table tbody .table__cell.team--blue {
+.matches-table tbody td.team--blue {
   background-color: #92C5F7;
 }
-.matches-table tbody .table__cell.team--red {
+.matches-table tbody td.team--red {
   background-color: #CEBCF2;
 }
 
@@ -807,13 +807,13 @@ table {
   border-spacing: 1.5px;
 }
 
-.table__cell {
+td {
   vertical-align: middle;
   text-align: center;
   font-size: 10px;
   padding: 3px;
 }
-.table__cell p {
+td p {
   margin-bottom: 3px;
 }
 

@@ -21,7 +21,7 @@ const Loader = (): JSX.Element => {
             <img
                 src={loadingImage}
                 alt="로딩중"
-                className="loader__loading-image"
+                className="loader__loading-image status-message__image"
             />
             <h4 className="status-message__text loader__text">{loadingText}</h4>
         </div>

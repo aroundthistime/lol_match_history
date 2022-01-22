@@ -21,18 +21,6 @@ Table.Body = ({ children }: { children: React.ReactElement }): JSX.Element => (
     </tbody>
 )
 
-Table.Row = ({ children, className = "" }: { children: React.ReactElement | React.ReactElement[], className?: string }): JSX.Element => (
-    <tr className={className}>
-        {children}
-    </tr>
-)
-
-Table.Cell = ({ children, className = "", style = {} }: { children: React.ReactNode, className?: string, style?: StyleObject }): JSX.Element => (
-    <td className={"table__cell " + className} style={{ ...style }}>
-        {children}
-    </td>
-)
-
 Table.Empty = (
     { children, className = "", text = "", style = {} }
         : { children?: React.ReactNode, className?: string, text?: string, style?: StyleObject }

@@ -11,7 +11,7 @@
         }
     }
     tbody {
-        .table__cell{
+        td{
             &.team--blue{
                 background-color: $team-color-blue;
             }
