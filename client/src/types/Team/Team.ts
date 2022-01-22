@@ -12,8 +12,8 @@ export interface CurrentMatchTeam extends Team {
 export interface EndedMatchTeam extends Team {
     players: EndedMatchPlayer[];
     championKills: number;
-    championDeaths?: number;
-    championAssists?: number;
+    championDeaths: number;
+    championAssists: number;
     dragonKills: number;
     baronKills: number;
     towerKills: number;

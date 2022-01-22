@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import CurrentMatch from '../../components/CurrentMatch/CurrentMatch';
 import Loader from '../../components/Loader/Loader';
 import MatchesTable from '../../components/MatchesTable/MatchesTable';
+import Spectator from '../../components/Spectator/Spectator';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import UserProfile from '../../components/UserProfile/UserProfile';
 import UserTiers from '../../components/UserTier/UserTiers/UserTiers';
@@ -60,7 +60,7 @@ const Histories = (): JSX.Element => {
                         tiers={user.tiers}
                     />
                     {user.currentMatch && (
-                        <CurrentMatch match={user.currentMatch} />
+                        <Spectator match={user.currentMatch} />
                     )}
                     <MatchesTable matches={user.latestMatches} />
                 </>

@@ -15,7 +15,7 @@ Table.Header = ({ children }: { children: React.ReactNode }): JSX.Element => (
     </thead>
 )
 
-Table.Body = ({ children }: { children: React.ReactElement }): JSX.Element => (
+Table.Body = ({ children }: { children: React.ReactElement | React.ReactElement[] }): JSX.Element => (
     <tbody>
         {children}
     </tbody>

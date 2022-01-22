@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleObject } from "../../types/StyleObject";
+import { StyleObject } from "../../../types/StyleObject";
 
 const Player = ({ children, className = "", style = {} }: { children: React.ReactNode, className?: string, style?: StyleObject }): JSX.Element => {
     return (

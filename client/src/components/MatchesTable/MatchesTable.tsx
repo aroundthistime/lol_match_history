@@ -1,5 +1,5 @@
 import React from "react";
-import { Match } from "../../types/Match/Match";
+import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
 import { getClassNameByPlatformWhetherDisplayObject } from "../../utils/viewHandlers";
 import Table from "../Table/Table";
@@ -70,7 +70,7 @@ const COLUMN_NAMES: ColumnNameObject = {
     }
 }
 
-const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
+const MatchesTable = ({ matches }: { matches: EndedMatch[] }): JSX.Element => {
     return (
         <Table className="matches-table">
             <Table.Header>
@@ -90,11 +90,11 @@ const MatchesTable = ({ matches }: { matches: Match[] }): JSX.Element => {
     )
 }
 
-MatchesTable.Matches = ({ matches }: { matches: Match[] }): JSX.Element => {
+MatchesTable.Matches = ({ matches }: { matches: EndedMatch[] }): JSX.Element => {
     if (matches.length > 0) {
         return (
             <>
-                {matches.map((match: Match): JSX.Element => {
+                {matches.map((match: EndedMatch): JSX.Element => {
                     return (
                         <MatchRow
                             match={match}

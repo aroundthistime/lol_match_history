@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Match } from "../../types/Match/Match";
+import { CurrentMatch } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
 import { CurrentMatchTeam } from "../../types/Team/Team";
@@ -11,7 +11,7 @@ import ChampionImage from "../ChampionImage/ChampionImage";
 import PlayerPerks from "../PerkImage/PlayerPerks/PlayerPerks";
 import PlayerSummonerSpells from "../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
 
-const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element => {
+const Spectator = ({ children }: { children: React.ReactNode }): JSX.Element => {
     return (
         <section className="current-match" >
             {children}
@@ -19,7 +19,7 @@ const CurrentMatch = ({ children }: { children: React.ReactNode }): JSX.Element 
     )
 }
 
-CurrentMatch.Summary = ({ texts }: { texts: string[] }) => (
+Spectator.Summary = ({ texts }: { texts: string[] }) => (
     <div className="current-match__summary">
         {texts.map((text: string): JSX.Element => (
             <span className="current-match__summary-text">{text}</span>
@@ -27,17 +27,17 @@ CurrentMatch.Summary = ({ texts }: { texts: string[] }) => (
     </div>
 )
 
-CurrentMatch.Teams = (
+Spectator.Teams = (
     { blueTeam, redTeam }: { blueTeam: CurrentMatchTeam, redTeam: CurrentMatchTeam }
 ): JSX.Element => (
     <div className="current-match__teams">
-        <CurrentMatch.Team
+        <Spectator.Team
             className="team--blue"
             team={blueTeam}
             teamColor="blue"
         />
         <div className="current-match__team-seperator" />
-        <CurrentMatch.Team
+        <Spectator.Team
             className="team--red"
             team={redTeam}
             teamColor="red"
@@ -45,10 +45,10 @@ CurrentMatch.Teams = (
     </div>
 )
 
-CurrentMatch.Team = ({ children, className = "", team, teamColor }: { children?: React.ReactNode, className?: string, team: CurrentMatchTeam, teamColor: string }): JSX.Element => (
+Spectator.Team = ({ children, className = "", team, teamColor }: { children?: React.ReactNode, className?: string, team: CurrentMatchTeam, teamColor: string }): JSX.Element => (
     <ul className={"current-match__team " + className}>
         {team.players.map((player: CurrentMatchPlayer) => (
-            <CurrentMatch.Player
+            <Spectator.Player
                 className={`player--${teamColor}`}
                 player={player}
             />
@@ -56,7 +56,7 @@ CurrentMatch.Team = ({ children, className = "", team, teamColor }: { children?:
         {children}
     </ul>
 )
-CurrentMatch.Player = ({ player, className = "", style = {} }: { player: CurrentMatchPlayer, className?: string, style?: StyleObject }): JSX.Element => (
+Spectator.Player = ({ player, className = "", style = {} }: { player: CurrentMatchPlayer, className?: string, style?: StyleObject }): JSX.Element => (
     <li className={"current-match__player player " + className} style={{ ...style }}>
         <ChampionImage champion={player.champion} className="player__champion-image" />
         <PlayerSummonerSpells
@@ -75,34 +75,34 @@ CurrentMatch.Player = ({ player, className = "", style = {} }: { player: Current
     </li>
 )
 
-CurrentMatch.Footer = ({ children }: { children: React.ReactElement }): JSX.Element => (
+Spectator.Footer = ({ children }: { children: React.ReactElement }): JSX.Element => (
     <div className="current-match__footer">
         {children}
     </div>
 )
 
-export default ({ match }: { match: Match }): JSX.Element => {
+export default ({ match }: { match: CurrentMatch }): JSX.Element => {
     const getCurrentGameDurationStr = (startTime: number): string => {
         const gameDurationInMilliseconds: number = getAbsTimeDiffFromCurrent(startTime);
         return getHourMinuteSecondStringFromMilliseconds(gameDurationInMilliseconds)
     }
     return (
-        <CurrentMatch>
-            <CurrentMatch.Summary texts={[match.gameMode, getCurrentGameDurationStr(match.gameStartTime)]} />
+        <Spectator>
+            <Spectator.Summary texts={[match.gameMode, getCurrentGameDurationStr(match.gameStartTime)]} />
             <div className="current-match__body">
-                <CurrentMatch.Teams
+                <Spectator.Teams
                     blueTeam={match.blueTeam}
                     redTeam={match.redTeam}
                 />
             </div>
-            <CurrentMatch.Footer>
+            <Spectator.Footer>
                 {match.blueTeam.bans && ( //밴이 존재하는 게임이면 밴목록 추가
                     <Bans
                         blueTeamBans={match.blueTeam.bans}
                         redTeamBans={match.redTeam.bans}
                     />
                 )}
-            </CurrentMatch.Footer>
-        </CurrentMatch>
+            </Spectator.Footer>
+        </Spectator>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Match } from "../../../types/Match/Match";
+import { EndedMatch } from "../../../types/Match/Match";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../../../types/Player/Player";
 import { getHourMinuteSecondStringFromSeconds, getLargestUnitOfTimeDiffFromCurrent } from "../../../utils/timeHandlers";
 import ChampionImage from "../../ChampionImage/ChampionImage";
@@ -10,7 +10,7 @@ import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
 import PlayerKDA from "../../PlayerKDA/PlayerKDA";
 import PlayerSummonerSpells from "../../SummonerSpellImage/PlayerSummonerSpells/PlayerSummonerSpells";
 
-const MatchRow = ({ match }: { match: Match }): JSX.Element => {
+const MatchRow = ({ match }: { match: EndedMatch }): JSX.Element => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
     const toggleShowDetails = (event: React.MouseEvent<HTMLElement>): void => {
         setShowDetails(prev => !prev)

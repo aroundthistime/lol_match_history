@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleObject } from "../../types/StyleObject";
 import { getKDATextClassName } from "../../utils/matchHandlers";
 
 const PlayerKDA = (

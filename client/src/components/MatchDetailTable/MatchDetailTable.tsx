@@ -1,7 +1,7 @@
 import React from "react";
-import { Match } from "../../types/Match/Match";
+import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
-import { CurrentMatchTeam, EndedMatchTeam } from "../../types/Team/Team";
+import { EndedMatchTeam } from "../../types/Team/Team";
 import { getClassNameByPlatformWhetherDisplayObject } from "../../utils/viewHandlers";
 import BaronIcon from "../Icons/Objectives/Baron/Baron";
 import Table from "../Table/Table";
@@ -56,7 +56,7 @@ const COLUMN_NAMES: ColumnNameObject = {
     }
 }
 
-const MatchDetailTable = ({ match }: { match: Match }): JSX.Element => {
+const MatchDetailTable = ({ match }: { match: EndedMatch }): JSX.Element => {
     return (
         <Table className="match-detail-table">
             <Table.Header>
@@ -71,10 +71,10 @@ const MatchDetailTable = ({ match }: { match: Match }): JSX.Element => {
             </Table.Header>
             <Table.Body>
                 <MatchDetailTable.Team
-                    team={{
-                        ...match.blueTeam,
-                        championDeaths: match.redTeam.championKills
-                    }}
+                    team={match.blueTeam}
+                />
+                <MatchDetailTable.Team
+                    team={match.redTeam}
                 />
             </Table.Body>
         </Table>

@@ -8,6 +8,7 @@ export interface CurrentMatchTeam {
 
 export interface EndedMatchTeam extends CurrentMatchTeam {
     championKills: number;
+    championDeaths?: number;
     championAssists?: number;
     dragonKills: number;
     baronKills: number;

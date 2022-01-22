@@ -142,16 +142,28 @@ const getTeamTotalGold = async (players: Player[]): Promise<number> => {
     return totalGold
 }
 
+const getTeamTotalAssists = async (players: Player[]): Promise<number> => {
+    let totalAssists: number = 0;
+    for (let player of players) {
+        if (player.assists) {
+            totalAssists += player.assists
+        }
+    }
+    return totalAssists
+}
+
 const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDto[], players: Player[]): Promise<EndedMatchTeam> => {
     const bans = await getBannedChampions(teamObj.bans, championsFromRiot);
     const objectKills = await extractEndedMatchTeamObjectKills(teamObj.objectives);
     const currentTeamPlayers = filterPlayersByTeamId(players, teamObj.teamId);
     const totalGold = await getTeamTotalGold(currentTeamPlayers);
+    const championAssists = await getTeamTotalAssists(currentTeamPlayers);
     const playersWithKillParticipation = await addKillParticipationToPlayers(currentTeamPlayers, objectKills.championKills);
     return ({
         bans,
         win: teamObj.win,
         championKills: objectKills.championKills,
+        championAssists,
         dragonKills: objectKills.dragonKills,
         baronKills: objectKills.baronKills,
         towerKills: objectKills.towerKills,
@@ -167,6 +179,10 @@ const getEndedMatchTeams = async (teams: TeamDto[], championsFromRiot: ChampionD
     // const redTeamPlayers: Player[] = getRedTeamPlayers(players);
     const blueTeam = await getEndedMatchTeam(teams[0], championsFromRiot, players);
     const redTeam = await getEndedMatchTeam(teams[1], championsFromRiot, players);
+    if (blueTeam && redTeam) {
+        blueTeam.championDeaths = redTeam.championKills;
+        redTeam.championDeaths = blueTeam.championKills;
+    }
     return [blueTeam, redTeam];
 }
 
