@@ -1,7 +1,7 @@
 import React from "react";
 import { Match } from "../../../types/Match/Match";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../../../types/Player/Player";
-import { getHourMinuteSecondStringFromSeconds } from "../../../utils/stringFormatter";
+import { getHourMinuteSecondStringFromSeconds, getLargestUnitOfTimeDiffFromCurrent } from "../../../utils/timeHandlers";
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
 import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
@@ -55,7 +55,7 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
         </MatchRow.Cell>
         <MatchRow.Cell>
             <p>{getHourMinuteSecondStringFromSeconds(match.gameLength)}</p>
-            {/* <p>{}</p> */}
+            <p>{getLargestUnitOfTimeDiffFromCurrent(match.gameStartTime)} 전</p>
         </MatchRow.Cell>
     </Table.Row>
 )

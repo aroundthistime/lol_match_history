@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Match } from "../../types/Match/Match";
 import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
 import { CurrentMatchTeam } from "../../types/Team/Team";
 import { getPathToHistories } from "../../utils/getPaths";
-import { getHourMinuteSecondStringFromMilliseconds } from "../../utils/stringFormatter";
+import { getAbsTimeDiffFromCurrent, getHourMinuteSecondStringFromMilliseconds } from "../../utils/timeHandlers";
 import Bans from "../Bans/Bans";
 import ChampionImage from "../ChampionImage/ChampionImage";
 import PlayerPerks from "../PerkImage/PlayerPerks/PlayerPerks";
@@ -82,8 +82,7 @@ CurrentMatch.Footer = ({ children }: { children: React.ReactElement }): JSX.Elem
 
 export default ({ match }: { match: Match }): JSX.Element => {
     const getCurrentGameDurationStr = (startTime: number): string => {
-        const currentDate = new Date();
-        const gameDurationInMilliseconds: number = currentDate.getTime() - startTime;
+        const gameDurationInMilliseconds: number = getAbsTimeDiffFromCurrent(startTime);
         return getHourMinuteSecondStringFromMilliseconds(gameDurationInMilliseconds)
     }
     return (
