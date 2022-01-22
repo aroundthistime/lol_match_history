@@ -1,6 +1,7 @@
 import React from "react";
 import { Match } from "../../../types/Match/Match";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../../../types/Player/Player";
+import { getHourMinuteSecondStringFromSeconds } from "../../../utils/stringFormatter";
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
 import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
@@ -51,6 +52,10 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
             <p className="player-growth">레벨 {match.searchTargetPlayer.championLevel}</p>
             <p className="player-growth">골드 {match.searchTargetPlayer.goldEarned}</p>
             <p className="player-growth">CS {match.searchTargetPlayer.cs}</p>
+        </MatchRow.Cell>
+        <MatchRow.Cell>
+            <p>{getHourMinuteSecondStringFromSeconds(match.gameLength)}</p>
+            {/* <p>{}</p> */}
         </MatchRow.Cell>
     </Table.Row>
 )

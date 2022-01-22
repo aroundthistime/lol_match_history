@@ -5,8 +5,7 @@ import { CurrentMatchPlayer } from "../../types/Player/Player";
 import { StyleObject } from "../../types/StyleObject";
 import { CurrentMatchTeam } from "../../types/Team/Team";
 import { getPathToHistories } from "../../utils/getPaths";
-import { seperateParticipants } from "../../utils/matchHandlers";
-import { getHourMinuteSecondString } from "../../utils/stringFormatter";
+import { getHourMinuteSecondStringFromMilliseconds } from "../../utils/stringFormatter";
 import Bans from "../Bans/Bans";
 import ChampionImage from "../ChampionImage/ChampionImage";
 import PlayerPerks from "../PerkImage/PlayerPerks/PlayerPerks";
@@ -29,20 +28,19 @@ CurrentMatch.Summary = ({ texts }: { texts: string[] }) => (
 )
 
 CurrentMatch.Teams = (
-    { children }: { children: React.ReactNode | React.ReactNode[] }
+    { blueTeam, redTeam }: { blueTeam: CurrentMatchTeam, redTeam: CurrentMatchTeam }
 ): JSX.Element => (
     <div className="current-match__teams">
-        {children}
-        {/* <CurrentMatch.Team
+        <CurrentMatch.Team
             className="team--blue"
-            players={blueTeamPlayers}
+            team={blueTeam}
             teamColor="blue"
         />
         <CurrentMatch.Team
             className="team--red"
-            players={redTeamPlayers}
+            team={redTeam}
             teamColor="red"
-        /> */}
+        />
     </div>
 )
 
@@ -86,14 +84,17 @@ export default ({ match }: { match: Match }): JSX.Element => {
     const getCurrentGameDurationStr = (startTime: number): string => {
         const currentDate = new Date();
         const gameDurationInMilliseconds: number = currentDate.getTime() - startTime;
-        return getHourMinuteSecondString(gameDurationInMilliseconds)
+        return getHourMinuteSecondStringFromMilliseconds(gameDurationInMilliseconds)
     }
     return (
         <CurrentMatch>
             <CurrentMatch.Summary texts={[match.gameMode, getCurrentGameDurationStr(match.gameStartTime)]} />
             <div className="current-match__body">
-                <CurrentMatch.Teams>
-                    <CurrentMatch.Team
+                <CurrentMatch.Teams
+                    blueTeam={match.blueTeam}
+                    redTeam={match.redTeam}
+                />
+                {/* <CurrentMatch.Team
                         team={match.blueTeam}
                         className="team--blue"
                         teamColor="blue"
@@ -103,7 +104,7 @@ export default ({ match }: { match: Match }): JSX.Element => {
                         className="team--red"
                         teamColor="red"
                     />
-                </CurrentMatch.Teams>
+                </CurrentMatch.Teams> */}
             </div>
             <CurrentMatch.Footer>
                 {match.blueTeam.bans && ( //밴이 존재하는 게임이면 밴목록 추가
