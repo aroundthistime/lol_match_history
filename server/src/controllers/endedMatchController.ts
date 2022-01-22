@@ -132,10 +132,21 @@ const filterPlayersByTeamId = (players: Player[], teamId: number) => {
     return players.filter(player => player.isBlueTeam === isBlueTeam)
 }
 
+const getTeamTotalGold = async (players: Player[]): Promise<number> => {
+    let totalGold: number = 0;
+    for (let player of players) {
+        if (player.goldEarned) {
+            totalGold += player.goldEarned
+        }
+    }
+    return totalGold
+}
+
 const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDto[], players: Player[]): Promise<EndedMatchTeam> => {
     const bans = await getBannedChampions(teamObj.bans, championsFromRiot);
     const objectKills = await extractEndedMatchTeamObjectKills(teamObj.objectives);
     const currentTeamPlayers = filterPlayersByTeamId(players, teamObj.teamId);
+    const totalGold = await getTeamTotalGold(currentTeamPlayers);
     const playersWithKillParticipation = await addKillParticipationToPlayers(currentTeamPlayers, objectKills.championKills);
     return ({
         bans,
@@ -146,13 +157,14 @@ const getEndedMatchTeam = async (teamObj: TeamDto, championsFromRiot: ChampionDt
         towerKills: objectKills.towerKills,
         inhibitorKills: objectKills.inhibitorKills,
         riftHeraldKills: objectKills.riftHeraldKills,
+        totalGold,
         players: playersWithKillParticipation
     })
 }
 
 const getEndedMatchTeams = async (teams: TeamDto[], championsFromRiot: ChampionDto[], players: Player[]): Promise<EndedMatchTeam[]> => {
-    const blueTeamPlayers: Player[] = getBlueTeamPlayers(players);
-    const redTeamPlayers: Player[] = getRedTeamPlayers(players);
+    // const blueTeamPlayers: Player[] = getBlueTeamPlayers(players);
+    // const redTeamPlayers: Player[] = getRedTeamPlayers(players);
     const blueTeam = await getEndedMatchTeam(teams[0], championsFromRiot, players);
     const redTeam = await getEndedMatchTeam(teams[1], championsFromRiot, players);
     return [blueTeam, redTeam];
@@ -162,15 +174,6 @@ const getEndedMatchData = async (matchId: string) => {
     const url: string = getEndedMatchUrl(matchId);
     const { data: { info: matchData } } = await axios.get(url);
     return matchData;
-}
-
-
-const getPlayerTeam = (player: Player, redTeam: EndedMatchTeam, blueTeam: EndedMatchTeam): EndedMatchTeam => {
-    if (player.isBlueTeam) {
-        return blueTeam
-    } else {
-        return redTeam
-    }
 }
 
 

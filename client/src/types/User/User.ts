@@ -1,27 +1,17 @@
-import { Match } from "../Match/Match";
+import { CurrentMatch, EndedMatch } from "../Match/Match";
 import { Tiers } from "../Tier/Tier";
 
-interface UserDefault {
+export interface User {
     name: string;
     id: string;
 }
 
-export interface User extends UserDefault {
-    profileIcon?: string;
-    accountId?: string;
-    puuid?: string;
-    summonerLevel?: number;
-    tiers?: Tiers;
-    currentMatch?: Match | null;
-    latestMatches?: Match[];
-}
-
-export interface SearchTargetUser extends UserDefault {
+export interface SearchTargetUser extends User {
     profileIcon: string;
     accountId: string;
     puuid: string;
     summonerLevel: number;
     tiers: Tiers;
-    currentMatch?: Match | null;
-    latestMatches?: Match[];
+    currentMatch?: CurrentMatch | null;
+    latestMatches?: EndedMatch[];
 }

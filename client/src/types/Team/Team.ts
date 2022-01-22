@@ -7,16 +7,6 @@ interface Team {
 
 export interface CurrentMatchTeam extends Team {
     players: CurrentMatchPlayer[];
-    championKills: number;
-    championDeaths?: number;
-    championAssists?: number;
-    dragonKills: number;
-    baronKills: number;
-    towerKills: number;
-    inhibitorKills: number;
-    riftHeraldKills: number;
-    totalGold?: number;
-    win: boolean;
 }
 
 export interface EndedMatchTeam extends Team {
@@ -29,6 +19,6 @@ export interface EndedMatchTeam extends Team {
     towerKills: number;
     inhibitorKills: number;
     riftHeraldKills: number;
-    totalGold?: number;
+    totalGold: number;
     win: boolean;
 }
