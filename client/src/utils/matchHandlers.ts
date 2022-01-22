@@ -1,4 +1,5 @@
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../types/Player/Player";
+import { getMaxOfArray } from "./math";
 
 export const seperateParticipants = async (participants: CurrentMatchPlayer[] | EndedMatchPlayer[]): Promise<CurrentMatchPlayer[][] | EndedMatchPlayer[][]> => {
     const blueTeamPlayers = [];
@@ -28,4 +29,28 @@ export const getKDATextClassName = (kdaString: string): string => {
         className = "kda--low"
     }
     return className
+}
+
+const getDamageMaxRange = (damages: number[]): number => {
+    const maxDamage = getMaxOfArray(damages);
+    let standard: number = 10000;
+    let maxRange: number;
+    while (maxRange === undefined) {
+        if (maxDamage <= standard) {
+            maxRange = standard
+        } else {
+            standard += 10000;
+        }
+    }
+    return maxRange;
+}
+
+export const getDamageDealtMaxRange = (players: EndedMatchPlayer[]): number => {
+    const damages = players.map(player => player.totalDamageDealt);
+    return getDamageMaxRange(damages);
+}
+
+export const getDamageTakenMaxRange = (players: EndedMatchPlayer[]): number => {
+    const damages = players.map(player => player.totalDamageTaken);
+    return getDamageMaxRange(damages);
 }

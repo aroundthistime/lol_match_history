@@ -5,6 +5,7 @@ import { getHourMinuteSecondStringFromSeconds, getLargestUnitOfTimeDiffFromCurre
 import ChampionImage from "../../ChampionImage/ChampionImage";
 import CaretIcon from "../../Icons/Caret/CaretIcon";
 import PlayerItems from "../../ItemImage/PlayerItems/PlayerItems";
+import LvGCs from "../../LVGCS/LvGCs";
 import MatchDetailTable from "../../MatchDetailTable/MatchDetailTable";
 import PlayerPerks from "../../PerkImage/PlayerPerks/PlayerPerks";
 import PlayerKDA from "../../PlayerKDA/PlayerKDA";
@@ -57,9 +58,11 @@ const MatchRow = ({ match }: { match: EndedMatch }): JSX.Element => {
                     <PlayerItems items={match.searchTargetPlayer.items} />
                 </MatchRow.Cell>
                 <MatchRow.Cell className="mobile-hidden tablet-hidden">
-                    <p className="player-growth">레벨 {match.searchTargetPlayer.championLevel}</p>
-                    <p className="player-growth">골드 {match.searchTargetPlayer.goldEarned}</p>
-                    <p className="player-growth">CS {match.searchTargetPlayer.cs}</p>
+                    <LvGCs
+                        championLevel={match.searchTargetPlayer.championLevel}
+                        goldEarned={match.searchTargetPlayer.goldEarned}
+                        cs={match.searchTargetPlayer.cs}
+                    />
                 </MatchRow.Cell>
                 <MatchRow.Cell>
                     <p>{getHourMinuteSecondStringFromSeconds(match.gameLength)}</p>

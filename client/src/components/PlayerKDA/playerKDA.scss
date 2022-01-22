@@ -15,3 +15,21 @@
         content: "평점 ";
     }
 }
+
+@include tablet {
+    .player-kda__text.kda--should-shorten{
+        text-decoration: underline;
+        &::before{
+            content:""
+        }        
+    }
+}
+
+@include mobile {
+    .player-kda__text.kda--should-shorten{
+        text-decoration: underline;
+        &::before{
+            content:""
+        }        
+    }
+}

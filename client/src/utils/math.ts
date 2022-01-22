@@ -3,3 +3,9 @@ export const roundTo2Decimal = (number: number): number => {
     temp = Math.round(temp);
     return temp / 100;
 }
+
+export const getMaxOfArray = (array: number[]): number => {
+    return array.reduce(function (a, b) {
+        return Math.max(a, b);
+    })
+}

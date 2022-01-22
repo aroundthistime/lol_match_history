@@ -15,12 +15,18 @@ td{
 }
 
 @include tablet {
+    td{
+        padding : 2px 1px;
+    }
     td.tablet-hidden {
         display : none;
     }
 }
 
 @include mobile {
+    td{
+        padding : 1px;
+    }
     td.mobile-hidden{
         display : none;
     }
