@@ -32,6 +32,7 @@
 @import "../components/ItemImage/PlayerItems/playerItems.scss";
 @import "../components/PlayerKDA/playerKDA.scss";
 @import "../components/PlayerGrowth/playerGrowth.scss";
+@import "../components/MatchDetailTable/matchDetailTable.scss";
 
 @import "./match.scss";
 @import "../components/Table/table.scss";
@@ -61,10 +62,15 @@ a {
 }
 
 .container {
-    min-width : 410px;
     min-height : 100vh;
     padding : 20px;
     position : relative;
+}
+
+@include mobile {
+    .container {
+        padding : 0;
+    }
 }
 
 .text--bold {

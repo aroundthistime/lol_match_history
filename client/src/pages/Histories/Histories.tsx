@@ -63,16 +63,6 @@ const Histories = (): JSX.Element => {
                         <CurrentMatch match={user.currentMatch} />
                     )}
                     <MatchesTable matches={user.latestMatches} />
-                    {/* <div className='tiers-container'>
-                        <UserTier
-                            isSolo={true}
-                            {...user.tiers.solo}
-                        />
-                        <UserTier
-                            isSolo={false}
-                            {...user.tiers.team}
-                        />
-                    </div> */}
                 </>
             )}
             {user === false && (
