@@ -26,6 +26,7 @@ code {
 /*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss (3) ***!
   \********************************************************************************************************************/
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -208,7 +209,7 @@ button.submit-button .button__text--mobile {
 }
 .layout .main {
   position: relative;
-  width: 800px;
+  width: 850px;
   background-color: #EAEAEA;
   border-radius: 3px;
   min-height: 350px;
@@ -283,7 +284,7 @@ button.submit-button .button__text--mobile {
 .header {
   position: relative;
   display: flex;
-  width: 800px;
+  width: 850px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -633,6 +634,10 @@ button.submit-button .button__text--mobile {
     flex-direction: column;
   }
 }
+.current-match__player {
+  padding-right: 10px;
+}
+
 .bans {
   display: flex;
   justify-content: center;
@@ -681,8 +686,20 @@ button.submit-button .button__text--mobile {
   background-color: #292828;
 }
 
-.match-table__cell {
-  vertical-align: middle;
+.matches-table {
+  width: 100%;
+}
+.matches-table thead .matches-table__header {
+  background-color: #F2F2F2;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.matches-table tbody .table__cell.team--blue {
+  background-color: #92C5F7;
+}
+.matches-table tbody .table__cell.team--red {
+  background-color: #CEBCF2;
 }
 
 .player__champion-image {
@@ -697,7 +714,6 @@ button.submit-button .button__text--mobile {
 .player__perks {
   display: flex;
   align-items: flex-end;
-  padding-right: 10px;
 }
 .player__perks .player__perk--main {
   width: calc(var(--champion-image-size) / 1.5);
@@ -711,6 +727,26 @@ button.submit-button .button__text--mobile {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2px;
+}
+.player__items .item-trinket {
+  grid-row: 1;
+  grid-column: 4;
+}
+
+.player-kda__text.kda--perfect, .player-kda__text.kda--max {
+  color: red;
+}
+.player-kda__text.kda--high {
+  color: blue;
+}
+.player-kda__text.kda--average {
+  color: green;
+}
+.player-kda__text.kda--low {
+  color: gray;
+}
+.player-kda__text:not(.kda--perfect)::before {
+  content: "평점 ";
 }
 
 .team--blue {
@@ -765,6 +801,22 @@ button.submit-button .button__text--mobile {
     font-size: 13.5px;
   }
 }
+table {
+  background-color: gray;
+  border-collapse: separate;
+  border-spacing: 1.5px;
+}
+
+.table__cell {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10px;
+  padding: 3px;
+}
+.table__cell p {
+  margin-bottom: 3px;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Nanum Gothic", sans-serif;

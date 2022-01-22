@@ -10,7 +10,7 @@ import Table from "../../Table/Table";
 
 const MatchRow = ({ match }: { match: Match }): JSX.Element =>
 (
-    <Table.Row className={match.searchTargetPlayer.isBlueTeam ? "team--blue" : "team--red"}>
+    <Table.Row className={match.searchTargetPlayer.win ? "match--win" : "match--lose"}>
         <MatchRow.Cell className="text--bold">{match.searchTargetPlayer.win ? "승" : "패"}</MatchRow.Cell>
         <MatchRow.Cell>
             <ChampionImage
@@ -39,10 +39,10 @@ const MatchRow = ({ match }: { match: Match }): JSX.Element =>
             />
         </MatchRow.Cell>
         <MatchRow.Cell>
-            <MatchRow.Teams>
-                <MatchRow.Team teamPlayers={match.blueTeam.players} />
-                <MatchRow.Team teamPlayers={match.redTeam.players} />
-            </MatchRow.Teams>
+            <MatchRow.Teams
+                blueTeamPlayers={match.blueTeam.players}
+                redTeamPlayers={match.redTeam.players}
+            />
         </MatchRow.Cell>
         <MatchRow.Cell>
             <PlayerItems items={match.searchTargetPlayer.items} />
@@ -65,12 +65,13 @@ MatchRow.Cell = ({ children, className = "" }: { children: React.ReactNode, clas
 )
 
 MatchRow.Teams = (
-    { children }
-        : { children?: React.ReactNode }
+    { blueTeamPlayers, redTeamPlayers }
+        : { blueTeamPlayers: EndedMatchPlayer[] | CurrentMatchPlayer[], redTeamPlayers: EndedMatchPlayer[] | CurrentMatchPlayer[] }
 ): JSX.Element => {
     return (
         <div className="matches-table__teams">
-            {children}
+            <MatchRow.Team teamPlayers={blueTeamPlayers} />
+            <MatchRow.Team teamPlayers={redTeamPlayers} />
         </div>
     )
 }

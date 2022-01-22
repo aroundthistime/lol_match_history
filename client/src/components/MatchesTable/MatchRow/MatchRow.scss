@@ -1,7 +1,15 @@
-.matches-table__cell{
-    // display : flex;
-    // justify-content: center;
-    // align-items: center;
-    // background-color: orange;
-    // vertical-align:middle;
+.matches-table {
+    .match--win {
+        background-color: $win-color;
+    }
+    .match--lose {
+        background-color: $lose-color;
+    }
+    .matches-table__cell{
+        // display : flex;
+        // justify-content: center;
+        // align-items: center;
+        // background-color: orange;
+        // vertical-align:middle;
+    }
 }
