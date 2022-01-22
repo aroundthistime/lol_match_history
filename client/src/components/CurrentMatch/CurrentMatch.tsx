@@ -36,6 +36,7 @@ CurrentMatch.Teams = (
             team={blueTeam}
             teamColor="blue"
         />
+        <div className="current-match__team-seperator" />
         <CurrentMatch.Team
             className="team--red"
             team={redTeam}
@@ -93,17 +94,6 @@ export default ({ match }: { match: Match }): JSX.Element => {
                     blueTeam={match.blueTeam}
                     redTeam={match.redTeam}
                 />
-                {/* <CurrentMatch.Team
-                        team={match.blueTeam}
-                        className="team--blue"
-                        teamColor="blue"
-                    />
-                    <CurrentMatch.Team
-                        team={match.redTeam}
-                        className="team--red"
-                        teamColor="red"
-                    />
-                </CurrentMatch.Teams> */}
             </div>
             <CurrentMatch.Footer>
                 {match.blueTeam.bans && ( //밴이 존재하는 게임이면 밴목록 추가

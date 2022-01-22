@@ -21,13 +21,28 @@
                 display : flex;
                 flex-direction: column;
                 width : 100%;
-                // .current-match__player 
+            }
+            .current-match__team-seperator {
+                width : 100px;
+                background-color: $light-gray;
             }
         }
     }
     .current-match__footer{
         background-color : $white;
 
+    }
+}
+
+@include tablet {
+    .current-match{
+        .current-match__body{
+            .current-match__teams{
+                .current-match__team-seperator{
+                    display : none;
+                }
+            }
+        }
     }
 }
 
