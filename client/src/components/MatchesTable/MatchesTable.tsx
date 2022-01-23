@@ -101,14 +101,7 @@ const MatchesTable = (
     return (
         <Table className="matches-table">
             <Table.Header>
-                {Object.keys(COLUMN_NAMES).map((columnName: string): JSX.Element => (
-                    <td
-                        className={"matches-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
-                        key={columnName}
-                    >
-                        {columnName}
-                    </td>
-                ))}
+                <MatchesTable.Header />
             </Table.Header>
             <Table.Body>
                 <MatchesTable.Matches matches={matches} />
@@ -122,6 +115,19 @@ const MatchesTable = (
         </Table>
     )
 }
+
+MatchesTable.Header = (): JSX.Element => (
+    <>
+        {Object.keys(COLUMN_NAMES).map((columnName: string): JSX.Element => (
+            <td
+                className={"matches-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
+                key={columnName}
+            >
+                {columnName}
+            </td>
+        ))}
+    </>
+)
 
 MatchesTable.Matches = ({ matches }: { matches: EndedMatch[] }): JSX.Element => {
     if (matches.length > 0) {

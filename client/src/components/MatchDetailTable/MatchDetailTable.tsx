@@ -93,14 +93,7 @@ const MatchDetailTable = ({ match }: { match: EndedMatch }): JSX.Element => {
     return (
         <Table className="match-detail-table">
             <Table.Header>
-                {Object.keys(COLUMN_NAMES).map((columnName: string): JSX.Element => (
-                    <td
-                        className={"match-detail-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
-                        key={columnName}
-                    >
-                        {columnName}
-                    </td>
-                ))}
+                <MatchDetailTable.Header />
             </Table.Header>
             <Table.Body>
                 <MatchDetailTable.Team
@@ -121,6 +114,19 @@ const MatchDetailTable = ({ match }: { match: EndedMatch }): JSX.Element => {
         </Table>
     )
 }
+
+MatchDetailTable.Header = (): JSX.Element => (
+    <>
+        {Object.keys(COLUMN_NAMES).map((columnName: string): JSX.Element => (
+            <td
+                className={"match-detail-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
+                key={columnName}
+            >
+                {columnName}
+            </td>
+        ))}
+    </>
+)
 
 MatchDetailTable.Team = (
     { team, teamColor, damageDealtMaxRange, damageTakenMaxRange, searchTargetPlayerId }

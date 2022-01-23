@@ -687,6 +687,24 @@ button.submit-button .button__text--mobile {
 .matches-table tbody td.team--red {
   background-color: #CEBCF2;
 }
+.matches-table tbody .matches-table__footer {
+  background-color: #F2F2F2;
+  text-align: end;
+}
+.matches-table tbody .matches-table__footer div {
+  display: flex;
+  justify-content: flex-end;
+}
+.matches-table tbody .matches-table__fetching-more {
+  background-color: #F2F2F2;
+}
+.matches-table tbody .matches-table__fetching-more div {
+  padding: 20px 0;
+}
+.matches-table tbody .matches-table__fetching-more div .fetching-more__image {
+  width: 30px;
+  height: 30px;
+}
 
 .player__champion-image {
   width: var(--champion-image-size);
@@ -901,6 +919,16 @@ table {
   background-color: gray;
   border-collapse: separate;
   border-spacing: 1.5px;
+}
+table .table__empty-body {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+table .table__empty-body .empty-body__text {
+  font-size: 16px;
 }
 
 td {
