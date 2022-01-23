@@ -7,7 +7,7 @@ import { EndedMatchTeam } from "../types/Team";
 import { getKda, getKillParticipation } from "../utils/calculation";
 import { getEndedMatchListUrl, getEndedMatchUrl } from "../utils/getUrl/riotApi/getRiotApiUrls";
 import { getChampion } from "./championController";
-import { getMatchModeInKorean } from "./globalController";
+import { getDetailDatasFromRiot, getMatchModeInKorean } from "./globalController";
 import { getPlayerItems } from "./itemController";
 import { getPerks } from "./perksController";
 import { extractCommonPlayerParts, getBannedChampions, getBlueTeamPlayers, getRedTeamPlayers } from "./commonMatchController";
@@ -17,6 +17,7 @@ import { ChampionDto } from "../types/apiResponseDtos/championJson";
 import { PerkStyleDto } from "../types/apiResponseDtos/perksJson";
 import { Player } from "../types/Player";
 import Constants from "../constants/constants";
+import { Request, Response } from "express";
 
 
 export const ENDED_GAME_FETCH_UNIT = 5;
@@ -47,7 +48,7 @@ const getEndedMatchPlayerStatistics = async (participant: ParticipantDtoEndedMat
         kda: getKda(participant.kills, participant.deaths, participant.assists),
         goldEarned: participant.goldEarned,
         cs: participant.totalMinionsKilled,
-        totalDamageDealt: participant.totalDamageDealt,
+        totalDamageDealt: participant.totalDamageDealtToChampions,
         totalDamageTaken: participant.totalDamageTaken,
         wardsPlaced: participant.wardsPlaced,
         wardsKilled: participant.wardsKilled,
@@ -285,5 +286,33 @@ export const getEndedMatches = async (summonerPuuid: string, summonerId: string,
     } catch (error) {
         console.log(error);
         return false;
+    }
+}
+
+export const fetchMatchesByPage = async (req: Request, res: Response) => {
+    try {
+        const {
+            query: { summonerPuuid, page, summonerId }
+        } = req;
+        if (
+            typeof summonerPuuid !== "string"
+            || typeof page !== "string"
+            || isNaN(parseInt(page))
+            || typeof summonerId !== "string"
+        ) {
+            throw Error
+        }
+        const detailDatasFromRiot = await getDetailDatasFromRiot();
+        if (detailDatasFromRiot === null) {
+            throw Error
+        }
+        const matches = await getEndedMatches(summonerPuuid, summonerId, detailDatasFromRiot, parseInt(page))
+        if (matches === false) {
+            throw Error
+        }
+        res.send(matches);
+    } catch (error) {
+        console.log(error);
+        res.send([])
     }
 }

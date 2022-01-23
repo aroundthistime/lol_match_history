@@ -129,17 +129,15 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         if (endedMatchs === false) {
             throw Error
         }
-        const result: UserFetchResult = {
-            result: true,
-            user: {
-                ...user,
-                tiers,
-                currentMatch: currentMatch,
-                latestMatches: endedMatchs
-            }
+        const result = {
+            ...user,
+            tiers,
+            currentMatch: currentMatch,
+            latestMatches: endedMatchs
         }
         res.json(result);
     } catch (error) {
-        res.json(FAILED_RESULT)
+        res.status(400);
+        res.end();
     }
 }
