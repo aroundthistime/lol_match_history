@@ -33,6 +33,7 @@ const MatchRow = ({ match }: { match: EndedMatch }): JSX.Element => {
                         deaths={match.searchTargetPlayer.deaths}
                         assists={match.searchTargetPlayer.assists}
                         kda={match.searchTargetPlayer.kda}
+                        className="kda--should-shorten"
                     />
                 </MatchRow.Cell>
                 <MatchRow.Cell className="mobile-hidden tablet-hidden">

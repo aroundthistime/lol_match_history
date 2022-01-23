@@ -9,11 +9,21 @@
             td {
                 background-color: $team-color-blue;
             }
+            &.match-detail-table__search-target{
+                td {
+                    background-color: $search-target-player-blue;
+                }
+            }
         }
         &.match-detail-table__player--red{
             td {
                 background-color: $team-color-red;
-            }        
+            }     
+            &.match-detail-table__search-target{
+                td {
+                    background-color: $search-target-player-red;                    
+                }
+            }   
         }
         .gagebar-container{
             width :100%;

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
 import { EndedMatchPlayer } from "../../types/Player/Player";
+import { StyleObject } from "../../types/StyleObject";
 import { EndedMatchTeam } from "../../types/Team/Team";
 import { getPathToHistories } from "../../utils/getPaths";
 import { getDamageDealtMaxRange, getDamageTakenMaxRange } from "../../utils/matchHandlers";
@@ -34,14 +35,19 @@ const COLUMN_NAMES: ColumnNameObject = {
         desktop: true
     },
     "소환사명": {
-        mobile: true,
+        mobile: false,
         tablet: true,
         desktop: true
     },
     "KDA": {
-        mobile: true,
+        mobile: false,
         tablet: true,
         desktop: true
+    },
+    "소환사명(KDA)": {
+        mobile: true,
+        tablet: false,
+        desktop: false
     },
     "킬관여": {
         mobile: false,
@@ -74,7 +80,7 @@ const COLUMN_NAMES: ColumnNameObject = {
         desktop: true
     },
     "시야": {
-        mobile: true,
+        mobile: false,
         tablet: true,
         desktop: true
     }
@@ -102,12 +108,14 @@ const MatchDetailTable = ({ match }: { match: EndedMatch }): JSX.Element => {
                     teamColor="blue"
                     damageDealtMaxRange={damageDealtMaxRange}
                     damageTakenMaxRange={damageTakenMaxRange}
+                    searchTargetPlayerId={match.searchTargetPlayer.id}
                 />
                 <MatchDetailTable.Team
                     team={match.redTeam}
                     teamColor="red"
                     damageDealtMaxRange={damageDealtMaxRange}
                     damageTakenMaxRange={damageTakenMaxRange}
+                    searchTargetPlayerId={match.searchTargetPlayer.id}
                 />
             </Table.Body>
         </Table>
@@ -115,27 +123,61 @@ const MatchDetailTable = ({ match }: { match: EndedMatch }): JSX.Element => {
 }
 
 MatchDetailTable.Team = (
-    { team, teamColor, damageDealtMaxRange, damageTakenMaxRange }
-        : { team: EndedMatchTeam, teamColor: string, damageDealtMaxRange: number, damageTakenMaxRange: number }
+    { team, teamColor, damageDealtMaxRange, damageTakenMaxRange, searchTargetPlayerId }
+        : { team: EndedMatchTeam, teamColor: string, damageDealtMaxRange: number, damageTakenMaxRange: number, searchTargetPlayerId: string }
 ): JSX.Element => (
     <>
-        {team.players.map(player => (
-            <MatchDetailTable.Player
-                player={player}
-                teamColor={teamColor}
-                damageDealtMaxRange={damageDealtMaxRange}
-                damageTakenMaxRange={damageTakenMaxRange}
-            />
-        ))}
-        <MatchDetailTable.TeamSummary team={team} />
+        {teamColor === "blue" ? (
+            <>
+                <MatchDetailTable.Players
+                    players={team.players}
+                    teamColor="red"
+                    damageDealtMaxRange={damageDealtMaxRange}
+                    damageTakenMaxRange={damageTakenMaxRange}
+                    searchTargetPlayerId={searchTargetPlayerId}
+                />
+                < MatchDetailTable.TeamSummary team={team} />
+            </>
+        ) : (
+            <>
+                < MatchDetailTable.TeamSummary team={team} />
+                <MatchDetailTable.Players
+                    players={team.players}
+                    teamColor="blue"
+                    damageDealtMaxRange={damageDealtMaxRange}
+                    damageTakenMaxRange={damageTakenMaxRange}
+                    searchTargetPlayerId={searchTargetPlayerId}
+                />
+            </>
+        )}
     </>
 )
 
-MatchDetailTable.Player = (
-    { player, teamColor, damageDealtMaxRange, damageTakenMaxRange }
-        : { player: EndedMatchPlayer, teamColor: string, damageDealtMaxRange: number, damageTakenMaxRange: number }
+MatchDetailTable.Players = (
+    { players, teamColor, damageDealtMaxRange, damageTakenMaxRange, searchTargetPlayerId }
+        : { players: EndedMatchPlayer[], teamColor: string, damageDealtMaxRange: number, damageTakenMaxRange: number, searchTargetPlayerId: string }
 ): JSX.Element => (
-    <tr className={`match-detail-table__player match-detail-table__player--${teamColor}`}>
+    <>
+        {
+            players.map(player => (
+                <MatchDetailTable.Player
+                    player={player}
+                    teamColor={teamColor}
+                    damageDealtMaxRange={damageDealtMaxRange}
+                    damageTakenMaxRange={damageTakenMaxRange}
+                    isSearchTargetPlayer={player.id === searchTargetPlayerId}
+                />
+            ))
+        }
+    </>
+)
+
+
+MatchDetailTable.Player = (
+    { player, teamColor, damageDealtMaxRange, damageTakenMaxRange, isSearchTargetPlayer }
+        : { player: EndedMatchPlayer, teamColor: string, damageDealtMaxRange: number, damageTakenMaxRange: number, isSearchTargetPlayer: boolean }
+): JSX.Element => (
+    <tr className={`match-detail-table__player match-detail-table__player--${teamColor} ${isSearchTargetPlayer ? "match-detail-table__search-target" : ""}`}>
         <td>
             <ChampionImage
                 className="player__champion-image"
@@ -148,18 +190,33 @@ MatchDetailTable.Player = (
                 summonerSpells={player.summonerSpells}
             />
         </td>
-        <td className="text--bold">
-            <Link to={getPathToHistories(player.name)}>
-                {player.name}
-            </Link>
+        <td className="text--bold mobile-hidden">
+            <PlayerNameWithLink name={player.name} />
         </td>
-        <td>
+        <td className="mobile-hidden">
             <PlayerKDA
                 kills={player.kills}
                 deaths={player.deaths}
                 assists={player.assists}
                 kda={player.kda}
                 className="kda--should-shorten"
+            />
+        </td>
+        <td className="desktop-hidden tablet-hidden">
+            <PlayerNameWithLink name={player.name} className="text--bold" />
+            <PlayerKDA
+                kills={player.kills}
+                deaths={player.deaths}
+                assists={player.assists}
+                kda={player.kda}
+                className="kda--should-shorten"
+                style={{
+                    "display": "flex",
+                    "justify-content": "center",
+                    "flex-direction": "row-reverse",
+                    "column-gap": "3px",
+                    "margin-top": "5px"
+                }}
             />
         </td>
         <td className="mobile-hidden tablet-hidden">
@@ -200,7 +257,7 @@ MatchDetailTable.Player = (
                 className={"match-detail-table__gage-bar match-detail-table__damage-taken"}
             />
         </td>
-        <td>
+        <td className="mobile-hidden">
             <VisionScore
                 wardsPlaced={player.wardsPlaced}
                 wardsKilled={player.wardsKilled}
@@ -249,16 +306,18 @@ MatchDetailTable.TeamSummary = ({ team }: { team: EndedMatchTeam }): JSX.Element
     </tr>
 )
 
-// const ObjectivesSummary = (
-//     {dragonKills, baronKills, heraldKills, towerKills, inhibitorKills}
-// )
 
-// const DragonSummary = ({})
-
-const TeamKDASummary = ({ kills, deaths, assists }: { kills: number, deaths: number, assists: number }): JSX.Element => (
-    <div className="">
-        <span>킬/데스/어시스트 : {kills}/{deaths}/{assists}</span>
-    </div>
+const PlayerNameWithLink = (
+    { name, className = "", style = {} }
+        : { name: string, className?: string, style?: StyleObject }
+): JSX.Element => (
+    <Link
+        to={getPathToHistories(name)}
+        className={className}
+        style={{ ...style }}
+    >
+        {name}
+    </Link>
 )
 
 export default MatchDetailTable;

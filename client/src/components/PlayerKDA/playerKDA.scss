@@ -17,19 +17,23 @@
 }
 
 @include tablet {
-    .player-kda__text.kda--should-shorten{
+    .kda--should-shorten{
+    .player-kda__text{
         text-decoration: underline;
-        &::before{
-            content:""
-        }        
+            &::before{
+                content:""
+            }     
+        }
     }
 }
 
 @include mobile {
-    .player-kda__text.kda--should-shorten{
-        text-decoration: underline;
-        &::before{
-            content:""
-        }        
-    }
+    .kda--should-shorten{
+        .player-kda__text{
+            text-decoration: underline;
+                &::before{
+                    content:""
+                }     
+            }
+        }
 }
