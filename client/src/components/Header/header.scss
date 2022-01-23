@@ -16,7 +16,7 @@
         }
     }
     .header__form{
-        .header__input {
+        .user-search-form__input {
             width : 400px;
         }
     }   
@@ -41,7 +41,7 @@
             justify-content: stretch;
             align-items: center;
             margin-top : 20px;
-            .header__input {
+            .user-search-form__input {
                 flex : 1;
                 margin-right : 20px;
             }
@@ -68,7 +68,7 @@
             justify-content: stretch;
             align-items: center;
             margin-top : 20px;
-            .header__input {
+            .user-search-form__input {
                 flex : 1;
                 margin-right : 20px;
             }

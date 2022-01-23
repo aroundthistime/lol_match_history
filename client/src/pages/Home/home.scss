@@ -48,13 +48,13 @@
             flex-direction : column;
         }
 
-        input.home__input {
+        .user-search-form__input {
             width : 350px;
             @include mobile {
                 width : 250px;
             }
         }
-        button.home__submit {
+        button.submit-button {
             @include mobile {
                 width : 250px;
                 margin-top : 20px;
