@@ -133,4 +133,4 @@ MatchRow.DetailsToggleBtn = (
     </div>
 )
 
-export default MatchRow;
+export default React.memo(MatchRow);

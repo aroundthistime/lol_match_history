@@ -7,72 +7,76 @@ import Spectator from '../../components/Spectator/Spectator';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import UserProfile from '../../components/UserProfile/UserProfile';
 import UserTiers from '../../components/UserTier/UserTiers/UserTiers';
+import { useUser } from '../../queries/useUser';
 import { SearchTargetUser } from '../../types/User/User';
 import fakeData from './fakeData';
 
 
 const Histories = (): JSX.Element => {
-    const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState<SearchTargetUser | undefined | false>();
     const params = useParams();
     const { username } = params;
+    const { isLoading, isError, data, refetch } = useUser(username);
 
-    const fetchUser = async () => {
-        setLoading(true);
-        if (username) {
-            try {
-                const response = fakeData;
-                // setUser(false);
-                setUser(response.data.user);
-                // const response = await axios.get(`/summoner/${username}`);
-                // console.log(response.data);
-                // if (response.data.result) {
-                //     setUser(response.data);
-                //     //have to fetch user matches
-                // } else {
-                //     setUser(response.data.result);
-                // }
-
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        setLoading(false);
+    if (isLoading) {
+        return <Loader />
     }
-
-    useEffect(() => {
-        fetchUser();
-    }, [])
-    console.log(user);
-    return loading ? (
-        <Loader />
-    ) : (
-        <>
-            {user && (
-                <>
-                    <UserProfile
-                        name={user.name}
-                        profileIcon={user.profileIcon}
-                        summonerLevel={user.summonerLevel}
-                        refresh={fetchUser}
-                    />
-                    <UserTiers
-                        tiers={user.tiers}
-                    />
-                    {user.currentMatch && (
-                        <Spectator match={user.currentMatch} />
-                    )}
-                    <MatchesTable matches={user.latestMatches} />
-                </>
-            )}
-            {user === false && (
-                <StatusMessage text="오류가 발생했습니다." />
-            )}
-            {user === null && (
-                <StatusMessage text="소환사 정보를 찾을 수 없습니다." />
-            )}
-        </>
+    return (
+        <Histories.Success
+            user={fakeData.data.user}
+            refetch={refetch}
+        />
     )
+    if (isError) {
+        return <StatusMessage text="오류가 발생했습니다." />
+    }
+    if (data) {
+        return (
+            <Histories.Success
+                user={data}
+                refetch={refetch}
+            />
+        )
+    } else {
+        return <StatusMessage text="소환사 정보를 찾을 수 없습니다." />
+    }
+    // return isLoading ? (
+    //     <Loader />
+    // ) : (
+    //     <>
+    //         <div></div>
+    //         {/* {user && (
+
+    //         )}
+    //         {user === false && (
+    //             <StatusMessage text="오류가 발생했습니다." />
+    //         )}
+    //         {user === null && (
+    //             <StatusMessage text="소환사 정보를 찾을 수 없습니다." />
+    //         )} */}
+    //     </>
+    // )
 }
+
+Histories.Success = ({ user, refetch }: { user: SearchTargetUser, refetch: Function }): JSX.Element => (
+    <>
+        <UserProfile
+            name={user.name}
+            profileIcon={user.profileIcon}
+            summonerLevel={user.summonerLevel}
+            refresh={refetch}
+        />
+        <UserTiers
+            tiers={user.tiers}
+        />
+        {user.currentMatch && (
+            <Spectator match={user.currentMatch} />
+        )}
+        <MatchesTable
+            matches={user.latestMatches}
+            summonerId={user.id}
+            summonerPuuid={user.puuid}
+        />
+    </>
+)
 
 export default Histories;

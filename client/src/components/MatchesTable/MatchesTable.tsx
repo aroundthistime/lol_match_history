@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMatches } from "../../queries/useMatches";
 import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
 import { getClassNameByPlatformWhetherDisplayObject } from "../../utils/viewHandlers";
@@ -70,7 +71,14 @@ const COLUMN_NAMES: ColumnNameObject = {
     }
 }
 
-const MatchesTable = ({ matches }: { matches: EndedMatch[] }): JSX.Element => {
+const MatchesTable = (
+    { matches: matchesParam, summonerPuuid, summonerId }
+        : { matches: EndedMatch[], summonerPuuid: string, summonerId: string }
+): JSX.Element => {
+    const [page, setPage] = useState(2);
+    const [matches, setMatches] = useState(matchesParam);
+    const { isLoading, error, data, refetch } = useMatches(summonerPuuid, summonerId, page);
+
     return (
         <Table className="matches-table">
             <Table.Header>
@@ -116,4 +124,4 @@ MatchesTable.Matches = ({ matches }: { matches: EndedMatch[] }): JSX.Element => 
 }
 
 
-export default MatchesTable;
+export default React.memo(MatchesTable);

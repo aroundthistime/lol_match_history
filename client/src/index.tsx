@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import axios from 'axios';
+import { QueryClient, QueryClientProvider } from "react-query";
 
-axios.defaults.baseURL = "http://127.0.0.1:4000"
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
-  <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <App />
-  </React.StrictMode>,
+  </QueryClientProvider>,
   document.getElementById('root')
 );

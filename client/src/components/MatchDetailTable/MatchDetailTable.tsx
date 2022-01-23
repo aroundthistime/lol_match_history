@@ -324,4 +324,4 @@ const PlayerNameWithLink = (
     </Link>
 )
 
-export default MatchDetailTable;
+export default React.memo(MatchDetailTable);
