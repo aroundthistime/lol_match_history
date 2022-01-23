@@ -44,13 +44,14 @@
     }
     .match-detail-table__team-summary {
         display : grid;
-        grid-template-columns: 1fr 1fr 1fr 2.5fr;
+        grid-template-columns: 100px 150px 150px 1fr;
         align-items: center;
         background-color: $white;
-        padding : 5px 0;
+        padding : 5px 20px;
         .team-summary__objectives {
             display : flex;
             align-items: center;
+            justify-content: flex-end;
             .team-summary__objective{
                 display : flex;
                 align-items: center;
@@ -62,6 +63,37 @@
                     width : 25px;
                     height : 25px;
                     margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .match-detail-table {
+        .match-detail-table__team-summary {
+            grid-template-columns: 1fr 1.5fr 1fr 2.5fr;
+            .team-summary__objectives{
+                .team-summary__objective{
+                    .team-summary__objective-icon {
+                        display : none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .match-detail-table {
+        .match-detail-table__team-summary {            
+            grid-template-columns: 1fr 2fr 5fr;
+            .team-summary__objectives{
+                .team-summary__objective{
+                    .team-summary__objective-icon {
+                        width : 15px;
+                        height : 15px;
+                    }
                 }
             }
         }

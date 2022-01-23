@@ -273,26 +273,30 @@ MatchDetailTable.TeamSummary = ({ team }: { team: EndedMatchTeam }): JSX.Element
         <td colSpan={100} style={{ height: "100%", padding: 0 }}>
             <div className="match-detail-table__team-summary">
                 <span className="team-summary__match-result text--bold">{team.win ? "승리" : "패배"}</span>
-                <span>킬/데스/어시스트 : {team.championKills}/{team.championDeaths}/{team.championAssists}</span>
-                <span>총 골드 : {team.totalGold}(G)</span>
+                <span>
+                    <span className="mobile-hidden">킬/데스/어시스트</span>
+                    <span className="tablet-hidden desktop-hidden">KDA</span>
+                    {team.championKills}/{team.championDeaths}/{team.championAssists}
+                </span>
+                <span className="mobile-hidden">총 골드 : {team.totalGold}(G)</span>
                 <ul className="team-summary__objectives">
                     <li className="team-summary__objective">
                         <BaronIcon
                             className="team-summary__objective-icon"
                         />
-                        바론 : {team.baronKills}
+                        <span className="mobile-hidden">바론 : </span>{team.baronKills}
                     </li>
                     <li className="team-summary__objective">
                         <DragonIcon
                             className="team-summary__objective-icon"
                         />
-                        드래곤 : {team.dragonKills}
+                        <span className="mobile-hidden">드래곤 : </span>{team.dragonKills}
                     </li>
                     <li className="team-summary__objective">
                         <HeraldIcon
                             className="team-summary__objective-icon"
                         />
-                        전령 : {team.riftHeraldKills}
+                        <span className="mobile-hidden">전령 : </span>{team.riftHeraldKills}
                     </li>
                     <li className="team-summary__objective">
                         타워 : {team.towerKills}

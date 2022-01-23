@@ -9,36 +9,19 @@ td{
     text-align: center;
     font-size : 10px;
     padding : 3px;
-    &.mobile-only {
-        display : none;
-    }
     p {
         margin-bottom: 3px;
-    }
-}
-
-@include desktop {
-    td {
-        &.desktop-hidden {
-            display : none;
-        }
     }
 }
 
 @include tablet {
     td{
         padding : 2px 1px;
-        &.tablet-hidden {
-            display : none;
-        }
     }
 }
 
 @include mobile {
     td{
         padding : 1px;
-        &.mobile-hidden {
-            display : none;
-        }
     }
 }

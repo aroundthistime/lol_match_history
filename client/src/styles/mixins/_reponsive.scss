@@ -20,3 +20,21 @@ $desktop : 1020px;
         @content;
     }
 }
+
+@include desktop{
+    .desktop-hidden {
+        display : none;
+    }
+}
+
+@include tablet{
+    .tablet-hidden {
+        display : none;
+    }
+}
+
+@include mobile{
+    .mobile-hidden {
+        display : none;
+    }
+}
