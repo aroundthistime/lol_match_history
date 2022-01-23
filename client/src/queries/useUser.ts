@@ -2,14 +2,8 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { SearchTargetUser } from "../types/User/User";
 
-// const getUserByUsername = async (username: string): Promise<SearchTargetUser | null> => {
-//     const { data } = await axios.get(`/summoner/${username}`);
-//     return data
-// }
-
-
 const getUserByUsername = async (username: string): Promise<SearchTargetUser | null> => {
-    const { data } = await axios.get(`/3`);
+    const { data } = await axios.get(`/summoner/${username}`);
     return data
 }
 

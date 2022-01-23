@@ -19,5 +19,24 @@
                 background-color: $team-color-red;
             }
         }
+        .matches-table__footer{
+            background-color: $white;
+            text-align: end;
+            div {
+                display : flex;
+                justify-content: flex-end;
+            }
+        }
+        .matches-table__fetching-more {
+            background-color: $white;
+            div {
+                padding : 20px 0;
+                .fetching-more__image{
+                    width : 30px;
+                    height : 30px;
+                }
+            }
+
+        }
     }
 }

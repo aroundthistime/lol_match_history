@@ -6,10 +6,10 @@ const PlayerKDA = (
     { kills, deaths, assists, kda, className = "", style = {} }
         : { kills: number, deaths: number, assists: number, kda: string, className?: string, style?: StyleObject }
 ): JSX.Element => (
-    <p style={{ ...style }} className={className}>
+    <div style={{ ...style }} className={className}>
         <p className={"player-kda__text text--bold " + getKDATextClassName(kda)}>{kda}</p>
         <p>{kills}/{deaths}/{assists}</p>
-    </p>
+    </div>
 )
 
 export default PlayerKDA;

@@ -166,6 +166,7 @@ MatchDetailTable.Players = (
                     damageDealtMaxRange={damageDealtMaxRange}
                     damageTakenMaxRange={damageTakenMaxRange}
                     isSearchTargetPlayer={player.id === searchTargetPlayerId}
+                    key={player.id}
                 />
             ))
         }
@@ -212,10 +213,10 @@ MatchDetailTable.Player = (
                 className="kda--should-shorten"
                 style={{
                     "display": "flex",
-                    "justify-content": "center",
-                    "flex-direction": "row-reverse",
-                    "column-gap": "3px",
-                    "margin-top": "5px"
+                    "justifyContent": "center",
+                    "flexDirection": "row-reverse",
+                    "columnGap": "3px",
+                    "marginTop": "5px"
                 }}
             />
         </td>
@@ -226,7 +227,7 @@ MatchDetailTable.Player = (
             <PlayerPerks
                 mainPerks={player.mainPerks}
                 subPerks={player.subPerks}
-                style={{ "flex-direction": "column", "align-items": "center" }}
+                style={{ "flexDirection": "column", "alignItems": "center" }}
             />
         </td>
         <td>

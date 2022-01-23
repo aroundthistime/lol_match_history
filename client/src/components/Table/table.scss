@@ -2,6 +2,16 @@ table {
     background-color: gray;
     border-collapse: separate;
     border-spacing: 1.5px;
+    .table__empty-body {
+        height : 200px;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        .empty-body__text{
+            font-size : 16px;
+        }
+    }
 }
 
 td{

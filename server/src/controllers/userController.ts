@@ -105,10 +105,7 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         } = req;
         const user: SearchTargetUser | null | false = await getUser(username);
         if (user === null) {
-            res.json({
-                result: true,
-                user
-            })
+            res.json(null);
             return
         } else if (user === false) {
             throw Error
@@ -125,18 +122,14 @@ export const fetchByUsername = async (req: Request, res: Response) => {
         if (currentMatch === false) {
             throw Error
         }
-        const endedMatchs: Match[] | false = await getEndedMatches(user.puuid, user.id, detailDatasFromRiot);
-        if (endedMatchs === false) {
-            throw Error
-        }
         const result = {
             ...user,
             tiers,
             currentMatch: currentMatch,
-            latestMatches: endedMatchs
         }
         res.json(result);
     } catch (error) {
+        console.log(error);
         res.status(400);
         res.end();
     }

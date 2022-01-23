@@ -25,10 +25,14 @@ Table.Empty = (
     { children, className = "", text = "", style = {} }
         : { children?: React.ReactNode, className?: string, text?: string, style?: StyleObject }
 ): JSX.Element => (
-    <div className={"table__empty-body " + className} style={{ ...style }}>
-        <p className="empty-body__text">{text}</p>
-        {children}
-    </div>
+    <tr>
+        <td colSpan={100}>
+            <div className={"table__empty-body " + className} style={{ ...style }}>
+                <p className="empty-body__text">{text}</p>
+                {children}
+            </div>
+        </td>
+    </tr>
 )
 
 

@@ -12,6 +12,7 @@ const PlayerSummonerSpells = (
             <SummonerSpellImage
                 summonerSpell={summonerSpell}
                 className={"player__summonerspell icon--small " + className}
+                key={summonerSpell.id}
             />
         ))}
     </div>

@@ -13,5 +13,4 @@ export interface SearchTargetUser extends User {
     summonerLevel: number;
     tiers: Tiers;
     currentMatch?: CurrentMatch | null;
-    latestMatches?: EndedMatch[];
 }

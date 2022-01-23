@@ -46,7 +46,7 @@ const MatchRow = ({ match }: { match: EndedMatch }): JSX.Element => {
                     <PlayerPerks
                         mainPerks={match.searchTargetPlayer.mainPerks}
                         subPerks={match.searchTargetPlayer.subPerks}
-                        style={{ "flex-direction": "column", "align-items": "center" }}
+                        style={{ "flexDirection": "column", "alignItems": "center" }}
                     />
                 </MatchRow.Cell>
                 <MatchRow.Cell className="mobile-hidden">
@@ -116,6 +116,7 @@ MatchRow.Team = (
             <ChampionImage
                 champion={teamPlayer.champion}
                 className="player__champion-image icon--small"
+                key={teamPlayer.champion.id}
             />
         ))}
     </div>

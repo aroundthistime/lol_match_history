@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { MouseEvent, MouseEventHandler, useEffect, useState } from "react";
 import { useMatches } from "../../queries/useMatches";
 import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
 import { getClassNameByPlatformWhetherDisplayObject } from "../../utils/viewHandlers";
 import Table from "../Table/Table";
 import MatchRow from "./MatchRow/MatchRow";
+import fetchMoreImage from "../../assets/images/fetchingMore.gif";
 
 type ColumnNameObject = { [key: string]: PlatformWhetherDisplay }
 
@@ -72,12 +73,30 @@ const COLUMN_NAMES: ColumnNameObject = {
 }
 
 const MatchesTable = (
-    { matches: matchesParam, summonerPuuid, summonerId }
+    { matches: initialMatches, summonerPuuid, summonerId }
         : { matches: EndedMatch[], summonerPuuid: string, summonerId: string }
 ): JSX.Element => {
-    const [page, setPage] = useState(2);
-    const [matches, setMatches] = useState(matchesParam);
-    const { isLoading, error, data, refetch } = useMatches(summonerPuuid, summonerId, page);
+    const [matches, setMatches] = useState<EndedMatch[]>(initialMatches)
+    const [page, setPage] = useState<number>(2);
+    const { isLoading, data, refetch, isFetched } = useMatches(summonerPuuid, summonerId, page, false)
+
+    useEffect(() => {
+        if (isFetched) {
+            if (data && data.length > 0) {
+                setMatches([...matches, ...data])
+                setPage(prev => prev + 1);
+            } else {
+                setPage(0)
+            }
+        }
+    }, [data])
+
+    const canRefetch = page !== 0 && !isLoading;
+    const onClick = (event: React.MouseEvent<HTMLElement>) => {
+        if (page !== 0) {
+            refetch();
+        }
+    }
 
     return (
         <Table className="matches-table">
@@ -93,6 +112,12 @@ const MatchesTable = (
             </Table.Header>
             <Table.Body>
                 <MatchesTable.Matches matches={matches} />
+                {canRefetch && (
+                    <MatchesTable.FetchMore onClick={onClick} />
+                )}
+                {isLoading && (
+                    <MatchesTable.Loader />
+                )}
             </Table.Body>
         </Table>
     )
@@ -116,12 +141,42 @@ MatchesTable.Matches = ({ matches }: { matches: EndedMatch[] }): JSX.Element => 
         return (
             <Table.Empty
                 className="matches-table__empty-body"
-                text="최근 전적이 없습니다."
+                text="최근 전적이 없습니다"
             />
         )
 
     }
 }
+
+MatchesTable.FetchMore = ({ onClick }: { onClick: MouseEventHandler<HTMLButtonElement> }): JSX.Element => (
+    <tr className="matches-table__footer">
+        <td colSpan={100}>
+            <div>
+                <button
+                    className="matches-table__fetch-more-btn"
+                    onClick={onClick}
+                >
+                    더보기
+                </button>
+            </div>
+
+        </td>
+    </tr>
+)
+
+MatchesTable.Loader = (): JSX.Element => (
+    <tr className="matches-table__fetching-more">
+        <td colSpan={100}>
+            <div>
+                <img
+                    src={fetchMoreImage}
+                    alt={"로딩중"}
+                    className={"fetching-more__image"}
+                />
+            </div>
+        </td>
+    </tr>
+)
 
 
 export default React.memo(MatchesTable);
