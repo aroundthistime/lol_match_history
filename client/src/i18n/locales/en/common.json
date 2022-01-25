@@ -1,0 +1,70 @@
+{
+    "gameMode": {
+        "solo": "solo",
+        "norm": "norm",
+        "aram": "aram",
+        "flex": "flex",
+        "nbg": "nbg",
+        "usb": "usb",
+        "urf": "URF",
+        "ofa": "ofa",
+        "ai": "AI",
+        "poro": "poro",
+        "tut": "tutorial",
+        "etc": "etc",
+        "clash": "clash"
+    },
+    "tier": {
+        "UNRANKED": "Unranked",
+        "IRON": "Iron",
+        "BRONZE": "Bronze",
+        "SILVER": "Silver",
+        "GOLD": "Gold",
+        "PLATINUM": "Platinum",
+        "DIAMOND": "Diamond",
+        "MASTER": "Master",
+        "GRANDMASTER": "Grandmaster",
+        "CHALLENGER": "Challenger",
+        "middleOfPlacement": "middle of placement"
+    },
+    "result": {
+        "win": {
+            "short": "W",
+            "full": "Win"
+        },
+        "lose": {
+            "short": "L",
+            "full": "Lose"
+        }
+    },
+    "ban": "Banned Champions",
+    "time": {
+        "time": "time",
+        "hour": "h",
+        "minute": "m",
+        "second": "s",
+        "ago": "ago"
+    },
+    "champion": "champion",
+    "mode": "mode",
+    "summonerSpell": "spell",
+    "rune": "rune",
+    "team": "team",
+    "item": "item",
+    "username": "username",
+    "damage": "damage",
+    "dealt": "dealt",
+    "taken": "taken",
+    "vision": "vision",
+    "kill": "kill",
+    "death": "death",
+    "assist": "assist",
+    "totalGold": "Global Gold",
+    "objectives": {
+        "baron": "baron",
+        "dragon": "dragon",
+        "herald": "herald",
+        "tower": "tower",
+        "inhibitor": "inhibitor"
+    }
+}

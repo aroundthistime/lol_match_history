@@ -1,0 +1,70 @@
+{
+    "gameMode": {
+        "solo": "솔랭",
+        "norm": "일반",
+        "aram": "칼바람",
+        "flex": "자유랭크",
+        "nbg": "돌넥",
+        "usb": "궁주문서",
+        "urf": "URF",
+        "ofa": "단일",
+        "ai": "AI대전",
+        "poro": "포로왕",
+        "tut": "튜토리얼",
+        "etc": "기타",
+        "clash": "격전"
+    },
+    "tier": {
+        "UNRANKED": "언랭",
+        "IRON": "아이언",
+        "BRONZE": "브론즈",
+        "SILVER": "실버",
+        "GOLD": "골드",
+        "PLATINUM": "플래티넘",
+        "DIAMOND": "다이아몬드",
+        "MASTER": "마스터",
+        "GRANDMASTER": "그랜드마스터",
+        "CHALLENGER": "챌린저",
+        "middleOfPlacement": "배치고사 진행중"
+    },
+    "result": {
+        "win": {
+            "short": "승",
+            "full": "승리"
+        },
+        "lose": {
+            "short": "패",
+            "full": "패배"
+        }
+    },
+    "ban": "금지된 챔피언",
+    "time": {
+        "time": "시간",
+        "hour": "시간",
+        "minute": "분",
+        "second": "초",
+        "ago": "전"
+    },
+    "champion": "챔피언",
+    "mode": "모드",
+    "summonerSpell": "스펠",
+    "rune": "룬",
+    "team": "팀",
+    "item": "아이템",
+    "username": "소환사명",
+    "damage": "피해량",
+    "dealt": "입힌",
+    "taken": "받은",
+    "vision": "시야",
+    "kill": "킬",
+    "death": "데스",
+    "assist": "어시스트",
+    "totalGold": "총 골드",
+    "objectives": {
+        "baron": "바론",
+        "dragon": "드래곤",
+        "herald": "전령",
+        "tower": "타워",
+        "inhibitor": "억제기"
+    }
+}
