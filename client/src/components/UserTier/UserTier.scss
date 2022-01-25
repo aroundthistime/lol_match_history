@@ -19,6 +19,9 @@
             justify-content: space-between;
             font-size : 14px;
             padding : 10px 0;
+            .tier__info.queue-type{
+                text-transform: uppercase;
+            }
         }
     }
 }

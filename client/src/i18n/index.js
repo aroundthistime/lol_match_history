@@ -10,7 +10,7 @@ i18n
             en: { translation: en },
             ko: { translation: ko }
         },
-        lng: "ko",
+        lng: "en",
         interpolation: {
             escapeValue: false,
         },

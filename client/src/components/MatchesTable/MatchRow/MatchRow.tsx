@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import i18n from "i18next";
 import { EndedMatch } from "../../../types/Match/Match";
 import { CurrentMatchPlayer, EndedMatchPlayer } from "../../../types/Player/Player";
 import { getHourMinuteSecondStringFromSeconds, getLargestUnitOfTimeDiffFromCurrent } from "../../../utils/timeHandlers";
@@ -19,7 +20,11 @@ const MatchRow = ({ match }: { match: EndedMatch }): JSX.Element => {
     return (
         <>
             <tr className={match.searchTargetPlayer.win ? "match--win" : "match--lose"}>
-                <MatchRow.Cell className="text--bold">{match.searchTargetPlayer.win ? "승" : "패"}</MatchRow.Cell>
+                <MatchRow.Cell className="text--bold">
+                    {match.searchTargetPlayer.win
+                        ? i18n.t('common.result.win.short')
+                        : i18n.t('common.result.lose.short')}
+                </MatchRow.Cell>
                 <MatchRow.Cell>
                     <ChampionImage
                         champion={match.searchTargetPlayer.champion}
@@ -67,7 +72,7 @@ const MatchRow = ({ match }: { match: EndedMatch }): JSX.Element => {
                 </MatchRow.Cell>
                 <MatchRow.Cell>
                     <p>{getHourMinuteSecondStringFromSeconds(match.gameLength)}</p>
-                    <p>{getLargestUnitOfTimeDiffFromCurrent(match.gameStartTime)} 전</p>
+                    <p>{getLargestUnitOfTimeDiffFromCurrent(match.gameStartTime)} {i18n.t('common.time.ago')}</p>
                 </MatchRow.Cell>
                 <MatchRow.Cell>
                     <MatchRow.DetailsToggleBtn

@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addSearchHistory } from "../../utils/searchHistoryHandlers";
+import i18n from "i18next";
 
 const UserSearchForm = (
     { initialUsername = "", className = "" }
@@ -26,7 +27,7 @@ const UserSearchForm = (
                 type="text"
                 name="username"
                 className='user-search-form__input'
-                placeholder='검색하고자 하는 소환사명을 입력하세요.'
+                placeholder={i18n.t('input.usernameInput.placeholder')}
                 value={username}
                 onChange={onInputChange}
             />
@@ -34,7 +35,7 @@ const UserSearchForm = (
                 type="submit"
                 className='button submit-button user-search-form__button'
             >
-                <span className="button__text">검색</span>
+                <span className="button__text">{i18n.t('button.search')}</span>
             </button>
         </form>
     )

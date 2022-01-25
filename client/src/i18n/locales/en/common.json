@@ -28,6 +28,7 @@
         "middleOfPlacement": "middle of placement"
     },
     "result": {
+        "winLoseStatisticsText": "{{totalGames}}G {{wins}}W {{losses}}L ({{winRate}}%)",
         "win": {
             "short": "W",
             "full": "Win"
@@ -40,31 +41,11 @@
     "ban": "Banned Champions",
     "time": {
         "time": "time",
+        "day": "d",
         "hour": "h",
         "minute": "m",
         "second": "s",
         "ago": "ago"
     },
-    "champion": "champion",
-    "mode": "mode",
-    "summonerSpell": "spell",
-    "rune": "rune",
-    "team": "team",
-    "item": "item",
-    "username": "username",
-    "damage": "damage",
-    "dealt": "dealt",
-    "taken": "taken",
-    "vision": "vision",
-    "kill": "kill",
-    "death": "death",
-    "assist": "assist",
-    "totalGold": "Global Gold",
-    "objectives": {
-        "baron": "baron",
-        "dragon": "dragon",
-        "herald": "herald",
-        "tower": "tower",
-        "inhibitor": "inhibitor"
-    }
+    "points": "p"
 }

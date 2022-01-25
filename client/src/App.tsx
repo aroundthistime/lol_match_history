@@ -10,13 +10,20 @@ import { useTranslation } from 'react-i18next';
 
 function App() {
   const { t, i18n } = useTranslation();
-  const changelanguageToKo = () => i18n.changeLanguage('ko')
-  const changelanguageToEn = () => i18n.changeLanguage('en')
+  const changeLanguageToKo = (event: any) => {
+    console.log(1);
+    //  i18n.changeLanguage('ko');
+  }
+  const changeLanguageToEn = (event: React.MouseEvent<HTMLElement>) => {
+    console.log(2);
+    // i18n.changeLanguage('en');
+  }
   return (
     <div className='container'>
-      <span>{t('page.home.subtitle')}</span>
-      <button onClick={changelanguageToKo}>한국어</button>
-      <button onClick={changelanguageToEn}>영어</button>
+      {/* <span className="left" onClick={() => { alert("left"); }}>Left</span>
+      <div onClick={() => { alert("left"); }}>영어</div>
+      <button onClick={changeLanguageToKo}>한국어</button>
+      <button onClick={changeLanguageToEn}>영어</button> */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -32,12 +39,12 @@ function App() {
           } />
           <Route path='*' element={
             <Layout>
-              <StatusMessage text="잘못된 접근입니다." />
+              <StatusMessage text={i18n.t('statusMessage.unauthorizedAccess')} />
             </Layout>
           } />
         </Routes>
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 

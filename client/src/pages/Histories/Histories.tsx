@@ -1,6 +1,6 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useMatch, useParams } from 'react-router-dom';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import i18n from "i18next";
 import Loader from '../../components/Loader/Loader';
 import MatchesTable from '../../components/MatchesTable/MatchesTable';
 import Spectator from '../../components/Spectator/Spectator';
@@ -29,7 +29,7 @@ const Histories = (): JSX.Element => {
         return <Loader />
     }
     if (isUserError) {
-        return <StatusMessage text="오류가 발생했습니다." />
+        return <StatusMessage text={i18n.t('statusMessage.error')} />
     }
     if (user && matches) {
         return (
@@ -40,7 +40,7 @@ const Histories = (): JSX.Element => {
             />
         )
     } else {
-        return <StatusMessage text="소환사 정보를 찾을 수 없습니다." />
+        return <StatusMessage text={i18n.t('statusMessage.noUser')} />
     }
 }
 

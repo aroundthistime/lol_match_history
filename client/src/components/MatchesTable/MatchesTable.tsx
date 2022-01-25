@@ -1,4 +1,4 @@
-import React, { MouseEvent, MouseEventHandler, useEffect, useState } from "react";
+import React, { MouseEventHandler, useEffect, useState } from "react";
 import { useMatches } from "../../queries/useMatches";
 import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
@@ -6,51 +6,52 @@ import { getClassNameByPlatformWhetherDisplayObject } from "../../utils/viewHand
 import Table from "../Table/Table";
 import MatchRow from "./MatchRow/MatchRow";
 import fetchMoreImage from "../../assets/images/fetchingMore.gif";
+import i18n from "i18next";
 
 type ColumnNameObject = { [key: string]: PlatformWhetherDisplay }
 
 const COLUMN_NAMES: ColumnNameObject = {
-    "승": {
+    "win": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "챔피언": {
+    "champion": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "모드": {
+    "mode": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "KDA": {
+    "kda": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "킬관여": {
+    "killParticipation": {
         mobile: false,
         tablet: false,
         desktop: true
     },
-    "스펠": {
+    "summonerSpell": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "룬": {
+    "rune": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "팀": {
+    "team": {
         mobile: false,
         tablet: true,
         desktop: true
     },
-    "아이템": {
+    "item": {
         mobile: true,
         tablet: true,
         desktop: true
@@ -60,7 +61,7 @@ const COLUMN_NAMES: ColumnNameObject = {
         tablet: false,
         desktop: true
     },
-    "시간": {
+    "time": {
         mobile: true,
         tablet: true,
         desktop: true
@@ -123,7 +124,7 @@ MatchesTable.Header = (): JSX.Element => (
                 className={"matches-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
                 key={columnName}
             >
-                {columnName}
+                {i18n.t(`table.${columnName}`)}
             </td>
         ))}
     </>
@@ -162,7 +163,7 @@ MatchesTable.FetchMore = ({ onClick }: { onClick: MouseEventHandler<HTMLButtonEl
                     className="matches-table__fetch-more-btn"
                     onClick={onClick}
                 >
-                    더보기
+                    {i18n.t('button.more')}
                 </button>
             </div>
 

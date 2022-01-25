@@ -1,8 +1,7 @@
 import React from "react";
-import constants from "../../constants/constants";
+import i18n from "i18next";
 import { StyleObject } from "../../types/StyleObject";
 import { Tier } from "../../types/Tier/Tier";
-import { TierTypeEng } from "../../types/Tier/TierType";
 import { roundTo2Decimal } from "../../utils/math";
 
 
@@ -14,22 +13,35 @@ const UserTier = (
         const winRate: number = wins / (wins + losses) * 100;
         return roundTo2Decimal(winRate);
     }
+    const getRankedTierDetails = (): string => {
+        return ` ${tier.rank} ${tier.leaguePoints}${i18n.t('common.points')}`;
+    }
+    const getTierDetailsText = (): string => {
+        let tierDetailsText: string = i18n.t(`common.tier.${tier.tier}`)
+        if (tier.tier !== "UNRANKED") {
+            tierDetailsText += getRankedTierDetails();
+        }
+        return tierDetailsText
+    }
+    const getWinLoseStatisticsText = (): string => {
+        if (tier.wins === undefined || tier.losses === undefined) {
+            return i18n.t("common.tier.middleOfPlacement")
+        } else {
+            return i18n.t('common.result.winLoseStatisticsText', {
+                totalGames: tier.wins + tier.losses,
+                wins: tier.wins,
+                losses: tier.losses,
+                winRate: getWinRate(tier.wins, tier.losses)
+            })
+        }
+    }
     return (
         <div className="user-tier">
             <UserTier.TierImage src={tier.tierImage} alt={tier.tier} />
             <div className="tier__infos">
                 <UserTier.Text className="queue-type" text={queueType} />
-                {tier.tier === "UNRANKED" ? (
-                    <UserTier.Text className="tier-rank" text={constants.korean.tiers[tier.tier as TierTypeEng]} style={{ fontWeight: "bold" }} />
-                ) : (
-                    <UserTier.Text className="tier-rank" text={`${constants.korean.tiers[tier.tier as TierTypeEng]} ${tier.rank} ${tier.leaguePoints}점`} style={{ fontWeight: "bold" }} />
-
-                )}
-                {(tier.wins === undefined || tier.losses === undefined) ? (
-                    <UserTier.Text text="배치고사 진행중" />
-                ) : (
-                    <UserTier.Text text={`${tier.wins + tier.losses}전 ${tier.wins}승 ${tier.losses}패 (${getWinRate(tier.wins, tier.losses)}%)`} />
-                )}
+                <UserTier.Text className="tier-rank" text={getTierDetailsText()} style={{ fontWeight: "bold" }} />
+                <UserTier.Text text={getWinLoseStatisticsText()} />
             </div>
         </div>
     )

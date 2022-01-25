@@ -1,7 +1,16 @@
+import i18n from "i18next";
+
 const SECOND_TO_MILLISECONDS = 1000;
 const MINUTE_TO_MILLISECONDS = SECOND_TO_MILLISECONDS * 60;
 const HOUR_TO_MILLISECONDS = MINUTE_TO_MILLISECONDS * 60;
 const DAY_TO_MILLISECONDS = HOUR_TO_MILLISECONDS * 24;
+
+const TIME_TEXT = i18n.t("common.time.time");
+const DAY_TEXT = i18n.t("common.time.day");
+const HOUR_TEXT = i18n.t("common.time.hour");
+const MINUTE_TEXT = i18n.t("common.time.minute");
+const SECOND_TEXT = i18n.t("common.time.second");
+
 
 const getDaysPartFromMilliseconds = (milliseconds: number): number => {
     return Math.floor(milliseconds / DAY_TO_MILLISECONDS)
@@ -23,10 +32,11 @@ export const getHourMinuteSecondStringFromMilliseconds = (milliseconds: number):
     const hours = getHoursPartFromMilliseconds(milliseconds);
     const minutes = getMinutesPartFromMilliseconds(milliseconds)
     const seconds = getSecondsPartFromMilliseconds(milliseconds)
+    console.log(HOUR_TEXT, DAY_TEXT, MINUTE_TEXT, SECOND_TEXT);
     if (hours > 0) {
-        return `${hours}시간 ${minutes}분 ${seconds}초`
+        return `${hours}${HOUR_TEXT} ${minutes}${MINUTE_TEXT} ${seconds}${SECOND_TEXT}`
     } else {
-        return `${minutes}분 ${seconds}초`
+        return `${minutes}${MINUTE_TEXT} ${seconds}${SECOND_TEXT}`
     }
 }
 
@@ -42,16 +52,16 @@ export const getAbsTimeDiffFromCurrent = (targetTime: number): number => {
 export const getLargestUnitFromTime = (milliseconds: number): string => {
     if (milliseconds >= DAY_TO_MILLISECONDS) {
         const days = getDaysPartFromMilliseconds(milliseconds);
-        return `${days}일`
+        return `${days}${DAY_TEXT}`
     } else if (milliseconds >= HOUR_TO_MILLISECONDS) {
         const hours = getHoursPartFromMilliseconds(milliseconds);
-        return `${hours}시간`
+        return `${hours}${HOUR_TEXT}`
     } else if (milliseconds >= MINUTE_TO_MILLISECONDS) {
         const minutes = getMinutesPartFromMilliseconds(milliseconds);
-        return `${minutes}분`
+        return `${minutes}${MINUTE_TEXT}`
     } else {
         const seconds = getSecondsPartFromMilliseconds(milliseconds);
-        return `${seconds}초`
+        return `${seconds}${SECOND_TEXT}`
     }
 }
 

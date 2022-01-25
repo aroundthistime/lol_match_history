@@ -28,6 +28,7 @@
         "middleOfPlacement": "배치고사 진행중"
     },
     "result": {
+        "winLoseStatisticsText": "{{totalGames}}전 {{wins}}승 {{losses}}패 ({{winRate}}%)",
         "win": {
             "short": "승",
             "full": "승리"
@@ -40,31 +41,11 @@
     "ban": "금지된 챔피언",
     "time": {
         "time": "시간",
+        "day": "일",
         "hour": "시간",
         "minute": "분",
         "second": "초",
         "ago": "전"
     },
-    "champion": "챔피언",
-    "mode": "모드",
-    "summonerSpell": "스펠",
-    "rune": "룬",
-    "team": "팀",
-    "item": "아이템",
-    "username": "소환사명",
-    "damage": "피해량",
-    "dealt": "입힌",
-    "taken": "받은",
-    "vision": "시야",
-    "kill": "킬",
-    "death": "데스",
-    "assist": "어시스트",
-    "totalGold": "총 골드",
-    "objectives": {
-        "baron": "바론",
-        "dragon": "드래곤",
-        "herald": "전령",
-        "tower": "타워",
-        "inhibitor": "억제기"
-    }
+    "points": "점"
 }

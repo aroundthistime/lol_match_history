@@ -1,4 +1,5 @@
 import React from "react";
+import i18n from "i18next";
 import { Ban } from "../../types/Ban/Ban";
 import { StyleObject } from "../../types/StyleObject";
 import BannedChampion from "./BannedChampion/BannedChampion";
@@ -12,7 +13,7 @@ const Bans = (
             bannedChampions={blueTeamBans}
             teamColor="blue"
         />
-        <p>금지된 챔피언</p>
+        <p>{i18n.t("common.ban")}</p>
         <Bans.Team
             bannedChampions={redTeamBans}
             teamColor="red"
@@ -22,11 +23,12 @@ const Bans = (
 
 Bans.Team = ({ bannedChampions, teamColor }: { bannedChampions: Ban[], teamColor: string }) => (
     <div className={`bans__team bans__team--${teamColor}`}>
-        {bannedChampions.map((bannedChampion: Ban) => {
+        {bannedChampions.map((bannedChampion: Ban, index) => {
             return (
                 <BannedChampion
                     bannedChampion={bannedChampion}
                     style={{ border: `2px solid ${teamColor}` }}
+                    key={index}
                 />
             )
         })}

@@ -21,8 +21,8 @@ const Spectator = ({ children }: { children: React.ReactNode }): JSX.Element => 
 
 Spectator.Summary = ({ texts }: { texts: string[] }) => (
     <div className="current-match__summary">
-        {texts.map((text: string): JSX.Element => (
-            <span className="current-match__summary-text">{text}</span>
+        {texts.map((text: string, index): JSX.Element => (
+            <span className="current-match__summary-text" key={index}>{text}</span>
         ))}
     </div>
 )
@@ -51,6 +51,7 @@ Spectator.Team = ({ children, className = "", team, teamColor }: { children?: Re
             <Spectator.Player
                 className={`player--${teamColor}`}
                 player={player}
+                key={player.id}
             />
         ))}
         {children}

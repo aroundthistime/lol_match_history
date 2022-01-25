@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import i18n from "i18next";
 import { EndedMatch } from "../../types/Match/Match";
 import { PlatformWhetherDisplay } from "../../types/PlatformWhetherDisplay";
 import { EndedMatchPlayer } from "../../types/Player/Player";
@@ -24,42 +25,42 @@ import VisionScore from "../VisionScore/VisionScore";
 type ColumnNameObject = { [key: string]: PlatformWhetherDisplay }
 
 const COLUMN_NAMES: ColumnNameObject = {
-    "챔피언": {
+    "champion": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "스펠": {
+    "summonerSpell": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "소환사명": {
+    "username": {
         mobile: false,
         tablet: true,
         desktop: true
     },
-    "KDA": {
+    "kda": {
         mobile: false,
         tablet: true,
         desktop: true
     },
-    "소환사명(KDA)": {
+    "username+kda": {
         mobile: true,
         tablet: false,
         desktop: false
     },
-    "킬관여": {
+    "killParticipation": {
         mobile: false,
         tablet: false,
         desktop: true
     },
-    "룬": {
+    "rune": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "아이템": {
+    "item": {
         mobile: true,
         tablet: true,
         desktop: true
@@ -69,17 +70,17 @@ const COLUMN_NAMES: ColumnNameObject = {
         tablet: false,
         desktop: true
     },
-    "입힌 피해량": {
+    "damageDealt": {
         mobile: true,
         tablet: true,
         desktop: true
     },
-    "받은 피해량": {
+    "damageTaken": {
         mobile: false,
         tablet: true,
         desktop: true
     },
-    "시야": {
+    "vision": {
         mobile: false,
         tablet: true,
         desktop: true
@@ -122,7 +123,7 @@ MatchDetailTable.Header = (): JSX.Element => (
                 className={"match-detail-table__header " + getClassNameByPlatformWhetherDisplayObject(COLUMN_NAMES[columnName])}
                 key={columnName}
             >
-                {columnName}
+                {i18n.t(`table.${columnName}`)}
             </td>
         ))}
     </>
@@ -279,37 +280,37 @@ MatchDetailTable.TeamSummary = ({ team }: { team: EndedMatchTeam }): JSX.Element
     <tr>
         <td colSpan={100} style={{ height: "100%", padding: 0 }}>
             <div className="match-detail-table__team-summary">
-                <span className="team-summary__match-result text--bold">{team.win ? "승리" : "패배"}</span>
+                <span className="team-summary__match-result text--bold">{team.win ? i18n.t("common.result.win.full") : i18n.t("common.result.lose.full")}</span>
                 <span>
-                    <span className="mobile-hidden">킬/데스/어시스트</span>
-                    <span className="tablet-hidden desktop-hidden">KDA</span>
+                    <span className="mobile-hidden">{i18n.t('table.kill')}/{i18n.t('table.death')}/{i18n.t('table.assist')} </span>
+                    <span className="tablet-hidden desktop-hidden">KDA </span>
                     {team.championKills}/{team.championDeaths}/{team.championAssists}
                 </span>
-                <span className="mobile-hidden">총 골드 : {team.totalGold}(G)</span>
+                <span className="mobile-hidden">{i18n.t('table.totalGold', { totalGold: team.totalGold })}</span>
                 <ul className="team-summary__objectives">
                     <li className="team-summary__objective">
                         <BaronIcon
                             className="team-summary__objective-icon"
                         />
-                        <span className="mobile-hidden">바론 : </span>{team.baronKills}
+                        <span className="mobile-hidden">{i18n.t('table.objectives.baron')} : </span>{team.baronKills}
                     </li>
                     <li className="team-summary__objective">
                         <DragonIcon
                             className="team-summary__objective-icon"
                         />
-                        <span className="mobile-hidden">드래곤 : </span>{team.dragonKills}
+                        <span className="mobile-hidden">{i18n.t('table.objectives.dragon')} : </span>{team.dragonKills}
                     </li>
                     <li className="team-summary__objective">
                         <HeraldIcon
                             className="team-summary__objective-icon"
                         />
-                        <span className="mobile-hidden">전령 : </span>{team.riftHeraldKills}
+                        <span className="mobile-hidden">{i18n.t('table.objectives.herald')} : </span>{team.riftHeraldKills}
                     </li>
                     <li className="team-summary__objective">
-                        타워 : {team.towerKills}
+                        {i18n.t('table.objectives.tower')} : {team.towerKills}
                     </li>
                     <li className="team-summary__objective">
-                        억제기 : {team.inhibitorKills}
+                        {i18n.t('table.objectives.inhibitor')} : {team.inhibitorKills}
                     </li>
                 </ul>
             </div>

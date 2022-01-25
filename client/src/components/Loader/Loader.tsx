@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import i18n from "i18next";
 import loadingImage from "../../assets/images/loading.gif";
 
 const Loader = (): JSX.Element => {
-    const defaultLoadingText = "소환사님의 전적을 불러오고 있습니다 "
+    const defaultLoadingText = i18n.t('statusMessage.loader') + " "
     const [loadingText, setLoadingText] = useState(defaultLoadingText);
 
     useEffect(() => {

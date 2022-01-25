@@ -1,4 +1,5 @@
 import React from "react";
+import i18n from "i18next";
 import { OnClickFunction } from "../../types/Functions/OnClickFunction";
 import { StyleObject } from "../../types/StyleObject";
 import ProfileIcon from "./ProfileIcon/ProfileIcon";
@@ -16,7 +17,7 @@ const UserProfile = (
             <UserProfile.Text className="profile__summoner-name" text={name} style={{ fontWeight: "bold" }} />
             <UserProfile.Button
                 className="refresh-button no-drag"
-                text="전적갱신"
+                text={i18n.t('button.refresh')}
                 onClick={() => refresh()}
                 style={{ color: "white" }}
             />
