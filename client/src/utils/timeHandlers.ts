@@ -5,12 +5,6 @@ const MINUTE_TO_MILLISECONDS = SECOND_TO_MILLISECONDS * 60;
 const HOUR_TO_MILLISECONDS = MINUTE_TO_MILLISECONDS * 60;
 const DAY_TO_MILLISECONDS = HOUR_TO_MILLISECONDS * 24;
 
-const TIME_TEXT = i18n.t("common.time.time");
-const DAY_TEXT = i18n.t("common.time.day");
-const HOUR_TEXT = i18n.t("common.time.hour");
-const MINUTE_TEXT = i18n.t("common.time.minute");
-const SECOND_TEXT = i18n.t("common.time.second");
-
 
 const getDaysPartFromMilliseconds = (milliseconds: number): number => {
     return Math.floor(milliseconds / DAY_TO_MILLISECONDS)
@@ -32,7 +26,9 @@ export const getHourMinuteSecondStringFromMilliseconds = (milliseconds: number):
     const hours = getHoursPartFromMilliseconds(milliseconds);
     const minutes = getMinutesPartFromMilliseconds(milliseconds)
     const seconds = getSecondsPartFromMilliseconds(milliseconds)
-    console.log(HOUR_TEXT, DAY_TEXT, MINUTE_TEXT, SECOND_TEXT);
+    const HOUR_TEXT = i18n.t("common.time.hour");
+    const MINUTE_TEXT = i18n.t("common.time.minute");
+    const SECOND_TEXT = i18n.t("common.time.second");
     if (hours > 0) {
         return `${hours}${HOUR_TEXT} ${minutes}${MINUTE_TEXT} ${seconds}${SECOND_TEXT}`
     } else {
@@ -50,6 +46,10 @@ export const getAbsTimeDiffFromCurrent = (targetTime: number): number => {
 }
 
 export const getLargestUnitFromTime = (milliseconds: number): string => {
+    const DAY_TEXT = i18n.t("common.time.day");
+    const HOUR_TEXT = i18n.t("common.time.hour");
+    const MINUTE_TEXT = i18n.t("common.time.minute");
+    const SECOND_TEXT = i18n.t("common.time.second");
     if (milliseconds >= DAY_TO_MILLISECONDS) {
         const days = getDaysPartFromMilliseconds(milliseconds);
         return `${days}${DAY_TEXT}`

@@ -281,36 +281,36 @@ MatchDetailTable.TeamSummary = ({ team }: { team: EndedMatchTeam }): JSX.Element
         <td colSpan={100} style={{ height: "100%", padding: 0 }}>
             <div className="match-detail-table__team-summary">
                 <span className="team-summary__match-result text--bold">{team.win ? i18n.t("common.result.win.full") : i18n.t("common.result.lose.full")}</span>
-                <span>
+                <span className="team-summary__team-kda">
                     <span className="mobile-hidden">{i18n.t('table.kill')}/{i18n.t('table.death')}/{i18n.t('table.assist')} </span>
                     <span className="tablet-hidden desktop-hidden">KDA </span>
                     {team.championKills}/{team.championDeaths}/{team.championAssists}
                 </span>
-                <span className="mobile-hidden">{i18n.t('table.totalGold', { totalGold: team.totalGold })}</span>
+                <span className="team-summary__team-gold mobile-hidden">{i18n.t('table.totalGold', { totalGold: team.totalGold })}</span>
                 <ul className="team-summary__objectives">
-                    <li className="team-summary__objective">
+                    <li className="team-summary__objective team-summary__objective-with-icon">
                         <BaronIcon
                             className="team-summary__objective-icon"
                         />
-                        <span className="mobile-hidden">{i18n.t('table.objectives.baron')} : </span>{team.baronKills}
+                        <span className="mobile-hidden">{i18n.t('table.objectives.baron')}&nbsp;</span>{team.baronKills}
                     </li>
-                    <li className="team-summary__objective">
+                    <li className="team-summary__objective team-summary__objective-with-icon">
                         <DragonIcon
                             className="team-summary__objective-icon"
                         />
-                        <span className="mobile-hidden">{i18n.t('table.objectives.dragon')} : </span>{team.dragonKills}
+                        <span className="mobile-hidden">{i18n.t('table.objectives.dragon')}&nbsp;</span>{team.dragonKills}
                     </li>
-                    <li className="team-summary__objective">
+                    <li className="team-summary__objective team-summary__objective-with-icon">
                         <HeraldIcon
                             className="team-summary__objective-icon"
                         />
-                        <span className="mobile-hidden">{i18n.t('table.objectives.herald')} : </span>{team.riftHeraldKills}
+                        <span className="mobile-hidden">{i18n.t('table.objectives.herald')}&nbsp;</span>{team.riftHeraldKills}
                     </li>
                     <li className="team-summary__objective">
-                        {i18n.t('table.objectives.tower')} : {team.towerKills}
+                        {i18n.t('table.objectives.tower')}&nbsp;{team.towerKills}
                     </li>
                     <li className="team-summary__objective">
-                        {i18n.t('table.objectives.inhibitor')} : {team.inhibitorKills}
+                        {i18n.t('table.objectives.inhibitor')}&nbsp;{team.inhibitorKills}
                     </li>
                 </ul>
             </div>
