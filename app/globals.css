@@ -7,3 +7,9 @@
         @apply text-default;
     }
 }
+
+@layer components {
+    .logo {
+        @apply font-bold;
+    }
+}
