@@ -7,6 +7,10 @@
         @apply text-default;
     }
 
+    *:focus {
+        @apply outline-none;
+    }
+
     button {
         @apply bg-button text-white font-semibold !important;
     }

@@ -3,11 +3,13 @@
 import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form'
 import { createQueryString } from '../../utils/url';
+import { REGIONS } from '../../constant/region';
 
 const  SummonerSearchForm = ({className = ''}: Props) => {
     const {
         control,
         handleSubmit,
+        register,
         formState
     } = useForm<Inputs>();
     const router = useRouter();
@@ -23,19 +25,30 @@ const  SummonerSearchForm = ({className = ''}: Props) => {
             className={`flex flex-col gap-y-6 [&>*]:w-full [&>*]:px-2 [&>*]:py-3 [&>*]:rounded-md ${className}`}
             onSubmit={handleSubmit(onSubmit)}
         >
-            <Controller
-                name='summonerName'
-                control={control}
-                rules={{required: 'Summoner name is required'}}
-                render={({field}) => (
-                    <input
-                    placeholder="Type in the summoner's name to check match history"
-                    className="text-dark"
-                    maxLength={30}
-                    {...field}
-                    />
-                )}
-            />
+            <div className='flex bg-white gap-x-3 [&>*]:bg-transparent'>
+                <select
+                    className='cursor-pointer'
+                    {...register('region')}
+                >
+                    {REGIONS.map(region => (
+                        <option key={region}>{region}</option>
+                    ))}
+                </select>
+                <Controller
+                    name='summonerName'
+                    control={control}
+                    rules={{required: 'Summoner name is required'}}
+                    render={({field}) => (
+                        <input
+                        placeholder="Type in the summoner's name"
+                        className="text-dark flex-1"
+                        maxLength={30}
+                        {...field}
+                        />
+                    )}
+                />
+            </div>
+            
             <button
                 type="submit"
                 disabled={!formState.isValid}
@@ -52,6 +65,7 @@ type Props = {
 
 type Inputs = {
     summonerName: string;
+    region: string;
 }
 
 export default SummonerSearchForm;
