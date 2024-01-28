@@ -6,6 +6,14 @@
     html {
         @apply text-default;
     }
+
+    button {
+        @apply bg-button text-white font-semibold !important;
+    }
+
+    button:disabled {
+        @apply bg-button-disabled !important;
+    }
 }
 
 @layer components {

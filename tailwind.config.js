@@ -7,10 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        default: '#CBD5D7'
+        default: '#CBD5D7',
+        dark: '#1E293B'
       },
       backgroundColor: {
-        root: '#1E293B'
+        root: '#1E293B',
+        button: '#598EF3',
+        "button-disabled": '#94A3B8'
       }
     },
   },
