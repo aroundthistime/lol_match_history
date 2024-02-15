@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply text-default;
+    }
+
+    *:focus {
+        @apply outline-none;
+    }
+
+    button {
+        @apply bg-button text-white font-semibold !important;
+    }
+
+    button:disabled {
+        @apply bg-button-disabled !important;
+    }
+}
+
+@layer components {
+    .logo {
+        @apply font-bold;
+    }
+}
