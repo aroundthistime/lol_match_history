@@ -5,7 +5,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { createQueryString } from '../../utils/url';
 import { REGIONS } from '../../constant/region';
 
-const  SummonerSearchForm = ({className = ''}: Props) => {
+const SummonerSearchForm = ({className = ''}: Props) => {
     const {
         control,
         handleSubmit,
@@ -17,7 +17,7 @@ const  SummonerSearchForm = ({className = ''}: Props) => {
     const onSubmit = (data: Inputs) => {
         const queryString = createQueryString(data);
 
-        router.push(`/history?${queryString}`)
+        router.push(`/user?${queryString}`)
     }
 
     return (
