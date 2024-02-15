@@ -22,7 +22,7 @@ const SummonerSearchForm = ({className = ''}: Props) => {
 
     return (
         <form
-            className={`flex flex-col gap-y-6 [&>*]:w-full [&>*]:px-2 [&>*]:py-3 [&>*]:rounded-md ${className}`}
+            className={`flex flex-col gap-y-6 [&>*]:px-2 [&>*]:py-3 [&>*]:rounded-md ${className}`}
             onSubmit={handleSubmit(onSubmit)}
         >
             <div className='flex bg-white gap-x-3 [&>*]:bg-transparent'>
@@ -48,7 +48,6 @@ const SummonerSearchForm = ({className = ''}: Props) => {
                     )}
                 />
             </div>
-            
             <button
                 type="submit"
                 disabled={!formState.isValid}
